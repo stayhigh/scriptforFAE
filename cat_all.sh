@@ -1,4 +1,6 @@
 #!/bin/sh
+#numeric comparison and string comparison in shell script
+#http://bash.cyberciti.biz/guide/Numeric_comparison
 
 cat_all(){
   echo "cat all file to filename 'newfile.txt'"
