@@ -15,3 +15,8 @@ echo "overwrite izzysoft.asc if exists"
 apt-key add izzysoft.asc
 sudo apt-get update
 sudo apt-get -y install monitorix
+
+echo "running the monitorix ..."
+echo "starting the service"
+service monitorix start
+firefox  http://localhost:8080/monitorix  &
