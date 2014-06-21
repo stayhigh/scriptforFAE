@@ -6,7 +6,7 @@
  
 
 echo "ping localhost 5 times ..."
-ping -q -c5 google.com > /dev/null
+ping -q -c5 localhost > /dev/null
 if [ $? -eq 0 ]
 then
         tput setf 2
