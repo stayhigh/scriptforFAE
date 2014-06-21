@@ -2,6 +2,15 @@
 # -q quiet
 # -c nb of pings to perform
 #tput:  2 for green, 4 for red color
+#Color Code for tput:
+#0 - Black
+#1 - Red
+#2 - Green
+#3 - Yellow
+#4 - Blue
+#5 - Magenta
+#6 - Cyan
+#7 - White
 #detail:
 #http://www.thegeekstuff.com/2008/09/bash-shell-ps1-10-examples-to-make-your-linux-prompt-like-angelina-jolie/
 
