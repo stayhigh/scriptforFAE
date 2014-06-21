@@ -16,7 +16,15 @@ apt-key add izzysoft.asc
 sudo apt-get update
 sudo apt-get -y install monitorix
 
-echo "running the monitorix ..."
-echo "starting the service"
-service monitorix start
-firefox  http://localhost:8080/monitorix  &
+which monitorix
+if test $? -eq 0
+then
+  echo "running the monitorix ..."
+  echo "starting the service"
+  service monitorix start
+  firefox  http://localhost:8080/monitorix  &
+else
+  tput setf 4
+  echo "monitorix not found"
+  tput sgr0
+fi 
