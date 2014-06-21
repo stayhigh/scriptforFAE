@@ -16,6 +16,7 @@
 
 
 
+ping_localhost(){
 echo "ping localhost 5 times ..."
 ping -q -c5 localhost > /dev/null
 if [ $? -eq 0 ]
@@ -29,7 +30,9 @@ else
 	tput sgr0
 
 fi
+}
 
+ping_google(){
 echo "ping google.com 5 times ..."
 ping -q -c5 google.com > /dev/null
  
@@ -43,3 +46,8 @@ else
 	echo "[failed] ping google.com"
 	tput sgr0
 fi
+}
+
+ping_localhost
+ping_google
+
