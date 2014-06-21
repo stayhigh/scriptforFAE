@@ -1,9 +1,11 @@
 #!/bin/sh
- 
 # -q quiet
 # -c nb of pings to perform
 #tput:  2 for green, 4 for red color
- 
+#detail:
+#http://www.thegeekstuff.com/2008/09/bash-shell-ps1-10-examples-to-make-your-linux-prompt-like-angelina-jolie/
+
+
 
 echo "ping localhost 5 times ..."
 ping -q -c5 localhost > /dev/null
