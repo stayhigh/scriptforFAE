@@ -17,9 +17,13 @@ check_port()
     local port=${2}
     if nc -w 5 -z ${host-ip} ${port} 2>/dev/null
     then
-      echo "\a\n => Port ${port} at ${host} is open"
+      tput setf 2
+      echo "\a\n[ok] => Port ${port} at ${host} is open"
+      tput sgr0
     else
-      echo "\a\n => Port ${port} at ${host} is closed"
+      tput setf 4
+      echo "\a\n[failed] => Port ${port} at ${host} is closed"
+      tput sgr0
       return 2
     fi
 }
