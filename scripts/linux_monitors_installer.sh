@@ -14,6 +14,7 @@
 #Nmon: Monitor Linux Performance
 
 sudo apt-get -y install tcpdump
+sudo apt-get -y install iperf
 sudo apt-get -y install netstat
 sudo apt-get -y install htop 
 sudo apt-get -y install iftop 
