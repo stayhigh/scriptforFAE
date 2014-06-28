@@ -18,7 +18,8 @@
 
 ping_localhost(){
   echo "ping localhost 5 times ..."
-  ping -q -c5 localhost > /dev/null
+  ping -c5 localhost
+  #ping -q -c5 localhost > /dev/null
   if [ $? -eq 0 ]
   then
           tput setf 2
@@ -34,8 +35,8 @@ ping_localhost(){
 
 ping_google(){
   echo "ping google.com 5 times ..."
-  ping -q -c5 google.com > /dev/null
-   
+  ping -c5 google.com
+  #ping -q -c5 google.com > /dev/null
   if [ $? -eq 0 ]
   then
           tput setf 2
