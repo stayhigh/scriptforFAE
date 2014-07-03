@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #show the average of loading on the system per 10 secs
-watch -n 10 'cat /proc/loadavg'
+watch -n 3 'cat /proc/loadavg'
 #watch the commandline per second
 watch -n 1 -d=cumulative tail targetfile.txt
 
