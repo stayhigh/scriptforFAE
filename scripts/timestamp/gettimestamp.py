@@ -1,11 +1,24 @@
 #!/usr/bin/python
 
-"""show current timestamp"""
+print """show current timestamp"""
 import time
-ts = time.time()
-print ts # 1355563265.81
+timestamp = time.time()
+print timestamp # 1355563265.81
 
-"""show date from timestamp"""
+print """show date from timestamp"""
 import datetime
-st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
-print st #2012-12-15 01:21:05
+currenttime = datetime.datetime.fromtimestamp(timestamp).strftime('%Y-%m-%d %H:%M:%S')
+print currenttime #2012-12-15 01:21:05
+
+print """show current UTC time"""
+print datetime.datetime.utcnow()
+
+print """show the current time with the specified format"""
+print datetime.datetime.now().strftime("%A, %d. %B %Y %I:%M%p")
+
+print """show the ISO format"""
+print datetime.datetime.now().isoformat()
+
+
+print """show UTC time from timestamp"""
+print datetime.datetime.utcfromtimestamp(timestamp)
