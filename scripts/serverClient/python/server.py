@@ -20,11 +20,11 @@ except socket.error , msg:
     sys.exit()
 finally:     
     print 'Socket bind complete'
- 
+
 try:
 	s.listen(backlog)
 except Exception as e:
-	print e.messages, e.args
+	print e.message, e.args
 finally:
 	print 'Socket now listening'
  
@@ -33,7 +33,14 @@ while True:
 	try:
 		conn, addr = s.accept()
 	except Exception as e: 
-		print e.messages, e.args
+		print e.message, e.args
 	finally:
 		#display client information
 		print 'Connected with ' + addr[0] + ':' + str(addr[1])
+		data = conn.recv(1024)
+		reply = "OK " + data
+		if not data:
+		    break
+		conn.sendall(reply)
+conn.close()
+s.close()

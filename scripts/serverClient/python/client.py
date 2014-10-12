@@ -27,6 +27,6 @@ finally:
 try:
 	s.connect((remote_ip , port))
 except Exception as e:
-	print e.messages, e.args
+	print e.message, e.args
 finally:
 	print 'Socket Connected to ' + host + ' on ip ' + remote_ip
