@@ -1,0 +1,515 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html
+xmlns="http://www.w3.org/1999/xhtml" lang="en-US"><head
+profile="http://gmpg.org/xfn/11"><meta
+http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>8 Tips To Solve Linux and Unix Disk Full &#038; Can&#8217;t Write/Failure Problems</title><meta
+name="robots" content="noodp, noydir" /><meta
+name="description" content="Explains why can&#8217;t your write to the disk on a Linux or Unix server. Learn how to solve full or corrupt and failed disk issues." /><meta
+name="keywords" content="DevOps, FreeBSD, Linux, OpenBSD, OS X, Unix" /><link
+rel="stylesheet" href="http://s0.cyberciti.org/assets/faq/mini_layout_v13.css" type="text/css" media="screen, projection" /> <!--[if lte IE 8]><link
+rel="stylesheet" href="http://s0.cyberciti.org/assets/faq/mini_ie_v03.css" type="text/css" media="screen, projection" /><![endif]--><link
+rel="canonical" href="http://www.cyberciti.biz/datacenter/linux-unix-bsd-osx-cannot-write-to-hard-disk/" /><link
+rel="alternate" type="application/rss+xml" title="nixCraft: Linux Tips, Hacks, Tutorials, And Ideas In Blog Format RSS Feed" href="http://feeds.cyberciti.biz/Nixcraft-LinuxFreebsdSolarisTipsTricks" /><link
+rel="pingback" href="http://www.cyberciti.biz/cms/xmlrpc.php" /><link
+rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.cyberciti.biz/cms/xmlrpc.php?rsd" /><link
+rel="alternate" type="application/rss+xml" title="nixCraft: Linux Tips, Hacks, Tutorials, And Ideas In Blog Format &raquo; 8 Tips to Solve Linux &amp; Unix Systems Hard Disk Problems Like Disk Full Or Can&#8217;t Write to the Disk Comments Feed" href="http://www.cyberciti.biz/datacenter/linux-unix-bsd-osx-cannot-write-to-hard-disk/feed/" /><link
+href="https://plus.google.com/+nixCraftadmin/" rel="author"/><link
+href="https://plus.google.com/+CybercitiBiz/" rel="publisher"/><link
+rel="shortcut icon" href="http://s0.cyberciti.org/static/legacy/i/favicon.ico"><meta
+name="robots" content="noarchive" /><link
+rel="dns-prefetch" href="//pagead2.googlesyndication.com"><!--
+	generated 227 seconds ago
+	generated in 0.759 seconds
+	served from batcache in 0.006 seconds
+	expires in 1273 seconds
+-->
+</head><body
+class="custom"><div
+id="container"><div
+id="page"><div
+class="menu-home-container"><ul
+id="menu-home" class="menu"><li
+id="menu-item-32" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-32"><a
+href="http://www.cyberciti.biz/topics/">Main Menu</a><ul
+class="sub-menu"><li
+id="menu-item-34" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34"><a
+href="http://www.cyberciti.biz/topics/datacenter/">Datacenter</a></li><li
+id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35"><a
+href="http://www.cyberciti.biz/topics/hardware/">Hardware</a></li><li
+id="menu-item-38" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-38"><a
+href="http://www.cyberciti.biz/topics/security/">IT / Linux Security</a></li><li
+id="menu-item-37" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37"><a
+href="http://www.cyberciti.biz/topics/open-source/">Open source</a></li><li
+id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31"><a
+href="http://www.cyberciti.biz/topics/reviews/">Reviews</a></li><li
+id="menu-item-39" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-39"><a
+href="http://www.cyberciti.biz/topics/storage/">Storage</a></li><li
+id="menu-item-40" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"><a
+href="http://www.cyberciti.biz/topics/virtualization/">Virtualization</a></li><li
+id="menu-item-33" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-33"><a
+href="http://www.cyberciti.biz/topics/cloud-computing/">Cloud Computing</a><ul
+class="sub-menu"><li
+id="menu-item-85" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-85"><a
+title="CDN " href="http://www.cyberciti.biz/topics/cloud-computing/content-delivery-network/">Content delivery network</a></li></ul></li><li
+id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-41"><a
+href="http://www.cyberciti.biz/topics/mobile-devices/">Mobile</a><ul
+class="sub-menu"><li
+id="menu-item-42" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42"><a
+href="http://www.cyberciti.biz/topics/mobile-devices/android/">Android</a></li><li
+id="menu-item-43" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43"><a
+href="http://www.cyberciti.biz/topics/mobile-devices/ios/">iOS</a></li></ul></li><li
+id="menu-item-36" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36"><a
+href="http://www.cyberciti.biz/topics/networking/">Networking</a></li><li
+id="menu-item-28" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-28"><a
+href="http://www.cyberciti.biz/#">Programming</a><ul
+class="sub-menu"><li
+id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29"><a
+title="Linux Shell Scripting Tutorial" href="http://bash.cyberciti.biz/guide/Main_Page">Linux Shell Scripting</a></li><li
+id="menu-item-30" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30"><a
+title="Python programming  tutorials" href="http://www.cyberciti.biz/topics/python-tutorials/">Python</a></li></ul></li><li
+id="menu-item-377" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377"><a
+title="See all topics by Category or Month" href="http://www.cyberciti.biz/topics/">See all topics</a></li></ul></li><li
+id="menu-item-378" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-378"><a
+title="Linux How-To Articles, Tips, and Guides" href="http://www.cyberciti.biz/faq/">Linux How-To &#038; Tutorials</a></li><li
+id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6"><a
+title="Linux / Unix and Shell Scripting Forum" href="http://nixcraft.com/forum.php">Forums</a></li><li
+id="menu-item-62" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-62"><a
+title="About us" href="http://www.cyberciti.biz/tips/about-us">About</a></li><li
+id="menu-item-63" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-63"><a
+title="Email us " href="http://www.cyberciti.biz/tips/contact-us">Contact us</a></li><li
+id="menu-item-65" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65"><a
+title="Various aspects of nixCraft can be monitored with RSS feeds." href="http://www.cyberciti.biz/nixcraft-rss-feed-syndication/">RSS/Feed</a></li></ul></div><div
+id="header"><div
+id="leaderboard"><div
+id="lbtop"><script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <ins
+class="adsbygoogle"
+style="display:inline-block;width:728px;height:90px"
+data-ad-client="ca-pub-7825705102693166"
+data-ad-slot="3400670370"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script> </div></div><div
+id="crumbslogo"><a
+href="/" title="Home Page">nixCraft</a></div></div><div
+id="content_box"><div
+id="content" class="hfeed"><div
+class="post-487 post type-post status-publish format-standard hentry category-datacenter category-hardware category-storage tag-devops tag-freebsd tag-linux tag-openbsd tag-os-x tag-unix post_box top" id="post-487"><div
+class="headline_area"><h1 class="entry-title">8 Tips to Solve Linux &#038; Unix Systems Hard Disk Problems Like Disk Full Or Can&#8217;t Write to the Disk</h1><p
+class="headline_meta">by <span
+class="author vcard"><a
+href="http://www.cyberciti.biz/tips/about-us" rel="author" class="url fn">nixCraft</a></span> on <abbr
+class="published" title="2014-10-29">October 29, 2014</abbr> &middot; <span><a
+href="http://www.cyberciti.biz/datacenter/linux-unix-bsd-osx-cannot-write-to-hard-disk/#comments" rel="nofollow"><span
+class="dsq-postid" data-dsqidentifier="487 http://www.cyberciti.biz/?p=487">5 comments</span></a></span>&middot; <span>LAST UPDATED <abbr
+class="updated" title="2014-12-09">December 9, 2014</abbr><span></p><p
+class="headline_meta">in <span><a
+href="http://www.cyberciti.biz/topics/datacenter/" rel="category tag">Datacenter</a>, <a
+href="http://www.cyberciti.biz/topics/hardware/" rel="category tag">Hardware</a>, <a
+href="http://www.cyberciti.biz/topics/storage/" rel="category tag">Storage</a></span></p></div><div
+class="format_text entry-content"><p><span
+class="drop_cap">C</span>an't write to the hard disk on a Linux or Unix-like systems? Want to diagnose corrupt disk issues on a server? Want to find out why you are getting "disk full" messages on screen? Want to learn how to solve full/corrupt and failed disk issues. Try these eight tips to diagnose a Linux and Unix server hard disk drive problems.<br/><br
+/> <img
+src="http://s0.cyberciti.org/uploads/cms/2014/10/welcome-0-disk-problems.001.jpg" alt="" width="598" height="449" class="aligncenter size-full wp-image-508" /><br
+/> <span
+id="more-487"></span></p><h2>#1 - Error: No space left on device</h2><p>When the Disk is full on Unix-like system you get an error message on screen. In this example, I'm running <a
+href="http://www.cyberciti.biz/faq/howto-create-lage-files-with-dd-command/">fallocate command</a> and my system run out of disk space:</p><pre>$ <strong>fallocate -l 1G test4.img</strong>
+<em>fallocate: test4.img: fallocate failed: <span style="color: #ff0000;"><strong>No space left on device</strong></span></em>
+</pre><p>The first step is to run the df command to find out information about total space and available space on a file system including partitions:<br
+/> <code>$ df</code><br
+/> OR try human readable output format:<br
+/> <code>$ df -h</code><br
+/> Sample outputs:</p><pre>
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda6       117G   54G   57G  49% /
+udev            993M  4.0K  993M   1% /dev
+tmpfs           201M  264K  200M   1% /run
+none            5.0M     0  5.0M   0% /run/lock
+none           1002M     0 1002M   0% /run/shm
+/dev/sda1       1.8G  115M  1.6G   7% /boot
+/dev/sda7       4.7G  145M  4.4G   4% /tmp
+/dev/sda9       9.4G  628M  8.3G   7% /var
+/dev/sda8        94G  579M   89G   1% /ftpusers
+/dev/sda10      4.0G  4.0G     0 100% /ftpusers/tmp
+</pre><p>From the df command output it is clear that /dev/sda10 has 4.0Gb of total space of which 4.0Gb is used.</p><h3>Fixing problem when the disk is full</h3><ol><li><a
+href="http://www.cyberciti.biz/howto/question/general/compress-file-unix-linux-cheat-sheet.php">Compress uncompressed log and other files</a> using gzip or bzip2 or tar command:<pre class="bash"><span style="color: #c20cb9; font-weight: bold;">gzip</span> /ftpusers/tmp/*.log
+<span style="color: #c20cb9; font-weight: bold;">bzip2</span> /ftpusers/tmp/large.<span style="color: #c20cb9; font-weight: bold;">file</span>.name</pre></li><li>Delete <a
+href="http://www.cyberciti.biz/faq/howto-linux-unix-delete-remove-file/">unwanted files using rm command</a> on a Unix-like system:<pre class="bash">m -rf /ftpusers/tmp/*.bmp</pre></li><li>Move files to other <a
+href="http://www.cyberciti.biz/faq/linux-unix-bsd-appleosx-rsync-delete-file-after-transfer/">system or external hard disk using rsync command</a>:<pre class="bash">&nbsp;
+rsync --remove-source-files -azv /ftpusers/tmp/*.mov /mnt/usbdisk/
+rsync --remove-source-files -azv /ftpusers/tmp/*.mov server2:/path/to/dest/<span style="color: #c20cb9; font-weight: bold;">dir</span>/
+&nbsp;</pre></li><li><a
+href="http://www.cyberciti.biz/faq/how-do-i-find-the-largest-filesdirectories-on-a-linuxunixbsd-filesystem/">Find out the largest directories or files eating disk space</a> on a Unix-like systesm:<pre class="bash">&nbsp;
+<span style="color: #c20cb9; font-weight: bold;">du</span> -a /ftpusers/tmp | <span style="color: #c20cb9; font-weight: bold;">sort</span> -n -r | <span style="color: #c20cb9; font-weight: bold;">head</span> -n <span style="color: #000000;">10</span>
+<span style="color: #c20cb9; font-weight: bold;">du</span> -cks * | <span style="color: #c20cb9; font-weight: bold;">sort</span> -rn | <span style="color: #c20cb9; font-weight: bold;">head</span>
+&nbsp;</pre></li><li><a
+href="http://www.cyberciti.biz/faq/truncate-large-text-file-in-unix-linux/">Truncate a particular file</a>. This is useful for log file:<pre class="bash">&nbsp;
+truncate -s <span style="color: #000000;">0</span> /ftpusers/<span style="color: #c20cb9; font-weight: bold;">ftp</span>.upload.log
+<span style="color: #808080; font-style: italic;">### bash/<span style="color: #c20cb9; font-weight: bold;">sh</span> etc ##</span>
+&gt;/ftpusers/<span style="color: #c20cb9; font-weight: bold;">ftp</span>.upload.log
+<span style="color: #808080; font-style: italic;">## <span style="color: #c20cb9; font-weight: bold;">perl</span> ##</span>
+<span style="color: #c20cb9; font-weight: bold;">perl</span> -e<span style="color: #ff0000;">'truncate &quot;filename&quot;, LENGTH'</span>
+&nbsp;</pre></li><li>Find and remove large files that are open but have been deleted on Linux or Unix:<pre class="bash"><span style="color: #808080; font-style: italic;">## Works on Linux/Unix/OSX/BSD etc ##</span>
+lsof -nP | <span style="color: #c20cb9; font-weight: bold;">grep</span> <span style="color: #ff0000;">'(deleted)'</span>
+&nbsp;
+<span style="color: #808080; font-style: italic;">## Only works on Linux ##</span>
+<span style="color: #c20cb9; font-weight: bold;">find</span> /proc/*/fd -<span style="color: #c20cb9; font-weight: bold;">ls</span> | <span style="color: #c20cb9; font-weight: bold;">grep</span>  <span style="color: #ff0000;">'(deleted)'</span>
+&nbsp;</pre><p>To truncate it:</p><pre class="bash"> <span style="color: #808080; font-style: italic;">## works on Linux/Unix/BSD/OSX etc all ##</span>
+&gt; <span style="color: #ff0000;">&quot;/path/to/the/deleted/file.name&quot;</span>
+<span style="color: #808080; font-style: italic;">## works on Linux only ##</span>
+&gt; <span style="color: #ff0000;">&quot;/proc/PID-HERE/fd/FD-HERE&quot;</span>
+&nbsp;</pre></li></ol><h2>#2 - Is the file system is in read-only mode?</h2><p>You may end up getting an error such as follows when you try to create a file or save a file:<br
+/> <code>$ <strong>cat > file</strong><br
+/> <em>-bash: file: <span
+style="color: #ff0000;">Read-only file system</span></em></code><br
+/> Run mount command to find out if the file system is mounted in read-only mode:<br
+/> <code>$ mount<br
+/> $ mount | grep '/ftpusers'</code><br
+/> To fix this problem, simply remount the file system in read-write mode on a Linux based system:<br
+/> <code># mount -o remount,rw /ftpusers/tmp</code><br
+/> Another example, from my <a
+href="http://www.cyberciti.biz/faq/howto-freebsd-remount-partition/">FreeBSD 9.x server to remount / in rw mode</a>:<br
+/> <code># mount -o rw /dev/ad0s1a /</code></p><h2>#3 - Am I running out of inodes?</h2><p>Sometimes, df command reports that there is enough free space but system claims file-system is full. You need to check <a
+href="http://www.cyberciti.biz/tips/understanding-unixlinux-filesystem-inodes.html">for the inode</a> which identifies the file and its attributes on a file systems using the following command:<br
+/> <code>$ df -i<br
+/> $ df -i /ftpusers/</code><br
+/> Sample outputs:</p><pre>Filesystem      Inodes IUsed   IFree IUse% Mounted on
+/dev/sda8      6250496 11568 6238928    1% /ftpusers</pre><p>So /ftpusers has 62,50,496 total inodes but only 11,568 are used. You are free to create another 62,38,928 files on /ftpusers partition. If 100% of your inodes are used, try the following options:</p><ul><li>Find unwanted files and delete or move to another server.</li><li>Find unwanted large files and delete or move to another server.</li></ul><h2>#4 - Is my hard drive is dying?</h2><p><A
+href="http://www.cyberciti.biz/tips/linux-find-out-if-harddisk-failing.html">I/O errors in log file (such as /var/log/messages) indicates</a> that something is wrong with the hard disk and it may be failing. You can check hard disk for errors using smartctl command, which is control and monitor utility for SMART disks under Linux and UNIX like operating systems. The syntax is:</p><pre class="bash">&nbsp;
+smartctl -a /dev/DEVICE
+<span style="color: #808080; font-style: italic;"># check <span style="color: #000000; font-weight: bold;">for</span> /dev/sda on a Linux server</span>
+smartctl -a /dev/sda
+&nbsp;</pre><p>You can also use "Disk Utility" to get the same information<div
+style="width: 600px" class="wp-caption aligncenter"><a
+href="http://www.cyberciti.biz/tips/linux-find-out-if-harddisk-failing.html"><img
+src="http://s0.cyberciti.org/uploads/l/tips/2007/07/500-GB-Hard-Disk-ATA-TOSHIBA-MK5061GSYF-dev-sda-%E2%80%94-Disk-Utility_014.png" width="590" height="387" alt="Fig. 01: Gnome disk utility (Applications &gt; System Tools &gt; Disk Utility)" class /></a><p
+class="wp-caption-text">Fig. 01: Gnome disk utility (Applications > System Tools > Disk Utility)</p></div></p><p
+class="note"><strong>Note:</strong> Don't expect too much from SMART tool. It may not work in some cases. Make backup on a regular basis.</p><h2>#5 - Is my hard drive and server is too hot?</h2><p>High temperatures can cause server to function poorly. So you need to maintain the proper temperature of the server and disk. High temperatures can result into server shutdown or damage to file system and disk. <a
+href="http://www.cyberciti.biz/tips/howto-monitor-hard-drive-temperature.html">Use hddtemp or smartctl utility to find out the temperature of your hard on a Linux or Unix based system</a> by reading data from S.M.A.R.T. on drives that support this feature. Only modern hard drives have a temperature sensor. hddtemp supports reading S.M.A.R.T. information from SCSI drives too. hddtemp can work as simple command line tool or as a daemon to get information from all servers:</p><pre class="bash">&nbsp;
+hddtemp /dev/DISK
+hddtemp /dev/sg0
+&nbsp;</pre><p>Sample outputs:<br
+/><div
+id="attachment_505" style="width: 310px" class="wp-caption aligncenter"><a
+href="http://www.cyberciti.biz/datacenter/linux-unix-bsd-osx-cannot-write-to-hard-disk/attachment/hddtemp-on-rhel/" rel="attachment wp-att-505"><img
+src="http://s0.cyberciti.org/uploads/cms/2014/10/hddtemp-on-rhel-300x85.jpg" alt="Fig.02: hddtemp in action" width="300" height="85" class="size-medium wp-image-505" /></a><p
+class="wp-caption-text">Fig.02: hddtemp in action</p></div><br
+/> You can use the smartctl command as follows too:</p><pre class="bash">&nbsp;
+smartctl -d ata -A /dev/sda | <span style="color: #c20cb9; font-weight: bold;">grep</span> -i temperature
+&nbsp;</pre><h3>How do I get the CPU temperature?</h3><p>You can use Linux hardware monitoring tool such as <a
+href="http://www.cyberciti.biz/faq/howto-linux-get-sensors-information/">lm_sensor to get the cpu temperature on a Linux based</a> system:</p><pre class="bash">&nbsp;
+sensors
+&nbsp;</pre><p>Sample outputs from Debian Linux server:<br
+/><div
+id="attachment_506" style="width: 608px" class="wp-caption aligncenter"><a
+href="http://www.cyberciti.biz/datacenter/linux-unix-bsd-osx-cannot-write-to-hard-disk/attachment/sensors-command-on-debian-server/" rel="attachment wp-att-506"><img
+src="http://s0.cyberciti.org/uploads/cms/2014/10/sensors-command-on-debian-server.jpg" alt="Fig.03: sensors command providing cpu core temperature and other info on a Linux" width="598" height="367" class="size-full wp-image-506" /></a><p
+class="wp-caption-text">Fig.03: sensors command providing cpu core temperature and other info on a Linux</p></div></p><h2>#6 - Dealing with corrupted file systems</h2><p>File system on server may be get corrupted due to a hard reboot or some other error such as bad blocks. You can <a
+href="http://www.cyberciti.biz/tips/repairing-linux-ext2-or-ext3-file-system.html">repair corrupted file systems with the following fsck command</a>:</p><pre class="bash">&nbsp;
+<span style="color: #c20cb9; font-weight: bold;">umount</span> /ftpusers
+fsck -y /dev/sda8
+&nbsp;</pre><p>See <a
+href="http://www.cyberciti.biz/tips/surviving-a-linux-filesystem-failures.html">how to surviving a Linux filesystem failures</a> for more info.</p><h2>#7 - Dealing with software RAID on a Linux</h2><p>To find the current status of a Linux software raid type the following command:</p><pre class="bash"> <span style="color: #808080; font-style: italic;">## get detail on /dev/md0 raid ##</span>
+mdadm --detail /dev/md0
+&nbsp;
+<span style="color: #808080; font-style: italic;">## Find status ##</span>
+<span style="color: #c20cb9; font-weight: bold;">cat</span> /proc/mdstat
+watch <span style="color: #c20cb9; font-weight: bold;">cat</span> /proc/mdstat
+&nbsp;</pre><p>Sample outputs:<br
+/><div
+id="attachment_507" style="width: 608px" class="wp-caption aligncenter"><a
+href="http://www.cyberciti.biz/datacenter/linux-unix-bsd-osx-cannot-write-to-hard-disk/attachment/linux-mdstat-output/" rel="attachment wp-att-507"><img
+src="http://s0.cyberciti.org/uploads/cms/2014/10/linux-mdstat-output.jpg" alt="Fig. 04: Find the status of a Linux software raid command " width="598" height="241" class="size-full wp-image-507" /></a><p
+class="wp-caption-text">Fig. 04: Find the status of a Linux software raid command</p></div><br
+/> You need to replace a failed hard drive. You must u remove the correct failed drive. In this example, I'm going to replace /dev/sdb (2nd hard drive of RAID 6). It is not necessary to take the storage offline to repair the RAID on Linux. This only works if your server support hot-swappable hard disk:</p><pre class="bash"><span style="color: #808080; font-style: italic;">## remove disk from an array md0 ##</span>
+mdadm --manage /dev/md0 --fail /dev/sdb1
+mdadm --manage /dev/md0 --remove /dev/sdb1
+&nbsp;
+<span style="color: #808080; font-style: italic;"># Do the same steps again <span style="color: #000000; font-weight: bold;">for</span> rest of /dev/sdbX ##</span>
+<span style="color: #808080; font-style: italic;"># Power down <span style="color: #000000; font-weight: bold;">if</span> not hot-swappable hard disk: ##</span>
+shutdown -h now
+&nbsp;
+<span style="color: #808080; font-style: italic;">## copy partition table from /dev/sda to newly replaced /dev/sdb ##</span>
+sfdisk -d /dev/sda | sfdisk /dev/sdb
+fdisk -l
+&nbsp;
+<span style="color: #808080; font-style: italic;">## Add it ##</span>
+mdadm --manage /dev/md0 --add /dev/sdb1
+<span style="color: #808080; font-style: italic;"># <span style="color: #000000; font-weight: bold;">do</span> the same steps again <span style="color: #000000; font-weight: bold;">for</span> rest of /dev/sdbX ##</span>
+&nbsp;
+<span style="color: #808080; font-style: italic;"># Now md0 will <span style="color: #c20cb9; font-weight: bold;">sync</span> again. See it on screen ## </span>
+watch <span style="color: #c20cb9; font-weight: bold;">cat</span> /proc/mdstat
+&nbsp;</pre><p>See our <a
+href="http://www.cyberciti.biz/tips/linux-raid-increase-resync-rebuild-speed.html">tips on increasing RAID sync speed on Linux</a> for more information.</p><h2>#8 - Dealing with hardware RAID</h2><p>You can use the samrtctl command or vendor specific command to find out the status of RAID and disks in your controller:</p><pre class="bash">&nbsp;
+<span style="color: #808080; font-style: italic;">## SCSI disk </span>
+smartctl -d scsi --all /dev/sgX
+&nbsp;
+<span style="color: #808080; font-style: italic;">## Adaptec RAID array</span>
+/usr/StorMan/arcconf getconfig <span style="color: #000000;">1</span>
+&nbsp;
+<span style="color: #808080; font-style: italic;">## 3ware RAID Array</span>
+tw_cli /c0 show
+&nbsp;</pre><p>See your vendor specific documentation to replace a failed disk.</p><h2>Monitoring disk health</h2><p>See our previous tutorials:</p><ol><li><a
+href="http://www.cyberciti.biz/tips/monitoring-hard-disk-health-with-smartd-under-linux-or-unix-operating-systems.html">Monitoring hard disk health with smartd under Linux or UNIX operating systems</a></li><li><a
+href="http://www.cyberciti.biz/tips/shell-script-to-watch-the-disk-space.html">Shell script to watch the disk space</a></li><li><a
+href="http://www.cyberciti.biz/faq/mac-osx-unix-get-an-alert-when-my-disk-is-full/">UNIX get an alert when disk is full</a></li><li><a
+href="http://bash.cyberciti.biz/monitoring/shell-script-monitor-unix-linux-diskspace/">Monitor UNIX / Linux server disk space with a shell scrip</a></li><li><a
+href="http://www.cyberciti.biz/tips/howto-write-perl-script-to-monitor-disk-space.html">Perl script to monitor disk space and send an email</a></li><li><a
+href="http://bash.cyberciti.biz/backup/monitor-nas-server-unix-linux-shell-script/">NAS backup server disk monitoring shell script</a></li></ol><h2>Conclusion</h2><p>I hope these tips will help you troubleshoot system disk issue on a Linux/Unix based server. I also recommend implementing a good backup plan in order to have the ability to recover from disk failure, accidental file deletion, file corruption, or complete server destruction:</p><ul><li><a
+href="http://www.cyberciti.biz/faq/duplicity-installation-configuration-on-debian-ubuntu-linux/">Debian / Ubuntu: Install Duplicity for encrypted backup in cloud</a></li><li><A
+href="http://www.cyberciti.biz/tips/how-to-backup-mysql-databases-web-server-files-to-a-ftp-server-automatically.html">HowTo: Backup MySQL databases, web server files to a FTP server automatically</a></li><li><a
+href="http://www.cyberciti.biz/faq/redhat-cetos-linux-remote-backup-snapshot-server/">How To Set Red hat & CentOS Linux remote backup / snapshot server</a></li><li><a
+href="http://www.cyberciti.biz/faq/linux-rsnapshot-backup-howto/">Debian / Ubuntu Linux install and configure remote filesystem snapshot with rsnapshot incremental backup utility</a></li><li><a
+href="http://www.cyberciti.biz/faq/linux-tape-backup-with-mt-and-tar-command-howto/">Linux Tape backup with mt And tar command tutorial</a></li></ul><p
+class="post_tags">Tagged as: <a
+href="http://www.cyberciti.biz/tutorials/devops/" rel="tag">DevOps</a>, <a
+href="http://www.cyberciti.biz/tutorials/freebsd/" rel="tag">FreeBSD</a>, <a
+href="http://www.cyberciti.biz/tutorials/linux/" rel="tag">Linux</a>, <a
+href="http://www.cyberciti.biz/tutorials/openbsd/" rel="tag">OpenBSD</a>, <a
+href="http://www.cyberciti.biz/tutorials/os-x/" rel="tag">OS X</a>, <a
+href="http://www.cyberciti.biz/tutorials/unix/" rel="tag">Unix</a></p> <a
+class="btn btn-tweet" href="https://twitter.com/intent/tweet?text=8+Tips+to+Solve+Linux+%26%23038%3B+Unix+Systems+Hard+Disk+Problems+Like+Disk+Full+Or+Can%26%238217%3Bt+Write+to+the+Disk&url=http://www.cyberciti.biz/datacenter/linux-unix-bsd-osx-cannot-write-to-hard-disk/&via=nixcraft" title="Tweet this tutorial/page">Twitter</a><a
+class="btn btn-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://www.cyberciti.biz/datacenter/linux-unix-bsd-osx-cannot-write-to-hard-disk/" title="Share this page/tutorial on Facebook">Facebook</a><a
+class="btn btn-google" href="https://plus.google.com/share?url=http://www.cyberciti.biz/datacenter/linux-unix-bsd-osx-cannot-write-to-hard-disk/" title="Share this page/tutorial on Google+">Google+</a><a
+class="btn btn-pdf" href="http://www.cyberciti.biz/view/pdf/cms/487.php" title="Download this tutorial/faq as a free pdf">PDF version</a><a
+class="btn btn-typoerr" href="https://nixcraft.wufoo.com/forms/give-us-feedback-for-nixcraft/def/Field209=http://www.cyberciti.biz/datacenter/linux-unix-bsd-osx-cannot-write-to-hard-disk/&Field211=8 Tips to Solve Linux &#038; Unix Systems Hard Disk Problems Like Disk Full Or Can&#8217;t Write to the Disk" target="_blank" title="Click here to report Typo/Grammer and other Incorrect information">Found an error/typo on this page? Help us!</a><br/><div
+class='my_featured_articles_0'> Featured Articles:<ul><li><a
+href="http://www.cyberciti.biz/open-source/30-cool-best-open-source-softwares-of-2013/">30 Cool Open Source Software I Discovered in 2013</a> <img
+style="verticalp-align: text-top; padding-left: 1px;" src="http://s0.cyberciti.org/static/legacy/i/new_post.png" alt="" border="0"></li><li><a
+href="http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html">30 Handy Bash Shell Aliases For Linux / Unix / Mac OS X</a></li><li><a
+href="http://www.cyberciti.biz/networking/nmap-command-examples-tutorials/">Top 30 Nmap Command Examples For Sys/Network Admins</a></li><li><a
+href="http://www.cyberciti.biz/tips/php-security-best-practices-tutorial.html">25 PHP Security Best Practices For Sys Admins</a></li><li><a
+href="http://www.cyberciti.biz/tips/top-linux-monitoring-tools.html">20 Linux System Monitoring Tools Every SysAdmin Should Know</a></li><li><a
+href="http://www.cyberciti.biz/tips/linux-security.html">20 Linux Server Hardening Security Tips</a></li><li><a
+href="http://www.cyberciti.biz/tips/linux-iptables-examples.html">Linux: 20 Iptables Examples For New SysAdmins</a></li><li><a
+href="http://www.cyberciti.biz/tips/linux-unix-bsd-openssh-server-best-practices.html">Top 20 OpenSSH Server Best Security Practices </a></li><li><a
+href="http://www.cyberciti.biz/tips/linux-unix-bsd-nginx-webserver-security.html">Top 20 Nginx WebServer Best Security Practices</a><li><A
+href="http://www.cyberciti.biz/tips/check-unix-linux-configuration-file-for-syntax-errors.html">20 Examples: Make Sure Unix / Linux Configuration Files Are Free From Syntax Errors</a><li><a
+href="http://www.cyberciti.biz/open-source/best-terminal-applications-for-linux-unix-macosx/">15 Greatest Open Source Terminal Applications Of 2012</a></li><li><a
+href="http://www.cyberciti.biz/tips/my-10-unix-command-line-mistakes.html">My 10 UNIX Command Line Mistakes</a></li><li><a
+href="http://www.cyberciti.biz/tips/open-source-project-management-software.html">Top 10 Open Source Web-Based Project Management Software</a></li><li><a
+href="http://www.cyberciti.biz/tips/download-email-client-for-linux-mac-osx-windows.html">Top 5 Email Client For Linux, Mac OS X, and Windows Users</a></li><li><a
+href="http://www.cyberciti.biz/tips/linux-laptop.html">The Novice Guide To Buying A Linux Laptop</a></li></ul></div></div></div><div
+id="disqus_thread"><div
+id="dsq-content"><ul
+id="dsq-comments"><li
+class="comment even thread-even depth-1" id="dsq-comment-2709"><div
+id="dsq-comment-header-2709" class="dsq-comment-header"><cite
+id="dsq-cite-2709"> <span
+id="dsq-author-user-2709">Alan</span></cite></div><div
+id="dsq-comment-body-2709" class="dsq-comment-body"><div
+id="dsq-comment-message-2709" class="dsq-comment-message"><p>Nice and informative article..</p></div></div></li><li
+class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-2710"><div
+id="dsq-comment-header-2710" class="dsq-comment-header"><cite
+id="dsq-cite-2710"> <span
+id="dsq-author-user-2710">Fabio Carvalho</span></cite></div><div
+id="dsq-comment-body-2710" class="dsq-comment-body"><div
+id="dsq-comment-message-2710" class="dsq-comment-message"><p>I also lookout for bigger directories using recurrently &#8220;du / -h &#8211;max-depth=1&#8243;, drilling down each directory until i found the bigger ones &#8211; which usually are the logs&#8217; directories.</p></div></div></li><li
+class="comment even thread-even depth-1" id="dsq-comment-2712"><div
+id="dsq-comment-header-2712" class="dsq-comment-header"><cite
+id="dsq-cite-2712"> <span
+id="dsq-author-user-2712">colin mcdermott</span></cite></div><div
+id="dsq-comment-body-2712" class="dsq-comment-body"><div
+id="dsq-comment-message-2712" class="dsq-comment-message"><p>Great article, ah though I think that you have made a BAD mistake:<br
+/> ## remove disk from an array md0 ##<br
+/> mdadm &#8211;manage /dev/md0 &#8211;fail /dev/sdb1<br
+/> mdadm &#8211;manage /dev/md0 &#8211;remove /dev/sdb1</p><p># Do the same steps again for rest of /dev/sdbX ##<br
+/> How about &#8220;do the same steps again for the rest of /dev/mdX Remember you want to remove the failed member from all arrays. NOT remove all members from a failing array!<br
+/> Also Logical Volume management should be in there. ie lvextend -L +1G /dev/ftpvolume;  resize2fs /dev/ftpvolume  A quick way to get a server back up and running, letting you find the root cause.. Naturally long term install Nagios or some monitoring/alerting software</p></div></div></li><li
+class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-2716"><div
+id="dsq-comment-header-2716" class="dsq-comment-header"><cite
+id="dsq-cite-2716"> <span
+id="dsq-author-user-2716">zeroconcept</span></cite></div><div
+id="dsq-comment-body-2716" class="dsq-comment-body"><div
+id="dsq-comment-message-2716" class="dsq-comment-message"><p>kindly correct this, &#8216;rm&#8217; instead of &#8221;m&#8217;<br
+/> rm -rf /ftpusers/tmp/*.bmp</p></div></div></li><li
+class="comment even thread-even depth-1" id="dsq-comment-2730"><div
+id="dsq-comment-header-2730" class="dsq-comment-header"><cite
+id="dsq-cite-2730"> <span
+id="dsq-author-user-2730">Sergiu</span></cite></div><div
+id="dsq-comment-body-2730" class="dsq-comment-body"><div
+id="dsq-comment-message-2730" class="dsq-comment-message"><p>for error reporting use Found an error/typo on this page? Help us!<br
+/> <a
+href="https://nixcraft.wufoo.com/forms/give-us-feedback-for-nixcraft/def/Field209=http://www.cyberciti.biz/datacenter/linux-unix-bsd-osx-cannot-write-to-hard-disk/&#038;Field211=8%20Tips%20to%20Solve%20Linux%20&#038;%20Unix%20Systems%20Hard%20Disk%20Problmes%20Like%20Disk%20Full%20Or%20Can%E2%80%99t%20Write%20to%20the%20Disk" rel="nofollow">https://nixcraft.wufoo.com/forms/give-us-feedback-for-nixcraft/def/Field209=http://www.cyberciti.biz/datacenter/linux-unix-bsd-osx-cannot-write-to-hard-disk/&#038;Field211=8%20Tips%20to%20Solve%20Linux%20&#038;%20Unix%20Systems%20Hard%20Disk%20Problmes%20Like%20Disk%20Full%20Or%20Can%E2%80%99t%20Write%20to%20the%20Disk</a></p></div></div></li></ul></div></div> <script type="text/javascript">/*<![CDATA[*/var disqus_url = 'http://www.cyberciti.biz/datacenter/linux-unix-bsd-osx-cannot-write-to-hard-disk/';
+var disqus_identifier = '487 http://www.cyberciti.biz/?p=487';
+var disqus_container_id = 'disqus_thread';
+var disqus_shortname = 'cyberciti';
+var disqus_title = "8 Tips to Solve Linux &#038; Unix Systems Hard Disk Problems Like Disk Full Or Can&#8217;t Write to the Disk";
+var disqus_config_custom = window.disqus_config;
+var disqus_config = function () {
+    /*
+    All currently supported events:
+    onReady: fires when everything is ready,
+    onNewComment: fires when a new comment is posted,
+    onIdentify: fires when user is authenticated
+    */
+    this.language = '';
+        this.callbacks.onReady.push(function () {
+        // sync comments in the background so we don't block the page
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = '?cf_action=sync_comments&post_id=487';
+        var firstScript = document.getElementsByTagName('script')[0];
+        firstScript.parentNode.insertBefore(script, firstScript);
+    });
+    if (disqus_config_custom) {
+        disqus_config_custom.call(this);
+    }
+};
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();/*]]>*/</script> <div
+class="prev_next post_nav"><p
+class="previous">Previous post: <a
+href="http://www.cyberciti.biz/cloud-computing/use-vagrant-to-create-small-virtual-lab-on-linux-osx/" rel="prev">How To Use Vagrant To Create Small Virtual Test Lab on a Linux / OS X / MS-Windows</a></p><p>Next post: <a
+href="http://www.cyberciti.biz/open-source/awesome-backup-software-for-linux-unix-osx-windows-systems/" rel="next">5 Awesome Open Source Backup Software For Linux and Unix-like Systems</a></p></div></div><div
+id="sidebars"><div
+id="multimedia_box" class="custom_box"><div
+id="custom_box"><table
+class="cnss-social-icon" style="width:300px;" border="0" cellspacing="0" cellpadding="0"><tr><td
+style="width:36px"><a
+target="_blank" title="Follow us at Twitter" href="https://twitter.com/nixcraft"><img
+src="http://s0.cyberciti.org/images/social/twitter.png" border="0" width="32" height="32" alt="twitter" /></a></td><td
+style="width:36px"><a
+target="_blank" title="Join us at Youtube for Video Tutorials" href="https://youtube.com/user/nixcraftcom"><img
+src="http://s0.cyberciti.org/images/social/youtube.png" border="0" width="32" height="32" alt="youtube" /></a></td><td
+style="width:36px"><a
+target="_blank" title="Follow us on Google Plus" href="https://plus.google.com/+CybercitiBiz?prsrc=5"><img
+src="http://s0.cyberciti.org/images/social/googleplus.png" border="0" width="32" height="32" alt="googleplus" /></a></td><td
+style="width:36px"><a
+target="_blank" title="Facebook fan page" href="https://facebook.com/nixcraft"><img
+src="http://s0.cyberciti.org/images/social/facebook.png" border="0" width="32" height="32" alt="facebook" /></a></td><td
+style="width:36px"><a
+target="_blank" title="Stay updated with our Rss/Feed" href="http://feeds.cyberciti.biz/Nixcraft-LinuxFreebsdSolarisTipsTricks"><img
+src="http://s0.cyberciti.org/images/social/rss.png" border="0" width="32" height="32" alt="rss" /></a></td><td
+style="width:36px"><a
+target="_blank" title="Sign up for our newsletter" href="http://feedburner.google.com/fb/a/mailverify?uri=Nixcraft-LinuxFreebsdSolarisTipsTricks"><img
+src="http://s0.cyberciti.org/images/social/email.png" border="0" width="32" height="32" alt="email" /></a></td></tr></table></div></div><div
+id="sidebar_1" class="sidebar"><ul
+class="sidebar_list"><li
+class="widget widget_text" id="text-10"><div
+class="textwidget"><ins
+class="adsbygoogle"
+style="display:inline-block;width:300px;height:250px"
+data-ad-client="ca-pub-7825705102693166"
+data-ad-slot="7895531150"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></li><li
+class="widget thesis_widget_search" id="thesis-search-widget-2"><form
+method="get" class="search_form" action="http://www.cyberciti.biz"><p> <input
+class="text_input" type="text" value="To search, type and hit enter" name="s" id="s" onfocus="if (this.value == 'To search, type and hit enter') {this.value = '';}" onblur="if (this.value == '') {this.value = 'To search, type and hit enter';}" /> <input
+type="hidden" id="searchsubmit" value="Search" /></p></form></li><li
+class="widget widget_text" id="text-12"><h3>Subscribe to nixCraft</h3><div
+class="textwidget"><form
+style="border:1px solid #ccc;padding:3px;text-align:center;" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=Nixcraft-LinuxFreebsdSolarisTipsTricks', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><p>Learn something new about Linux/Unix by email<br/>Enter your email address:</p><p><input
+type="text" style="width:140px" name="email"/></p><input
+type="hidden" value="Nixcraft-LinuxFreebsdSolarisTipsTricks" name="uri"/><input
+type="hidden" name="loc" value="en_US"/><input
+type="submit" value="Subscribe" /></form></div></li><li
+class="widget widget_text" id="text-13"><div
+class="textwidget"> <script src="https://apis.google.com/js/platform.js" async defer></script> <div
+class="g-page" data-href="//plus.google.com/u/0/104257421720370350735" data-layout="landscape" data-rel="publisher"></div></div></li><li
+class="widget widget_text" id="text-2"><div
+class="textwidget"><ins
+class="adsbygoogle"
+style="display:inline-block;width:300px;height:600px"
+data-ad-client="ca-pub-7825705102693166"
+data-ad-slot="3521177162"></ins> <script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></li><li
+class="widget widget_wp_related_posts" id="wp_related_posts_widget"><div
+class="wp_rp_wrap  wp_rp_modern" id="wp_rp_first"><div
+class="wp_rp_content"><h3>Related Posts</h3><ul
+class="related_post wp_rp" style="visibility: visible"><li ><a
+href="http://www.cyberciti.biz/hardware/linux-find-and-recover-wasted-disk-space/" class="wp_rp_thumbnail"><img
+src="http://s0.cyberciti.org/uploads/cms/2012/10/agedu.output-150x150.png" alt="agedu: Unix / Linux Command For Tracking Down Wasted Disk Space" /></a><a
+href="http://www.cyberciti.biz/hardware/linux-find-and-recover-wasted-disk-space/" class="wp_rp_title">agedu: Unix / Linux Command For Tracking Down Wasted Disk Space</a></li><li ><a
+href="http://www.cyberciti.biz/datacenter/5-awesome-open-source-cloning-software/" class="wp_rp_thumbnail"><img
+src="http://s0.cyberciti.org/uploads/cms/2014/08/mondo-rescue-150x150.jpg" alt="5 Awesome Open Source Cloning Software" /></a><a
+href="http://www.cyberciti.biz/datacenter/5-awesome-open-source-cloning-software/" class="wp_rp_title">5 Awesome Open Source Cloning Software</a></li><li ><a
+href="http://www.cyberciti.biz/open-source/awesome-backup-software-for-linux-unix-osx-windows-systems/" class="wp_rp_thumbnail"><img
+src="http://s0.cyberciti.org/uploads/cms/2014/11/bacula-network-backup-150x150.jpg" alt="5 Awesome Open Source Backup Software For Linux and Unix-like Systems" /></a><a
+href="http://www.cyberciti.biz/open-source/awesome-backup-software-for-linux-unix-osx-windows-systems/" class="wp_rp_title">5 Awesome Open Source Backup Software For Linux and Unix-like Systems</a></li><li ><a
+href="http://www.cyberciti.biz/open-source/command-line-hacks/linux-command-pinfo-for-colorful-info-pages/" class="wp_rp_thumbnail"><img
+src="http://s0.cyberciti.org/uploads/cms/2012/07/vivek@wks01-_032-150x150.png" alt="pinfo: Read Linux Info Documentation in Colors" /></a><a
+href="http://www.cyberciti.biz/open-source/command-line-hacks/linux-command-pinfo-for-colorful-info-pages/" class="wp_rp_title">pinfo: Read Linux Info Documentation in Colors</a></li><li ><a
+href="http://www.cyberciti.biz/open-source/command-line-hacks/pv-command-examples/" class="wp_rp_thumbnail"><img
+src="http://s0.cyberciti.org/images/rp/1/24.jpg" alt="Linux / Unix pv Command: Monitor Progress of Data Sent Via a Pipe" /></a><a
+href="http://www.cyberciti.biz/open-source/command-line-hacks/pv-command-examples/" class="wp_rp_title">Linux / Unix pv Command: Monitor Progress of Data Sent Via a Pipe</a></li><li ><a
+href="http://www.cyberciti.biz/networking/nmap-command-examples-tutorials/" class="wp_rp_thumbnail"><img
+src="http://s0.cyberciti.org/uploads/cms/2012/11/welcome-nmap-150x150.png" alt="Top 30 Nmap Command Examples For Sys/Network Admins" /></a><a
+href="http://www.cyberciti.biz/networking/nmap-command-examples-tutorials/" class="wp_rp_title">Top 30 Nmap Command Examples For Sys/Network Admins</a></li><li ><a
+href="http://www.cyberciti.biz/open-source/oneko-app-creates-cute-cat-chasing-around-your-mouse/" class="wp_rp_thumbnail"><img
+src="http://s0.cyberciti.org/images/rp/1/1.jpg" alt="Linux / Unix Desktop Fun: Cat And Mouse Chase All Over Your Screen" /></a><a
+href="http://www.cyberciti.biz/open-source/oneko-app-creates-cute-cat-chasing-around-your-mouse/" class="wp_rp_title">Linux / Unix Desktop Fun: Cat And Mouse Chase All Over Your Screen</a></li><li ><a
+href="http://www.cyberciti.biz/networking/nload-linux-command-to-monitor-network-traffic-bandwidth-usage/" class="wp_rp_thumbnail"><img
+src="http://s0.cyberciti.org/uploads/cms/2014/03/nload-command-linux-unix-screenshot-output-150x150.jpg" alt="Linux and Unix  nload App: Monitor Network Traffic and Bandwidth Usage In Real Time " /></a><a
+href="http://www.cyberciti.biz/networking/nload-linux-command-to-monitor-network-traffic-bandwidth-usage/" class="wp_rp_title">Linux and Unix  nload App: Monitor Network Traffic and Bandwidth Usage In Real Time </a></li><li ><a
+href="http://www.cyberciti.biz/cloud-computing/use-vagrant-to-create-small-virtual-lab-on-linux-osx/" class="wp_rp_thumbnail"><img
+src="http://s0.cyberciti.org/uploads/cms/2014/10/states-150x150.jpg" alt="How To Use Vagrant To Create Small Virtual Test Lab on a Linux / OS X / MS-Windows" /></a><a
+href="http://www.cyberciti.biz/cloud-computing/use-vagrant-to-create-small-virtual-lab-on-linux-osx/" class="wp_rp_title">How To Use Vagrant To Create Small Virtual Test Lab on a Linux / OS X / MS-Windows</a></li><li ><a
+href="http://www.cyberciti.biz/hardware/linux-iotop-simple-top-like-io-monitor/" class="wp_rp_thumbnail"><img
+src="http://s0.cyberciti.org/uploads/cms/2012/07/iotop-output-screenshot-150x150.png" alt="Linux iotop: Check What&#8217;s Stressing And Increasing Load On Your Hard Disks" /></a><a
+href="http://www.cyberciti.biz/hardware/linux-iotop-simple-top-like-io-monitor/" class="wp_rp_title">Linux iotop: Check What&#8217;s Stressing And Increasing Load On Your Hard Disks</a></li></ul></div></div></li><li
+class="widget widget_rss" id="rss-2"><h3><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/feed/'><img
+style='border:0' width='14' height='14' src='http://www.cyberciti.biz/cms/wp-includes/images/rss.png' alt='RSS' /></a> <a
+class='rsswidget' href='http://www.cyberciti.biz/faq'>Latest Linux Howtos &amp; Tutorials</a></h3><ul><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/stress-test-linux-unix-server-with-stress-ng/'>How To Stress Test CPU and Memory (VM) On a Linux and Unix With Stress-ng</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/cve-2015-0235-ghost-glibc-buffer-overflow-linux-test-program/'>Glibc: GHOST Vulnerability Test To See If a Linux Sever Is  Secure</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/cve-2015-0235-patch-ghost-on-debian-ubuntu-fedora-centos-rhel-linux/'>How To Patch and Protect Linux Server Against the Glibc GHOST Vulnerability # CVE-2015-0235</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/create-a-freebsd-swap-file/'>How To Add Swap on FreeBSD Unix Systems</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/how-to-pfsense-configure-network-interface-as-a-bridge-network-switch/'>How To PFSense Configure Network Interface As A Bridge / Network Switch</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/centos-linux-6-7-changing-timezone-command-line/'>How To Change Timezone on a CentOS 6 and 7</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/howto-execute-command-when-i-log-out-of-linux-unix-shell/'>How to Run and Execute Command When I Log Out Of Linux Session?</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/howto-unix-linux-initialization-dot-files-without-restarting-shell-session/'>Unix / Linux: Initialize Dot Files Without Restarting The Current Shell Session</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/how-to-install-mariadb-databases-on-a-freebsd-v10-unix-server/'>How To Install MariaDB Databases on a FreeBSD v10 Unix Server</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/howto-extract-tar-file-to-specific-directory-on-unixlinux/'>How To Extract a Tar Files To a Different Directory on a Linux/Unix-like Systems</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/how-to-install-apache-mysql-php-stack-on-freebsd-unix-server/'>How To Install Apache, MySQL, PHP stack on FreeBSD Unix Server</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/howto-show-mysql-open-database-connections-on-linux-unix/'>Check The Number Of MySQL Open Database Connections on Linux Or Unix-like Server</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/howto-use-ps-kill-nice-killall-to-manage-processes-in-freebsd-unix/'>HowTo: Use ps, kill, nice, and killall To Manage processes in FreeBSD and OS X Unix Operating System</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/install-lemp-linux-nginx-mysql-and-php-stack-on-ubuntu-linux-14-04-lts/'>Install LEMP (Linux, Nginx, MySQL and PHP) Stack  on Ubuntu Linux 14.04 LTS</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/how-to-add-delete-grant-sudo-privileges-to-users-on-freebsd-unix-server/'>How To Add, Delete, and Grant Sudo Privileges to Users on a FreeBSD Server</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/set-up-ssh-tunneling-on-a-linux-unix-bsd-server-to-bypass-nat/'>Set Up SSH Tunneling on a Linux / Unix / BSD Server To Bypass NAT</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/ubuntu-linux-create-add-swap-file/'>Ubuntu Linux Create and Add Swap File Tutorial</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/linux-hide-processes-from-other-users/'>Linux: Hide Processes From Other Users</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/rhel-centos-linux-7-restart-networking-command-line/'>CentOS / RHEL 7 Restart / Stop / Start Networking Command</a></li><li><a
+class='rsswidget' href='http://www.cyberciti.biz/faq/linux-unix-logtop-realtime-log-line-rate-analyser/'>Linux / Unix logtop: Realtime Log Line Rate Analyser</a></li></ul></li></ul></div></div></div><div
+id="footer"> &copy;2004-2015 nixCraft. All rights reserved. <a
+href="/tips/privacy">Privacy Policy</a> - <a
+href="/tips/disclaimer">Terms of Service</a> - <a
+href="/tips/contact-us">Questions or Comments</a> -
+We are proudly powered by Linux + Nginx + WordPress.<br/> The content is <a
+href="/tips/copyright">copyrighted to nixCraft</a> and may not be reproduced on other websites. <script type="text/javascript">/*<![CDATA[*/// 
+        var disqus_shortname = 'cyberciti';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('data-dsqidentifier'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+        ///*]]>*/</script>	</div>
+</div>
+</div>
+<!--[if lte IE 8]>
+<div id="ie_clear"></div>
+<![endif]-->
+<script src="http://www.cyberciti.biz/mint/?js" type="text/javascript"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-108650-1']);
+  _gaq.push(['_setDomainName', 'www.cyberciti.biz']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>
