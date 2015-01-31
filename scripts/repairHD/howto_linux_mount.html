@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html class='v2' dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<meta content='IE=EmulateIE7' http-equiv='X-UA-Compatible'/>
+<meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<script type="text/javascript">(function() { var b=window,f="chrome",g="tick",k="jstiming";(function(){function d(a){this.t={};this.tick=function(a,d,c){var e=void 0!=c?c:(new Date).getTime();this.t[a]=[e,d];if(void 0==c)try{b.console.timeStamp("CSI/"+a)}catch(h){}};this[g]("start",null,a)}var a;b.performance&&(a=b.performance.timing);var n=a?new d(a.responseStart):new d;b.jstiming={Timer:d,load:n};if(a){var c=a.navigationStart,h=a.responseStart;0<c&&h>=c&&(b[k].srt=h-c)}if(a){var e=b[k].load;0<c&&h>=c&&(e[g]("_wtsrt",void 0,c),e[g]("wtsrt_","_wtsrt",h),e[g]("tbsd_","wtsrt_"))}try{a=null,
+b[f]&&b[f].csi&&(a=Math.floor(b[f].csi().pageT),e&&0<c&&(e[g]("_tbnd",void 0,b[f].csi().startE),e[g]("tbnd_","_tbnd",c))),null==a&&b.gtbExternal&&(a=b.gtbExternal.pageT()),null==a&&b.external&&(a=b.external.pageT,e&&0<c&&(e[g]("_tbnd",void 0,b.external.startE),e[g]("tbnd_","_tbnd",c))),a&&(b[k].pt=a)}catch(p){}})();b.tickAboveFold=function(d){var a=0;if(d.offsetParent){do a+=d.offsetTop;while(d=d.offsetParent)}d=a;750>=d&&b[k].load[g]("aft")};var l=!1;function m(){l||(l=!0,b[k].load[g]("firstScrollTime"))}b.addEventListener?b.addEventListener("scroll",m,!1):b.attachEvent("onscroll",m);
+ })();</script>
+<meta content='blogger' name='generator'/>
+<link href='http://www.gtwang.org/favicon.ico' rel='icon' type='image/x-icon'/>
+<link href='http://www.gtwang.org/2013/01/linux-mount.html' rel='canonical'/>
+<link rel="alternate" type="application/atom+xml" title="G. T. Wang - Atom" href="http://www.gtwang.org/feeds/posts/default" />
+<link rel="alternate" type="application/rss+xml" title="G. T. Wang - RSS" href="http://www.gtwang.org/feeds/posts/default?alt=rss" />
+<link rel="service.post" type="application/atom+xml" title="G. T. Wang - Atom" href="http://www.blogger.com/feeds/5628310816558079036/posts/default" />
+
+<link rel="alternate" type="application/atom+xml" title="G. T. Wang - Atom" href="http://www.gtwang.org/feeds/235667992468541763/comments/default" />
+<!--[if IE]><script type="text/javascript" src="https://www.blogger.com/static/v1/jsbin/1969951888-ieretrofit.js"></script>
+<![endif]-->
+<link href='http://2.bp.blogspot.com/-F6NcmKADZJI/UQkR4znFvqI/AAAAAAAAIxc/UJlkQmv1SQ8/s1600/article-new_ehow_images_a06_f4_lt_mount-dmg-linux-800x800.jpg' rel='image_src'/>
+<link href='https://plus.google.com/116064369839910382084' rel='publisher'/>
+<!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {} })(); </script> <![endif]-->
+<title>Linux 檔案系統掛載&#65288;mount&#65289;使用教學與範例 - G. T. Wang</title>
+<meta content='Your Blog Keywords Here' name='keywords'/>
+<link href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' rel='stylesheet'/>
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700|Oswald' rel='stylesheet' type='text/css'/>
+<link type='text/css' rel='stylesheet' href='https://www.blogger.com/static/v1/widgets/189244943-widget_css_mobile_2_bundle.css' />
+<link type='text/css' rel='stylesheet' href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=5628310816558079036&zx=e7d9c6f4-b0ce-46a9-8b19-120a9624b272' />
+<style id='page-skin-1' type='text/css'><!--
+body {
+font-family: 'Lato', sans-serif;
+font-size: 14px;
+line-height: 1.428571429;
+color: #333;
+margin: 0;
+background-color: #f8f8f8;
+}
+a {
+transition: background-color 0.3s;
+-webkit-transition: background-color 0.3s;
+font-weight: 400;
+font-size: 18px;
+/*-webkit-font-smoothing: antialiased;*/
+/*color: #ED702B;*/
+color: #e5554e;
+text-decoration: none;
+background: transparent;
+}
+ul {
+-webkit-padding-start: 0px;
+}
+div, ul, .gallery-caption, footer p, li a, p, span, article, nav, blockquote, dl, dt, dd, td, a, tr, th, code, caption, figcaption, input, label, textarea {
+/*
+font-weight: 400;
+color: #636467;
+font-size: 16px;
+-webkit-font-smoothing: antialiased; */
+}
+h1 , h1 a , h1 span ,
+h2 , h2 a , h2 span ,
+h3 , h3 a , h3 span ,
+h4 , h4 a , h4 span ,
+h5 , h5 a , h5 span ,
+h6 , h6 a , h6 span
+{
+color: #333;
+font-family: 'Lato', sans-serif;
+font-weight: 700;
+text-decoration: none;
+padding: 0px;
+margin-top: 0px;
+line-height: 100%;
+}
+h2, h2 a {
+font-size: 28px;
+}
+h3, h3 a {
+font-size: 22px;
+}
+h4, h4 a {
+font-size: 20px;
+}
+a:hover {
+text-decoration: none;
+color: #333;
+}
+.section {
+margin: 0!important;
+}
+.head h1, .head h1 a {
+margin: 0;
+color: #ffffff;
+font-size: 26px;
+line-height: 40px;
+font-family: 'Lato', sans-serif;
+font-weight: normal;
+}
+.head h1 a:hover {
+color: #e5554e;
+-webkit-transition: color 0.3s;
+-moz-transition: color 0.3s;
+-ms-transition: color 0.3s;
+-o-transition: color 0.3s;
+transition: color 0.3s;
+}
+.header-wrapper {
+width: 100%;
+height: 60px;
+background-color: #453D3F;
+position: relative;
+/*border-bottom: 4px solid #EADBC4;*/
+margin-bottom: 20px;
+}
+#head {
+max-width: 100%;
+float: left;
+clear: both;
+border: 0px;
+padding: 14px 20px;
+height: 32px;
+}
+.container {
+margin-right: auto;  margin-left: auto;
+width: 1170px;
+z-index: 1;
+clear: both;
+}
+div#header-main-menu {
+float: right;
+}
+nav.menu {
+float: left;
+}
+nav.menu ul {
+padding: 0px;
+margin: 0px;
+}
+#header-toggle-menu {
+display: none;
+}
+nav.menu ul li {
+float: left;
+list-style: none;
+text-transform: uppercase;
+position: relative;
+}
+nav.menu ul li a {
+color: #fff;
+text-transform: uppercase;
+font-size: 20px;
+font-weight: 700;
+-webkit-transition: color 0.3s;
+-moz-transition: color 0.3s;
+-ms-transition: color 0.3s;
+-o-transition: color 0.3s;
+transition: color 0.3s;
+letter-spacing: 5px;
+height: 60px;
+line-height: 60px;
+display: block;
+padding: 0 20px;
+}
+nav.menu > ul > li a:hover{
+background-color: #272727;
+}
+nav.menu > ul > li > ul {
+border-top-width: 2px;
+border-top-style: solid;
+}
+nav.menu > ul > li > ul {
+border-top-color: #f4793d;
+}
+nav.menu ul ul {
+display:none;
+position: absolute;
+top: 50px;
+left: -30px;
+z-index: 9;
+width: 200px;
+background: #303030;
+padding: 0px;
+}
+nav.menu > ul > li > ul:before {
+border-color: rgba(244, 121, 61, 0);
+border-bottom-color: #f4793d;
+border-width: 6px;
+margin-left: -6px;
+}
+nav.menu ul > li:hover > ul {
+display: block;
+}
+.menu&#160;ul > li > ul:hover {
+display:block;
+}
+nav.menu ul ul li {
+float: left;
+clear: both;
+width: 200px;
+text-align: center;
+float: left;
+clear: both;
+padding: 0px;
+}
+nav.menu ul ul li a {
+padding-left: 12%;
+padding-right: 8%;
+padding-top: 12px;
+padding-bottom: 12px;
+width: 80%;
+text-align: left;
+float: left;
+clear: both;
+display: block;
+text-transform: none;
+-webkit-transition: background-color 0.3s;
+-moz-transition: background-color 0.3s;
+-ms-transition: background-color 0.3s;
+-o-transition: background-color 0.3s;
+transition: background-color 0.3s;
+border-bottom: 1px solid #363636;
+}
+nav.menu ul ul li a:hover {
+color: #fff !important;
+}
+nav.menu ul ul li a:hover {
+background-color: #363636;
+}
+.ad-wrapper {
+background-color: #ffffff;
+margin: auto;
+padding: 40px;
+text-align: left;
+overflow: hidden;
+}
+#banner {
+width: 100%;
+box-sizing: border-box;
+}
+.container-wrapper {
+padding-top: 20px;
+}
+.wrap2 {
+width: 1170px;
+margin: 0 auto;
+}
+.main-wrapper {
+width: 67%;
+float: left;
+position: relative;
+min-height: 1px;
+}
+.post-body img {
+max-width: 650px;
+height: auto;
+}
+.post.hentry {
+padding: 40px;
+margin-bottom: 45px;
+background: #fff;
+clear: both;
+float: left;
+width: 100%;
+box-sizing: border-box;
+}
+.post.hentry.lasthentry {
+margin-bottom: 40px;
+}
+.post-outer {
+overflow: hidden;
+}
+h3.post-title {
+margin-bottom:10px;
+line-height: 120%;
+}
+h2.post-title {
+width: 100%;  text-align: left;  margin-bottom: 30px;  line-height: 120%;  font-size: 32px;
+}
+.post-title a {
+font-weight: 700;  color: #333;
+font-size: 32px;
+}
+.post-title a:hover {
+/*color: #f4793d !important;*/
+color: #e5554e;
+}
+#main {
+font-family: 'Lato', sans-serif;
+text-decoration: none;
+padding: 0px;
+line-height: 100%;
+}
+.post-body {
+color: #333;
+font-family: 'Lato', sans-serif;
+font-size: 18px;
+line-height: 28px;
+font-weight: 400;
+/*text-align: justify;*/
+}
+.post-footer-line {
+overflow: hidden;
+}
+.post-meta {
+width: 100%;
+text-align: left;
+margin-bottom: 20px;
+float: left;
+clear: both;
+}
+.post-meta span {
+color: #c1c0c0;
+line-height: 18px;
+margin-right: 15px;
+font-size: 14px !important;
+float: left;
+}
+.post-meta span a, .post-meta span i {
+color: #c1c0c0 !important;
+}
+.post-meta span i {
+float: left;
+margin-top: 3px;
+margin-right: 10px;
+}
+.post-meta span a {
+margin-top: 0px !important;
+float: left;
+font-size: 14px;
+line-height: 17px !important;
+}
+.post-meta span:hover a, .post-meta span:hover i {
+color: #f4793d !important;
+}
+.blog-feeds {
+display: none;
+}
+nav.menu > ul > li > ul:before {
+border-color: rgba(244, 121, 61, 0);
+border-bottom-color: #f4793d;
+border-width: 6px;
+margin-left: -6px;
+}
+.sub-menu:before {
+border-color: transparent transparent #FCFCFC;
+border-style: solid;
+border-width: 15px;
+content: "";
+height: 0;
+left: 40px;
+position: absolute;
+top: -13px;
+width: 0;
+}
+.sub-menu:before {
+top: -13px;
+border-color: transparent transparent #DDD;
+}
+h1.post-title {
+width: 100%;
+text-align: left;
+margin: 0 0 10px 0;
+line-height: 120%;
+font-size: 32px;
+color: #333;
+}
+.post-meta span {
+color: #c1c0c0;
+line-height: 18px;
+font-size: 14px !important;
+}
+.post-comment-link {
+display: none;
+}
+.readmore a {
+font-size: 12px;  line-height: 12px;
+color: #fff;  font-weight: 700;  text-transform: uppercase;  text-align: center;  padding: 11px 13px !important;  border-radius: 3px;  -webkit-border-radius: 3px;
+background-color: #f4793d;
+margin-top: 10px;
+}
+.post-labels a {
+padding: 4px;
+color: #fff;
+background-color: #dadada;
+font-size: 14px;
+}
+.post-labels a:hover {
+color: #fff !important;
+background-color: #e5554e;
+}
+#blog-pager {
+text-align: center;
+margin-bottom: 0px;
+float: left;
+clear: both;
+width: 100%;
+margin-left: 0px !important;
+padding-top: 30px;
+padding-bottom: 30px;
+margin: 0;
+box-sizing: border-box;
+}
+.blog-pager a:hover {
+color: #FFF;
+text-decoration: none;
+}
+.blog-pager a:hover {
+color: #FFF;
+text-decoration: none;
+}
+.showpageArea {
+float: left;
+margin-left: 30px;
+width: 95%;
+}
+.showpageOf {
+display: none;
+}
+.showpagePoint {
+padding: 10px 15px 10px 15px;
+background: #f4793d;
+float: left;
+font-size: 14px;
+font-weight: bold;
+border-radius: 4px;  -webkit-border-radius: 4px;  color: #fff;
+margin-right: 5px;
+}
+.showpageNum a,.showpage a {
+padding: 10px 15px 10px 15px;
+background: #303030;
+float: left;
+font-size: 14px;
+text-decoration: none;
+border-radius: 4px;  -webkit-border-radius: 4px;  color: #fff;
+margin-right: 5px;
+}
+.showpageNum a:hover,.showpage a:hover {
+background: #e5554e;
+}
+#comments {
+float: left;  clear: both;
+width: 87%;
+padding-left: 50px;
+padding-right: 50px;
+padding-bottom: 45px;  background: #fff;  border-right: 1px solid #E9E9E9;  border-left: 1px solid #E9E9E9;  border-bottom: 1px solid #E9E9E9;
+margin-top: 0;
+}
+.comments-content {
+padding-top: 35px;
+}
+#comments > h4 {
+color: #636467 !important;
+text-transform: uppercase;  font-size: 14px;
+}
+.comment {
+float: left;  clear: both;  margin-bottom: 35px;  width: 100%;
+}
+.comments .avatar-image-container {
+float: left;  border-radius: 2px;
+max-height: 55px;
+width: 54px;
+}
+.comments .avatar-image-container img {
+max-width: 55px;
+width: 54px;
+height: 54px;
+}
+.comments .comment-block {
+margin-left: 74px;  display: block;  border-bottom: 1px solid #e9e9e9;
+padding-bottom: 40px;
+}
+.comments .comments-content .user {
+text-transform: none;
+color: #636467 !important;
+margin-bottom: 3px;
+font-size: 14px;
+font-weight: 700;
+}
+.comments .comments-content .user a {
+color: #636467 !important;
+font-weight: 700;  text-transform: uppercase;  font-size: 14px;
+}
+.comments .comments-content .comment-content {
+margin-top: 10px;
+padding-bottom: 20px;
+color: #c1c0c0 !important;
+font-size: 16px;  line-height: 26px;
+}
+.comments .comment .comment-actions a {
+float: left;  color: #fff;  text-transform: uppercase;  text-align: center;  padding: 8px 8px;  border-radius: 3px;  -webkit-border-radius: 3px;  border: none;  font-size: 10px;  line-height: 10px;  background: #c1c0c0;
+margin-right: 6px;
+}
+.comments .comment .comment-actions a:hover {
+background-color: #e5554e;
+}
+.comment-actions {
+}
+.comments .comments-content .comment-replies {
+margin-left: 45px;  margin-top: 30px;  width: 94%;
+}
+.comments .thread-toggle {
+display: none;
+}
+.w2t-pager {
+/*border-top: 2px dashed #ddd;*/
+border-bottom: 1px solid #ddd;
+margin-bottom: 10px;
+overflow:hidden; padding:0px;}
+.w2t-pager li.next { float: right; padding:0px; background:none; margin:0px;}
+.w2t-pager li.next a { padding-left: 24px; }
+.w2t-pager li.previous { margin:0px -2px 0px 0px; float: left;  border-right:1px solid #ddd; padding:0px; background:none;
+}
+.w2t-pager li.previous a { padding-right: 24px;  }
+.w2t-pager li.next:hover, .w2t-pager li.previous:hover  {background:#333333; }
+.w2t-pager li { width: 50%; display: inline; float: left; text-align: center; }
+.w2t-pager li a { position: relative; min-height: 77px; display: block; padding: 15px 46px 15px; outline:none; text-decoration:none;}
+.w2t-pager li i { color: #ccc; font-size: 18px; }
+.w2t-pager li a strong { display: block; font-size: 20px; color: #ccc; letter-spacing: 0.5px; font-weight: bold; text-transform: uppercase; font-family: 'Lato', sans-serif; margin-bottom:10px;}
+.w2t-pager li a span { font-size: 15px; color: #666;  font-family: 'Lato', sans-serif; margin:0px;}
+.w2t-pager li a:hover span,
+.w2t-pager li a:hover i { color: #ffffff; }
+.w2t-pager li.previous i { float:left; margin-top:15%; margin-left:5%; }
+.w2t-pager li.next i { float: right;
+margin-top: 15%;
+margin-right: 5%; }
+.w2t-pager li.next i, .w2t-pager li.previous i ,
+.w2t-pager li.next,  .w2t-pager li.previous{
+-webkit-transition-property: background color; -webkit-transition-duration: 0.4s; -webkit-transition-timing-function: ease-out;
+-moz-transition-property: background color; -moz-transition-duration: 0.4s; -moz-transition-timing-function: ease-out;
+-o-transition-property: background color; -o-transition-duration: 0.4s; -o-transition-timing-function: ease-out;
+transition-property: background color; transition-duration: 0.4s; transition-timing-function: ease-out; }
+.fa-chevron-right {padding-right:0px;}
+.sidebar-wrapper {
+margin-bottom: 60px;
+width: 30.7%;
+float: right;
+overflow: hidden;
+}
+#sidebar {
+clear: both;
+background-color: #fff;
+/*border: 1px solid #e9e9e9;*/
+float: left;
+padding: 20px;
+}
+.sidebar .widget {
+margin-bottom: 50px;  float: left;  clear: both;  width: 100%;
+}
+.sidebar .widget h2 {
+font-size: 17px;  line-height: 100%;  font-weight: 700;  font-family: 'Lato', sans-serif;
+margin-bottom: 25px;
+}
+.sidebar .widget a {
+font-size: 16px;  line-height: 26px;
+}
+.sidebar .widget a:hover {
+color: #333;
+}
+.sidebar .widget ul {
+list-style: none;
+padding: 0px;
+margin: 0px;
+float: left;
+clear: both;
+width: 100%;
+font-size: 14px;
+line-height: 18px;
+}
+.sidebar .widget li {
+list-style: none;
+list-style: none;
+float: left;
+clear: both;
+margin-bottom: 10px;
+padding-bottom: 10px;
+width: 100%;
+border-bottom: 1px solid #f2f2f2;
+}
+#search_mini_form {
+float: left;  clear: both;  width: 100%;  background-color: #dadada;  border-radius: 4px;  -webkit-border-radius: 4px;  position: relative;
+}
+form.search-form input.s {
+float: left;  clear: both;  width: 100%;  background: none;  border: none;  outline: none;  color: #fff;  padding: 12px 15px;  position: relative;  z-index: 0;
+}
+form.search-form input.submit {
+position: absolute;  top: 12px;  right: 15px;  width: 17px;  height: 17px;
+background: url(http://1.bp.blogspot.com/-tyqc87NE-7c/Uw7_8hi29fI/AAAAAAAABXo/xpCHt5tlJtc/s1600/featherimages.png) no-repeat;  outline: none;  border: none;
+background-position: -10px -938px;
+}
+footer {
+text-align: center;
+float: left;
+clear: both;
+width: 100%;
+margin: 0px;
+padding: 30px 0px 15px 0px;
+background-color: #303030;
+}
+.social-icons {
+width: 100%;
+margin-bottom: 10px;
+}
+footer .social-icons a {
+margin-right: 5px;
+margin-bottom: 10px;
+width: 40px;
+color: #888;
+font-size: 32px;
+display: inline-block;
+position: relative;
+transition: color 0.5s;
+-webkit-transition: color 0.5s;
+}
+.social-icons a.facebook:hover{
+color: #4265b9;
+}
+.social-icons a.twitter:hover{
+color: #9ae4e8;
+}
+.social-icons a.linkedin:hover{
+color: #005987;
+}
+.social-icons a.github:hover{
+color: #272727;
+}
+.social-icons a.google:hover{
+color: #d62408;
+}
+.social-icons a.vimeo:hover{
+color: #1bb6ec;
+}
+.social-icons a.youtube:hover{
+color: #df3333;
+}
+.social-icons a.skype:hover{
+color: #0bbff2;
+}
+.social-icons a.tumblr:hover{
+color: #35506b;
+}
+.social-icons a.instagram:hover{
+color: #F95B60;
+}
+.social-icons a.dribbble:hover{
+color: #ea4c89;
+}
+.social-icons a.flickr:hover{
+color: #ff0084;
+}
+.social-icons a.pinterest:hover{
+color: #c31e26;
+}
+.social-icons a.soundcloud:hover{
+color: #fe9700;
+}
+footer {
+margin-top: 45px;
+}
+footer .copyrights {
+float: left;
+font-size: 14px;
+margin: 0px;
+margin-top: 0px;
+clear: both;
+width: 100%;
+color: #666;
+}
+footer .copyrights a {
+font-size: 14px;
+}
+footer .copyrights a:hover {
+color: #666;
+}
+/* Add by Seal */
+code {
+font-family: 'Droid Sans Mono', Menlo, Monaco, 'Andale Mono', 'lucida console', 'Courier New', monospace;
+font-size: 16px;
+background: #333;
+-webkit-border-radius: 0.3em;
+-moz-border-radius: 0.3em;
+-ms-border-radius: 0.3em;
+-o-border-radius: 0.3em;
+border-radius: 0.3em;
+border: 1px solid #333;
+margin: 1em 0;
+padding: .8em 1em;
+color: #EEEEEE;
+overflow: auto;
+display: block;
+clear: both;
+white-space: no-wrap;
+}
+pre.code {
+font-family: 'Droid Sans Mono', Menlo, Monaco, 'Andale Mono', 'lucida console', 'Courier New', monospace;
+font-size: 16px;
+-webkit-border-radius: 0.3em;
+-moz-border-radius: 0.3em;
+-ms-border-radius: 0.3em;
+-o-border-radius: 0.3em;
+border-radius: 0.3em;
+border: 1px solid #333;
+margin: 1em 0;
+padding: .8em;
+overflow: auto;
+display: block;
+clear: both;
+white-space: pre-wrap;
+/* color: #EEEEEE; */
+color: #f6f3e8;
+/* background-color: #333; */
+background-color: #242424;
+}
+.pseudo-code {
+font-family: 'Droid Sans Mono', Menlo, Monaco, 'Andale Mono', 'lucida console', 'Courier New', monospace;
+white-space: no-wrap;
+padding: 1.5em 1em;
+background: #EEEEEE;
+display: block;
+clear: both;
+margin-top: 15px;
+margin-bottom: 15px;
+}
+.caution, .notes {
+display: block;
+padding: 1.5em 1em;
+font-style: italic;
+}
+.notes {
+background-color: #EEF4EE;
+}
+.caution {
+background-color: #F8EEEE;
+}
+.post .credit {
+color: #aaa;
+font-style: italic;
+}
+.post-body blockquote {
+font-family: 'Droid Sans Mono', Menlo, Monaco, 'Andale Mono', 'lucida console', 'Courier New', monospace;
+background-color: #f5f5f5;
+border: medium none;
+margin: 1em 0;
+padding: 5px 5px 5px 15px;
+font-style: italic;
+border-left: 5px solid #7caf3c;
+font-size: 16px;
+}
+.post-body blockquote pre {
+overflow-wrap: break-word;
+}
+.inline-code {
+font-family: 'Droid Sans Mono', Menlo, Monaco, 'Andale Mono', 'lucida console', 'Courier New', monospace;
+color: #007000;
+white-space: no-wrap;
+}
+.post-body hr {
+border: none;
+border-top: dashed 1px #BBBBBB;
+color: #ffffff;
+background-color: #ffffff;
+width: 100%;
+margin: 20px 0;
+}
+.post-body .timestamp {
+font-weight: bold;
+}
+.post-body .step, .post-body .tip {
+font-family: 'Oswald', arial, serif;
+font-weight: bold;
+background-color: #EFEFEF;
+padding: 10px 30px;
+display: inline-block;
+margin: 20px 0;
+text-transform: uppercase;
+}
+/* code */
+.Identifier { color: #cae682; }
+.Special { color: #e7f6da; }
+.Statement { color: #8ac6f2; }
+.Function { color: #cae682; }
+.String { color: #95e454; font-style: italic; }
+.Type { color: #cae682; }
+.Comment { color: #99968b; font-style: italic; }
+.PreProc { color: #e5786d; }
+.Number { color: #e5786d; }
+.Constant { color: #e5786d; }
+.Title { color: #f6f3e8; font-weight: bold; }
+#Attribution1 {display: none;}
+#head p.description{display: none;}
+.post .postFooterAdSense {
+text-align: center;
+margin: 30px auto 30px;
+}
+.post .postFooterAdSenseLink {
+margin-top: 20px;
+}
+/***** Page Nav CSS *****/
+.desktop-pager .home-link, .desktop-pager .blog-pager-newer-link, .desktop-pager .blog-pager-older-link {
+/*background: #ED702B;*/
+background: #e5554e;
+color: #fff;
+display: inline-block;
+padding: 10px 20px;
+}
+.mobile-link-button {
+/*background: #ED702B;*/
+background: #e5554e;
+padding: 10px 0;
+height: 20px;
+}
+.mobile-link-button a {
+color: #fff;
+}
+/*
+#blog-pager {
+overflow: hidden;
+text-align: left;
+font-weight: bold;
+font-size: 14px;
+}
+.showpageOf {  display:none;  }
+.showpagePoint {  background: #ED702B;  color: #FFFFFF;  margin: 0 5px;  padding: 10px 20px;  text-decoration: none;  border-radius: 5px;  -moz-border-radius: 5px;  -o-border-radius: 5px;  -webkit-border-radius: 5px;  }
+.showpage a, .showpageNum a {  background: #3E3E3E;  color: #fff;  margin: 0 5px;  padding: 10px 20px;  text-decoration: none;  border-radius: 5px;  -moz-border-radius: 5px;  -o-border-radius: 5px;  -webkit-border-radius: 5px;  	-moz-transition: all 0.2s ease-in-out;  -webkit-transition: all 0.2s ease-in-out;  -webkit-border-radius: 5px;  transition: all 0.2s ease-in-out;  }
+.showpage a:hover, .showpageNum a:hover {  background: #ED702B;  color: #fff;  text-decoration: none;  }
+.home-link, #blog-pager-newer-link a, #blog-pager-older-link a {  background: #ED702B;  color: #fff;  display: inline-block;  padding: 10px 20px;  }
+.home-link {  margin: 0 10px;  }
+.home-link:hover, #blog-pager-newer-link a:hover, #blog-pager-older-link a:hover {   background: #3E3E3E;  color: #FFFFFF;  text-decoration: none;  }
+*/
+.post-footer {
+margin-top: 30px;
+border-top: 1px solid #eee;
+padding-top: 10px;
+}
+.post-body h2, .post-body h3 {
+margin-top: 20px;
+margin-bottom: 20px;
+}
+/* Mobile */
+.mobile-index-title {
+width: 100%;
+font-weight: bold;
+}
+.mobile-post-outer {
+padding: 0 10px 10px 10px;
+}
+.mobile-index-thumbnail {
+margin: 0 .5em 0 0;
+}
+.BlogArchive #ArchiveList ul li {
+padding-left: 0;
+text-indent: 0;
+box-sizing: border-box;
+}
+.PopularPosts .item-thumbnail {
+float: left;
+margin: 0 5px 5px 0;
+}
+#Header1 {
+margin: 0 auto;
+}
+.jump-link {
+padding: 10px 0;
+}
+/***** Table CSS *****/
+table.post-table {
+min-width: 50%;
+background-color: #f9f9f9;
+border-collapse: collapse;
+border: 1px solid #AAAAAA;
+font-family: arial, sans-serif;
+font-size: 15px;
+line-height: 1.5;
+margin: 1em auto;
+}
+table.post-table td.header, table.post-table th {
+background-color: #EEEEEE;
+border: 1px solid #AAAAAA;
+padding: 0.2em;
+text-align: center;
+}
+table.post-table td {
+background-color: #f9f9f9;
+border: 1px solid #AAAAAA;
+padding: 0.2em;
+}
+.comment-mark {
+display: inline-block;
+background-color: #f39c12;
+margin: 0 5px;
+font-size: 80%;
+color: white;
+font-weight: bold;
+padding: 0px 9px;
+border-radius: 3px;
+font-style: normal;
+}
+
+--></style>
+<style>
+.post.hentry{
+  border-bottom: 0px;
+}
+/*	#blog-pager { display: none; } */
+.post-feeds {
+    display: none;
+}
+</style>
+<style>
+@media screen and (max-width: 1230px) {
+  .container {
+    width: 1000px;
+  }
+  .wrap2 {
+    width: 1000px;
+  }
+  .post-body img {
+    max-width: 95%;
+  }
+  #sidebar {
+    max-width: 100%;
+    width: 300px;
+    padding: 20px;
+  }
+  .main-wrapper {
+    width: 63%;
+  }
+  .sidebar-wrapper {
+    width: 34%;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .container {
+    width: 940px;
+  }
+  .wrap2 {
+    width: 940px;
+  }
+  .post-body img {
+    max-width: 95%;
+  }
+  #sidebar {
+    max-width: 100%;
+    width: 300px;
+    padding: 20px 15px;
+  }
+  .main-wrapper {
+    width: 63%;
+  }
+  .sidebar-wrapper {
+    width: 35%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1020px) {
+  .blog-feeds {
+    display: none;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .container {
+	  max-width: 800px;
+      width: 100%;
+  }
+  .container-wrapper {
+    max-width: 100%;
+  }
+  .main-wrapper {
+    margin: 0 auto;
+    float: none;
+    width: 100%;
+    max-width: 800px;
+  }
+  .ad-wrapper {
+    max-width: 800px;
+  }
+  .wrap2 {
+    width: 100%;
+    overflow: hidden;
+  }
+  #PopularPosts1 {
+    padding: 0 10px;
+	box-sizing: border-box;
+  }
+  .post-body img {
+    max-width: 100%
+  }
+  #blog-pager {
+    width: 100%;
+  }
+  #sidebar {
+    max-width: 100%;
+    width: 100%;
+    padding: 20px 0 0 0;
+	text-align: center;
+  }
+  .sidebar-wrapper {
+    margin: 0 auto;
+    float: none;
+    width: 100%;
+    max-width: 800px;
+  }
+
+}
+@media screen and (max-width: 767px) {
+  .wrap2 {
+    width: 100%;
+  }
+  #PopularPosts1 {
+    padding: 0 10px;
+	box-sizing: border-box;
+  }
+  .main-wrapper {
+    width: 100%;
+  }
+  #sidebar {
+    max-width: 100%;
+    width: 100%;
+    padding: 20px 0 0 0;
+	text-align: center;
+  }
+  .sidebar-wrapper {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  .post-body img {
+    max-width: 80%;
+  }
+  header .top-content {
+    float: left;
+    clear: both;
+    width: 100%;
+  }
+  .container {
+    max-width: 800px;
+    width: 100%;
+  }
+  .container-wrapper {
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .post.hentry {
+    padding: 20px;
+  }
+  .ad-wrapper {
+    padding: 20px;
+  }
+  .sidebar-wrapper {
+    padding: 0 10px;
+  }
+  #main {
+    width: 100%;
+  }
+  #head {
+    float: none;
+	clear: none;
+	display: inline-block;
+  }
+  #Header1 {
+    display: inline-block;
+  }
+  div#header-main-menu {
+    float: none;
+	display: none;
+  }
+  nav.menu {
+    float: none;
+  }
+  .post-meta {
+    display: none;
+  }
+  .header-wrapper {
+    height: auto;
+  }
+  .header-inner {
+    height: 32px;
+	display: inline-block;
+  }
+  .head h1, .head h1 a {
+    line-height: 50px;
+  }
+  nav.menu ul li {
+    float: none;
+	border-top: 1px solid #555;
+  }
+  #header-toggle-menu:before {
+    content: "\f0c9";
+    font-family: FontAwesome;
+	cursor: pointer;
+  }
+  #header-toggle-menu:hover {
+    background-color: #272727;
+  }
+  #header-toggle-menu {
+    display: block;
+	font-size: 32px;
+	color: #fff;
+	padding: 0 20px;
+	float: right;
+	height: 60px;
+	line-height: 60px;
+	cursor: pointer;
+  }
+}
+</style>
+<!-- Begin: AdSense -->
+<script async src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+<!-- End: AdSense -->
+<!-- Begin: jQuery -->
+<script src='//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+<!-- End: jQuery -->
+<!-- Begin: Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50330039-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- End: Analytics -->
+<script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('headEnd');
+</script></head>
+<body>
+<div class='header-wrapper'>
+<div class='header container'>
+<div id='header-toggle-menu'></div>
+<div class='head section' id='head'><div class='widget Header' id='Header1'>
+<div id='header-inner'>
+<a href='http://www.gtwang.org/?m=1'>
+<img alt='G. T. Wang' height='32px; ' id='Header1_headerimg' src='http://2.bp.blogspot.com/-8Od5daYCNaY/VAqJUicDK7I/AAAAAAAAUHk/iRmRVAPGrXM/s400/gtwang-logo-2.png'/>
+</a>
+</div>
+</div>
+<div class='widget Attribution' id='Attribution1'>
+<div class='widget-content' style='text-align: center;'>
+由 <a href='http://www.blogger.com' target='_blank'>Blogger</a> 技術提供.
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5628310816558079036&widgetType=Attribution&widgetId=Attribution1&action=editWidget&sectionId=head' onclick='return _WidgetManager._PopupConfig(document.getElementById("Attribution1"));' target='configAttribution1' title='編輯'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div>
+<div id='header-main-menu'>
+<nav class='menu'>
+<ul>
+<li><a href='/p/statistics.html'>統計</a></li>
+<li><a href='/p/services.html'>服務</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<!-- Begin: Banner -->
+<div id='banner'>
+<div class='container'>
+<div class='ad-wrapper'>
+<!-- Begin: AdSense -->
+<!-- GTWang Top Banner -->
+<ins class='adsbygoogle' data-ad-client='ca-pub-7794009487786811' data-ad-format='horizontal' data-ad-slot='1391833737' style='display:block'></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<!-- End: AdSense -->
+</div>
+</div></div>
+<!-- End: Banner -->
+<div class='container-wrapper'>
+<div class='wrap2'>
+<div class='main-wrapper'>
+<div class='main section' id='main'><div class='widget Blog' id='Blog1'>
+<div class='blog-posts hfeed'>
+<div class='date-outer'>
+<div class='date-posts'>
+<div class='post-outer'>
+<div class='post hentry uncustomized-post-template' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
+<meta content='http://2.bp.blogspot.com/-F6NcmKADZJI/UQkR4znFvqI/AAAAAAAAIxc/UJlkQmv1SQ8/s72-c/article-new_ehow_images_a06_f4_lt_mount-dmg-linux-800x800.jpg' itemprop='image_url'/>
+<meta content='5628310816558079036' itemprop='blogId'/>
+<meta content='235667992468541763' itemprop='postId'/>
+<a name='235667992468541763'></a>
+<h3 class='post-title entry-title' itemprop='name'>
+Linux 檔案系統掛載&#65288;mount&#65289;使用教學與範例
+</h3>
+<div style='margin-bottom: 15px;'>
+<span class='date-span' style='color: #c1c0c0;'><i class='fa fa-lg fa-clock-o'></i><span content='2013/01/30' itemprop='datePublished' style='padding-left:6px;'>2013/01/30</span></span>
+</div>
+<div class='post-header'>
+<div class='post-header-line-1'></div>
+</div>
+<div class='post-body entry-content' id='post-body-235667992468541763' itemprop='articleBody'>
+在 Windows 系統中如果裝了好多顆硬碟&#12289;光碟機或是隨身碟&#65292;系統就會自動幫這些設備&#65288;device&#65289;編號&#65292;例如第一顆硬碟通常就會是 C 槽&#65292;第二顆就是 D 槽&#65292;如果又有光碟機或隨身碟&#65292;就依序編下去&#65292;而在&#12300;我的電腦&#12301;中打開後&#65292;就可以存取設備&#65288;硬碟&#12289;光碟或隨身碟&#65289;中的檔案&#65292;這是大家應該都很習慣的事情&#12290;<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-F6NcmKADZJI/UQkR4znFvqI/AAAAAAAAIxc/UJlkQmv1SQ8/s1600/article-new_ehow_images_a06_f4_lt_mount-dmg-linux-800x800.jpg" imageanchor="1" style=""><img border="0" src="http://2.bp.blogspot.com/-F6NcmKADZJI/UQkR4znFvqI/AAAAAAAAIxc/UJlkQmv1SQ8/s1600/article-new_ehow_images_a06_f4_lt_mount-dmg-linux-800x800.jpg" /></a></div><br />
+不過在 Linux 系統中就不是這樣&#65292;所有可存取的檔案都被安置在一個很大的目錄樹&#65288;也就是根目錄&#12300;<span class="inline-code">/</span>&#12301;&#65289;底下的某ㄧ個位置&#65292;如果要存取某個設備上的檔案&#65292;就必須先把這個設備掛載&#65288;mount&#65289;上來後&#65292;才能夠讀取或寫入資料&#65292;例如在新增硬碟&#12289;存取 USB 隨身碟或是讀取 CD-ROM 時&#65292;都需要掛載的動作&#12290;<br />
+<br />
+雖然現在大家常用的的 Linux distribution 大部分都有自動掛載 USB 或 CD-ROM 的功能&#65292;不過難免還是會需要用到指令的時候&#12290;這裡將介紹在 Linux 中常用的掛載方式&#65292;也就是 <span class="inline-code">mount</span> 與 <span class="inline-code">umount</span> 兩個指令的使用方式&#65292;一般若要使用 <span class="inline-code">mount</span> 指令掛載 device&#65292;最常見的方式就是像這樣&#65306;<br />
+<div><code>mount -t type device dir</code></div>其中 <span class="inline-code">device</span> 是就是要掛載的設備&#65292;而 <span class="inline-code">-t type</span> 參數是指定 <span class="inline-code">device</span> 的檔案系統格式&#65288;如 <span class="inline-code">ext4</span>&#12289;<span class="inline-code">vfat</span> 或 <span class="inline-code">ntfs</span> 等&#65289;&#65292;最後的 <span class="inline-code">dir</span> 則是指定掛載的路徑&#65288;也就是要把這個設備掛在目錄樹的哪裡&#65289;&#12290;<br />
+<br />
+在設備存取完畢後&#65292;如果要移除設備&#65288;例如拔除 USB 隨身碟&#65289;&#65292;必須要先把設備卸載&#65292;以免資料沒有同步寫入設備而造成資料損毀&#12290;要卸載設備則使用 <span class="inline-code">umount</span> 指令&#65306;<br />
+<div><code>umount dir</code></div><span class="inline-code">umount</span> 的參數只需要指定掛載的路徑即可&#12290;<br />
+<a name='more'></a><br />
+以下是一些 <span class="inline-code">mount</span> 與 <span class="inline-code">umount</span> 常見的使用範例&#65306;<br />
+<br />
+<h2>掛載光碟&#65288;CD-ROM 或 DVD-ROM&#65289;</h2>如果 Linux 有抓到光碟機&#65292;正常的情況在 <span class="inline-code">/dev</span> 中會有一個叫做 <span class="inline-code">cdrom</span> 的檔案&#65292;它是一個連結&#65288;link&#65289;檔&#65292;指到真正的設備&#65288;通常是 <span class="inline-code">/dev/sr0</span>&#65289;&#65292;如果想知道&#65292;可以用 <span class="inline-code">ls -l</span> 看一下&#65306;<br />
+<div><code>ls -l /dev/cdrom</code></div>輸出為&#65306;<br />
+<blockquote class="tr_bq">lrwxrwxrwx 1 root root 3 2013-01-08 16:55 /dev/cdrom -&gt; sr0</blockquote><br />
+如果要讀取光碟片中的內容&#65292;先將光碟片放進光碟機後之後&#65292;執行 <span class="inline-code">mount</span> 指令&#65306;<br />
+<div><code>sudo mount -t iso9660 -o ro /dev/cdrom /mnt/cdrom</code></div>這裡將 <span class="inline-code">/dev/cdrom</span> 這個光碟機掛載到 <span class="inline-code">/mnt/cdrom</span> 這個目錄&#65292;這個目錄可以自己選擇&#65292;不過要先確認這個目錄是存在的&#65292;如果指定的目錄不存在記得要用 <span class="inline-code">mkdir</span> 先建立&#12290;<br />
+<br />
+第一個參數 <span class="inline-code">-t iso9660</span> 是指定光碟的檔案格式&#65292;這個通常是不需要修改的&#65292;只要掛載光碟就是這樣使用&#12290;<br />
+<br />
+另外一個參數 <span class="inline-code">-o ro</span> 參數是指定這個設備是唯讀的&#65288;read only&#65289;&#65292;因為正常的光碟片只能讀取&#65292;不能寫入&#65292;所以要加上這個參數&#65292;如果想燒錄光碟片的話&#65292;就要使用其它燒錄專用的工具了&#12290;<br />
+<br />
+<h2>掛載 ISO 影像檔</h2>ISO 影像檔是常常會使用到的檔案格式&#65288;例如下載各種 Linux 的安裝光碟&#65289;&#65292;通常 ISO 檔都是用來直接燒錄成光碟片&#65292;沒辦法直接讀取&#65292;如果想在 Linux 中直接讀取 ISO 檔案內容&#65292;就需要先用 mount 指令將 ISO 檔案掛載後&#65292;才能讀取其中的資料&#65306;<br />
+<div><code>mount -t iso9660 -o loop /home/seal/myiso.iso /mnt/myiso</code></div>其中所使用的參數有兩個&#65292;<span class="inline-code">-t iso9660</span> 是指定 ISO 檔案格式&#65292;<span class="inline-code">-o loop</span> 則是使用 loop device 來掛載 ISO 檔&#65292;基本上這兩個參數都不需要更動&#65292;之後就是指定 ISO 檔案的位置與掛載點的位置&#65292;這樣掛載 ISO 檔案之後&#65292;<span class="inline-code">/mnt/myiso</span> 目錄中就可以看到這個 ISO 影像檔的內容了&#12290;<br />
+<br />
+<br />
+<h2>查看所有的掛載資訊</h2>如果想查看系統中所有設備掛載的狀況&#65292;可以直接執行 <span class="inline-code">mount</span> 指令不加任何參數&#65306;<br />
+<div><code>mount</code></div>輸出為&#65306;<br />
+<blockquote class="tr_bq">/dev/sda1 on / type ext4 (rw,errors=remount-ro)<br />
+proc on /proc type proc (rw,noexec,nosuid,nodev)<br />
+sysfs on /sys type sysfs (rw,noexec,nosuid,nodev)<br />
+none on /sys/fs/fuse/connections type fusectl (rw)<br />
+none on /sys/kernel/debug type debugfs (rw)<br />
+none on /sys/kernel/security type securityfs (rw)<br />
+udev on /dev type devtmpfs (rw,mode=0755)<br />
+devpts on /dev/pts type devpts (rw,noexec,nosuid,gid=5,mode=0620)<br />
+tmpfs on /run type tmpfs (rw,noexec,nosuid,size=10%,mode=0755)<br />
+none on /run/lock type tmpfs (rw,noexec,nosuid,nodev,size=5242880)<br />
+none on /run/shm type tmpfs (rw,nosuid,nodev)<br />
+/home on /export/home type none (rw,bind)<br />
+/opt on /export/opt type none (rw,bind)<br />
+nfsd on /proc/fs/nfsd type nfsd (rw)<br />
+rpc_pipefs on /run/rpc_pipefs type rpc_pipefs (rw)<br />
+/dev/sdb1 on /media/usb type vfat (rw)<br />
+/dev/sr0 on /media/cdrom type iso9660 (ro)</blockquote><br />
+上面這個輸出中的倒數第二行是一個 USB 隨身碟&#65288;<span class="inline-code">/dev/sdb1</span>&#65289;&#65292;掛載路徑為 <span class="inline-code">/media/usb</span>&#12290;最後一行則是光碟&#65292;掛載路徑為 <span class="inline-code">/media/cdrom</span>&#12290;<br />
+<br />
+除了使用 <span class="inline-code">mount</span> 指令之外&#65292;也可以使用 <span class="inline-code">df</span> 指令&#65306;<br />
+<div><code>df -h</code></div>輸出為&#65306;<br />
+<blockquote class="tr_bq">檔案系統        容量  已用  可用 已用% 掛載點<br />
+/dev/sda1       116G   12G   98G   11% /<br />
+udev             16G  4.0K   16G    1% /dev<br />
+tmpfs           6.3G  344K  6.3G    1% /run<br />
+none            5.0M     0  5.0M    0% /run/lock<br />
+none             16G     0   16G    0% /run/shm<br />
+/dev/sdb1        30G  6.6G   24G   22% /media/usb<br />
+/dev/sr0        4.0G  4.0G     0  100% /media/cdrom</blockquote><br />
+<span class="inline-code">mount</span> 指令所輸出的資訊較詳盡&#65292;而 <span class="inline-code">df</span> 指令則是會輸出每個儲存裝置的空間使用狀況&#65292;在一般的狀況下&#65292;若只是要看設備掛載的路徑的話&#65292;使用 df 指令就夠了&#12290;<br />
+<br />
+<h2>掛載 <span class="inline-code">/etc/fstab</span> 中所有的設備&#65288;device&#65289;</h2>Linux 系統中的 <span class="inline-code">/etc/fstab</span> 這個檔案是紀錄開機過程中會自動掛載的設備&#65292;有時候因為某些因素&#65288;例如格式化硬碟等&#65289;&#65292;系統管理者會在開機過後手動 <span class="inline-code">umount</span> 某些設備&#65292;如果想要一次把 <span class="inline-code">/etc/fstab</span> 中所有的設備都掛載上去的話&#65292;可以用 <span class="inline-code">mount</span> 加上 <span class="inline-code">-a</span> 參數&#65292;以下是一個範例&#65306;<br />
+<br />
+假設 <span class="inline-code">/etc/fstab</span> 的內容如下&#65306;<br />
+<blockquote class="tr_bq">#<br />
+proc            /proc           proc    nodev,noexec,nosuid 0       0<br />
+# / was on /dev/sda5 during installation<br />
+/dev/sda5       /               ext4    errors=remount-ro   0       1<br />
+# /mydata was on /dev/sda6 during installation<br />
+/dev/sda6       /mydata         ext2    defaults            0       2<br />
+# /backup was on /dev/sda7 during installation<br />
+/dev/sda7       /backup         vfat    defaults            0       3</blockquote><br />
+使用 <span class="inline-code">mount</span> 指令將以上的設備全數掛載&#65306;<br />
+<div><code>sudo mount -a</code></div>使用 <span class="inline-code">-a</span> 參數時&#65292;<span class="inline-code">mount</span> 指令會把 <span class="inline-code">/etc/fstab</span> 中所有的設備依照設定的路徑掛載&#65292;以這個範例而言就是將 <span class="inline-code">/dev/sda6</span> 掛載到 <span class="inline-code">/mydata</span>&#65292;而 <span class="inline-code">/dev/sda7</span> 則掛載到 <span class="inline-code">/backup</span>&#65292;而原本就已經掛載的目錄就會自動跳過&#65292;例如 <span class="inline-code">/dev/sda5</span> 這個是根目錄&#65292;一般都會是以掛載的狀態&#65292;就會自動跳過&#12290;<br />
+<br />
+用 <span class="inline-code">mount</span> 指令查看&#65306;<br />
+<div><code>mount</code></div>輸出為&#65306;<br />
+<blockquote class="tr_bq">/dev/sda5 on / type ext4 (rw,errors=remount-ro)<br />
+proc on /proc type proc (rw,noexec,nosuid,nodev)<br />
+sysfs on /sys type sysfs (rw,noexec,nosuid,nodev)<br />
+none on /sys/fs/fuse/connections type fusectl (rw)<br />
+none on /sys/kernel/debug type debugfs (rw)<br />
+none on /sys/kernel/security type securityfs (rw)<br />
+udev on /dev type devtmpfs (rw,mode=0755)<br />
+devpts on /dev/pts type devpts (rw,noexec,nosuid,gid=5,mode=0620)<br />
+tmpfs on /run type tmpfs (rw,noexec,nosuid,size=10%,mode=0755)<br />
+none on /run/lock type tmpfs (rw,noexec,nosuid,nodev,size=5242880)<br />
+none on /run/shm type tmpfs (rw,nosuid,nodev)<br />
+/dev/sda6 on /mydata type ext2 (rw)<br />
+/dev/sda7 on /backup type vfat (rw)<br />
+gvfs-fuse-daemon on /home/bala/.gvfs type fuse.gvfs-fuse-daemon (rw,nosuid,nodev,user=bala)</blockquote><br />
+<span class="inline-code">mount</span> 的 <span class="inline-code">-a</span> 參數可以一次掛載所有的設備&#65292;而 <span class="inline-code">umount</span> 也有對應的 <span class="inline-code">-a</span> 參數&#65292;可以一次卸載所有的設備&#65306;<br />
+<div><code>sudo umount -a</code></div>輸出為&#65306;<br />
+<blockquote class="tr_bq">umount: /run/shm: device is busy.<br />
+(In some cases useful info about processes that use<br />
+the device is found by lsof(8) or fuser(1))<br />
+umount: /run: device is busy.<br />
+(In some cases useful info about processes that use<br />
+the device is found by lsof(8) or fuser(1))<br />
+umount: /dev: device is busy.<br />
+(In some cases useful info about processes that use<br />
+the device is found by lsof(8) or fuser(1))<br />
+umount: /: device is busy.<br />
+(In some cases useful info about processes that use<br />
+the device is found by lsof(8) or fuser(1))</blockquote><br />
+這時後會出現一些訊息&#65292;顯示某一些設備無法卸載&#65292;這是因為這些都是系統主要的檔案&#65292;在系統運行時無法卸載&#65292;而其餘沒有顯示的部分都會全部卸載&#12290;<br />
+<br />
+<h2>掛載 <span class="inline-code">/etc/fstab</span> 中的某一項的設備</h2>如果只是想掛載某一項設備&#65292;而這個設備剛好有寫在 <span class="inline-code">/etc/fstab</span> 中&#65292;那麼在掛載時就只需要指定掛載路徑&#65292;<span class="inline-code">mount</span> 指令會自己依照 <span class="inline-code">/etc/fstab</span> 中的設定去找到設備並掛載&#12290;<br />
+<br />
+假設 <span class="inline-code">/etc/fstab</span> 中有一行設定如下&#65306;<br />
+<blockquote class="tr_bq">/dev/sda6 /mydata         ext2    defaults        0       2</blockquote><br />
+那麼要掛載 /<span class="inline-code">mydata</span> 就只需要執行&#65306;<br />
+<div><code>sudo mount /mydata</code></div>這樣 <span class="inline-code">/dev/sda6</span> 就會被掛載到 <span class="inline-code">/mydata</span> 這個位置&#12290;<br />
+<br />
+除了指定掛載位置&#65292;也可以直接指定設備&#65292;也就是這樣&#65306;<br />
+<div><code>sudo mount /dev/sda6</code></div>兩種寫法都可以&#12290;<br />
+<br />
+<h2>查看指定檔案系統的設備</h2>如果只想查看某一種檔案系統的掛載設備&#65292;可以使用 <span class="inline-code">mount</span> 指令配合 <span class="inline-code">-l</span> 與 <span class="inline-code">-t</span> 兩個參數&#65292;例如查看檔案系統為 Ext2 的掛載設備&#65306;<br />
+<div><code>mount -l -t ext2</code></div>輸出為&#65306;<br />
+<blockquote class="tr_bq">/dev/sda6 on /mydata type ext2 (rw)</blockquote><br />
+查看檔案系統為 Ext4 的掛載設備&#65306;<br />
+<br />
+<div><code>mount -l -t ext4</code></div>輸出為&#65306;<br />
+<blockquote class="tr_bq">/dev/sda5 on / type ext4 (rw,errors=remount-ro)</blockquote>使用 -l 與 -t 兩個參數時&#65292;mount 就只會列出符合指定檔案系統的設備&#12290;<br />
+<br />
+<h2>掛載軟碟機</h2>軟碟機在現在這個時代應該幾乎已經沒有人在用了&#65292;所以就簡單介紹一下指令&#65292;掛載指令為&#65306;<br />
+<div><code>sudo mount /dev/fd0 /mnt/floppy</code></div>卸載指令&#65306;<br />
+<div><code>sudo umount /mnt/floppy</code></div><br />
+<h2>變更設備掛載點</h2>如果想將已經掛載的設備掛載點更換位置&#65292;一般直覺得做法是先卸載後再重新掛載&#65292;但其實有更快的方式&#65292;就是利用 <span class="inline-code">--move</span>&#65288;或 <span class="inline-code">-M</span>&#65289;參數&#65292;例如要將 <span class="inline-code">/mydata</span> 變更為 <span class="inline-code">/mnt/data2</span>&#65292;則執行&#65306;<br />
+<div><code>sudo mount -M /mydata /mnt/data2</code></div>這樣原本掛載在 <span class="inline-code">/mydata</span> 的設備就會搬到 <span class="inline-code">/mnt/data2</span> 了&#12290;執行完後可以檢查一下&#65306;<br />
+<div><code>mount | grep /mydata<br />
+mount | grep /mnt/data2</code></div>輸出為<br />
+<blockquote class="tr_bq">/dev/sda6 on /mnt/data2 type ext2 (rw)</blockquote><br />
+<h2>在不更動 <span class="inline-code">/etc/mtab</span> 的情況下掛載</h2>在一般的狀況下 <span class="inline-code">mount</span> 與 <span class="inline-code">umount</span> 指令會將目前的掛載狀態寫入 <span class="inline-code">/etc/mtab</span> 這個檔案中&#65292;而使用 <span class="inline-code">mount</span> 指令查看掛載狀態時就是輸出這個檔案的內容&#65292;但如果 <span class="inline-code">/etc</span> 是以唯讀&#65288;read-only&#65289;的方式掛載時&#65292;這個檔案就無法寫入&#65292;這時候可以使用 <span class="inline-code">-n</span> 參數&#65306;<br />
+<div><code>sudo mount -n /dev/sda6 /mydata</code></div>這樣的掛載方式不會更新 <span class="inline-code">/etc/mtab</span>&#65292;所以在使用 <span class="inline-code">mount</span> 查看掛載狀態時&#65292;就不會出現這個設備&#65306;<br />
+<div><code>mount | grep /mydata<br />
+grep /mydata /etc/mtab</code></div>這兩個都沒有任何輸出&#65292;但事實上 <span class="inline-code">/dev/sda6</span> 這個設備已經被掛載在 <span class="inline-code">/mydata</span> 上了&#12290;<br />
+<div><code>cd /mydata<br />
+ls</code></div>輸出為<br />
+<blockquote class="tr_bq">dir1  dir2  test</blockquote><br />
+<h2>以唯讀&#65288;Read-Only&#65289;的方式掛載設備</h2>一般正常使用 <span class="inline-code">mount</span> 指令掛載時&#65292;預設會以可讀寫&#65288;<span class="inline-code">-w</span> 或 <span class="inline-code">-o rw</span>&#65289;的方式掛載&#65292;若要以唯讀的方式掛載設備&#65292;可以加上 <span class="inline-code">--read-only</span> 或 <span class="inline-code">-r</span> 參數&#65292;這個參數的作用相當於 <span class="inline-code">-o ro</span>&#12290;<br />
+<div><code>sudo mount -r /dev/sda6 /mydata<br />
+mount | grep /mydata</code></div>輸出為<br />
+<blockquote class="tr_bq">/dev/sda6 on /mydata type ext4 (ro)</blockquote>雖然這裡使用唯讀的方式掛載&#65292;但若設備的檔案系統為 Ext 3 或 Ext 4&#65292;且設備之前有資料寫入不完全或錯誤的狀況&#65288;例如硬碟寫入到一半突然斷電&#65289;的話&#65292;系統還是會依照 journal 重新寫入資料到設備中&#65292;如果要避免這樣的狀況發生&#65292;就要再加入一個 <span class="inline-code">noload</span> 參數&#65306;<br />
+<div><code>sudo mount /dev/sda6 /mydata -t ext4 -o ro -o noload<br />
+mount | grep /mydata</code></div>輸出為<br />
+<blockquote class="tr_bq">/dev/sda6 on /mydata type ext4 (ro,noload)</blockquote><br />
+<h2>將掛載點綁定&#65288;bind&#65289;至新的位置</h2>當一個設備被掛載之後&#65292;其掛載的目錄位置稱作這個設備的掛載點&#65292;正常來說一個掛載的設備會有一個掛載點&#65292;但有些情況會需要將一個設備掛載在多的掛載點上&#65292;讓多個掛載點可以同時存取設備中的檔案&#65292;這個時候就要使用 <span class="inline-code">mount</span> 指令的 bind 的功能&#65292;加上 <span class="inline-code">--bind</span>&#65288;或是 <span class="inline-code">-B</span>&#65289;參數並指定既有的掛載點與新的掛載點&#65306;<br />
+<div><code>mount --bind olddir newdir</code></div>或是用更精簡的寫法<br />
+<div><code>mount -B olddir newdir</code></div>其中這樣 <span class="inline-code">olddir</span> 是原本的掛載點&#65292;而 <span class="inline-code">newdir</span> 則是新的掛載點&#65292;執行上述的指令之後&#65292;這個設備就可以同時由 <span class="inline-code">olddir</span> 與 <span class="inline-code">newdir</span> 這兩個地方來存取&#12290;<br />
+<br />
+以下是一個實際的範例&#65292;假設某項設備已經被掛載到 <span class="inline-code">/mydata</span> 這個掛載點&#65292;我們想將這個設備重復掛載到 <span class="inline-code">/mnt/data2</span> 這個位置&#65292;則執行&#65306;<br />
+<div><code>sudo mount -B /mydata /mnt/data2</code></div>接著檢查一下掛載狀態&#65306;<br />
+<div><code>mount | grep /mydata</code></div>輸出為&#65306;<br />
+<blockquote class="tr_bq">/dev/sda6 on /mydata type ext2 (rw)<br />
+/mydata on /mnt/data2 type none (rw,bind)</blockquote><br />
+這樣就表示掛載完成了&#65292;接著測試一下&#65292;首先檢查 <span class="inline-code">/mydata</span> 中的內容&#65306;<br />
+<div><code>cd /mydata<br />
+ls</code></div>輸出為&#65306;<br />
+<blockquote class="tr_bq">test</blockquote><br />
+接著在 <span class="inline-code">/mydata</span> 建立兩個資料夾&#65306;<br />
+<div><code>mkdir dir1<br />
+mkdir dir2<br />
+ls</code></div>輸出為&#65306;<br />
+<blockquote class="tr_bq">test    dir1    dir2</blockquote><br />
+然後再查看 <span class="inline-code">/mnt/data2</span> 中的內容&#65306;<br />
+<div><code>cd /mnt/data2<br />
+ls</code></div>輸出為&#65306;<br />
+<blockquote class="tr_bq">test    dir1    dir2</blockquote><br />
+由這個小測試就可以看得出來&#65292;<span class="inline-code">/mydata</span> 與 <span class="inline-code">/mnt/data2</span> 這兩個資料夾其實是同一個設備&#65292;不管從哪邊存取都是一樣的&#65292;這樣大家應該就會比較瞭解 bind 的意思了&#12290;<br />
+<br />
+上面的新的掛載點其掛載方式會跟原始的掛載點相同&#65292;如果想變更新掛載點的掛載選項&#65288;例如以唯讀方式掛載&#65289;&#65292;則可使用 <span class="inline-code">mount</span> 指令加上 <span class="inline-code">remount</span> 參數來設定新的掛載點選項&#65306;<br />
+<div><code>sudo mount --bind olddir newdir<br />
+sudo mount -o remount,ro newdir</code></div>第二行就是設定 newdir 以唯獨方式掛載&#12290;<br />
+<br />
+<h2>一次卸載多個設備</h2>若要一次卸載多個設備&#65292;可以直接使用 <span class="inline-code">umount</span> 指令加上多個挂載點參數&#65306;<br />
+<div><code>sudo umount /mydata /backup</code></div><br />
+<h2>延遲&#65288;Lazy&#65289;卸載功能</h2>有時候我們想要卸載某個設備&#65292;但這個設備還在進行一些資料的存取&#65288;例如複製檔案等&#65289;&#65292;但又不想等它做完所有的事情才下 <span class="inline-code">umount</span> 指令&#65288;例如要下班了&#65289;&#65292;這時候就可以使用 <span class="inline-code">umount</span> 指令的 lazy 功能&#65292;他會等到設備把所有的事情都做完之後&#65292;才進行卸載&#65306;<br />
+<div><code>sudo umount -l /mydata</code></div><br />
+<h2>強制卸載設備</h2><span class="inline-code">umount</span> 指令有提供一個強制卸載功能&#65292;這個功能通常用於 NFS 的掛載出問題時&#65288;例如網路斷線&#65289;&#65292;讓管理者可以強制把斷線的 NFS 卸載&#65292;若要強制卸載則使用 <span class="inline-code">-f</span> 參數&#65306;<br />
+<div><code>sudo umount -f /mnt/data3</code></div><br />
+而有時候因為某些不明因素&#65292;卸載設備時會有問題&#65292;最常見的問題就是設備還在被某些行程&#65288;process&#65289;使用&#65292;這時候可以使用 <span class="inline-code">ps</span> 指令看看系統中有沒有什麼行程在使用要卸載的設備&#65306;<br />
+<div><code>ps ajx | grep /mydata</code></div>輸出可能會像這樣&#65306;<br />
+<blockquote class="tr_bq">2540  3037  3037  2468 pts/2     3037 D+       0   0:00 cp -r /home/geekstuff/ProjectData/ /mydata</blockquote><br />
+另外也可以使用 <span class="inline-code">fuser</span> 指令看看是哪一個行程在使用要卸載的設備&#65306;<br />
+<div><code>fuser -cu /mydata</code></div>輸出為&#65306;<br />
+<blockquote class="tr_bq">/mydata:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3087(root)</blockquote><span class="inline-code">fuser</span> 輸出會顯示行程的 ID&#65288;Process ID&#65289;與使用者名稱&#12290;透過這樣的方式&#65292;就可以很快得知到底是誰在使用這個設備了&#12290;
+<div style='clear: both;'></div>
+</div>
+<div class='postFooterAdSense'>
+<ins class='adsbygoogle' data-ad-client='ca-pub-7794009487786811' data-ad-format='rectangle' data-ad-slot='1336964931' style='display:block'></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div id='postFooterAdSenseLink'>
+<ins class='adsbygoogle' data-ad-client='ca-pub-7794009487786811' data-ad-slot='1309325334' style='display:inline-block;width:200px;height:90px'></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div style='clear: both;'></div>
+<div class='post-footer'>
+<div class='post-footer-line post-footer-line-1'>
+<span class='post-author vcard'>
+</span>
+<span class='post-timestamp'>
+</span>
+<span class='post-comment-link'>
+</span>
+</div>
+<div class='post-footer-line post-footer-line-2'>
+</div>
+</div>
+</div>
+<script src='https://apis.google.com/js/plusone.js' type='text/javascript'></script>
+<div class='cmt_iframe_holder' data-href='http://www.gtwang.org/2013/01/linux-mount.html' data-viewtype='FILTERED_POSTMOD'></div>
+</div>
+</div>
+</div>
+</div>
+<div class='blog-pager' id='blog-pager'>
+<div class='mobile-link-button' id='blog-pager-newer-link'>
+<a class='blog-pager-newer-link' href='http://www.gtwang.org/2013/01/linux-qrencode-qr-code.html?m=1' id='Blog1_blog-pager-newer-link' title='較新的文章'>&lsaquo;</a>
+</div>
+<div class='mobile-link-button' id='blog-pager-older-link'>
+<a class='blog-pager-older-link' href='http://www.gtwang.org/2013/01/linux-ext2ext3-ext4.html?m=1' id='Blog1_blog-pager-older-link' title='較舊的文章'>&rsaquo;</a>
+</div>
+<div class='mobile-link-button' id='blog-pager-home-link'>
+<a class='home-link' href='http://www.gtwang.org/?m=1'>首頁</a>
+</div>
+<div class='mobile-desktop-link'>
+<a class='home-link' href='http://www.gtwang.org/2013/01/linux-mount.html?m=0'>查看網路版</a>
+</div>
+</div>
+<div class='clear'></div>
+<script type="text/javascript">window.___gcfg = {'lang': 'zh_TW'};</script>
+</div></div>
+</div>
+<div class='sidebar-wrapper'>
+<div class='sidebar section' id='sidebar'><div class='widget HTML' id='HTML1'>
+<div class='widget-content'>
+<center><div style="width:300px;height:1050px">
+<!-- GTWang 側邊欄 300x1050 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:1050px"
+     data-ad-client="ca-pub-7794009487786811"
+     data-ad-slot="2044844933"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></center>
+
+<div style="padding: 30px 0 10px 0;">
+<!-- GTWang 側邊連結200x90 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:200px;height:90px"
+     data-ad-client="ca-pub-7794009487786811"
+     data-ad-slot="8093018933"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5628310816558079036&widgetType=HTML&widgetId=HTML1&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML1"));' target='configHTML1' title='編輯'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget PopularPosts' id='PopularPosts1'>
+<h2>熱門文章</h2>
+<div class='widget-content popular-posts'>
+<ul>
+<li>
+<a href='http://www.gtwang.org/2012/10/usb-mac-os-x-windows.html?m=1'>格式化 USB 隨身碟或硬碟給 Mac OS X 與 Windows 使用</a>
+</li>
+<li>
+<a href='http://www.gtwang.org/2013/04/ethernet-cables-and-network-speed.html?m=1'>各種網路線的差異&#65306;不同的網路線會影響上網速度嗎&#65311;</a>
+</li>
+<li>
+<a href='http://www.gtwang.org/2014/09/fat32-format-for-mobile.html?m=1'>將 64GB 的 MicroSD 卡格式化為 FAT32 給手機使用</a>
+</li>
+<li>
+<a href='http://www.gtwang.org/2013/01/linux-mount.html?m=1'>Linux 檔案系統掛載&#65288;mount&#65289;使用教學與範例</a>
+</li>
+<li>
+<a href='http://www.gtwang.org/2013/09/how-to-boost-your-wi-fi-signal.html?m=1'>如何加強 Wi-Fi 無線網路的訊號</a>
+</li>
+<li>
+<a href='http://www.gtwang.org/2014/09/recover-wifi-network-router-password.html?m=1'>從 Windows 中找回忘記的 WiFi 無線網路密碼</a>
+</li>
+<li>
+<a href='http://www.gtwang.org/2014/02/print-coloring-book-for-kids.html?m=1'>免費卡通著色圖案整理&#65292;自己列印製作小朋友的塗鴉畫本&#65288;著色本&#65289;</a>
+</li>
+<li>
+<a href='http://www.gtwang.org/2012/02/linux.html?m=1'>替 Linux 新增硬碟&#65288;磁碟分割&#12289;格式化與掛載&#65289;</a>
+</li>
+<li>
+<a href='http://www.gtwang.org/2014/09/memtest86-memory-test-tool.html?m=1'>Memtest86+ 使用教學&#65306;測試記憶體是否有問題的軟體工具</a>
+</li>
+<li>
+<a href='http://www.gtwang.org/2012/04/blog-post.html?m=1'>機車托運原來很簡單</a>
+</li>
+</ul>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5628310816558079036&widgetType=PopularPosts&widgetId=PopularPosts1&action=editWidget&sectionId=sidebar' onclick='return _WidgetManager._PopupConfig(document.getElementById("PopularPosts1"));' target='configPopularPosts1' title='編輯'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<footer>
+<div class='footer container'>
+<div class='social-icons'>
+<a class='facebook' href='https://www.facebook.com/pages/G-T-Wang/489529864441673' target='_blank'><i class='fa fa-facebook'></i></a>
+<a class='google' href='https://plus.google.com/+SealmemoryBlogspotTwMain' rel='publisher' target='_blank'><i class='fa fa-google-plus'></i></a>
+<!-- <a class='twitter' href='http://twitter.com/twitter'/> <a class='linkedin' href='#'/> <a class='dribbble' href='#'/> <a class='flickr' href='#'/> <a class='skype' href='#'/> <a class='pinterest' href='#'/> <a class='vimeo' href='#'/> <a class='tumblr' href='#'/> <a class='youtube' href='#'/> <a class='soundcloud' href='#'/> <a class='instagram' href='#'/> <a class='github' href='#'/> -->
+</div>
+<div class='copyrights'>
+											Copyright &#169; <script type='text/javascript'>var creditsyear = new Date();document.write(creditsyear.getFullYear());</script>
+<a href='http://www.gtwang.org/?m=1'>G. T. Wang</a><br/>Author: <a href='https://plus.google.com/+GuoZhaoWang?rel=author' target='_blank'>+GuoZhaoWang</a>
+</div>
+</div>
+</footer>
+<script>
+$(function() {
+	$("#header-toggle-menu").click(function() {
+		$("#header-main-menu").slideToggle();
+	});
+});
+</script>
+<script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('widgetJsBefore');
+</script><script type="text/javascript" src="https://www.blogger.com/static/v1/widgets/2350289290-widgets.js"></script>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type='text/javascript'>
+if (typeof(BLOG_attachCsiOnload) != 'undefined' && BLOG_attachCsiOnload != null) { window['blogger_templates_experiment_id'] = "templatesV2";window['blogger_blog_id'] = '5628310816558079036';BLOG_attachCsiOnload('item_'); }var BLOG_BASE_IMAGE_URL = 'http://img2.blogblog.com/img';var BLOG_LANG_DIR = 'ltr';var f=window,g=Function,h=document,k=Math,p=Array,r="appendChild",t="createElement",u="bind",v="apply",w="slice",x="indexOf",C="addEventListener",D="length",E="prototype",F="call",G="",H=" ",I='");  border-radius: 0 60px 60px 0;  left: -60px;}#right-arrow {  background-image: url("',K='");  border-radius: 60px 0 0 60px;  right: -60px;}#left-arrow:after, #right-arrow:after {  background-color:',aa='");  display: none;  line-height: 0;  vertical-align: middle;}#arrow-container.navigating #left-arrow:after,#arrow-container.navigating #right-arrow:after {  display: inline-block;}',
+ba="#arrow-container {  display: none;  height: 120px;  margin-top: -60px;  overflow: hidden;  position: absolute;  width: 100%;}#arrow-container.prerender, #arrow-container.swiping {  display: block;}#left-arrow, #right-arrow {  background-color:",ca="/mobile-swipe-arrow-left.png",da="/mobile-swipe-arrow-right.png",ea="/mobile-swipe-loading.gif",fa=';  background-position: center center;  background-repeat: no-repeat;  display: inline-block;  height: 120px;  line-height: 120px;  position: absolute;  text-align: center;  width: 60px;}#left-arrow {  background-image: url("',
+ga=";  border: solid 2px ",ha=';  content: url("',ia="Blog1_blog-pager-newer-link",ja="Blog1_blog-pager-older-link",ka="arrow-container",la="arrow-slider",ma="black",L="div",na="head",oa="http://img2.blogblog.com/img",pa="left-arrow",qa="main",ra="native code",sa="navigating",ta="ontouchstart",M="prerender",ua="px",va="px, 0, 0)",wa="right-arrow",xa="rtl",ya="string",za="style",Q="swiping",Aa="touchend",Ba="touchmove",Ca="touchstart",Da="translate3d(";function R(a){return typeof a==ya}
+function Ea(a,c,b){return a[F][v](a[u],arguments)}function Fa(a,c,b){if(!a)throw Error();if(2<arguments[D]){var d=p[E][w][F](arguments,2);return function(){var b=p[E][w][F](arguments);p[E].unshift[v](b,d);return a[v](c,b)}}return function(){return a[v](c,arguments)}}function S(a,c,b){S=g[E][u]&&-1!=g[E][u].toString()[x](ra)?Ea:Fa;return S[v](null,arguments)}g[E].bind=g[E][u]||function(a,c){if(1<arguments[D]){var b=p[E][w][F](arguments,1);b.unshift(this,a);return S[v](null,b)}return S(this,a)};var T=p[E],U=T[x]?function(a,c,b){return T[x][F](a,c,b)}:function(a,c,b){b=null==b?0:0>b?k.max(0,a[D]+b):b;if(R(a))return R(c)&&1==c[D]?a[x](c,b):-1;for(;b<a[D];b++)if(b in a&&a[b]===c)return b;return-1},Ga=T.filter?function(a,c,b){return T.filter[F](a,c,b)}:function(a,c,b){for(var d=a[D],l=[],q=0,y=R(a)?a.split(G):a,e=0;e<d;e++)if(e in y){var J=y[e];c[F](b,J,e,a)&&(l[q++]=J)}return l};function V(a,c,b){return 2>=arguments[D]?T[w][F](a,c):T[w][F](a,c,b)};function W(a){a=a.className;return R(a)&&a.match(/\S+/g)||[]}function X(a,c){for(var b=W(a),d=V(arguments,1),l=b,q=0;q<d[D];q++)0<=U(l,d[q])||l.push(d[q]);a.className=b.join(H)}function Y(a,c){var b=W(a),d=V(arguments,1),b=Ha(b,d);a.className=b.join(H)}function Ha(a,c){return Ga(a,function(a){return!(0<=U(c,a))})};function Z(a,c,b,d,l){this.h=c;this.g=b;this.f=d;this.i=l||4;this.c=!1;this.a=this.b=this.e=this.d=0;a[C]&&(a[C](Ca,S(this.l,this),!1),a[C](Ba,S(this.k,this),!1),a[C](Aa,S(this.j,this),!1))}Z[E].l=function(a){a=a.targetTouches;1==a[D]?(this.d=a[0].pageX,this.e=a[0].pageY,this.a=this.b=0,this.c=!0):(this.f(0),this.c=!1)};
+Z[E].k=function(a){if(this.c){var c=a.targetTouches[0];this.b=c.pageX-this.d;if(0==this.a){var b=k.abs(this.b),c=k.abs(c.pageY-this.e);this.a=b+c<this.i?0:b>1.73*c?1:2;1==this.a&&this.h()}2!=this.a&&(a.preventDefault(),1==this.a&&this.g(this.b))}};Z[E].j=function(a){this.c&&1==this.a&&(this.c=!1,a.preventDefault(),this.f(this.b))};(function(){function a(){N||(O=m=0,X(n,Q),n.style.top=f.innerHeight/2+h.body.scrollTop+ua)}function c(a){N||(m+=a-O,m=k.max(k.min(m,z),-z),O=a,d(m/z))}function b(){var a=0>m?A:B;k.abs(m)<z||!a||!a.href?Y(n,Q):(X(n,sa),d(0>m?-1:1),h.location=a.href,N=!0)}function d(a){P.style.opacity=k.abs(a)+G;P.style.webkitTransform=Da+60*a+va}function l(a){var b=h[t](za);b[r](h.createTextNode(ba+a+fa+Ia+I+Ja+K+a+ga+a+ha+J+aa));return b}function q(a,b){var c=h[t](L);c.id=ka;var d=h[t](L);d.id=la;if(a){var e=y(pa);
+d[r](e)}b&&(e=y(wa),d[r](e));c[r](d);return c}function y(a){var b=h[t](L);b.id=a;return b}var e=e||oa,J=e+ea,Ia=e+ca,Ja=e+da,z=60,n,P,m,O,B,A,N=!1;return{m:function(){if(ta in f){var d=h.getElementById(ja),e=h.getElementById(ia);if(d||e)B=d,A=e,BLOG_LANG_DIR===xa&&(B=e,A=d),new Z(h.getElementById(qa),a,c,b),z=k.max(.15*screen.width,60),d=B||A,e=ma,d&&d.parentElement&&(e=f.getComputedStyle(d.parentElement).backgroundColor),d=l(e),(h.getElementsByTagName(na)[0]||h.body)[r](d),n=q(!!B,!!A),h.body[r](n),
+P=n.firstChild,X(n,M),f.setTimeout(function(){Y(n,M)},0)}}}})().m();
+_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d5628310816558079036','//www.gtwang.org/2013/01/linux-mount.html?m\x3d1','5628310816558079036');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '5628310816558079036', 'bloggerUrl': 'http://www.blogger.com', 'title': 'G. T. Wang', 'pageType': 'item', 'postId': '235667992468541763', 'url': 'http://www.gtwang.org/2013/01/linux-mount.html?m\0751', 'canonicalUrl': 'http://www.gtwang.org/2013/01/linux-mount.html', 'canonicalHomepageUrl': 'http://www.gtwang.org/', 'homepageUrl': 'http://www.gtwang.org/?m\0751', 'blogspotFaviconUrl': 'http://www.gtwang.org/favicon.ico', 'enabledCommentProfileImages': true, 'adultContent': false, 'disableAdSenseWidget': false, 'analyticsAccountNumber': '', 'searchLabel': '', 'searchQuery': '', 'pageName': 'Linux 檔案系統掛載&#65288;mount&#65289;使用教學與範例', 'pageTitle': 'G. T. Wang: Linux 檔案系統掛載&#65288;mount&#65289;使用教學與範例', 'metaDescription': '', 'encoding': 'UTF-8', 'locale': 'zh_TW', 'localeUnderscoreDelimited': 'zh_tw', 'isPrivate': false, 'isMobile': true, 'isMobileRequest': true, 'mobileClass': ' mobile', 'isPrivateBlog': false, 'languageDirection': 'ltr', 'feedLinks': '\74link rel\75\42alternate\42 type\75\42application/atom+xml\42 title\75\42G. T. Wang - Atom\42 href\75\42http://www.gtwang.org/feeds/posts/default\42 /\76\n\74link rel\75\42alternate\42 type\75\42application/rss+xml\42 title\75\42G. T. Wang - RSS\42 href\75\42http://www.gtwang.org/feeds/posts/default?alt\75rss\42 /\76\n\74link rel\75\42service.post\42 type\75\42application/atom+xml\42 title\75\42G. T. Wang - Atom\42 href\75\42http://www.blogger.com/feeds/5628310816558079036/posts/default\42 /\76\n\n\74link rel\75\42alternate\42 type\75\42application/atom+xml\42 title\75\42G. T. Wang - Atom\42 href\75\42http://www.gtwang.org/feeds/235667992468541763/comments/default\42 /\76\n', 'meTag': '', 'openIdOpTag': '', 'googleProfileUrl': 'https://plus.google.com/116064369839910382084', 'postImageThumbnailUrl': 'http://2.bp.blogspot.com/-F6NcmKADZJI/UQkR4znFvqI/AAAAAAAAIxc/UJlkQmv1SQ8/s72-c/article-new_ehow_images_a06_f4_lt_mount-dmg-linux-800x800.jpg', 'postImageUrl': 'http://2.bp.blogspot.com/-F6NcmKADZJI/UQkR4znFvqI/AAAAAAAAIxc/UJlkQmv1SQ8/s1600/article-new_ehow_images_a06_f4_lt_mount-dmg-linux-800x800.jpg', 'latencyHeadScript': '\74script type\75\42text/javascript\42\76(function() { var b\75window,f\75\42chrome\42,g\75\42tick\42,k\75\42jstiming\42;(function(){function d(a){this.t\75{};this.tick\75function(a,d,c){var e\75void 0!\75c?c:(new Date).getTime();this.t[a]\75[e,d];if(void 0\75\75c)try{b.console.timeStamp(\42CSI/\42+a)}catch(h){}};this[g](\42start\42,null,a)}var a;b.performance\46\46(a\75b.performance.timing);var n\75a?new d(a.responseStart):new d;b.jstiming\75{Timer:d,load:n};if(a){var c\75a.navigationStart,h\75a.responseStart;0\74c\46\46h\76\75c\46\46(b[k].srt\75h-c)}if(a){var e\75b[k].load;0\74c\46\46h\76\75c\46\46(e[g](\42_wtsrt\42,void 0,c),e[g](\42wtsrt_\42,\42_wtsrt\42,h),e[g](\42tbsd_\42,\42wtsrt_\42))}try{a\75null,\nb[f]\46\46b[f].csi\46\46(a\75Math.floor(b[f].csi().pageT),e\46\0460\74c\46\46(e[g](\42_tbnd\42,void 0,b[f].csi().startE),e[g](\42tbnd_\42,\42_tbnd\42,c))),null\75\75a\46\46b.gtbExternal\46\46(a\75b.gtbExternal.pageT()),null\75\75a\46\46b.external\46\46(a\75b.external.pageT,e\46\0460\74c\46\46(e[g](\42_tbnd\42,void 0,b.external.startE),e[g](\42tbnd_\42,\42_tbnd\42,c))),a\46\46(b[k].pt\75a)}catch(p){}})();b.tickAboveFold\75function(d){var a\0750;if(d.offsetParent){do a+\75d.offsetTop;while(d\75d.offsetParent)}d\75a;750\76\75d\46\46b[k].load[g](\42aft\42)};var l\75!1;function m(){l||(l\75!0,b[k].load[g](\42firstScrollTime\42))}b.addEventListener?b.addEventListener(\42scroll\42,m,!1):b.attachEvent(\42onscroll\42,m);\n })();\74/script\076', 'mobileHeadScript': '', 'ieCssRetrofitLinks': '\74!--[if IE]\76\74script type\75\42text/javascript\42 src\75\42https://www.blogger.com/static/v1/jsbin/1969951888-ieretrofit.js\42\76\74/script\76\n\74![endif]--\076', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/76f25a6f2e06af76', 'plusOneApiSrc': 'https://apis.google.com/js/plusone.js', 'sf': 'n', 'tf': ''}}, {'name': 'skin', 'data': {'vars': {}, 'override': ''}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\75classic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\75flipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\75magazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\75mosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\75sidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\75snapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\75timeslide'}}}]);
+_WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'head', null, document.getElementById('Header1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_AttributionView', new _WidgetInfo('Attribution1', 'head', null, document.getElementById('Attribution1'), {'attribution': '由 \74a href\75\47http://www.blogger.com\47 target\75\47_blank\47\76Blogger\74/a\76 技術提供.'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main', null, document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'legacyCommentModerationUrl': 'https://www.blogger.com/moderate-legacy-comment.g?blogID\0755628310816558079036', 'iframeCommentsId': 'gpluscomments', 'viewType': 'FILTERED_POSTMOD', 'mobile': true}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML1', 'sidebar', null, document.getElementById('HTML1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_PopularPostsView', new _WidgetInfo('PopularPosts1', 'sidebar', null, document.getElementById('PopularPosts1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogArchiveView', new _WidgetInfo('BlogArchive1', 'sidebar', null, document.getElementById('BlogArchive1'), {'languageDirection': 'ltr'}, 'displayModeFull'));
+</script>
+</body>
+</html>
