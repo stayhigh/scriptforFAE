@@ -1,0 +1,2760 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dropEffect="none" class="no-js no-auth">
+<head>
+<meta charset="utf-8" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit" />
+
+<title>
+
+
+程序员如何优雅地使用 Mac？ - OS X - 知乎
+
+
+</title>
+
+<meta name="apple-itunes-app" content="app-id=432274380, app-argument=zhihu://questions/20873070">
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta http-equiv="mobile-agent" content="format=html5;url=http://www.zhihu.com/question/20873070">
+<meta id="znonce" name="znonce" content="197787c61a4748f4b20ace46eed7af81">
+<link rel="apple-touch-icon-precomposed" href="http://static.zhihu.com/static/img/ios/zhihu(57px).png" />
+<link rel="apple-touch-icon-precomposed" href="http://static.zhihu.com/static/img/ios/zhihu(72px).png" sizes="72x72" />
+<link rel="apple-touch-icon-precomposed" href="http://static.zhihu.com/static/img/ios/zhihu(76px).png" sizes="76x76" />
+<link rel="apple-touch-icon-precomposed" href="http://static.zhihu.com/static/img/ios/zhihu(114px).png" sizes="114x114" />
+<link rel="apple-touch-icon-precomposed" href="http://static.zhihu.com/static/img/ios/zhihu(120px).png" sizes="120x120" />
+<link rel="apple-touch-icon-precomposed" href="http://static.zhihu.com/static/img/ios/zhihu(152px).png" sizes="152x152" />
+
+
+<link rel="shortcut icon" href="http://static.zhihu.com/static/favicon.ico" type="image/x-icon">
+
+<link rel="search" type="application/opensearchdescription+xml" href="http://static.zhihu.com/static/search.xml" title="知乎" />
+<link rel="stylesheet" href="http://static.zhihu.com/static/ver/e0e871fdf96e7df7fa313c138c12cd1e.z.css">
+
+<meta name="google-site-verification" content="FTeR0c8arOPKh8c5DYh_9uu98_zJbaWw53J-Sch9MTg" />
+<meta property="qc:admins" content="14414345146201056375" />
+
+
+
+<!--[if lt IE 9]>
+<script src="http://static.zhihu.com/static/components/respond/dest/respond.min.js"></script>
+<link href="http://static.zhihu.com/static/components/respond/cross-domain/respond-proxy.html" id="respond-proxy" rel="respond-proxy" />
+<link href="/static/components/respond/cross-domain/respond.proxy.gif" id="respond-redirect" rel="respond-redirect" />
+<script src="/static/components/respond/cross-domain/respond.proxy.js"></script>
+<![endif]-->
+
+<script src="http://static.zhihu.com/static/ver/c9815c35381b57c0fdc44e8d89dc4327.instant.min.js"></script>
+
+
+
+
+</head>
+
+<body class="zhi">
+<div role="navigation" class="zu-top">
+<div class="zg-wrap" id="zh-top-inner">
+<a href="/" class="zu-top-link-logo" id="zh-top-link-logo">知乎</a>
+
+
+<div role="search" id="zh-top-search" class="zu-top-search">
+<form method="GET" action="/search" id="zh-top-search-form" class="zu-top-search-form form-with-magnify">
+
+<input type="text" class="zu-top-search-input" id="q" name="q" autocomplete="off" value="" placeholder="搜索话题、问题或人…" />
+<input type="hidden" name="type" value="question" />
+<label for="q" class="hide-text">知乎搜索</label>
+<button type="submit" class="magnify-button"><i class="icon icon-magnify-q"></i><span class="hide-text">搜索</span></button>
+</form>
+<button class="zu-top-add-question" id="zu-top-add-question">提问</button>
+</div>
+
+
+
+<div id="zg-top-nav" class="zu-top-nav">
+<ul class="zu-top-nav-ul zg-clear">
+
+<li class="zu-top-nav-li " id="zh-top-home-link">
+<a class="zu-top-nav-link" href="/" id="zh-top-link-home">首页</a>
+</li>
+<li class="top-nav-topic-selector zu-top-nav-li " id="zh-top-nav-item-topic">
+<a class="zu-top-nav-link" href="/topic" id="top-nav-dd-topic">话题</a>
+
+</li>
+<li class="zu-top-nav-li ">
+<a class="zu-top-nav-link" href="/explore">发现</a>
+</li>
+
+
+</ul>
+<div class="zu-top-nav-live zu-noti7-popup zg-r5px no-hovercard" id="zh-top-nav-live-new" role="popup" tabindex="0">
+<div class="zu-top-nav-live-inner zg-r5px">
+<div class="zu-top-live-icon">&nbsp;</div>
+<div class="zu-home-noti-inner" id="zh-top-nav-live-new-inner">
+<div class="zm-noti7-popup-tab-container clearfix" tabindex="0">
+<button class="zm-noti7-popup-tab-item message">
+<span class="icon">消息</span>
+<span class="new-noti" style="display:none;">0</span>
+</button>
+<button class="zm-noti7-popup-tab-item user">
+<span class="icon">用户</span>
+<span class="new-noti" style="display:none;">0</span>
+</button>
+<button class="zm-noti7-popup-tab-item thanks">
+<span class="icon">赞同和感谢</span>
+<span class="new-noti" style="display:none;">0</span>
+</button>
+</div>
+</div>
+<div class="zm-noti7-frame-border top"></div>
+<div class="zm-noti7-frame">
+<div class="zm-noti7-content">
+<div class="zm-noti7-content-inner">
+<div class="zm-noti7-popup-refresh" style="display:none;">
+<img class="noti-spinner" src="/static/img/spinner2.gif" />
+</div>
+<div class="zm-noti7-content-body">
+<div class="zm-noti7-popup-loading">
+<img class="noti-spinner" src="/static/img/noti-loading.gif" />
+</div>
+</div>
+</div>
+</div>
+<div class="zm-noti7-content" style="display:none;">
+<div class="zm-noti7-content-inner">
+<div class="zm-noti7-popup-refresh" style="display:none;">
+<img class="noti-spinner" src="/static/img/spinner2.gif" />
+</div>
+<div class="zm-noti7-content-body">
+<div class="zm-noti7-popup-loading">
+<img class="noti-spinner" src="/static/img/noti-loading.gif" />
+</div>
+</div>
+</div>
+</div>
+<div class="zm-noti7-content" style="display:none;">
+<div class="zm-noti7-content-inner">
+<div class="zm-noti7-popup-refresh" style="display:none;">
+<img class="noti-spinner" src="/static/img/spinner2.gif" />
+</div>
+<div class="zm-noti7-content-body">
+<div class="zm-noti7-popup-loading">
+<img class="noti-spinner" src="/static/img/noti-loading.gif" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="zm-noti7-frame-border bottom"></div>
+<div class="zm-noti7-popup-footer">
+<a href="/notifications" class="zm-noti7-popup-footer-all zg-right">查看全部 &raquo;</a>
+<a href="/settings/notification" class="zm-noti7-popup-footer-set" title="通知设置" ><i class="zg-icon zg-icon-settings"></i></a>
+</div>
+</div>
+</div>
+
+</div>
+
+
+
+<ul class="topnav-noauth clearfix">
+<li>
+<a href="javascript:;" class="js-signup-noauth"><i class="zg-icon zg-icon-dd-home"></i>注册知乎</a>
+</li>
+<li>
+<a href="javascript:;" class="js-signin-noauth">登录</a>
+</li>
+</ul>
+
+
+</div>
+</div>
+
+<div class="zu-global-notify" id="zh-global-message" style="display:none">
+<div class="zg-wrap">
+<div class="zu-global-nitify-inner">
+<a class="zu-global-notify-close" href="javascript:;" title="关闭" name="close">x</a>
+<span class="zu-global-notify-icon"></span>
+<span class="zu-global-notify-msg"></span>
+</div>
+</div>
+</div>
+
+
+
+<div class="zu-global-notify zu-global-notify-info" id="zh-question-redirect-info" style="display:none"></div>
+
+
+<div class="zu-global-notify zu-global-notify-info" id="zh-question-notification-summary" style="display:none;">
+<div class="zg-wrap">
+<div class="zu-global-nitify-inner">
+<span class="zu-global-notify-icon"></span>
+<ul class="zu-question-notify-wrap">
+</ul>
+</div>
+</div>
+</div>
+<div class="zg-wrap zu-main question-page" itemscope itemtype="http://schema.org/Question" id="zh-single-question-page"
+data-urltoken="20873070">
+<meta itemprop="isTopQuestion" content="true" />
+<meta itemprop="visitsCount" content="260152" />
+<div class="zu-main-content">
+<div class="zu-main-content-inner with-indention-votebar">
+
+
+<div id="zh-message-container" class="zg-info-message" style="display:none;"></div>
+
+
+<div class="zm-tag-editor zg-section">
+<div class="zm-tag-editor-labels zg-clear">
+
+<a class="zm-item-tag"
+href="/topic/19550264"
+data-tip="t$b$19550264" data-token="19550264" data-topicid="17">
+Mac
+</a>
+
+<a class="zm-item-tag"
+href="/topic/19550290"
+data-tip="t$b$19550290" data-token="19550290" data-topicid="24">
+OS X
+</a>
+
+<a class="zm-item-tag"
+href="/topic/19552330"
+data-tip="t$b$19552330" data-token="19552330" data-topicid="707">
+程序员
+</a>
+
+<a class="zm-item-tag"
+href="/topic/19591970"
+data-tip="t$b$19591970" data-token="19591970" data-topicid="13903">
+Mac OS X 使用技巧
+</a>
+
+<a class="zm-item-tag"
+href="/topic/19803276"
+data-tip="t$b$19803276" data-token="19803276" data-topicid="84761">
+如何优雅地 X
+</a>
+
+</div>
+</div>
+<div id="zh-question-title" data-editable="true">
+
+<h2 class="zm-item-title zm-editable-content">
+
+程序员如何优雅地使用 Mac？
+
+</h2>
+</div>
+<div id="zh-question-detail" class="zm-item-rich-text" data-resourceid="529757" data-action="/question/detail">
+
+<div class="zm-editable-content"></div>
+
+
+</div>
+<div class="zm-item-meta zm-item-comment-el clearfix" id="zh-question-meta-wrap">
+<div class="zm-meta-panel">
+
+<a href="#" name="addcomment" class="toggle-comment meta-item">
+<i class="z-icon-comment"></i>9 条评论
+</a>
+<a href="#" name="share" class="share meta-item">
+<i class="z-icon-share"></i>分享
+</a>
+
+</div>
+<div class="panel-container">
+
+</div>
+</div>
+
+<div class="zh-answers-title clearfix">
+
+<div id="zh-answers-filter" class="answers-sorter">
+
+<span class="lbl">按票数排序</span>
+<a class="lbl" href="/question/20873070?sort=created">按时间排序</a>
+
+<i class="zg-icon zg-icon-double-arrow"></i>
+</div>
+
+<h3 data-num="54" id="zh-question-answer-num">54 个回答</h3>
+</div>
+<div class="zh-question-answer-summary-wrap zm-item-rich-text" id="zh-question-answer-summary-wrap" style="display:none;">
+<h3>
+<a href="http://www.zhihu.com/question/20014415" target="_blank" class="zg-right zg-link-litblue" style="font-weight:normal">什么是答案总结？</a>
+答案总结</h3>
+<div id="zh-question-answer-summary" class="zg-section"
+data-resourceid="529757" data-action="/question/summary">
+
+<div class="zm-editable-content"></div>
+
+</div>
+</div>
+
+<div id="zh-question-answer-wrap" data-pagesize="20" class="zh-question-answer-wrapper" data-widget="navigable" data-navigable-options="{&quot;items&quot;: &quot;&gt;.zm-item-answer&quot;}" data-init="{&quot;params&quot;: {&quot;url_token&quot;: 20873070, &quot;pagesize&quot;: 20, &quot;offset&quot;: 0}, &quot;nodename&quot;: &quot;QuestionAnswerListV2&quot;}" data-fixed-summary="1">
+
+
+<div tabindex="-1" class="zm-item-answer "
+
+itemprop="topAnswer"
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="3241104"
+data-atoken="20139836"
+data-collapsed="0"
+data-created="1384678818"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-score="5240.12407742"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-3241104"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="label">赞同</span>
+<span class="count">2724</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+<h3 class="zm-item-answer-author-wrap">
+
+
+<a data-tip="p$t$theloverz"
+class="zm-item-link-avatar"
+href="/people/theloverz">
+<img src="http://pic2.zhimg.com/9e8ce8074_s.jpg"
+class="zm-list-avatar"
+data-source="http://pic4.zhimg.com/9e8ce8074_s.jpg" />
+</a>
+
+
+
+<a data-tip="p$t$theloverz" href="/people/theloverz">Z Liam</a>，<strong title="KnewOne.com，金属狗" class="zu-question-my-bio"><a href="http://KnewOne.com" class=" external" target="_blank" rel="nofollow noreferrer"><span class="invisible">http://</span><span class="visible">KnewOne.com</span><span class="invisible"></span><i class="icon-external"></i></a>，金属狗</strong>
+
+</h3>
+<a href="javascript:;" name="collapse" class="collapse meta-item zg-right"><i class="z-icon-fold"></i>收起</a>
+</div>
+<div class="zm-item-vote-info " data-votecount="2724">
+
+<span class="voters">
+<span class="user-block">知乎用户、</span><span class="user-block"><a data-tip="p$t$chen-qiu-35" href="http://www.zhihu.com/people/chen-qiu-35" class="zg-link" title="陈秋">陈秋</a>、</span><span class="user-block"><a data-tip="p$t$chi-en-73" href="http://www.zhihu.com/people/chi-en-73" class="zg-link" title="离恩">离恩</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text" data-resourceid="529757" data-action="/answer/content">
+
+<div class="fixed-summary zm-editable-content clearfix">谢邀。（严肃脸<br>（逼格是不是蹭蹭蹭连升了好几个档次？<br>1. 最好不要拿 Macbook 装 windows，即使必须要用 windows 的话能不装 xp 么？即使必须使用 xp 的话能麻烦升级一下 IE 么？<br>（以下均指使用 OS X）<br><br>2. 不要装 360<br><br>3. 不要装杀毒软件<br><br>4. 不要装磁盘整理<br><br>5. 自带的 Safari 很好用，Chrome for mac 也很棒。忘掉 IE 和什么三狗浏览器吧<br><br>6. 合上盖就可以走，不需要经常关机…<br><a data-hash="e4c846a244593a56a6b7c9ae6b2cc387" href="http://www.zhihu.com/people/e4c846a244593a56a6b7c9ae6b2cc387" class="member_mention" data-editable="true" data-title="@慕楚云" data-tip="p$b$e4c846a244593a56a6b7c9ae6b2cc387">@慕楚云</a> 提醒「就是这样我的朋友坏了个pro13的机械盘然后土豪地换了SSD么....」<br>修正一下：如果你用的是 ssd 那么没什么问题，如果是机械硬盘的话还是等呼吸灯好了再走吧…= = <br><br>7. 日历的定时启动功能相当好用，夜深人静都睡着的时候下载小电影什么的…如下图：<br><noscript><img src="http://pic2.zhimg.com/5b42335d93fe79080869ce1d2f84291b_b.jpg" data-rawwidth="281" data-rawheight="434" class="content_image" width="281">经</noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="281" data-rawheight="434" class="content_image lazy" width="281" data-actualsrc="http://pic2.zhimg.com/5b42335d93fe79080869ce1d2f84291b_b.jpg">经<a data-hash="34bae9f1a2391009f9fd7d2c7c3fe284" href="http://www.zhihu.com/people/34bae9f1a2391009f9fd7d2c7c3fe284" class="member_mention" data-editable="true" data-title="@朱文律 Wesley" data-tip="p$b$34bae9f1a2391009f9fd7d2c7c3fe284">@朱文律 Wesley</a> 提醒发现，提醒里面可选的「信息」并不是指自动发 iMessage，而是蹦出来一个日历提醒…= = <br><br><b><u><i>亲们，这个休眠或者关机的时候真的不能自动运行啊……………………</i></u></b><br><br>8. 如果你是程序员最好学会使用 Alfred，如果你只是普通用户那也应该学会用 Spotlight. Alfred 有各种好用的 workflow <b><u>强烈推荐</u></b>！具体请看：<a href="https://github.com/zenorocha/alfred-workflows" class=" wrap external" target="_blank" rel="nofollow noreferrer">zenorocha/alfred-workflows · GitHub<i class="icon-external"></i></a><br>我最近最喜欢的是这个 workflow，不用再跑到 terminal 里面找 pid 了…<br><noscript><img src="http://pic3.zhimg.com/9863d66e62653eb8d219b83f859a2dfa_b.jpg" data-rawwidth="611" data-rawheight="177" class="origin_image zh-lightbox-thumb" width="611" data-original="http://pic3.zhimg.com/9863d66e62653eb8d219b83f859a2dfa_r.jpg">关于 alfred workflow 也可以看 </noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="611" data-rawheight="177" class="origin_image zh-lightbox-thumb lazy" width="611" data-original="http://pic3.zhimg.com/9863d66e62653eb8d219b83f859a2dfa_r.jpg" data-actualsrc="http://pic3.zhimg.com/9863d66e62653eb8d219b83f859a2dfa_b.jpg">关于 alfred workflow 也可以看 <a href="http://www.zhihu.com/question/20656680" class="internal">借助 Alfred 2.0 的 Workflows 功能可以做哪些好玩的事情？</a> 这里<br><br>9. 触摸板可以设置成触摸板轻敲替代按下的…<br><br>10. Bartender 可以把菜单栏中不太常用的给设置到二级菜单里，看图：<br><noscript><img src="http://pic2.zhimg.com/9f6fd553d5a8c79c3ba348b55ba5e379_b.jpg" data-rawwidth="693" data-rawheight="21" class="origin_image zh-lightbox-thumb" width="693" data-original="http://pic1.zhimg.com/9f6fd553d5a8c79c3ba348b55ba5e379_r.jpg">上面这个是平时的状态</noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="693" data-rawheight="21" class="origin_image zh-lightbox-thumb lazy" width="693" data-original="http://pic1.zhimg.com/9f6fd553d5a8c79c3ba348b55ba5e379_r.jpg" data-actualsrc="http://pic2.zhimg.com/9f6fd553d5a8c79c3ba348b55ba5e379_b.jpg">上面这个是平时的状态<br><noscript><img src="http://pic1.zhimg.com/7c58e5862f83430c5529752025d6e0f0_b.jpg" data-rawwidth="788" data-rawheight="44" class="origin_image zh-lightbox-thumb" width="788" data-original="http://pic2.zhimg.com/7c58e5862f83430c5529752025d6e0f0_r.jpg">这个是点开以后的状态，一些不常用的都丢到这里</noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="788" data-rawheight="44" class="origin_image zh-lightbox-thumb lazy" width="788" data-original="http://pic2.zhimg.com/7c58e5862f83430c5529752025d6e0f0_r.jpg" data-actualsrc="http://pic1.zhimg.com/7c58e5862f83430c5529752025d6e0f0_b.jpg">这个是点开以后的状态，一些不常用的都丢到这里<br>好吧其实那个 Mem，CPU，上下行，温度，都是用 iStat Menu 2 看的…<br><br>11. Dash + alfred 很好用，程序员必备<br><noscript><img src="http://pic3.zhimg.com/2662797289ef1c4f1fe66b29014e08de_b.jpg" data-rawwidth="940" data-rawheight="681" class="origin_image zh-lightbox-thumb" width="940" data-original="http://pic1.zhimg.com/2662797289ef1c4f1fe66b29014e08de_r.jpg">这是纯 Dash，加上了 alfred 以后就变成了下面这样：</noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="940" data-rawheight="681" class="origin_image zh-lightbox-thumb lazy" width="940" data-original="http://pic1.zhimg.com/2662797289ef1c4f1fe66b29014e08de_r.jpg" data-actualsrc="http://pic3.zhimg.com/2662797289ef1c4f1fe66b29014e08de_b.jpg">这是纯 Dash，加上了 alfred 以后就变成了下面这样：<br><noscript><img src="http://pic4.zhimg.com/2d47077f828f4b6c66ca532b85407bce_b.jpg" data-rawwidth="597" data-rawheight="442" class="origin_image zh-lightbox-thumb" width="597" data-original="http://pic2.zhimg.com/2d47077f828f4b6c66ca532b85407bce_r.jpg"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="597" data-rawheight="442" class="origin_image zh-lightbox-thumb lazy" width="597" data-original="http://pic2.zhimg.com/2d47077f828f4b6c66ca532b85407bce_r.jpg" data-actualsrc="http://pic4.zhimg.com/2d47077f828f4b6c66ca532b85407bce_b.jpg"><br>12. Moom 可以很方便地调整窗口，一目了然：<br><noscript><img src="http://pic1.zhimg.com/8593b32c5f0f2c203e8d04ded99fc84b_b.jpg" data-rawwidth="211" data-rawheight="91" class="content_image" width="211"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="211" data-rawheight="91" class="content_image lazy" width="211" data-actualsrc="http://pic1.zhimg.com/8593b32c5f0f2c203e8d04ded99fc84b_b.jpg"><br><br>13. Boom 可以增大音量和增强音效，如图：<br><noscript><img src="http://pic1.zhimg.com/cff22dc213d489aadf31b4ec5b9785fa_b.jpg" data-rawwidth="648" data-rawheight="527" class="origin_image zh-lightbox-thumb" width="648" data-original="http://pic4.zhimg.com/cff22dc213d489aadf31b4ec5b9785fa_r.jpg"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="648" data-rawheight="527" class="origin_image zh-lightbox-thumb lazy" width="648" data-original="http://pic4.zhimg.com/cff22dc213d489aadf31b4ec5b9785fa_r.jpg" data-actualsrc="http://pic1.zhimg.com/cff22dc213d489aadf31b4ec5b9785fa_b.jpg"><br>14. Popclip 把 iOS 上面很方便的功能带回到了 Mac OS X 上面来，我不太喜欢这个东西，因为举得快捷键已经很方便了，具体效果请看官网：<a href="http://pilotmoon.com/popclip/" class=" wrap external" target="_blank" rel="nofollow noreferrer">PopClip for Mac<i class="icon-external"></i></a> 各种插件请见：<a href="http://pilotmoon.com/popclip/extensions/" class=" wrap external" target="_blank" rel="nofollow noreferrer">PopClip Extensions<i class="icon-external"></i></a><br><br>15. 如果你内存够大并且没有用 ssd 的话，那么可以考虑用 Tmpdisk 把一部分内存划出来当成缓存来用。512M 就足够了。<br><br>16. 老板来围观你工作但是你的 SNS / IM 蹦个不停？乖，别怕！打开通知中心，往下划一下可以看到这个！<br><noscript><img src="http://pic1.zhimg.com/7595c92b9639cc82a892b8b97e7c2eca_b.jpg" data-rawwidth="287" data-rawheight="86" class="content_image" width="287"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="287" data-rawheight="86" class="content_image lazy" width="287" data-actualsrc="http://pic1.zhimg.com/7595c92b9639cc82a892b8b97e7c2eca_b.jpg"><br><br>以下是  <a data-hash="1991ce7d1aab926def3e943c58f895b8" href="http://www.zhihu.com/people/1991ce7d1aab926def3e943c58f895b8" class="member_mention" data-tip="p$b$1991ce7d1aab926def3e943c58f895b8">@华承韬</a> 提到的改良版本，最近一直在用，确实很爽- - <br><br><blockquote>其实不用那么麻烦……<br>按住 Option 按键，并单击右上角的「通知中心」图标。图标变灰之后就不用怕老板啦。<br>再重复一遍上述操作可还原。<br>这招要比「打开通知中心，往下划一下」快多了。。</blockquote><br><br>17. control + shift + eject（右上角倒三角）可以锁屏，什么？还嫌麻烦？没关系！触发角来帮助你！<br><noscript><img src="http://pic2.zhimg.com/62c492b16a4671138edbd67b27cf0d95_b.jpg" data-rawwidth="589" data-rawheight="193" class="origin_image zh-lightbox-thumb" width="589" data-original="http://pic2.zhimg.com/62c492b16a4671138edbd67b27cf0d95_r.jpg">从此以后离开电脑的时候优雅地甩一下鼠标~蹬蹬蹬蹬，电脑就锁上了！再也不怕有人偷看你的小黄片儿了！（触发角在「桌面与屏幕保护程序」-「屏幕保护程序」）</noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="589" data-rawheight="193" class="origin_image zh-lightbox-thumb lazy" width="589" data-original="http://pic2.zhimg.com/62c492b16a4671138edbd67b27cf0d95_r.jpg" data-actualsrc="http://pic2.zhimg.com/62c492b16a4671138edbd67b27cf0d95_b.jpg">从此以后离开电脑的时候优雅地甩一下鼠标~蹬蹬蹬蹬，电脑就锁上了！再也不怕有人偷看你的小黄片儿了！（触发角在「桌面与屏幕保护程序」-「屏幕保护程序」）<br><br>18. Mission Control 可以用鼠标多出来的按键来触发的~<br><noscript><img src="http://pic3.zhimg.com/4411d1516376209b1133f57b3334cfff_b.jpg" data-rawwidth="625" data-rawheight="217" class="origin_image zh-lightbox-thumb" width="625" data-original="http://pic2.zhimg.com/4411d1516376209b1133f57b3334cfff_r.jpg"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="625" data-rawheight="217" class="origin_image zh-lightbox-thumb lazy" width="625" data-original="http://pic2.zhimg.com/4411d1516376209b1133f57b3334cfff_r.jpg" data-actualsrc="http://pic3.zhimg.com/4411d1516376209b1133f57b3334cfff_b.jpg"><br>19. 勾上这个「互联网共享」就可以把以太网接口的网络共享成 Wi-Fi 了……<br><noscript><img src="http://pic1.zhimg.com/b4353077e7ec96627dfb8f894afc4e18_b.jpg" data-rawwidth="637" data-rawheight="297" class="origin_image zh-lightbox-thumb" width="637" data-original="http://pic1.zhimg.com/b4353077e7ec96627dfb8f894afc4e18_r.jpg">类似的，「远程登录」是 ssh 连接，「屏幕共享」是 vnc……程序员都懂的……</noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="637" data-rawheight="297" class="origin_image zh-lightbox-thumb lazy" width="637" data-original="http://pic1.zhimg.com/b4353077e7ec96627dfb8f894afc4e18_r.jpg" data-actualsrc="http://pic1.zhimg.com/b4353077e7ec96627dfb8f894afc4e18_b.jpg">类似的，「远程登录」是 ssh 连接，「屏幕共享」是 vnc……程序员都懂的……<br><br>20. iTunes 智能播放列表很好用的…<br><noscript><img src="http://pic2.zhimg.com/7a0e8696c727a1a9cf8c0798cf6d85f5_b.jpg" data-rawwidth="537" data-rawheight="186" class="origin_image zh-lightbox-thumb" width="537" data-original="http://pic2.zhimg.com/7a0e8696c727a1a9cf8c0798cf6d85f5_r.jpg">这样可以把我最喜欢的并且不太大的歌曲（iPhone 16G 的所以…太大的可能是 FLAC/APE 等等）挑出来…</noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="537" data-rawheight="186" class="origin_image zh-lightbox-thumb lazy" width="537" data-original="http://pic2.zhimg.com/7a0e8696c727a1a9cf8c0798cf6d85f5_r.jpg" data-actualsrc="http://pic2.zhimg.com/7a0e8696c727a1a9cf8c0798cf6d85f5_b.jpg">这样可以把我最喜欢的并且不太大的歌曲（iPhone 16G 的所以…太大的可能是 FLAC/APE 等等）挑出来…<br>感谢 <a data-hash="0df2dfb75d7e0012cf815ba046b53d9f" href="http://www.zhihu.com/people/0df2dfb75d7e0012cf815ba046b53d9f" class="member_mention" data-editable="true" data-title="@李浩博" data-tip="p$b$0df2dfb75d7e0012cf815ba046b53d9f">@李浩博</a> 提醒，可以使用这个更方便的功能= = <noscript><img src="http://pic4.zhimg.com/e07b82652b8e30f1ab57b52fd4d96a4f_b.jpg" data-rawwidth="362" data-rawheight="264" class="content_image" width="362"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="362" data-rawheight="264" class="content_image lazy" width="362" data-actualsrc="http://pic4.zhimg.com/e07b82652b8e30f1ab57b52fd4d96a4f_b.jpg"><br>刚才随便测试了一下（码率没关注，就试试效果），之前 220M 的 mp3 勾选了这个以后再传到 iPhone 里大概是 160M 左右…<br><br>21. 什么？你居然还不知道在 OS X 中空格键可以预览 <b><u>几乎所有的 </u></b>东西？<br><br>22. 关注 Mac Apps 的可以关注一下 <a data-hash="ebfb3d5044ca675ea54a18f96d4c8cbb" href="http://www.zhihu.com/people/ebfb3d5044ca675ea54a18f96d4c8cbb" class="member_mention" data-editable="true" data-title="@hzlzh" data-tip="p$b$ebfb3d5044ca675ea54a18f96d4c8cbb">@hzlzh</a> 的这个 list：<a href="https://github.com/hzlzh/Best-App" class=" wrap external" target="_blank" rel="nofollow noreferrer">hzlzh/Best-App · GitHub<i class="icon-external"></i></a>（都是收费 apps 但是质量非常高）<br><br>23. 我刚知道的，切换这里的「位置」就可以不用老是调网络设置了……（公司可能有固定 ip 什么的<br><noscript><img src="http://pic2.zhimg.com/5a93be2eb2fb7448b3fc35daed98501e_b.jpg" data-rawwidth="360" data-rawheight="265" class="content_image" width="360"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="360" data-rawheight="265" class="content_image lazy" width="360" data-actualsrc="http://pic2.zhimg.com/5a93be2eb2fb7448b3fc35daed98501e_b.jpg"><br><b><u>注意</u></b>经<a data-hash="221c6ba2f5aa18208ea776b42f688da5" href="http://www.zhihu.com/people/221c6ba2f5aa18208ea776b42f688da5" class="member_mention" data-editable="true" data-title="@柯英" data-tip="p$b$221c6ba2f5aa18208ea776b42f688da5">@柯英</a> 提醒发现，这个需要先在「网络偏好设置」顶部设置好才会出现……<br><br>24. 对于程序员来说熟练掌握快捷键是很有必要的，下图可以自定义快捷键，就比如我就把 launchpad 绑定到了 F1 上（因为外接显示器的话好像还真没什么办法打开 launchpad？）mission control 是 F9<br><noscript><img src="http://pic1.zhimg.com/264b1939a2dca17f0b0f80dba9820a0f_b.jpg" data-rawwidth="666" data-rawheight="596" class="origin_image zh-lightbox-thumb" width="666" data-original="http://pic1.zhimg.com/264b1939a2dca17f0b0f80dba9820a0f_r.jpg">注意：这里的 F1 是需要按着 fn 键的</noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="666" data-rawheight="596" class="origin_image zh-lightbox-thumb lazy" width="666" data-original="http://pic1.zhimg.com/264b1939a2dca17f0b0f80dba9820a0f_r.jpg" data-actualsrc="http://pic1.zhimg.com/264b1939a2dca17f0b0f80dba9820a0f_b.jpg">注意：这里的 F1 是需要按着 fn 键的<br><br>25. 选中一个文件按 enter 可以直接改名的…<br>cmd + up 是回到上一层文件夹<br>cmd + down 如果是文件夹就进入文件夹，如果是文件就打开（比如说 .avi 就会自动调用播放器）<br><br>26. 如果你尝试改过后缀名就会发现貌似直接改没效果，你需要右键，显示简介<br><noscript><img src="http://pic1.zhimg.com/0bd5d90cc10eb65162d4c16e23ed537a_b.jpg" data-rawwidth="263" data-rawheight="176" class="content_image" width="263">然后在这里改好像才有用…不知道有没有人有更方便的办法？</noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="263" data-rawheight="176" class="content_image lazy" width="263" data-actualsrc="http://pic1.zhimg.com/0bd5d90cc10eb65162d4c16e23ed537a_b.jpg">然后在这里改好像才有用…不知道有没有人有更方便的办法？<br>感谢<a data-hash="d4882a8f802527433bc828ea822ca313" href="http://www.zhihu.com/people/d4882a8f802527433bc828ea822ca313" class="member_mention" data-editable="true" data-title="@曾铭" data-tip="p$b$d4882a8f802527433bc828ea822ca313">@曾铭</a> 提醒，在 Finder 的偏好设置中有相关设置。<br>不过…您的「编辑」为什么是 -1…<br><noscript><img src="http://pic1.zhimg.com/f771144bbbc602e033048b4779a74b3a_b.jpg" data-rawwidth="631" data-rawheight="266" class="origin_image zh-lightbox-thumb" width="631" data-original="http://pic1.zhimg.com/f771144bbbc602e033048b4779a74b3a_r.jpg"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="631" data-rawheight="266" class="origin_image zh-lightbox-thumb lazy" width="631" data-original="http://pic1.zhimg.com/f771144bbbc602e033048b4779a74b3a_r.jpg" data-actualsrc="http://pic1.zhimg.com/f771144bbbc602e033048b4779a74b3a_b.jpg"><br>27. 有的时候可能你需要改变默认的打开方式，比如说前一段我这里 MPlayerX 挂了，我就换了 VLC，但是我还需要把默认的播放软件改掉。继续看上面 26 的图，下面的打开方式可以改掉…再也不用担心看不了小电影了~<br><br>28. 看到 <a data-hash="53975d3ea4ef4a4653bea6c24a2af1d0" href="http://www.zhihu.com/people/53975d3ea4ef4a4653bea6c24a2af1d0" class="member_mention" data-editable="true" data-title="@刘帅" data-tip="p$b$53975d3ea4ef4a4653bea6c24a2af1d0">@刘帅</a> 推荐 zsh，那我就推荐个主题配合 git 一起用。<br>编辑 ~/.zshrc 把这一行改成：ZSH_THEME="juanghurtado"<br>效果如图：<br><noscript><img src="http://pic2.zhimg.com/f8a960e2eb7d84c7df3aa7dcc3358a38_b.jpg" data-rawwidth="591" data-rawheight="218" class="origin_image zh-lightbox-thumb" width="591" data-original="http://pic1.zhimg.com/f8a960e2eb7d84c7df3aa7dcc3358a38_r.jpg"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="591" data-rawheight="218" class="origin_image zh-lightbox-thumb lazy" width="591" data-original="http://pic1.zhimg.com/f8a960e2eb7d84c7df3aa7dcc3358a38_r.jpg" data-actualsrc="http://pic2.zhimg.com/f8a960e2eb7d84c7df3aa7dcc3358a38_b.jpg"><br>29. 我是个懒人…所以…请看我的 git alias…用惯了以后去服务器配东西（没有 alias）就各种不适应= = <br><noscript><img src="http://pic1.zhimg.com/68378dde7bc7a1fb412e6edcce78744f_b.jpg" data-rawwidth="343" data-rawheight="214" class="content_image" width="343">好吧，其实我也不明白当初为什么要把 branch 起名叫 develop 而不是 dev…</noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="343" data-rawheight="214" class="content_image lazy" width="343" data-actualsrc="http://pic1.zhimg.com/68378dde7bc7a1fb412e6edcce78744f_b.jpg">好吧，其实我也不明白当初为什么要把 branch 起名叫 develop 而不是 dev…<br><br>30. 感谢 <a data-hash="0062185bed018d61b1c44ea83298070c" href="http://www.zhihu.com/people/0062185bed018d61b1c44ea83298070c" class="member_mention" data-editable="true" data-title="@李嘉鹏" data-tip="p$b$0062185bed018d61b1c44ea83298070c">@李嘉鹏</a> 补充：<br><blockquote>查看多个文件占用的容量 ctrl + command + i<br><br>把多个文件归类到一个文件夹中：选中你想要的文件 按control＋command＋n<br><br>快速关机 正常左上角苹果－关机会出来个对话框 按住option再点关机就不会出现了 其实按住option很多菜单会发生些小变化，自己探索吧～<br><br>调整声音的时候，系统会发出“嘟嘟”的声音，按住shift键就没了<br><br>同时按shift+option， 可以4分1格调节（这个同样适用键盘背光和屏幕亮度）</blockquote>
+<a href="/question/20873070/answer/20139836" class="toggle-expand">显示全部</a>
+<div class="fixed-summary-mask"></div>
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="3241104-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2013-11-17" target="_blank" href="/question/20873070/answer/20139836">编辑于 2014-08-08</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>200 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="copyright zu-autohide"></span>
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer "
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="3343630"
+data-atoken="20389715"
+data-collapsed="0"
+data-created="1385552802"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-score="705.124921902"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-3343630"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="label">赞同</span>
+<span class="count">403</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+<h3 class="zm-item-answer-author-wrap">
+
+
+<a data-tip="p$t$becoder"
+class="zm-item-link-avatar"
+href="/people/becoder">
+<img src="http://pic1.zhimg.com/05af820b0_s.jpg"
+class="zm-list-avatar"
+data-source="http://pic3.zhimg.com/05af820b0_s.jpg" />
+</a>
+
+
+
+<a data-tip="p$t$becoder" href="/people/becoder">BeCoDeR</a>，<strong title="认认真真写答案" class="zu-question-my-bio">认认真真写答案</strong>
+
+</h3>
+<a href="javascript:;" name="collapse" class="collapse meta-item zg-right"><i class="z-icon-fold"></i>收起</a>
+</div>
+<div class="zm-item-vote-info " data-votecount="403">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$anderson-chen" href="http://www.zhihu.com/people/anderson-chen" class="zg-link" title="Anderson CHEN">Anderson CHEN</a>、</span><span class="user-block"><a data-tip="p$t$js1098" href="http://www.zhihu.com/people/js1098" class="zg-link" title="js1098">js1098</a>、</span><span class="user-block">知乎用户</span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text" data-resourceid="529757" data-action="/answer/content">
+
+<div class="fixed-summary zm-editable-content clearfix"><noscript><img src="http://pic3.zhimg.com/248ce304f1e570120468e76a6759b6a3_b.jpg" data-rawwidth="610" data-rawheight="340" class="origin_image zh-lightbox-thumb" width="610" data-original="http://pic4.zhimg.com/248ce304f1e570120468e76a6759b6a3_r.jpg"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="610" data-rawheight="340" class="origin_image zh-lightbox-thumb lazy" width="610" data-original="http://pic4.zhimg.com/248ce304f1e570120468e76a6759b6a3_r.jpg" data-actualsrc="http://pic3.zhimg.com/248ce304f1e570120468e76a6759b6a3_b.jpg"><noscript><img src="http://pic3.zhimg.com/4b091adb469a94a0e6b74de0be1dfd27_b.jpg" data-rawwidth="480" data-rawheight="640" class="origin_image zh-lightbox-thumb" width="480" data-original="http://pic4.zhimg.com/4b091adb469a94a0e6b74de0be1dfd27_r.jpg"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="480" data-rawheight="640" class="origin_image zh-lightbox-thumb lazy" width="480" data-original="http://pic4.zhimg.com/4b091adb469a94a0e6b74de0be1dfd27_r.jpg" data-actualsrc="http://pic3.zhimg.com/4b091adb469a94a0e6b74de0be1dfd27_b.jpg"><br><br>＝＝＝＝＝＝＝＝＝＝＝＝＝＝好吧，正经的分割线＝＝＝＝＝＝＝＝＝＝＝＝＝＝<br>MacOS 自带的英文读音：<br><ol><li>进入Terminal, 输入say “任何你想读音的单词，句子，段落”。比如：say Hello World</li><li>优雅的方式，10.9的配置方式：</li></ol><noscript><img src="http://pic1.zhimg.com/6b1f00794b5d3fdf985c80a2939a3014_b.jpg" data-rawwidth="669" data-rawheight="440" class="origin_image zh-lightbox-thumb" width="669" data-original="http://pic2.zhimg.com/6b1f00794b5d3fdf985c80a2939a3014_r.jpg"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="669" data-rawheight="440" class="origin_image zh-lightbox-thumb lazy" width="669" data-original="http://pic2.zhimg.com/6b1f00794b5d3fdf985c80a2939a3014_r.jpg" data-actualsrc="http://pic1.zhimg.com/6b1f00794b5d3fdf985c80a2939a3014_b.jpg"><br>保存之后，就可以在任意程序中选择英文单词/句子/段落，按下上图设定的快捷键(Option+Esc)，enjoy it。
+<a href="/question/20873070/answer/20389715" class="toggle-expand">显示全部</a>
+<div class="fixed-summary-mask"></div>
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="3343630-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2013-11-27" target="_blank" href="/question/20873070/answer/20389715">编辑于 2014-03-04</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>30 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="copyright zu-autohide"></span>
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer "
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="3345044"
+data-atoken="20393140"
+data-collapsed="0"
+data-created="1385561416"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-score="130.125504281"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-3345044"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="label">赞同</span>
+<span class="count">75</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+<h3 class="zm-item-answer-author-wrap">
+
+
+<a data-tip="p$t$robermac"
+class="zm-item-link-avatar"
+href="/people/robermac">
+<img src="http://pic4.zhimg.com/8bd6888fa_s.jpg"
+class="zm-list-avatar"
+data-source="http://pic2.zhimg.com/8bd6888fa_s.jpg" />
+</a>
+
+
+
+<a data-tip="p$t$robermac" href="/people/robermac">RoberMac</a>
+
+</h3>
+<a href="javascript:;" name="collapse" class="collapse meta-item zg-right"><i class="z-icon-fold"></i>收起</a>
+</div>
+<div class="zm-item-vote-info " data-votecount="75">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$liu-zhe-60-62" href="http://www.zhihu.com/people/liu-zhe-60-62" class="zg-link" title="刘哲">刘哲</a>、</span><span class="user-block"><a data-tip="p$t$john-wang-81" href="http://www.zhihu.com/people/john-wang-81" class="zg-link" title="John Wang">John Wang</a>、</span><span class="user-block">知乎用户</span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text" data-resourceid="529757" data-action="/answer/content">
+
+<div class="fixed-summary zm-editable-content clearfix">首先你得学会优雅地「截图」.<br><noscript><img src="http://pic1.zhimg.com/6bfafe9d278d18d2baab7b7462d8fc37_b.jpg" data-rawwidth="626" data-rawheight="681" class="origin_image zh-lightbox-thumb" width="626" data-original="http://pic2.zhimg.com/6bfafe9d278d18d2baab7b7462d8fc37_r.jpg"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="626" data-rawheight="681" class="origin_image zh-lightbox-thumb lazy" width="626" data-original="http://pic2.zhimg.com/6bfafe9d278d18d2baab7b7462d8fc37_r.jpg" data-actualsrc="http://pic1.zhimg.com/6bfafe9d278d18d2baab7b7462d8fc37_b.jpg"><noscript><img src="http://pic1.zhimg.com/d96e7e66410cb0fe78f74eb146715469_b.jpg" data-rawwidth="523" data-rawheight="577" class="origin_image zh-lightbox-thumb" width="523" data-original="http://pic1.zhimg.com/d96e7e66410cb0fe78f74eb146715469_r.jpg"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="523" data-rawheight="577" class="origin_image zh-lightbox-thumb lazy" width="523" data-original="http://pic1.zhimg.com/d96e7e66410cb0fe78f74eb146715469_r.jpg" data-actualsrc="http://pic1.zhimg.com/d96e7e66410cb0fe78f74eb146715469_b.jpg">
+<a href="/question/20873070/answer/20393140" class="toggle-expand">显示全部</a>
+<div class="fixed-summary-mask"></div>
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="3345044-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2013-11-27" target="_blank" href="/question/20873070/answer/20393140">编辑于 2013-11-28</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>21 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="copyright zu-autohide"></span>
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer "
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="2771388"
+data-atoken="18987969"
+data-collapsed="0"
+data-created="1379829016"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-score="221.125507089"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-2771388"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="label">赞同</span>
+<span class="count">124</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+<h3 class="zm-item-answer-author-wrap">
+
+
+<a class="zm-item-link-avatar"
+href="javascript:void(0);">
+<img src="http://pic2.zhimg.com/da8e974dc_s.jpg"
+class="zm-list-avatar"
+data-source="http://pic2.zhimg.com/da8e974dc_s.jpg" />
+</a>
+
+
+
+知乎用户，<strong title="大三时因没听过协程被知乎拒掉" class="zu-question-my-bio">大三时因没听过协程被知乎拒掉</strong>
+
+</h3>
+<a href="javascript:;" name="collapse" class="collapse meta-item zg-right"><i class="z-icon-fold"></i>收起</a>
+</div>
+<div class="zm-item-vote-info " data-votecount="124">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$kuang-zheng-38" href="http://www.zhihu.com/people/kuang-zheng-38" class="zg-link" title="邝政">邝政</a>、</span><span class="user-block">知乎用户、</span><span class="user-block"><a data-tip="p$t$Quentin-Hsu" href="http://www.zhihu.com/people/Quentin-Hsu" class="zg-link" title="Quentin Hsu">Quentin Hsu</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text" data-resourceid="529757" data-action="/answer/content">
+
+<div class="fixed-summary zm-editable-content clearfix">==update 2013-11-28T13:01:19+08:00==<br>已经做了一个周的iOS开发了，觉得iOS开发其乐无穷啊。<br>看到这么多人关注这个问题，还有点小激动呢（醒醒吧！又不是给你点赞！！）。其实我最初是想把重点放在“<b>程序员</b>”和“<b>Mac</b>”上，不过看见有很多知友从方方面面分享了Mac的使用经验，也受益匪浅。作为提问者，我还是想<b>从程序员的角度</b>补充分享一点经验。<br><ul><li>使用<a href="http://brew.sh/" class=" wrap external" target="_blank" rel="nofollow noreferrer">Homebrew — MacPorts driving you to drink? Try Homebrew!<i class="icon-external"></i></a></li></ul>这个绝对是程序员居家旅行必备的神器了，功能上跟apt-get差不多。<br><noscript><img src="http://pic1.zhimg.com/68f72c5445452386b78583a51f708923_b.jpg" data-rawwidth="1852" data-rawheight="294" class="origin_image zh-lightbox-thumb" width="1852" data-original="http://pic2.zhimg.com/68f72c5445452386b78583a51f708923_r.jpg"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="1852" data-rawheight="294" class="origin_image zh-lightbox-thumb lazy" width="1852" data-original="http://pic2.zhimg.com/68f72c5445452386b78583a51f708923_r.jpg" data-actualsrc="http://pic1.zhimg.com/68f72c5445452386b78583a51f708923_b.jpg"><br><ul><li>注册一个美区账号</li></ul>很多App在大陆是不发售的（比如下面这款应用），因此你需要去注册一个美区的Apple ID。<br><ul><li>使用Microsoft Remote Desktop</li></ul>这个应用貌似不在大陆的商店中销售。这个应用特别适用这种情况：公司给配了一个台机，上面装了个Windows，然后你又想把台机的显示器分给Mac做双屏，偶尔用到Windows的时候还得把显示器还给台机，接来接去可麻烦（好吧，不要问我为什么不再去向公司申请一个显示器），这个时候这款神器就有用了，你可以远程桌面到你的台机！<br><noscript><img src="http://pic2.zhimg.com/ffb65bb502be0af24af294f8de0e0f9d_b.jpg" data-rawwidth="730" data-rawheight="1062" class="origin_image zh-lightbox-thumb" width="730" data-original="http://pic4.zhimg.com/ffb65bb502be0af24af294f8de0e0f9d_r.jpg"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="730" data-rawheight="1062" class="origin_image zh-lightbox-thumb lazy" width="730" data-original="http://pic4.zhimg.com/ffb65bb502be0af24af294f8de0e0f9d_r.jpg" data-actualsrc="http://pic2.zhimg.com/ffb65bb502be0af24af294f8de0e0f9d_b.jpg"><br><noscript><img src="http://pic3.zhimg.com/1fb7b1344cb9f7dfd2b38087dd095e21_b.jpg" data-rawwidth="2826" data-rawheight="1634" class="origin_image zh-lightbox-thumb" width="2826" data-original="http://pic3.zhimg.com/1fb7b1344cb9f7dfd2b38087dd095e21_r.jpg"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="2826" data-rawheight="1634" class="origin_image zh-lightbox-thumb lazy" width="2826" data-original="http://pic3.zhimg.com/1fb7b1344cb9f7dfd2b38087dd095e21_r.jpg" data-actualsrc="http://pic3.zhimg.com/1fb7b1344cb9f7dfd2b38087dd095e21_b.jpg"><br>==end==<br><br>使用rMBP快半年了，现在来回答自己提的问题（那些在Mac上装Win的就无视吧）。<br>声明：本人是程序员一枚，平时常用语言为Java、Python、Shell，会做一些Android开发以及脚本开发，喜欢折腾，见到优雅的可以称之为艺术品的应用就像见到了亲爹一样。<br>私以为，Mac的优点在于它的内在美：GUI和Unix命令行的完美融合，触控板和巧克力键盘带来的良好的用户体验。至于其他诸如外观、续航等就不说了。<br>我觉得程序员要优雅的使用rMBP可以充分做到以下几点：<br><ul><li>充分利用Mac的命令行（终端）</li></ul>这是每个程序猿，不管做的是哪方面的技术都应该掌握的。一些基本的命令，会让你的工作效率提升很多。Mac自带的Shell是bash，建议换成zsh（Mac已经自带zsh，省去了安装的步骤，要做的只是切换一下，而且zsh兼容bash，使用起来无压力，其他优点不再赘述，自行Google），配合github上oh-my-zsh的插件，使用起来真心方便；此外，推荐使用自带终端的代替应用：iTerm2，也是个小神器了~网上这方面的教程很多。举个例子，比如要查看根目录一个隐藏文件夹的大小，用GUI怎么办？是不是要各种设置一番？用终端，一个命令就解决了：<br><noscript><img src="http://pic4.zhimg.com/d7cf259090bfbb3f176fdf3e114370ca_b.jpg" data-rawwidth="1304" data-rawheight="1602" class="origin_image zh-lightbox-thumb" width="1304" data-original="http://pic1.zhimg.com/d7cf259090bfbb3f176fdf3e114370ca_r.jpg">iTerm2 + zsh，是我的标配了~</noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="1304" data-rawheight="1602" class="origin_image zh-lightbox-thumb lazy" width="1304" data-original="http://pic1.zhimg.com/d7cf259090bfbb3f176fdf3e114370ca_r.jpg" data-actualsrc="http://pic4.zhimg.com/d7cf259090bfbb3f176fdf3e114370ca_b.jpg">iTerm2 + zsh，是我的标配了~<br><ul><li>使用Airdrop跟同事传文件</li></ul>AirDrop是Mac自带的很棒的局域Wi-Fi无线传送技术，如果同事都用Mac，那么你们互传文件时尽量用Airdrop吧，UI很赞不说，速度也很快，不要再用QQ等IM的发送文件了。<br><ul><li>安装<a href="https://github.com/ohdarling/GoAgentX" class=" wrap external" target="_blank" rel="nofollow noreferrer">ohdarling/GoAgentX · GitHub<i class="icon-external"></i></a> GoAgentX<br></li></ul>FQ应该是程序员必备的技能了吧~Mac下有一款很好用的图形化FQ工具，如题所示，这里是如何配置：<a href="http://www.zhihu.com/question/20468963" class="internal">如何在 Mac OS X 平台设置 GoAgent？</a><br><ul><li>主动去发掘一些应用</li></ul>没事可以去逛逛V2EX等一些论坛，找到那些能提升你工作效率、生活品味的应用，多多把玩，才能让Mac物尽其用。像Sublime Text、Mou、OmniGraffle、EverNote、AppCleaner等等都不用说了吧~<br><ul><li>last but not least：不要装Windows</li></ul>这个只是个人的品味和建议了，我个人觉得装了Windows的Mac就特别不纯粹，可能是之前也一直再用Ubuntu，对Win没什么好感。实在不行了，安个虚拟机吧。<br><br>暂时想到这么多，一点个人的经验分享，还望海涵。<br><br><noscript><img src="http://pic4.zhimg.com/12205863e35b61093152cd8b9e2d2c57_b.jpg" data-rawwidth="3264" data-rawheight="2448" class="origin_image zh-lightbox-thumb" width="3264" data-original="http://pic3.zhimg.com/12205863e35b61093152cd8b9e2d2c57_r.jpg">（题主不小心露脸，我是想晒一下哪个Github的贴纸~）</noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="3264" data-rawheight="2448" class="origin_image zh-lightbox-thumb lazy" width="3264" data-original="http://pic3.zhimg.com/12205863e35b61093152cd8b9e2d2c57_r.jpg" data-actualsrc="http://pic4.zhimg.com/12205863e35b61093152cd8b9e2d2c57_b.jpg">（题主不小心露脸，我是想晒一下哪个Github的贴纸~）<br><noscript><img src="http://pic2.zhimg.com/f6a90683744d53997c69fbf70d1c2c7d_b.jpg" data-rawwidth="3264" data-rawheight="2448" class="origin_image zh-lightbox-thumb" width="3264" data-original="http://pic2.zhimg.com/f6a90683744d53997c69fbf70d1c2c7d_r.jpg">（故意制造一个写代码的场景，其实当时是在聊天好么~~）</noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="3264" data-rawheight="2448" class="origin_image zh-lightbox-thumb lazy" width="3264" data-original="http://pic2.zhimg.com/f6a90683744d53997c69fbf70d1c2c7d_r.jpg" data-actualsrc="http://pic2.zhimg.com/f6a90683744d53997c69fbf70d1c2c7d_b.jpg">（故意制造一个写代码的场景，其实当时是在聊天好么~~）
+<a href="/question/20873070/answer/18987969" class="toggle-expand">显示全部</a>
+<div class="fixed-summary-mask"></div>
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="2771388-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2013-09-22" target="_blank" href="/question/20873070/answer/18987969">编辑于 2013-11-28</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>54 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="copyright zu-autohide"></span>
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer "
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="3317925"
+data-atoken="20328683"
+data-collapsed="0"
+data-created="1385370983"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-score="19.1255251069"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-3317925"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="label">赞同</span>
+<span class="count">10</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+<a href="javascript:;" name="collapse" class="collapse meta-item zg-right"><i class="z-icon-fold"></i>收起</a>
+<h3 class="zm-item-answer-author-wrap">匿名用户</h3></div>
+<div class="zm-item-vote-info " data-votecount="10">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$wei-lan-99-26" href="http://www.zhihu.com/people/wei-lan-99-26" class="zg-link" title="微蓝">微蓝</a>、</span><span class="user-block">知乎用户、</span><span class="user-block"><a data-tip="p$t$xiao-hong-cheng" href="http://www.zhihu.com/people/xiao-hong-cheng" class="zg-link" title="肖宏程">肖宏程</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text" data-resourceid="529757" data-action="/answer/content">
+
+<div class="fixed-summary zm-editable-content clearfix">外接N部显示器……<br>一个看代码<br>一个看log<br>一个看UI<br>一个跑测试<br><br>从不摸鼠标，双指扫触板……
+
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="3317925-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/20873070/answer/20328683">发布于 2013-11-25</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>3 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="copyright zu-autohide"></span>
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer "
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="3321286"
+data-atoken="20336753"
+data-collapsed="0"
+data-created="1385391061"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-score="60.1239949133"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-3321286"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="label">赞同</span>
+<span class="count">32</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+<h3 class="zm-item-answer-author-wrap">
+
+
+<a data-tip="p$t$zhangjie-gooogle"
+class="zm-item-link-avatar"
+href="/people/zhangjie-gooogle">
+<img src="http://pic1.zhimg.com/b995bac1a13b5e7566038e3a9d5af218_s.jpg"
+class="zm-list-avatar"
+data-source="http://pic1.zhimg.com/b995bac1a13b5e7566038e3a9d5af218_s.jpg" />
+</a>
+
+
+
+<a data-tip="p$t$zhangjie-gooogle" href="/people/zhangjie-gooogle">张杰</a>
+
+</h3>
+<a href="javascript:;" name="collapse" class="collapse meta-item zg-right"><i class="z-icon-fold"></i>收起</a>
+</div>
+<div class="zm-item-vote-info " data-votecount="32">
+
+<span class="voters">
+<span class="user-block">知乎用户、</span><span class="user-block">知乎用户、</span><span class="user-block"><a data-tip="p$t$fan-xi-55" href="http://www.zhihu.com/people/fan-xi-55" class="zg-link" title="范西">范西</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text" data-resourceid="529757" data-action="/answer/content">
+
+<div class="fixed-summary zm-editable-content clearfix">上面已经很详细了，在此补充一个神器。Better Touch Tool 下载地址：<a href="http://www.boastr.net/" class=" wrap external" target="_blank" rel="nofollow noreferrer">BetterTouchTool<i class="icon-external"></i></a> 触控板增强软件。<br><br>配置起来稍微有点麻烦。但是用着巨爽！<br><br>列出我的配置以供参考吧。<br><br>1. 全局下：三指轻拍截图到剪贴板；四指轻拍截图保存到相应目录，自带截图按键太多，这下方便很多了。<noscript><img src="http://pic2.zhimg.com/cec5eafba12f187b2b3a9b661174a71e_b.jpg" data-rawwidth="1035" data-rawheight="785" class="origin_image zh-lightbox-thumb" width="1035" data-original="http://pic4.zhimg.com/cec5eafba12f187b2b3a9b661174a71e_r.jpg"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="1035" data-rawheight="785" class="origin_image zh-lightbox-thumb lazy" width="1035" data-original="http://pic4.zhimg.com/cec5eafba12f187b2b3a9b661174a71e_r.jpg" data-actualsrc="http://pic2.zhimg.com/cec5eafba12f187b2b3a9b661174a71e_b.jpg"><br>2. Finder 中双指左滑前进；双指右滑后退，这样就与 Chrome 操作相同了。<br>3. Chrome 中 TipTap Left 匹配上一个标签页；TipTap Right 匹配下一个标签页，还可以设定关闭标和新建标签页的手势，这样在单纯浏览网页的时候就可以做到单手触控板全部搞定。<br>4. Window Moving and Resizing<noscript><img src="http://pic3.zhimg.com/e50508366e1534814c5f6c5787d5cd0f_b.jpg" data-rawwidth="1022" data-rawheight="785" class="origin_image zh-lightbox-thumb" width="1022" data-original="http://pic1.zhimg.com/e50508366e1534814c5f6c5787d5cd0f_r.jpg">这样就可以按住 opt 键来移动窗口，按住 opt+cmd 拖动鼠标可以随意改变窗口大小。</noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="1022" data-rawheight="785" class="origin_image zh-lightbox-thumb lazy" width="1022" data-original="http://pic1.zhimg.com/e50508366e1534814c5f6c5787d5cd0f_r.jpg" data-actualsrc="http://pic3.zhimg.com/e50508366e1534814c5f6c5787d5cd0f_b.jpg">这样就可以按住 opt 键来移动窗口，按住 opt+cmd 拖动鼠标可以随意改变窗口大小。<br>5. Window Snapping<br><noscript><img src="http://pic4.zhimg.com/1ff677088f03153b31739a370df277d3_b.jpg" data-rawwidth="527" data-rawheight="390" class="origin_image zh-lightbox-thumb" width="527" data-original="http://pic2.zhimg.com/1ff677088f03153b31739a370df277d3_r.jpg"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="527" data-rawheight="390" class="origin_image zh-lightbox-thumb lazy" width="527" data-original="http://pic2.zhimg.com/1ff677088f03153b31739a370df277d3_r.jpg" data-actualsrc="http://pic4.zhimg.com/1ff677088f03153b31739a370df277d3_b.jpg"><br><br>这样可以将窗口拖动到边缘自动调整大小。非常赞。<br><br>还是免费的！强烈推荐。<br><br><br>============================================<br>Update：过了很久又回来看了一下，居然没有提到<b> z 或者 j (autojump)</b> 。命令行快速切换目录神器。会根据你的习惯记录常去的目录，之后就不用一直 cd 了。<br><br>用过一段时间 j，最后还是用了 z，个人觉得 z 更好。<br><br>[项目地址](<a href="https://github.com/rupa/z" class=" external" target="_blank" rel="nofollow noreferrer"><span class="invisible">https://</span><span class="visible">github.com/rupa/z</span><span class="invisible"></span><i class="icon-external"></i></a>)<br><br>这货安装之后要先 cd 一会儿，让他学习一下，记录你常去的目录~
+<a href="/question/20873070/answer/20336753" class="toggle-expand">显示全部</a>
+<div class="fixed-summary-mask"></div>
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="3321286-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2013-11-25" target="_blank" href="/question/20873070/answer/20336753">编辑于 2014-08-24</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>18 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="copyright zu-autohide"></span>
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer "
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="3396387"
+data-atoken="20516864"
+data-collapsed="0"
+data-created="1385989560"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-score="6.1254795556"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-3396387"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="label">赞同</span>
+<span class="count">4</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+<h3 class="zm-item-answer-author-wrap">
+
+
+<a data-tip="p$t$rock-94"
+class="zm-item-link-avatar"
+href="/people/rock-94">
+<img src="http://pic2.zhimg.com/33c953fee_s.jpg"
+class="zm-list-avatar"
+data-source="http://pic1.zhimg.com/33c953fee_s.jpg" />
+</a>
+
+
+
+<a data-tip="p$t$rock-94" href="/people/rock-94">Rock</a>，<strong title="iOS Dev" class="zu-question-my-bio">iOS Dev</strong>
+
+</h3>
+<a href="javascript:;" name="collapse" class="collapse meta-item zg-right"><i class="z-icon-fold"></i>收起</a>
+</div>
+<div class="zm-item-vote-info " data-votecount="4">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$chen-jia-peng-99" href="http://www.zhihu.com/people/chen-jia-peng-99" class="zg-link" title="陈嘉鹏">陈嘉鹏</a>、</span><span class="user-block"><a data-tip="p$t$yan-bin-23" href="http://www.zhihu.com/people/yan-bin-23" class="zg-link" title="晏斌">晏斌</a>、</span><span class="user-block"><a data-tip="p$t$xie-wei-74-75" href="http://www.zhihu.com/people/xie-wei-74-75" class="zg-link" title="谢伟">谢伟</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text" data-resourceid="529757" data-action="/answer/content">
+
+<div class="fixed-summary zm-editable-content clearfix">如果你喜欢chrome  那么vimium不来一发？
+
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="3396387-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/20873070/answer/20516864">发布于 2013-12-02</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>添加评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="copyright zu-autohide"></span>
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer "
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="3330058"
+data-atoken="20357189"
+data-collapsed="0"
+data-created="1385458492"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-score="42.1255186424"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-3330058"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="label">赞同</span>
+<span class="count">24</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+<h3 class="zm-item-answer-author-wrap">
+
+
+<a data-tip="p$t$qiuyue"
+class="zm-item-link-avatar"
+href="/people/qiuyue">
+<img src="http://pic4.zhimg.com/5d4027977_s.jpg"
+class="zm-list-avatar"
+data-source="http://pic1.zhimg.com/5d4027977_s.jpg" />
+</a>
+
+
+
+<a data-tip="p$t$qiuyue" href="/people/qiuyue">邱岳</a>，<strong title="丁香园招PM qiuy#dxy.com" class="zu-question-my-bio">丁香园招PM qiuy#<a href="http://dxy.com" class=" external" target="_blank" rel="nofollow noreferrer"><span class="invisible">http://</span><span class="visible">dxy.com</span><span class="invisible"></span><i class="icon-external"></i></a></strong>
+
+</h3>
+<a href="javascript:;" name="collapse" class="collapse meta-item zg-right"><i class="z-icon-fold"></i>收起</a>
+</div>
+<div class="zm-item-vote-info " data-votecount="24">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$longyao" href="http://www.zhihu.com/people/longyao" class="zg-link" title="龙遥">龙遥</a>、</span><span class="user-block"><a data-tip="p$t$chen-xin-peng" href="http://www.zhihu.com/people/chen-xin-peng" class="zg-link" title="陈新鹏">陈新鹏</a>、</span><span class="user-block"><a data-tip="p$t$haitian-gu" href="http://www.zhihu.com/people/haitian-gu" class="zg-link" title="Haitian Gu">Haitian Gu</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text" data-resourceid="529757" data-action="/answer/content">
+
+<div class="fixed-summary zm-editable-content clearfix">推荐几个小东西<br><br>1. Bartender 不到100块，将状态栏多余的图标都收起来，只能到官网用信用卡买。<br>2. JiTouch 不到50块，增强各种手势（Trackpad 和 Magic Mouse），只能到官网用信用卡买。<br>3. Caffeine 快速开启保持不会自动休眠，非常有用，免费，Mac Store。<br>4. iStat Pro  是一个 Dash Board 的插件，可以看到电脑的 CPU、内存、网络、电池的使用情况，貌似官网目前主推 App，不提供这个插件下载了，但还有很多网站留有下载链接。<br>5. Window Tidy 快速调节窗口大小，只要50块，App Store 有售。<br>6. Droplr 网盘，跟 OS X 结合非常无缝，截图自动生成链接到剪切板，App Store 有售。<br>7. Sip 屏幕取色，方便快捷，支持各种格式，6块钱，App Store 有售。<br>8. Screeny 录屏软件，好用，我用它录了很多软件操作视频，98块钱，App Store。<br><br>最后推荐池建强这个书   <a href="http://www.duokan.com/mactalk%C2%B7%E4%BA%BA%E7%94%9F%E5%85%83%E7%BC%96%E7%A8%8B/b/40930" class=" wrap external" target="_blank" rel="nofollow noreferrer">MacTalk·人生元编程【下载 在线阅读 书评】<i class="icon-external"></i></a>
+
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="3330058-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/20873070/answer/20357189">发布于 2013-11-26</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>15 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="copyright zu-autohide"></span>
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer "
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="3527687"
+data-atoken="20830258"
+data-collapsed="0"
+data-created="1386991337"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-score="145.125406451"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-3527687"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="label">赞同</span>
+<span class="count">80</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+<h3 class="zm-item-answer-author-wrap">
+
+
+<a data-tip="p$t$wensonsmith"
+class="zm-item-link-avatar"
+href="/people/wensonsmith">
+<img src="http://pic4.zhimg.com/64fdeb64d_s.jpg"
+class="zm-list-avatar"
+data-source="http://pic2.zhimg.com/64fdeb64d_s.jpg" />
+</a>
+
+
+
+<a data-tip="p$t$wensonsmith" href="/people/wensonsmith">Wenson Smith</a>，<strong title="产品设计师" class="zu-question-my-bio">产品设计师 </strong>
+
+</h3>
+<a href="javascript:;" name="collapse" class="collapse meta-item zg-right"><i class="z-icon-fold"></i>收起</a>
+</div>
+<div class="zm-item-vote-info " data-votecount="80">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$jasinyip" href="http://www.zhihu.com/people/jasinyip" class="zg-link" title="Jasin Yip">Jasin Yip</a>、</span><span class="user-block">知乎用户、</span><span class="user-block"><a data-tip="p$t$jin-yang-yang-42" href="http://www.zhihu.com/people/jin-yang-yang-42" class="zg-link" title="金阳阳">金阳阳</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text" data-resourceid="529757" data-action="/answer/content">
+
+<div class="fixed-summary zm-editable-content clearfix">作为一个工具控！工具控啊！<br><br>那我不得不说下各种我爱的软件了：<br><br>一。首先作为程序员，如果你不知道 <b>Sublime Text </b>，那么请接收我深深的同情 <br><noscript><img src="http://pic3.zhimg.com/03a78c888e123207062d5a6933208798_b.jpg" data-rawwidth="464" data-rawheight="272" class="origin_image zh-lightbox-thumb" width="464" data-original="http://pic2.zhimg.com/03a78c888e123207062d5a6933208798_r.jpg"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="464" data-rawheight="272" class="origin_image zh-lightbox-thumb lazy" width="464" data-original="http://pic2.zhimg.com/03a78c888e123207062d5a6933208798_r.jpg" data-actualsrc="http://pic3.zhimg.com/03a78c888e123207062d5a6933208798_b.jpg"><br>看我的这个小图标，是不是好看啊~~哈哈哈 我是连难看的图标都不会放过的人。<br>想换图标的花，只需要右键-&gt;显示包-&gt;contents-&gt;resources,吧原来图标的Sublime.icns替换掉就哦了。<br><br>2.如果你在用10.9 一下的OS ，如果你没有用<noscript><img src="http://pic2.zhimg.com/eeaeedd9e99e15cd1903196f1322aceb_b.jpg" data-rawwidth="346" data-rawheight="236" class="content_image" width="346"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="346" data-rawheight="236" class="content_image lazy" width="346" data-actualsrc="http://pic2.zhimg.com/eeaeedd9e99e15cd1903196f1322aceb_b.jpg"><br>那么在你剪切粘贴复制粘贴的时候你有没有感受到蛋痛。你的finder可以多标签么！！<br><br>3.如果你用iTerm2 和zsh ，却没有配上这个oh-my-zsh 的装逼主题，那么还是差了点火候啊!<br>字体打包特殊字符，完成这种风格，可算是要折腾的啊<br><noscript><img src="http://pic1.zhimg.com/415afb884b7b6a462b3866b1872ab28b_b.jpg" data-rawwidth="1398" data-rawheight="980" class="origin_image zh-lightbox-thumb" width="1398" data-original="http://pic4.zhimg.com/415afb884b7b6a462b3866b1872ab28b_r.jpg">4.如果你做网页设计，想找一个爽一点的取色软件，找来找去都找不到顺手的时候，请试一下</noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="1398" data-rawheight="980" class="origin_image zh-lightbox-thumb lazy" width="1398" data-original="http://pic4.zhimg.com/415afb884b7b6a462b3866b1872ab28b_r.jpg" data-actualsrc="http://pic1.zhimg.com/415afb884b7b6a462b3866b1872ab28b_b.jpg">4.如果你做网页设计，想找一个爽一点的取色软件，找来找去都找不到顺手的时候，请试一下<br><noscript><img src="http://pic2.zhimg.com/00fab3fee3cce195c4a3e4531a80a83b_b.jpg" data-rawwidth="266" data-rawheight="236" class="content_image" width="266"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="266" data-rawheight="236" class="content_image lazy" width="266" data-actualsrc="http://pic2.zhimg.com/00fab3fee3cce195c4a3e4531a80a83b_b.jpg"><noscript><img src="http://pic1.zhimg.com/62dd9b534e3b2f99a833004a2c073abf_b.jpg" data-rawwidth="262" data-rawheight="262" class="content_image" width="262"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="262" data-rawheight="262" class="content_image lazy" width="262" data-actualsrc="http://pic1.zhimg.com/62dd9b534e3b2f99a833004a2c073abf_b.jpg"><br><br>5.如果你的触摸板上下滚动是使用的自然方式，意思是双手向上的时候页面向上，那么在使用鼠标滚轮的时候，感受到那么的别扭的时候，请使用这个神器<br><noscript><img src="http://pic3.zhimg.com/8ff9731c4c7c21fbaed8af43050e4b2f_b.jpg" data-rawwidth="316" data-rawheight="238" class="content_image" width="316"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="316" data-rawheight="238" class="content_image lazy" width="316" data-actualsrc="http://pic3.zhimg.com/8ff9731c4c7c21fbaed8af43050e4b2f_b.jpg"><br>6.android 开发，如果你还在用那个慢到死的模拟器，珍爱生命，珍惜时间，请用<br><noscript><img src="http://pic2.zhimg.com/833c1d31b511ca45382b5ede54f472ea_b.jpg" data-rawwidth="262" data-rawheight="194" class="content_image" width="262">分分钟就开机了啊！秒杀自带模拟器不知道多少次啊好么！！</noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="262" data-rawheight="194" class="content_image lazy" width="262" data-actualsrc="http://pic2.zhimg.com/833c1d31b511ca45382b5ede54f472ea_b.jpg">分分钟就开机了啊！秒杀自带模拟器不知道多少次啊好么！！<br><br>7.如果你英语不好，自带的词典就非常好！ 自己装上词典包，以后就省了各种词典了，<br>浏览器中右键，直接选择在词典中查找，就哦了有木有，效果爽不爽！<br><noscript><img src="http://pic3.zhimg.com/642de467e218d0f741533a5dd50a7b82_b.jpg" data-rawwidth="802" data-rawheight="858" class="origin_image zh-lightbox-thumb" width="802" data-original="http://pic4.zhimg.com/642de467e218d0f741533a5dd50a7b82_r.jpg"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="802" data-rawheight="858" class="origin_image zh-lightbox-thumb lazy" width="802" data-original="http://pic4.zhimg.com/642de467e218d0f741533a5dd50a7b82_r.jpg" data-actualsrc="http://pic3.zhimg.com/642de467e218d0f741533a5dd50a7b82_b.jpg"><br><br>8.居然忘了Markdown编辑器，我只用<br><noscript><img src="http://pic1.zhimg.com/6f56649deec6989b006567ebeddb07a9_b.jpg" data-rawwidth="270" data-rawheight="202" class="content_image" width="270"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="270" data-rawheight="202" class="content_image lazy" width="270" data-actualsrc="http://pic1.zhimg.com/6f56649deec6989b006567ebeddb07a9_b.jpg">
+<a href="/question/20873070/answer/20830258" class="toggle-expand">显示全部</a>
+<div class="fixed-summary-mask"></div>
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="3527687-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2013-12-14" target="_blank" href="/question/20873070/answer/20830258">编辑于 2013-12-14</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>26 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="copyright zu-autohide"></span>
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer "
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="6833180"
+data-atoken="28627233"
+data-collapsed="0"
+data-created="1406814726"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-score="28.1241151712"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-6833180"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="label">赞同</span>
+<span class="count">16</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+<h3 class="zm-item-answer-author-wrap">
+
+
+<a class="zm-item-link-avatar"
+href="javascript:void(0);">
+<img src="http://pic3.zhimg.com/da8e974dc_s.jpg"
+class="zm-list-avatar"
+data-source="http://pic2.zhimg.com/da8e974dc_s.jpg" />
+</a>
+
+
+
+知乎用户，<strong title="开发者" class="zu-question-my-bio">开发者</strong>
+
+</h3>
+<a href="javascript:;" name="collapse" class="collapse meta-item zg-right"><i class="z-icon-fold"></i>收起</a>
+</div>
+<div class="zm-item-vote-info " data-votecount="16">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$wu-jian-xing" href="http://www.zhihu.com/people/wu-jian-xing" class="zg-link" title="吳建興">吳建興</a>、</span><span class="user-block"><a data-tip="p$t$you-dont-know-me" href="http://www.zhihu.com/people/you-dont-know-me" class="zg-link" title="lidashuang">lidashuang</a>、</span><span class="user-block"><a data-tip="p$t$zhuang-long" href="http://www.zhihu.com/people/zhuang-long" class="zg-link" title="庄龙">庄龙</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text" data-resourceid="529757" data-action="/answer/content">
+
+<div class="fixed-summary zm-editable-content clearfix"><ul><li>用 Homebrew 装开发工具链<br></li><li>用 Homebrew Cask 装所有 Mac App Store 里没有的软件<br></li><li>开发依赖复杂的项目时，不要直接在 Mac 系统中编译安装和搭建服务，而是使用 Vagrant 或者 Docker（配合 boot2docker）</li><li>用 iTerm 2 代替系统自带的 Terminal</li><li>用 Time Machine 做好备份</li></ul><br>所谓优雅不就是希望高效、舒服地使用工具么。看到一些回答里说“装逼”的，至于么 = =
+
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="6833180-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2014-07-31" target="_blank" href="/question/20873070/answer/28627233">编辑于 2014-07-31</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>2 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="copyright zu-autohide"></span>
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer "
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="3924813"
+data-atoken="21814875"
+data-collapsed="0"
+data-created="1390278465"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-score="34.1251726665"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-3924813"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="label">赞同</span>
+<span class="count">19</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+<h3 class="zm-item-answer-author-wrap">
+
+
+<a data-tip="p$t$pengyong"
+class="zm-item-link-avatar"
+href="/people/pengyong">
+<img src="http://pic2.zhimg.com/da8e974dc_s.jpg"
+class="zm-list-avatar"
+data-source="http://pic4.zhimg.com/da8e974dc_s.jpg" />
+</a>
+
+
+
+<a data-tip="p$t$pengyong" href="/people/pengyong">彭勇</a>，<strong title="linux/java/python/FreeSwitch/PM" class="zu-question-my-bio">linux/java/python/FreeSwitch/PM</strong>
+
+</h3>
+<a href="javascript:;" name="collapse" class="collapse meta-item zg-right"><i class="z-icon-fold"></i>收起</a>
+</div>
+<div class="zm-item-vote-info " data-votecount="19">
+
+<span class="voters">
+<span class="user-block">知乎用户、</span><span class="user-block"><a data-tip="p$t$lonuery" href="http://www.zhihu.com/people/lonuery" class="zg-link" title="lonuery">lonuery</a>、</span><span class="user-block"><a data-tip="p$t$feng-zhi-shang-13" href="http://www.zhihu.com/people/feng-zhi-shang-13" class="zg-link" title="风之伤">风之伤</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text" data-resourceid="529757" data-action="/answer/content">
+
+<div class="fixed-summary zm-editable-content clearfix">在github上建立了一个项目：<br><br><div class="highlight"><pre><code class="language-text">https://github.com/pubyun/macdev
+</code></pre></div><br><br><h2>Mac for Developer v0.1</h2><p>将本人在使用Mac作为开发工具的过程中的一些体会做个记录和整理，方便以后 自己和团队的参考，提高效率。如果本文对其他开发人员也有所帮助，欢迎您给 给出反馈或者提出改进意见</p><br><p>本文假设您是一个开发工程师，并且是一个Mac的新手。这些步骤在OS X Mavericks 下测试通过。</p><br><p>欢迎大家一起改进这个项目，请Fork、Star或在<a href="https://github.com/pubyun/macdev/issues" class=" wrap external" target="_blank" rel="nofollow noreferrer">Issues<i class="icon-external"></i></a>中提交 :)</p><p>您也可以关注我的<a href="http://weibo.com/pubyun" class=" wrap external" target="_blank" rel="nofollow noreferrer">新浪微博<i class="icon-external"></i></a>，以获取最新消息。</p><br><ul><li><a href="https://github.com/pubyun/macdev/blob/master/install.md" class=" wrap external" target="_blank" rel="nofollow noreferrer">OS X的安装<i class="icon-external"></i></a></li><li><a href="https://github.com/pubyun/macdev/blob/master/recovery.md" class=" wrap external" target="_blank" rel="nofollow noreferrer">OS X的备份和恢复<i class="icon-external"></i></a></li><li><a href="https://github.com/pubyun/macdev/blob/master/basic.md" class=" wrap external" target="_blank" rel="nofollow noreferrer">基本设置<i class="icon-external"></i></a></li><li><a href="https://github.com/pubyun/macdev/blob/master/python.md" class=" wrap external" target="_blank" rel="nofollow noreferrer">python开发环境的设置<i class="icon-external"></i></a></li><li>ruby开发环境的设置 - 整理中...</li><li>java开发环境的设置 - 整理中...</li><li><a href="https://github.com/pubyun/macdev/blob/master/apps.md" class=" wrap external" target="_blank" rel="nofollow noreferrer">推荐软件<i class="icon-external"></i></a></li><li>配置文件 - 整理中 ...</li><li>常用快捷键 - 整理中 ...</li><li><a href="https://github.com/pubyun/macdev/blob/master/refs.md" class=" wrap external" target="_blank" rel="nofollow noreferrer">参考文档<i class="icon-external"></i></a></li></ul>
+
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="3924813-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/20873070/answer/21814875">发布于 2014-01-21</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>1 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="copyright zu-autohide"></span>
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer "
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="3643804"
+data-atoken="21117637"
+data-collapsed="0"
+data-created="1387949498"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-score="22.1239650483"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-3643804"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="label">赞同</span>
+<span class="count">13</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+<h3 class="zm-item-answer-author-wrap">
+
+
+<a data-tip="p$t$rix-tox"
+class="zm-item-link-avatar"
+href="/people/rix-tox">
+<img src="http://pic3.zhimg.com/44576f8e8_s.jpg"
+class="zm-list-avatar"
+data-source="http://pic1.zhimg.com/44576f8e8_s.jpg" />
+</a>
+
+
+
+<a data-tip="p$t$rix-tox" href="/people/rix-tox">Rix Tox</a>，<strong title="汝等皆醒，吾獨睡" class="zu-question-my-bio">汝等皆醒，吾獨睡</strong>
+
+</h3>
+<a href="javascript:;" name="collapse" class="collapse meta-item zg-right"><i class="z-icon-fold"></i>收起</a>
+</div>
+<div class="zm-item-vote-info " data-votecount="13">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$wu-jian-xing" href="http://www.zhihu.com/people/wu-jian-xing" class="zg-link" title="吳建興">吳建興</a>、</span><span class="user-block"><a data-tip="p$t$yentau-yang" href="http://www.zhihu.com/people/yentau-yang" class="zg-link" title="Yentau Yang">Yentau Yang</a>、</span><span class="user-block"><a data-tip="p$t$hou-xu-nan" href="http://www.zhihu.com/people/hou-xu-nan" class="zg-link" title="侯旭男">侯旭男</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text" data-resourceid="529757" data-action="/answer/content">
+
+<div class="fixed-summary zm-editable-content clearfix">吾補充一些小眾的吧<br><br><b>1. 替換光驅位，加裝SSD</b><br>參考教程：<a href="http://www.ifixit.com/Guide/MacBook+Pro+17-Inch+Unibody+Optical+Drive+Replacement/3418" class=" wrap external" target="_blank" rel="nofollow noreferrer">MacBook Pro 17" Unibody Optical Drive Replacement<i class="icon-external"></i></a><br>吾的方式是把SSD裝到原硬盤位，能有6GBps的理論上限，機械硬盤放到光驅位，有3GBps理論上限。硬件換完后關鍵是要配置汝們的操作系統，這裏需要用到一些經驗，吾介紹一些，希望能有補充。<br>首先需要配置掛載方式，用sudo vifs進行配置（可以先設置好EDITOR環境變量）<br><div class="highlight"><pre><code class="language-text">UUID=CF6ABF48-BD75-3392-8582-683E36FED193 / hfs rw,noatime
+</code></pre></div>吾用的是UUID指定硬盤，也可以用路徑，但是後面的文件系統和掛載選項請注意，一定要選擇noatime，否則每次訪問文件都會修改最後訪問時間的字段，造成大量讀寫。<br>接著吾建議安裝Trim Enabler: <a href="http://www.groths.org/software/trimenabler/" class=" wrap external" target="_blank" rel="nofollow noreferrer">groths.org<i class="icon-external"></i></a> 可以優化SSD讀寫。然後請把用戶目錄移動到機械硬盤上，可以到System Preference - Users &amp; Groups - Unlock - Right click user - Advanced Options裡面修改路徑，然後把用戶目錄rsync過去，重啟后生效。接下來汝就可以把大型軟體安裝到~/Applications下面了。<br><b>注：</b>提到rsync，就不得不講一下Mac的特別版本，可以通過brew進行安裝，使用的時候用rsync -avxSEH可以保留HFS的特殊文件屬性（xattr）<br><br><b>2. 配置HTFS支持</b><br>不想買Paragon，就摸索了一下，吾已經總結了詳細步驟，見<a href="http://blog.rixtox.com/post/53595161363/mac-os-x-mountain-lion-ntfs-support-using-ntfs-3g" class=" wrap external" target="_blank" rel="nofollow noreferrer">Mac OS X Mountain Lion NTFS Support Using NTFS-3G<i class="icon-external"></i></a><br>大致翻譯一下主要步驟：安裝Homebrew，用brew裝ntfs-3g，替換Mac的NTFS掛載程式為自檢測腳本，done<br><br>（UPDATE）吾之前為了支持開源與免費一直在用NTFS-3G，但是到了後來實在忍受不鳥2MB/s的傳送速率。吾現在用的是Mac平台下讀寫最快的FUSE系統<a href="http://www.tuxera.com/products/tuxera-ntfs-for-mac/" class=" wrap external" target="_blank" rel="nofollow noreferrer">Tuxera NTFS for Mac<i class="icon-external"></i></a>，不過這是一個商業軟體，需要用31 USD買License。但是裝上這個后吾的讀寫速度有了大幅度提升。<br><br><b>3. 配置命令行終端</b><br><noscript><img src="http://pic3.zhimg.com/6cf4bb48fbf916e1da91b4288735dcac_b.jpg" data-rawwidth="1076" data-rawheight="709" class="origin_image zh-lightbox-thumb" width="1076" data-original="http://pic3.zhimg.com/6cf4bb48fbf916e1da91b4288735dcac_r.jpg">（吾的Terminal自製配色：</noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="1076" data-rawheight="709" class="origin_image zh-lightbox-thumb lazy" width="1076" data-original="http://pic3.zhimg.com/6cf4bb48fbf916e1da91b4288735dcac_r.jpg" data-actualsrc="http://pic3.zhimg.com/6cf4bb48fbf916e1da91b4288735dcac_b.jpg">（吾的Terminal自製配色：<a href="http://www.deviantart.com/art/XIR-DARK-384838766" class=" wrap external" target="_blank" rel="nofollow noreferrer">XIR DARK by RixTox on deviantART<i class="icon-external"></i></a>）<br>吾認為Mac自帶的Terminal已經足夠優秀，沒有使用iTerm的絕對必要。以前用過fish shell，很喜歡它的簡潔，但是又想用回zsh的強大功能，後來發現zsh也有fishy主題:)<br>首先安裝oh-my-zsh: <a href="https://github.com/robbyrussell/oh-my-zsh" class=" wrap external" target="_blank" rel="nofollow noreferrer">robbyrussell/oh-my-zsh · GitHub<i class="icon-external"></i></a><br>然後編輯汝的.zshrc，根據自己的情況配置就好，吾推薦一些選項<br><div class="highlight"><pre><code class="language-bash"><span class="nv">COMPLETION_WAITING_DOTS</span><span class="o">=</span><span class="s2">"true"</span>
+<span class="nv">DISABLE_UNTRACKED_FILES_DIRTY</span><span class="o">=</span><span class="s2">"true"</span>
+<span class="nv">DISABLE_CORRECTION</span><span class="o">=</span><span class="s2">"true"</span>
+<span class="nv">plugins</span><span class="o">=(</span>git brew osx sublime<span class="o">)</span>
+autoload -U compinit
+compinit
+zstyle <span class="s1">':completion:*'</span> menu <span class="k">select</span>
+setopt completealiases
+
+<span class="nb">source</span> <span class="nv">$ZSH</span>/oh-my-zsh.sh
+
+<span class="c"># alias ls='ls --color'</span>
+<span class="nb">alias </span><span class="nv">lsa</span><span class="o">=</span><span class="s1">'ls -lah'</span>
+<span class="nb">alias </span><span class="nv">l</span><span class="o">=</span><span class="s1">'ls'</span>
+<span class="nb">alias </span><span class="nv">ll</span><span class="o">=</span><span class="s1">'ls -alh'</span>
+<span class="nb">alias </span><span class="nv">la</span><span class="o">=</span><span class="s1">'ls -A'</span>
+<span class="nb">alias </span><span class="nv">q</span><span class="o">=</span><span class="s1">'exit'</span>
+</code></pre></div>吾這裏給出的幾個插件都是嚴重推薦的！omz的插件都很不錯，請汝自行選擇。<br>osx插件提供了一些很好用的命令，cdf能cd到最後一個處於激活狀態的finder目錄。sublime提供Sublime Text的相關命令，st [filename]能用ST編輯文件，stt能編輯當前目錄<br><br><b>4. Slate窗格管理器</b><br>項目主頁：<a href="https://github.com/jigish/slate" class=" wrap external" target="_blank" rel="nofollow noreferrer">jigish/slate 路 GitHub<i class="icon-external"></i></a><br>相比于Moom這樣的商業軟體，吾更喜歡像Slate這樣的小型程式，首先它不提供GUI界面，一切靠腳本進行配置，純鍵盤操作，有意思的是汝可以用標準的JavaScript腳本進行配置，具有很高的靈活性。（UPDATE）贴一下吾的slate配置，因为下面会提到<a href="https://gist.github.com/RixTox/4f800f75cfb78ae32b9d" class=" wrap external" target="_blank" rel="nofollow noreferrer">.slate.js<i class="icon-external"></i></a>。<br><br><b>5. 關閉不用的應用程式</b><br>Mac下提供了很多精緻漂亮的掛件和工具，單是如果汝並不使用它們，那麼就可以把它們關掉來節省資源。吾關掉了下面這些東西：<br>Notification Center: <a href="http://www.maclife.com/article/howtos/how_disable_notification_center_mountain_lion" class=" wrap external" target="_blank" rel="nofollow noreferrer">How to Disable Notification Center in Mountain Lion<i class="icon-external"></i></a><br>User Name on Menu-bar: <a href="http://www.elmajdal.net/Mac_OS/How_to_Show_or_Hide_the_UserName_From_the_Menu_Bar_in_OS_X_Lion.aspx" class=" wrap external" target="_blank" rel="nofollow noreferrer">How to Show or Hide the 
+							UserName from the Menu Bar in OS X 
+							Lion<i class="icon-external"></i></a><br>Spotlight Icon: <a href="http://osxdaily.com/2011/12/12/hide-spotlight-menu-icon-mac-os-x/" class=" wrap external" target="_blank" rel="nofollow noreferrer">Hide the Spotlight Menu Icon in Mac OS X<i class="icon-external"></i></a><br>Dashboard: <a href="http://www.macworld.com/article/1046236/disabledashboard.html" class=" wrap external" target="_blank" rel="nofollow noreferrer">Disable Dashboard<i class="icon-external"></i></a><br><br><b>6. Alfred</b><br>雖然很多人都已經說過了，但吾還是想提一下，因為一旦汝使用了Alfred，汝基本上就能一直將Dock給隱藏起來了，這能給汝提供更多的窗體空間。<a href="https://github.com/zenorocha/alfred-workflows" class=" wrap external" target="_blank" rel="nofollow noreferrer">zenorocha/alfred-workflows · GitHub<i class="icon-external"></i></a>提供了很多有用的Workflows，不過汝等還是應該自己寫一些適用於汝們的，為自己常用的開發環境設立快捷鍵，有時候真的十分方便。<br><br>＝＝＝＝＝＝＝＝＝＝UPDATE＝＝＝＝＝＝＝＝＝<br><br>看到有人點贊和評論，吾就再Update一下吧。<br><br><b>7. Dev Setup</b><br><b><a href="https://github.com/nicolashery/mac-dev-setup" class=" wrap external" target="_blank" rel="nofollow noreferrer">nicolashery/mac-dev-setup · GitHub<i class="icon-external"></i></a><br></b><br>這是吾無意間找到的一份開發環境設置清單，裡面包含了部份主流開發語言的相關配置。如果汝在給新機做配置，可以參考這個清單看看有沒有遺漏。<br><br><b>8. Emacs24 Starter Kit</b><br><a href="http://eschulte.github.io/emacs24-starter-kit/" class=" external" target="_blank" rel="nofollow noreferrer"><span class="invisible">http://</span><span class="visible">eschulte.github.io/emac</span><span class="invisible">s24-starter-kit/</span><span class="ellipsis"></span><i class="icon-external"></i></a><br><br><a href="https://github.com/eschulte/emacs24-starter-kit/" class=" wrap external" target="_blank" rel="nofollow noreferrer">eschulte/emacs24-starter-kit · GitHub<i class="icon-external"></i></a><br>上面的Dev Setup裡面之有Vim沒有Emacs，而吾是Emacs黨。這裡推薦一份適合所有階段Emacs使用者的配置模板。<br><br><b>9. Dash</b><br><a href="http://kapeli.com/dash" class=" wrap external" target="_blank" rel="nofollow noreferrer">Dash<i class="icon-external"></i></a>是一款非常好用的文档索引工具，吾自从用上它之后就很少再去用Google搜文档了。<br><br><b>10. iTerm2</b><br>之前吾不用它是因为那时它的字体优化做得非常渣，抗锯齿做得不忍直视。后来吾尝试了那时的Beta版，发现这个问题被解决后其实还蛮好用的说。现在吾就固定用iTerm了，吾把之前Terminal的那套配色照搬过来，用得还很爽。<br>在这里提一下关于iTerm在Alfred中配置workflow的问题，吾在网上找过很多写得不错的workflow，但是吾还想让吾的环境用起来跟tiling window manager一样舒爽，吾想让iTerm打开后固定在屏幕的右下角，占据1/4屏幕大小。所以吾把workflow跟slate稍微结合了一下，详细见代码。<br><div class="highlight"><pre><code class="language-applescript"><span class="k">on</span> <span class="nv">appIsRunning</span><span class="p">(</span><span class="nv">appName</span><span class="p">)</span>
+  <span class="k">tell</span> <span class="nb">application</span> <span class="s2">"System Events"</span> <span class="k">to</span> <span class="p">(</span><span class="na">name</span> <span class="k">of</span> <span class="nv">processes</span><span class="p">)</span> <span class="ow">contains</span> <span class="nv">appName</span>
+<span class="k">end</span> <span class="nv">appIsRunning</span>
+
+<span class="k">on</span> <span class="nv">alfred_script</span><span class="p">(</span><span class="nv">q</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nv">appIsRunning</span><span class="p">(</span><span class="s2">"iTerm"</span><span class="p">)</span> <span class="k">then</span>
+      <span class="k">tell</span> <span class="nb">application</span> <span class="s2">"iTerm"</span>
+        <span class="k">set</span> <span class="nv">myterm</span> <span class="k">to</span> <span class="nb">make</span> <span class="nb">new</span> <span class="nv">terminal</span>
+        <span class="k">tell</span> <span class="nv">myterm</span>
+          <span class="nb">launch</span> <span class="nv">session</span> <span class="s2">"Default Session"</span>
+        <span class="k">end</span> <span class="k">tell</span>
+      <span class="k">end</span> <span class="k">tell</span>
+    <span class="k">else</span>
+      <span class="k">tell</span> <span class="nb">application</span> <span class="s2">"iTerm"</span> <span class="k">to</span> <span class="nb">activate</span>
+    <span class="k">end</span> <span class="k">if</span>
+    <span class="k">tell</span> <span class="nb">application</span> <span class="s2">"System Events"</span> <span class="k">to</span> <span class="nv">keystroke</span> <span class="s2">"&gt;"</span> <span class="nv">using</span> <span class="p">{</span><span class="nv">shift</span> <span class="nv">down</span><span class="p">,</span> <span class="nv">option</span> <span class="nv">down</span><span class="p">}</span>
+<span class="k">end</span> <span class="nv">alfred_script</span>
+</code></pre></div>这里吾触发了吾的Slate热键Shift+Opt+&gt;，详情请见吾上面的slate配置。这个workflow还可以应用在别的程式上面，吾将吾常用的开发软体都用这种方式固定在了屏幕的某个位置，真的有种在用i3的赶脚。<br><br><b>11. LiteIcon</b><br>这个只是顺便提一下关于UI的事。CandyBar从Mavericks开始就没好好工作过，更别提吾已经更新到了Yosemite DP6了。<a href="http://www.freemacsoft.net/liteicon/" class=" wrap external" target="_blank" rel="nofollow noreferrer">LiteIcon<i class="icon-external"></i></a>是吾无意间找到的可以代替CandyBar的图标更换工具，可能功能上还不是很完备，但是作者仍然在持续开发中。
+<a href="/question/20873070/answer/21117637" class="toggle-expand">显示全部</a>
+<div class="fixed-summary-mask"></div>
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="3643804-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2013-12-25" target="_blank" href="/question/20873070/answer/21117637">编辑于 2014-08-30</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>4 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="copyright zu-autohide"></span>
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer "
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="3528633"
+data-atoken="20832645"
+data-collapsed="0"
+data-created="1386997473"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-score="7.1254060242"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-3528633"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="label">赞同</span>
+<span class="count">7</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+<h3 class="zm-item-answer-author-wrap">
+
+
+<a data-tip="p$t$marsorange"
+class="zm-item-link-avatar"
+href="/people/marsorange">
+<img src="http://pic2.zhimg.com/443616073_s.jpg"
+class="zm-list-avatar"
+data-source="http://pic2.zhimg.com/443616073_s.jpg" />
+</a>
+
+
+
+<a data-tip="p$t$marsorange" href="/people/marsorange">彭博</a>，<strong title="用 macbook 装 windows 用chrmoe 上 baidu" class="zu-question-my-bio">用 macbook 装 windows 用chrmoe 上 baidu</strong>
+
+</h3>
+<a href="javascript:;" name="collapse" class="collapse meta-item zg-right"><i class="z-icon-fold"></i>收起</a>
+</div>
+<div class="zm-item-vote-info " data-votecount="7">
+
+<span class="voters">
+<span class="user-block">知乎用户、</span><span class="user-block"><a data-tip="p$t$joechao" href="http://www.zhihu.com/people/joechao" class="zg-link" title="JoeChao">JoeChao</a>、</span><span class="user-block"><a data-tip="p$t$ccyjava" href="http://www.zhihu.com/people/ccyjava" class="zg-link" title="崔晨阳">崔晨阳</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text" data-resourceid="529757" data-action="/answer/content">
+
+<div class="fixed-summary zm-editable-content clearfix">1.电脑是拿来用的，无论是否优雅，满足需求才是王道；<br><br><blockquote><b>  装Windows没什么不好</b>，否则为什么Apple提供 Boot Camp 这么便捷的装windows呢。</blockquote><br>2.mac 用 Goagent 翻（墙）不如windows下方便；<br><br>3.mac 下 QQ 不能群语音；<br><br>4.mac 下修改Gif 不好用；<br><br>5.mac 下 Office  不如Office2013 好用；（不要和我提Pages，功能上的差那么多）；<br><br><br>--------下面说下怎么优雅使用Mac---------<br><br>1. jitouch： 这是神器，从此你可以抛弃鼠标了，顺便吐槽 magic mouse 的难用（主要指握姿）；<br><br>2.不用关机，只需要合上盖子就好（SSD硬盘的）。 windows 和 mac 均可；<br><br>3.Magsafe 电源适配器 连接 可以正反面接；<br><br>4.Mac下有自带截图快捷键：<br><div class="highlight"><pre><code class="language-text">全屏截图：Command-Shift-3
+使用快捷键后会马上截取当前的全屏
+
+指定区域截图：Command-Shift-4
+使用快捷键后会出来一个带有座标的瞄准器，用鼠标的拖放可以选择需要截图的区域。
+</code></pre></div><br>5.多桌面：Mac下面多桌面非常好用，三指滑动切换；
+
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="3528633-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2013-12-14" target="_blank" href="/question/20873070/answer/20832645">编辑于 2013-12-14</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>6 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="copyright zu-autohide"></span>
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer "
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="3333659"
+data-atoken="20365924"
+data-collapsed="0"
+data-created="1385480042"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-score="10.1249411685"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-3333659"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="label">赞同</span>
+<span class="count">5</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+<h3 class="zm-item-answer-author-wrap">
+
+
+<a data-tip="p$t$hanghigh"
+class="zm-item-link-avatar"
+href="/people/hanghigh">
+<img src="http://pic2.zhimg.com/6d9d8016f_s.jpg"
+class="zm-list-avatar"
+data-source="http://pic4.zhimg.com/6d9d8016f_s.jpg" />
+</a>
+
+
+
+<a data-tip="p$t$hanghigh" href="/people/hanghigh">憨航航</a>，<strong title="已成年" class="zu-question-my-bio">已成年</strong>
+
+</h3>
+<a href="javascript:;" name="collapse" class="collapse meta-item zg-right"><i class="z-icon-fold"></i>收起</a>
+</div>
+<div class="zm-item-vote-info " data-votecount="5">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$augustus" href="http://www.zhihu.com/people/augustus" class="zg-link" title="张延宽">张延宽</a>、</span><span class="user-block">知乎用户、</span><span class="user-block"><a data-tip="p$t$xiao-chao" href="http://www.zhihu.com/people/xiao-chao" class="zg-link" title="小超">小超</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text" data-resourceid="529757" data-action="/answer/content">
+
+<div class="fixed-summary zm-editable-content clearfix">前面的回答很赞，受教了。<br>推荐一个辅助功能的放大屏幕<noscript><img src="http://pic4.zhimg.com/be5335eb223689e0c25f0836e992412d_b.jpg" data-rawwidth="669" data-rawheight="449" class="origin_image zh-lightbox-thumb" width="669" data-original="http://pic2.zhimg.com/be5335eb223689e0c25f0836e992412d_r.jpg"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="669" data-rawheight="449" class="origin_image zh-lightbox-thumb lazy" width="669" data-original="http://pic2.zhimg.com/be5335eb223689e0c25f0836e992412d_r.jpg" data-actualsrc="http://pic4.zhimg.com/be5335eb223689e0c25f0836e992412d_b.jpg"><br>如图“Use scroll gesture”那一项。<br>编程字体很小，用了这个就不会坏眼了。。<br><br>再加一个改变屏幕色调保护眼睛的功能：<br><noscript><img src="http://pic3.zhimg.com/ddeb3198f8f13ec206517a93a915c698_b.jpg" data-rawwidth="782" data-rawheight="589" class="origin_image zh-lightbox-thumb" width="782" data-original="http://pic4.zhimg.com/ddeb3198f8f13ec206517a93a915c698_r.jpg"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="782" data-rawheight="589" class="origin_image zh-lightbox-thumb lazy" width="782" data-original="http://pic4.zhimg.com/ddeb3198f8f13ec206517a93a915c698_r.jpg" data-actualsrc="http://pic3.zhimg.com/ddeb3198f8f13ec206517a93a915c698_b.jpg"><noscript><img src="http://pic2.zhimg.com/28ff486e117abba5701ea34d6d00948a_b.jpg" data-rawwidth="734" data-rawheight="554" class="origin_image zh-lightbox-thumb" width="734" data-original="http://pic1.zhimg.com/28ff486e117abba5701ea34d6d00948a_r.jpg">如图设置之后就会变成图中那种yellowish white色调，我把它命名为“老照片”</noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="734" data-rawheight="554" class="origin_image zh-lightbox-thumb lazy" width="734" data-original="http://pic1.zhimg.com/28ff486e117abba5701ea34d6d00948a_r.jpg" data-actualsrc="http://pic2.zhimg.com/28ff486e117abba5701ea34d6d00948a_b.jpg">如图设置之后就会变成图中那种yellowish white色调，我把它命名为“老照片”<br>这一条出自<a href="http://mac.pcbeta.com/thread-67177-1-1.html" class=" wrap external" target="_blank" rel="nofollow noreferrer">保护视力，将显示器调成暖黄色<i class="icon-external"></i></a>
+<a href="/question/20873070/answer/20365924" class="toggle-expand">显示全部</a>
+<div class="fixed-summary-mask"></div>
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="3333659-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2013-11-26" target="_blank" href="/question/20873070/answer/20365924">编辑于 2014-03-01</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>12 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="copyright zu-autohide"></span>
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer "
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="3361838"
+data-atoken="20433792"
+data-collapsed="0"
+data-created="1385697371"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-score="90.1255010301"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-3361838"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="label">赞同</span>
+<span class="count">63</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+<h3 class="zm-item-answer-author-wrap">
+
+
+<a data-tip="p$t$xiao-xiao-xia-mi"
+class="zm-item-link-avatar"
+href="/people/xiao-xiao-xia-mi">
+<img src="http://pic3.zhimg.com/bbc01e553_s.jpg"
+class="zm-list-avatar"
+data-source="http://pic4.zhimg.com/bbc01e553_s.jpg" />
+</a>
+
+
+
+<a data-tip="p$t$xiao-xiao-xia-mi" href="/people/xiao-xiao-xia-mi">小小夏米</a>
+
+</h3>
+<a href="javascript:;" name="collapse" class="collapse meta-item zg-right"><i class="z-icon-fold"></i>收起</a>
+</div>
+<div class="zm-item-vote-info " data-votecount="63">
+
+<span class="voters">
+<span class="user-block">知乎用户、</span><span class="user-block"><a data-tip="p$t$wang-zhong-19-40" href="http://www.zhihu.com/people/wang-zhong-19-40" class="zg-link" title="王重">王重</a>、</span><span class="user-block">知乎用户</span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text" data-resourceid="529757" data-action="/answer/content">
+
+<div class="fixed-summary zm-editable-content clearfix">至从程序员老公用了MAC后，我再也不查岗了，因为不懂得怎么用。
+
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="3361838-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/20873070/answer/20433792">发布于 2013-11-29</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>13 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="copyright zu-autohide"></span>
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer "
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="3345446"
+data-atoken="20394057"
+data-collapsed="0"
+data-created="1385563328"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-score="19.1255109068"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-3345446"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="label">赞同</span>
+<span class="count">11</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+<h3 class="zm-item-answer-author-wrap">
+
+
+<a data-tip="p$t$utal"
+class="zm-item-link-avatar"
+href="/people/utal">
+<img src="http://pic2.zhimg.com/fa7870bf1_s.jpg"
+class="zm-list-avatar"
+data-source="http://pic2.zhimg.com/fa7870bf1_s.jpg" />
+</a>
+
+
+
+<a data-tip="p$t$utal" href="/people/utal">utal</a>，<strong title="什么都不知道但什么都想知道" class="zu-question-my-bio">什么都不知道但什么都想知道</strong>
+
+</h3>
+<a href="javascript:;" name="collapse" class="collapse meta-item zg-right"><i class="z-icon-fold"></i>收起</a>
+</div>
+<div class="zm-item-vote-info " data-votecount="11">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$zi-yu-xi-ming" href="http://www.zhihu.com/people/zi-yu-xi-ming" class="zg-link" title="子羽西鸣">子羽西鸣</a>、</span><span class="user-block">知乎用户、</span><span class="user-block"><a data-tip="p$t$lori-ho" href="http://www.zhihu.com/people/lori-ho" class="zg-link" title="Lori HO">Lori HO</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text" data-resourceid="529757" data-action="/answer/content">
+
+<div class="fixed-summary zm-editable-content clearfix">1.safari浏览器里浏览标签页设个好用的快捷键，每次浏览多个网页时候划来划去多潇洒。<noscript><img src="http://pic2.zhimg.com/6020ddf797d51dab9b8f447ca7e86e67_b.jpg" data-rawwidth="1263" data-rawheight="781" class="origin_image zh-lightbox-thumb" width="1263" data-original="http://pic1.zhimg.com/6020ddf797d51dab9b8f447ca7e86e67_r.jpg"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="1263" data-rawheight="781" class="origin_image zh-lightbox-thumb lazy" width="1263" data-original="http://pic1.zhimg.com/6020ddf797d51dab9b8f447ca7e86e67_r.jpg" data-actualsrc="http://pic2.zhimg.com/6020ddf797d51dab9b8f447ca7e86e67_b.jpg"><br>2.MissionControl里面的建立新桌面很好用。<br><noscript><img src="http://pic2.zhimg.com/5e00adc6c5b13e49527d85ea0c434e4d_b.jpg" data-rawwidth="1194" data-rawheight="800" class="origin_image zh-lightbox-thumb" width="1194" data-original="http://pic2.zhimg.com/5e00adc6c5b13e49527d85ea0c434e4d_r.jpg">另外就是MAC自带的grapher软件很牛掰有木有，感觉画方程的图比matlab还给力啊</noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="1194" data-rawheight="800" class="origin_image zh-lightbox-thumb lazy" width="1194" data-original="http://pic2.zhimg.com/5e00adc6c5b13e49527d85ea0c434e4d_r.jpg" data-actualsrc="http://pic2.zhimg.com/5e00adc6c5b13e49527d85ea0c434e4d_b.jpg">另外就是MAC自带的grapher软件很牛掰有木有，感觉画方程的图比matlab还给力啊<br><noscript><img src="http://pic2.zhimg.com/74484174c88ab540b5a0c39ee59282fb_b.jpg" data-rawwidth="1278" data-rawheight="767" class="origin_image zh-lightbox-thumb" width="1278" data-original="http://pic4.zhimg.com/74484174c88ab540b5a0c39ee59282fb_r.jpg"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="1278" data-rawheight="767" class="origin_image zh-lightbox-thumb lazy" width="1278" data-original="http://pic4.zhimg.com/74484174c88ab540b5a0c39ee59282fb_r.jpg" data-actualsrc="http://pic2.zhimg.com/74484174c88ab540b5a0c39ee59282fb_b.jpg"><br>另外就是前面有人说的一个取色软件，mac自带的数码侧色计也很好用。<br><br>再推荐个小东西，叫break wall，没它之前每次用gae上墙外都要终端敲命令然后设置里面改代理，有了之后可方便了。<noscript><img src="http://pic3.zhimg.com/dcde21970fa625c911d024f7c4183327_b.jpg" data-rawwidth="271" data-rawheight="354" class="content_image" width="271"></noscript><img src="//s1.zhimg.com/misc/whitedot.jpg" data-rawwidth="271" data-rawheight="354" class="content_image lazy" width="271" data-actualsrc="http://pic3.zhimg.com/dcde21970fa625c911d024f7c4183327_b.jpg"><br>还有rowmote远程控制，用手机端控制MAC，简直就是为MAC打造的，靠在椅子上划着装口袋里的手机屏幕来翻页看PPT绝对很优雅。
+<a href="/question/20873070/answer/20394057" class="toggle-expand">显示全部</a>
+<div class="fixed-summary-mask"></div>
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="3345446-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/20873070/answer/20394057">发布于 2013-11-27</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>10 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="copyright zu-autohide"></span>
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer "
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="3720192"
+data-atoken="21306743"
+data-collapsed="0"
+data-created="1388628694"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-score="4.1252888126"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-3720192"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="label">赞同</span>
+<span class="count">3</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+<h3 class="zm-item-answer-author-wrap">
+
+
+<a class="zm-item-link-avatar"
+href="javascript:void(0);">
+<img src="http://pic2.zhimg.com/da8e974dc_s.jpg"
+class="zm-list-avatar"
+data-source="http://pic3.zhimg.com/da8e974dc_s.jpg" />
+</a>
+
+
+
+知乎用户，<strong title="请使用简体汉字，说普通话" class="zu-question-my-bio">请使用简体汉字，说普通话</strong>
+
+</h3>
+<a href="javascript:;" name="collapse" class="collapse meta-item zg-right"><i class="z-icon-fold"></i>收起</a>
+</div>
+<div class="zm-item-vote-info " data-votecount="3">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$koala-jaro" href="http://www.zhihu.com/people/koala-jaro" class="zg-link" title="koala Jaro">koala Jaro</a>、</span><span class="user-block"><a data-tip="p$t$lori-ho" href="http://www.zhihu.com/people/lori-ho" class="zg-link" title="Lori HO">Lori HO</a>、</span><span class="user-block"><a data-tip="p$t$zhong-jiu-80" href="http://www.zhihu.com/people/zhong-jiu-80" class="zg-link" title="金枪鱼">金枪鱼</a></span>
+</span>
+
+
+<span>赞同</span>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text" data-resourceid="529757" data-action="/answer/content">
+
+<div class="fixed-summary zm-editable-content clearfix">都没人提到手势神器Jitouch吗，这个插件可以让你的触摸板升级为神器，一只手的两三个手指就可以完美打开关闭切换浏览器里的不同标签，配合Chrome 兼职就是上网浏览的极致体验哟，右手操作电脑，左手还可以干点别的哟~嘻嘻哈哈。<br><br>这里再介绍一下，Chorme下还应该安装“印象笔记·悦读”插件，可以把宂乱无章夹杂各种评论和广告的页面转换成精美易读的大字体，背景清爽整洁，还能自动另存为Pdf，学习的好帮手哟~<br><br>当然你可以说自带的safari浏览器就有这个阅读功能啦，但是个人不喜safari，一是整个设计是拟mac的铝制金属感，收藏夹里每个网页都无自己的logo显示，感觉单调枯燥乏。。最关键的是标签之间切换的迟滞感好难受哟~<br><br><br><br><br><b>ps：针对mac下是否安装windows以及安装了windows是否是一件很低级龌龊的事，我是这个看法：</b><br><b>1.首先跟性别无关，不要觉得你是女孩子就有理由用不了mac OS，而用OS就是男生（geek）的事。女孩子不要把自己的智商想成是2岁的baby。</b><br><b>2.其次就是看具体的使用了，如果两个环境下，有相同的软件使用环境，比如说纯粹的office办公，上网浏览，视听娱乐等，这些不但mac有，而且个人认为用户体验至少做得不比windows差。所以这些基本的功能大可使用mac的。当然我说的这些有点太小看mac了，难道全世界人们买mac只是用来干这些简单的事情吗？</b><br><b>不是的，mac有高端大气的keynote，iMovie，Aperture，FinalCut Pro等神器了（我不是做摄影平面的，所以其他的神器我就不太知道啦）。像我拿keynote做的汇报高端大气有没有，拿iMovie简单做个产品开箱什么的，相比windows下的什么xxxx简直弱爆了有没有。</b><br><b>所以说，还是具体依照你的职业来判断，是否“合适and适合”来使用mac。</b><br><b>比如你是摄影or平面or动画等专业，那么你应该庆幸这个世界上有比PC好用的软件or硬件（就是OS和Mac啦），Mac显示器的色彩是出类拔萃的，OS下众多高精简的软件也使你看到了不少大制作的电影动画。</b><br><br><br><b>我个人是干建筑设计的，这个行业不得不涉及到各种绘图制作软件。不得不说，就做常用的AutoCAD来说，这个国际通用的二维绘图软件有很多本地化的插件（例如天正，理正工具箱等），所以这个软件的运行环境95%以上都是在PC下的。同样，Autodesk公司下的大多数二维三维的软件，都是以PC下为主的，包括现在流行的Revit等等。而三维建模软件也同理，Sketchup和Rhino，这两个建筑师最常用的建模工具，也是在PC环境下有着众多的第三方插件以及可以熟练操作。所以说建筑师或者相关从业人员如果单纯为了优雅装b的在Mac下使用不成熟的相关软件，那就是事倍功半了。</b><br><b>当然，Adobe系列的软件，一直在OS下做的很好啊，配合SSD硬盘，Photoshop和AI也可以秒开秒存哦。</b><br><br><b>程序员以及IT行业我就不知道有多少软件的兼容性好了，总结来说就是看你具体干什么。</b>
+<a href="/question/20873070/answer/21306743" class="toggle-expand">显示全部</a>
+<div class="fixed-summary-mask"></div>
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="3720192-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link last_updated meta-item" data-tip="s$t$发布于 2014-01-02" target="_blank" href="/question/20873070/answer/21306743">编辑于 2014-01-02</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>4 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="copyright zu-autohide"></span>
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer "
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="9472008"
+data-atoken="35209028"
+data-collapsed="0"
+data-created="1418650378"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-score="0.1234583474"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-9472008"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="label">赞同</span>
+<span class="count">3</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+<h3 class="zm-item-answer-author-wrap">
+
+
+<a data-tip="p$t$idada"
+class="zm-item-link-avatar"
+href="/people/idada">
+<img src="http://pic2.zhimg.com/58f573cdf_s.jpg"
+class="zm-list-avatar"
+data-source="http://pic1.zhimg.com/58f573cdf_s.jpg" />
+</a>
+
+
+
+<a data-tip="p$t$idada" href="/people/idada">达达</a>，<strong title="服务端程序员，主页：http://1234n.com" class="zu-question-my-bio">服务端程序员，主页：<a href="http://1234n.com" class=" external" target="_blank" rel="nofollow noreferrer"><span class="invisible">http://</span><span class="visible">1234n.com</span><span class="invisible"></span><i class="icon-external"></i></a></strong>
+
+</h3>
+<a href="javascript:;" name="collapse" class="collapse meta-item zg-right"><i class="z-icon-fold"></i>收起</a>
+</div>
+<div class="zm-item-vote-info " data-votecount="3">
+
+<span class="voters">
+<span class="user-block">知乎用户、</span><span class="user-block"><a data-tip="p$t$jsxqf" href="http://www.zhihu.com/people/jsxqf" class="zg-link" title="jsxqf">jsxqf</a>、</span><span class="user-block"><a data-tip="p$t$tolower" href="http://www.zhihu.com/people/tolower" class="zg-link" title="月明星稀">月明星稀</a></span>
+</span>
+
+
+<span>赞同</span>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text" data-resourceid="529757" data-action="/answer/content">
+
+<div class="fixed-summary zm-editable-content clearfix">打字的时候把小拇指翘起来。<br><br>本来要上图的，怕大家会吐，还是自行想象吧。
+
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="9472008-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/20873070/answer/35209028">发布于 2014-12-15</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>3 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="copyright zu-autohide"></span>
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer "
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="3719646"
+data-atoken="21305382"
+data-collapsed="0"
+data-created="1388625477"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-score="-4.8747108618"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-3719646"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="label">赞同</span>
+<span class="count">7</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+<h3 class="zm-item-answer-author-wrap">
+
+
+<a data-tip="p$t$linan"
+class="zm-item-link-avatar"
+href="/people/linan">
+<img src="http://pic4.zhimg.com/24f3a654b_s.jpg"
+class="zm-list-avatar"
+data-source="http://pic3.zhimg.com/24f3a654b_s.jpg" />
+</a>
+
+
+
+<a data-tip="p$t$linan" href="/people/linan">李楠</a>，<strong title="写了：Mac OS ，全键盘工作，全鼠标浏览" class="zu-question-my-bio">写了：Mac OS ，全键盘工作，全鼠标浏览</strong>
+
+</h3>
+<a href="javascript:;" name="collapse" class="collapse meta-item zg-right"><i class="z-icon-fold"></i>收起</a>
+</div>
+<div class="zm-item-vote-info " data-votecount="7">
+
+<span class="voters">
+<span class="user-block">知乎用户、</span><span class="user-block"><a data-tip="p$t$kzjnet" href="http://www.zhihu.com/people/kzjnet" class="zg-link" title="Kzjnet">Kzjnet</a>、</span><span class="user-block"><a data-tip="p$t$xie-yu-hao-61" href="http://www.zhihu.com/people/xie-yu-hao-61" class="zg-link" title="叶雨豪">叶雨豪</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text" data-resourceid="529757" data-action="/answer/content">
+
+<div class="fixed-summary zm-editable-content clearfix">比使用 Windows 的程序员更快更好的 commit 。
+
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="3719646-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/20873070/answer/21305382">发布于 2014-01-02</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>添加评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="copyright zu-autohide"></span>
+
+
+</div>
+</div>
+</div>
+
+<div tabindex="-1" class="zm-item-answer "
+
+itemscope itemtype="http://schema.org/Answer"
+data-aid="9227981"
+data-atoken="34600792"
+data-collapsed="0"
+data-created="1417766357"
+data-deleted="0"
+data-helpful="1"
+data-isowner="0"
+data-score="-7.8764949776"
+
+
+>
+<a class="zg-anchor-hidden" name="answer-9227981"></a>
+
+
+<div class="zm-votebar">
+<button class="up ">
+<i class="icon vote-arrow"></i>
+<span class="label">赞同</span>
+<span class="count">5</span>
+</button>
+<button class="down ">
+<i class="icon vote-arrow"></i>
+<span class="label">反对</span>
+</button>
+</div>
+
+
+<div class="answer-head">
+<div class="zm-item-answer-author-info">
+<h3 class="zm-item-answer-author-wrap">
+
+
+<a data-tip="p$t$ccyjava"
+class="zm-item-link-avatar"
+href="/people/ccyjava">
+<img src="http://pic1.zhimg.com/0e84c2c07_s.jpg"
+class="zm-list-avatar"
+data-source="http://pic1.zhimg.com/0e84c2c07_s.jpg" />
+</a>
+
+
+
+<a data-tip="p$t$ccyjava" href="/people/ccyjava">崔晨阳</a>，<strong title="学姿势，造天亮" class="zu-question-my-bio">学姿势，造天亮</strong>
+
+</h3>
+<a href="javascript:;" name="collapse" class="collapse meta-item zg-right"><i class="z-icon-fold"></i>收起</a>
+</div>
+<div class="zm-item-vote-info " data-votecount="5">
+
+<span class="voters">
+<span class="user-block"><a data-tip="p$t$ychen171" href="http://www.zhihu.com/people/ychen171" class="zg-link" title="陈予">陈予</a>、</span><span class="user-block"><a data-tip="p$t$xiong-yi-lin-58" href="http://www.zhihu.com/people/xiong-yi-lin-58" class="zg-link" title="雄亿琳">雄亿琳</a>、</span><span class="user-block"><a data-tip="p$t$hi-xw" href="http://www.zhihu.com/people/hi-xw" class="zg-link" title="肖旺">肖旺</a></span>
+</span>
+
+
+<a href="javascript:;" class="more"> 等人赞同</a>
+
+
+</div>
+</div>
+<div class="zm-item-rich-text" data-resourceid="529757" data-action="/answer/content">
+
+<div class="fixed-summary zm-editable-content clearfix">1，外接键盘（如果你不是程序员就不用了），市面上90%的键盘都比macbook的好用。。。<br>2，别用chrome<br>3，神奇的快捷键 ctrl + a ,ctrl + e<br>4，系统自带的窗口控制简直是坨翔，最大最小化窗口简直不是人用的，下个spectacle吧<br>5，记住一点，如果硬说mac比windows好，那么关键就在于它有term，其他的地方都是渣渣，就算term也只能跟windows比而已，跟ubuntu比还是渣渣，楼上有人说homebrew堪比apt-get,真是笑尿了。。。有人扯出sublime text，人家是跨平台的编辑器好吧。。。。finder连复制路径都不行。。。activity moniter 也被任务管理器虐成渣了好吧。。。还有说keynote,page,number堪比office系列的，来来来，帮我找找keynote里面自带几个默认图形？也就几个箭头几个方块好吧，ppt想画个图都麻烦，必须依赖其他的工具。。。office里的格式刷真是神器啊，岂是mac自带的那些破玩意能比的。。。<br><br><br>无比怀念windows，如果windows下的命令行好用一点我这辈子就再也不碰mac了。。。。
+
+
+</div>
+
+</div>
+<a class="zg-anchor-hidden ac" name="9227981-comment"></a>
+<div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+<div class="zm-meta-panel">
+
+<span class="answer-date-link-wrap">
+<a class="answer-date-link meta-item" target="_blank" href="/question/20873070/answer/34600792">发布于 2014-12-05</a>
+</span>
+
+<a href="#" name="addcomment" class=" meta-item toggle-comment">
+<i class="z-icon-comment"></i>9 条评论</a>
+
+
+<a href="#" class="meta-item zu-autohide" name="thanks"><i class="z-icon-thank"></i>感谢</a>
+
+
+
+<a href="#" class="meta-item zu-autohide" name="share">
+<i class="z-icon-share"></i>分享</a>
+<a href="#" class="meta-item zu-autohide" name="favo">
+<i class="z-icon-collect"></i>收藏</a>
+
+
+
+
+<span class="zg-bull zu-autohide">&bull;</span>
+
+<a href="#" name="nohelp" class="meta-item zu-autohide">没有帮助</a>
+
+<span class="zg-bull zu-autohide">&bull;</span>
+<a href="#" name="report" class="meta-item zu-autohide">举报</a>
+
+
+
+<span class="copyright zu-autohide"></span>
+
+
+</div>
+</div>
+</div>
+
+
+</div>
+
+<div id="zh-question-collapsed-link" class="zu-question-collap-title" style="display:none" >
+<a href="javascript:;" name="expand" class="zg-link-gray" id="zh-question-collapsed-switcher">
+<span id="zh-question-collapsed-num">45</span> 个回答被折叠
+</a>
+（<a target="_blank" href="http://www.zhihu.com/question/20120168" class="zg-link-gray">为什么？</a>）
+</div>
+<div id="zh-question-collapsed-wrap" class="zh-question-answer-wrapper" style="display:none"></div>
+<a name="draft"></a>
+<div id="zh-question-answer-form-wrap" class="zh-question-answer-form-wrap">
+<div class="zm-editable-tip"></div>
+<div class="zm-editable-content"></div>
+</div>
+
+
+<!-- end of content -->
+</div>
+</div>
+<div class="zu-main-sidebar">
+
+
+<div class="zm-side-section">
+<div class="zm-side-section-inner">
+<div class="well login-reg-box">
+<span>知乎是一个真实的问答社区，在这里分享知识、经验和见解，发现更大的世界。<br>
+<a id="js-reg-with-mail-in-top" href="javascript:;">使用邮箱注册 &raquo;</a>
+</span>
+<div class="clearfix">
+<a id="js-reg-with-sina-in-top" target="_blank" class="zg-btn-red"><span class="icon-big-white-sina"></span>使用微博登录</a>
+<a id="js-reg-with-qq-in-top" target="_blank" class="zg-btn-blue"><span class="icon-big-white-qq" style="margin-right: 10px;"></span>使用 QQ 登录</a>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="zm-side-section">
+<div class="zm-side-section-inner zg-gray-normal" id="zh-question-side-header-wrap">
+<button data-follow="q:m:button" class="follow-button zg-follow zg-btn-green" data-id="529757">关注问题</button>
+
+6849
+人关注该问题
+
+</div>
+</div>
+
+
+<div class="zm-side-section">
+<div class="zm-side-section-inner">
+<div id="zh-question-related-questions" class="zh-question-related-questions clearfix">
+
+<a class="zg-right next">换一换</a>
+
+<h3>相关问题</h3>
+<ul itemprop="relatedQuestion" itemscope itemtype="http://schema.org/ItemList">
+
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/20036899">程序员用 Mac 都有哪些必备的 app？</a> <span class="num">60 个回答</span><meta itemprop="followerCount" content="2677" /></li>
+
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/19987594">Mac 上还有没有可能运行当年 PowerPC 的程序？</a> <span class="num">4 个回答</span><meta itemprop="followerCount" content="14" /></li>
+
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/21261475">程序员和设计师等专业人员是否更青睐 OS X / Mac 电脑？</a> <span class="num">62 个回答</span><meta itemprop="followerCount" content="457" /></li>
+
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/19913306">「Mac OS X」怎么读？</a> <span class="num">10 个回答</span><meta itemprop="followerCount" content="63" /></li>
+
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/19814550">苹果电脑（Mac）贵在何处？</a> <span class="num">130 个回答</span><meta itemprop="followerCount" content="1646" /></li>
+
+<li hidden itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/21665243">OS X 好用在哪里？</a> <span class="num">71 个回答</span><meta itemprop="followerCount" content="1104" /></li>
+
+<li hidden itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/20596851">OS X 有哪些令人无法忍受的缺点？</a> <span class="num">57 个回答</span><meta itemprop="followerCount" content="369" /></li>
+
+<li hidden itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/19947980">在 Mac 上运行 Windows 程序的最佳方法是什么？</a> <span class="num">11 个回答</span><meta itemprop="followerCount" content="51" /></li>
+
+<li hidden itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/21743269">1Password 4 for Mac 的使用体验如何？</a> <span class="num">9 个回答</span><meta itemprop="followerCount" content="136" /></li>
+
+<li hidden itemprop="itemListElement" itemscope itemtype="http://schema.org/Question"><a class="question_link" href="/question/19948745">OS X 是否支持 Flash？</a> <span class="num">4 个回答</span><meta itemprop="followerCount" content="12" /></li>
+
+</ul>
+</div>
+</div>
+</div>
+
+
+
+
+
+</div>
+<div class="zg-clear"></div>
+</div>
+
+<div id="zh-footer" class="zh-footer">
+<div class="zg-wrap clearfix">
+<ul>
+
+<li><a href="/app" target='_blank'>移动应用</a></li>
+<li><a href="/careers">加入知乎</a></li>
+<li><a href="/terms" target="_blank">知乎协议</a></li>
+<li><a href="mailto:bd@zhihu.com">商务合作</a></li>
+</ul>
+<span class="copy">&copy; 2015 知乎</span>
+</div>
+</div>
+
+<script type="template/text" id="sign-flow-template">
+<div id="js-sign-flow" class="sign-flow">
+<div class="view view-signin">
+<form method="post" action="/login" class="zu-side-login-box">
+<div class="input-wrap">
+<input required class="zg-form-text-input" name="email" type="email" placeholder="邮箱">
+</div>
+<div class="input-wrap password-wrap">
+<input required class="zg-form-text-input" maxlength="128" name="password" type="password" placeholder="密码">
+<div class="z-ico-show-password"></div>
+</div>
+<div class="input-wrap js-captcha captcha-wrap" style="display:none;">
+<input id="captcha" class="zg-form-text-input" autocomplete="off" name="captcha" placeholder="验证码" required>
+<div class="captcha js-refresh-captcha" data-tip="s$b$看不清楚？换一张">
+<img class="js-captcha-img"/>
+</div>
+</div>
+<div class="captcha-holder"></div>
+<div class="command">
+<div class="zg-left actions">
+<label class="remember_me"><input type="checkbox" name="rememberme" checked value="y"> 记住我</label>
+<span class="middot">·</span>
+<a class="js-resetpassword" href="#">忘记密码?</a>
+</div>
+<input type="submit" class="zg-right zg-btn-blue" value="登录">
+</div>
+<div class="sns">
+<a class="js-bindweibo" href="#">
+<span class="icon z-ico-sina-weibo"></span>微博登录
+</a>
+<a class="js-bindqq" href="#">
+<span class="icon z-ico-qq"></span>QQ 登录
+</a>
+</div>
+</form>
+</div>
+<div class="view view-signup">
+<form action="/register/account" method="post" class="zu-side-login-box" id="sign-form-1" >
+<div class="input-wrap realname-wrap js-weibo-bind-name-transfer">
+<span>
+<input required class="zg-form-text-input first" aria-label="姓" name="last_name" placeholder="姓" type="text">
+</span>
+<span>
+<input required class="zg-form-text-input" aria-label="名" name="first_name" placeholder="名" type="text">
+</span>
+</div>
+<div class="input-wrap">
+<input required class="zg-form-text-input" name="email" type="email" placeholder="邮箱">
+</div>
+<div class="input-wrap password-wrap">
+<input data-rule-strongpassword="true" required class="zg-form-text-input" maxlength="128" name="password" type="password" placeholder="密码">
+<div class="z-ico-show-password"></div>
+</div>
+<div class="captcha-holder"></div>
+<div class="command">
+<a class="js-signin signin-switch" href="#">已有账号？</i></a>
+<input type="submit" class="zg-btn-blue zg-right" value="注册">
+</div>
+<div class="sns">
+<a class="js-bindweibo" href="#">
+<span class="icon z-ico-sina-weibo"></span>微博登录
+</a>
+<a class="js-bindqq" href="#">
+<span class="icon z-ico-qq"></span>QQ 登录
+</a>
+</div>
+</form>
+</div>
+<div class="view view-info">
+<form class="login" method="post" action="/register/account">
+<div class="input-wrap realname-wrap">
+<span>
+<input required class="zg-form-text-input first" aria-label="姓" name="last_name" placeholder="姓" type="text">
+</span>
+<span>
+<input required class="zg-form-text-input" aria-label="名" name="first_name" placeholder="名" type="text">
+</span>
+</div>
+<div class="input-wrap">
+<input required class="zg-form-text-input" aria-label="邮箱" name="email" placeholder="邮 箱" spellcheck="false" type="email" value="">
+</div>
+<div class="command">
+<input class="zg-btn-blue" type="submit" value="完成注册">
+</div>
+</form>
+</div>
+<div class="view view-resetpassword">
+<form class="resetpassword" method="post" action="/resetpassword">
+<div class="input-wrap">
+<input required class="zg-form-text-input" aria-label="邮箱" name="email" placeholder="邮 箱" spellcheck="false" type="email" value="">
+</div>
+<div class="command">
+<input class="zg-btn-blue" type="submit" value="重设密码">
+<span class="reset-success" style="display:none">邮件发送成功</span>
+</div>
+</form>
+</div>
+</div>
+</script>
+<script type="text/json" class="json-inline" data-name="current_user">["","","","-1","",0,0]</script>
+<script type="text/json" class="json-inline" data-name="env">["zhihu.com","comet.zhihu.com",false,null]</script>
+<script type="text/json" class="json-inline" data-name="permissions">[]</script>
+
+
+<script type="text/json" class="json-inline" data-name="ga_vars">{"user_created":0,"now":1422776922000,"abtest_mask":"------------------------------","user_attr":[0,0,0,"-","-"],"user_hash":0}</script>
+
+<script type="text/json" class="json-inline" data-name="current_question">{"status":"normal","isLocked":0,"detailEditReasonRequired":false,"editPermission":false,"isAnon":0,"qid":529757,"urlToken":20873070,"showInvitePanel":false,"askAboutMember":0}</script>
+<script type="text/json" class="json-inline" data-name="current_question_owner">false</script>
+<script type="text/json" class="json-inline" data-name="draft">[]</script>
+<script type="text/json" class="json-inline" data-name="my_answer">{}</script>
+<script type="text/json" class="json-inline" data-name="need_first_answer_guide">false</script>
+
+<script type="text/json" class="json-inline" data-name="redirect_to">""</script>
+
+
+
+<script src="http://static.zhihu.com/static/ver/82cfd3bf774281811fa8287dc189988f.extern_src.min.js"></script>
+<script src="http://static.zhihu.com/static/ver/179e70a24ba308ef5ffbe48795c518f2.app_core.js"></script>
+<script src="http://static.zhihu.com/static/ver/10befd22dc17053d74467df85fa7bf47.sign.js"></script>
+<script src="http://static.zhihu.com/static/ver/0133491dd462e7e5c25d5cc694975ff4.app.js"></script>
+<script src="http://static.zhihu.com/static/ver/6a928b4c0f9346619c52302a6e069487.rich_text_editor.js"></script>
+
+<script type="text/zscript" znonce="197787c61a4748f4b20ace46eed7af81">
+ZH.entrySQ();
+</script>
+
+<input type="hidden" name="_xsrf" value="6a1883f6a0a4442621147e09019b72f4"/>
+</body>
+</html>
