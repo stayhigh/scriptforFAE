@@ -19,8 +19,8 @@ int main(int argc, char **argv)
          printf("unknown\n");
       }
       
-      else {
-         printf("sizeof(short) = %d\n", sizeof(short));
-      }
+  else {
+     printf("sizeof(short) = %d\n", sizeof(short));
+  }
    exit(0);
 }
