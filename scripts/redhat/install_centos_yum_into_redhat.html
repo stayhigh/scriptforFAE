@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="zh-TW" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="UTF-8"/>
+<link rel="profile" href="http://gmpg.org/xfn/11"/>
+<link rel="stylesheet" type="text/css" media="all" href="http://blog.longwin.com.tw/wp-content/themes/twentyten/A.style.css.pagespeed.cf.fV-A5l3h34.css"/>
+<link rel="pingback" href="http://blog.longwin.com.tw/xmlrpc.php"/>
+<!-- BEGIN Metadata added by Add-Meta-Tags WordPress plugin -->
+<meta name="description" content="之前幫忙設定 Red Hat Enterprise Linux(RHEL) 的系統, 好的狀況是有原始光碟, 可以直接 mount 進來裝, 差的狀況就是自己找 Source code 回來編譯. 上次遇到發現有人將 CenOS 的 &lt;a href=http://en.wikipedia."/>
+<meta name="keywords" content="my_note-unix"/>
+<meta name="referrer" content="origin">
+<meta name="google-translate-customization" content="6fc3f188ea42926e-49f50a6ef12efa32-g6f2c68bfc6d8597e-13">
+<!-- END Metadata added by Add-Meta-Tags WordPress plugin -->
+<!-- Jetpack Site Verification Tags -->
+<meta name="p:domain_verify" content="6430cc7475dd0db49c299212ec727f4a"/>
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.7.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>於 RHEL 安裝 CenOS YUM Package Manager - Tsung&#039;s Blog</title>
+<link rel="canonical" href="http://blog.longwin.com.tw/2009/11/rhel-install-cenos-yum-2009/"/>
+<meta property="og:locale" content="zh_TW"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="於 RHEL 安裝 CenOS YUM Package Manager - Tsung&#039;s Blog"/>
+<meta property="og:description" content="之前幫忙設定 Red Hat Enterprise Linux(RHEL) 的系 &hellip; 繼續閱讀 &rarr;"/>
+<meta property="og:url" content="http://blog.longwin.com.tw/2009/11/rhel-install-cenos-yum-2009/"/>
+<meta property="og:site_name" content="Tsung&#039;s Blog"/>
+<meta property="article:author" content="http://www.facebook.com/tsunghaolee"/>
+<meta property="article:section" content="My_Note-Unix"/>
+<meta property="article:published_time" content="2009-11-23T07:55:41+00:00"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:description" content="之前幫忙設定 Red Hat Enterprise Linux(RHEL) 的系 &hellip; 繼續閱讀 &rarr;"/>
+<meta name="twitter:title" content="於 RHEL 安裝 CenOS YUM Package Manager - Tsung&#039;s Blog"/>
+<meta name="twitter:site" content="@tsung"/>
+<meta name="twitter:domain" content="Tsung&#039;s Blog"/>
+<meta name="twitter:creator" content="@tsung"/>
+<!-- / Yoast WordPress SEO plugin. -->
+<link rel="alternate" type="application/rss+xml" title="訂閱 Tsung&#039;s Blog &raquo;" href="http://blog.longwin.com.tw/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="訂閱 Tsung&#039;s Blog &raquo; 迴響" href="http://blog.longwin.com.tw/comments/feed/"/>
+<link rel="alternate" type="application/rss+xml" title="訂閱 Tsung&#039;s Blog &raquo; 於 RHEL 安裝 CenOS YUM Package Manager 迴響" href="http://blog.longwin.com.tw/2009/11/rhel-install-cenos-yum-2009/feed/"/>
+<style id='cptch_stylesheet-css' media='all'>.cptch_example_fields_actions{float:left;height:18px;width:140px;position:relative;top:-7px;padding:2px 0}.cptch_example_fields_actions img{position:relative;width:30px;top:6px}.cptch_block{direction:ltr}.cptch_help_box{background-image:url(/wp-content/plugins/captcha/images/xtooltip_icons.png.pagespeed.ic.7MWyHTJqp2.png);background-repeat:no-repeat;cursor:pointer;float:left;height:29px;position:relative;margin:-3px 5px 3px;width:29px;clear:none!important}.cptch_hidden_help_text{background:#f4f4f4;border:1px solid #dcdcdc;border-radius:4px;left:40px;padding:5px 10px;position:absolute;width:240px;line-height:1.5}.cptch_hidden_help_text:before{content:url(/wp-content/plugins/captcha/images/help.png.pagespeed.ce.mCHKcnfh8c.png);left:-10px;position:absolute;top:7px}form input.cptch_input{padding-left:8px;padding-right:8px}</style>
+<link rel='stylesheet' id='genericons-css' href='http://blog.longwin.com.tw/wp-content/plugins/jetpack/_inc/genericons/genericons/A.genericons.css,qver=3.1.pagespeed.cf.NPz-yIFsxm.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='jetpack_css-css' href='http://blog.longwin.com.tw/wp-content/plugins/jetpack/css/A.jetpack.css,qver=3.3.pagespeed.cf.21IuNDJnVY.css' type='text/css' media='all'/>
+<script type='text/javascript' src='http://blog.longwin.com.tw/wp-includes/js/jquery/jquery.js,qver=1.11.1.pagespeed.jm.z9hb-Gxqf6.js'></script>
+<script src="http://blog.longwin.com.tw/wp-includes,_js,_jquery,_jquery-migrate.min.js,qver==1.2.1+wp-content,_plugins,_jquery-syntax,_jquery-syntax,_jquery.syntax.min.js,qver==4.1+wp-content,_plugins,_jetpack,_modules,_related-posts,_related-posts.js,qver==20141201+wp-content,_plugins,_jquery-image-lazy-loading,_js,_jquery.lazyload.min.js,qver==1.7.1+wp-content,_plugins,_jetpack,__inc,_postmessage.js,qver==3.3+wp-content,_plugins,_jetpack,__inc,_jquery.jetpack-resize.js,qver==3.3+wp-content,_plugins,_jetpack,__inc,_jquery.inview.js,qver==3.3.pagespeed.jc.OqUykeN4qi.js"></script><script>eval(mod_pagespeed_Hf0$z$LmEX);</script>
+<script>eval(mod_pagespeed_dwEpw4QPCR);</script>
+<script>eval(mod_pagespeed_l_cnj2BADd);</script>
+<script>eval(mod_pagespeed_BoDVghwguW);</script>
+<script>eval(mod_pagespeed_VsktZVGS9r);</script>
+<script>eval(mod_pagespeed_mT8yhfEae8);</script>
+<script>eval(mod_pagespeed_gZg633iS9l);</script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://blog.longwin.com.tw/xmlrpc.php?rsd"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://blog.longwin.com.tw/wp-includes/wlwmanifest.xml"/>
+<meta name="generator" content="WordPress 4.1"/>
+<link rel='shortlink' href='http://wp.me/p1s9D4-rO'/>
+<!-- BEGIN License added by Creative-Commons-Configurator plugin for WordPress -->
+<style type="text/css">p.cc-block{clear:both;width:90%;margin:8px auto;padding:4px;text-align:center;border:1px solid #ccc;color:#000;background-color:#eef6e6}p.cc-block a:link,p.cc-block a:visited,p.cc-block a:hover,p.cc-block a:active{text-decoration:underline;color:#000}.cc-button{border-width:0}</style>
+<!-- END License added by Creative-Commons-Configurator plugin for WordPress -->
+<!-- The js code for google + 1  WordPress http://blog.dengruo.com/201107/1171 -->
+<script type="text/javascript" src="http://apis.google.com/js/plusone.js" async>{lang: 'zh-TW'}</script><style type='text/css'>img.lazy{display:none}</style>
+<style media="screen">.syntax{font-size:80%}.syntax-container pre{font-size:80%!important;line-height:1.5em!important}.syntax-container li.alt{border-left:none}</style>
+<script type="text/javascript">jQuery.noConflict();jQuery(document).ready(function($){$.syntax({root:'http://blog.longwin.com.tw/wp-content/plugins/jquery-syntax/jquery-syntax/'})});</script>
+<!--MP Share Center Styles-->
+<style>.mp-share-buttons,.mp-share-boxes{display:inline}.mp-share-buttons li,.mp-share-boxes li{float:left;list-style:none!important;width:100px}.mp-share-clear-fix{clear:both}#mp-share-below-action{font-size:33px;line-height:36px;display:block;padding:5px}</style>
+<link rel="image_src" href=""/><!-- Facebook Like Thumbnail -->
+<script type="text/javascript">window._wp_rp_static_base_url='https://wprp.zemanta.com/static/';window._wp_rp_wp_ajax_url="http://blog.longwin.com.tw/wp-admin/admin-ajax.php";window._wp_rp_plugin_version='3.5.3';window._wp_rp_post_id='1724';window._wp_rp_num_rel_posts='5';window._wp_rp_thumbnails=true;window._wp_rp_post_title='%E6%96%BC+RHEL+%E5%AE%89%E8%A3%9D+CenOS+YUM+Package+Manager';window._wp_rp_post_tags=['my_note-unix','4','packag','linux','sourc','code','yum','rebuild','updat','red','5','hat','releas','enterpris','mount','manag'];window._wp_rp_promoted_content=true;</script>
+<script type="text/javascript" src="https://wprp.zemanta.com/static/js/loader.js?version=3.5.3" async></script>
+<style>.wp_rp_wrap{clear:both}.wp_rp_wrap .related_post_title{background:rgba(245,245,245,1)!important;padding:3px 0 3px 10px!important;margin:0!important;font-weight:normal;border-radius:2px!important;border:1px solid rgba(0,0,0,.1)!important;clear:both!important}div.wp_rp_content{display:block!important}div.wp_rp_footer{text-align:right!important;overflow:hidden!important}div.wp_rp_footer a{color:#999!important;font-size:11px!important;text-decoration:none!important;display:inline-block!important}div.wp_rp_footer a.wp_rp_edit{color:#fff!important;font-size:12px!important;text-decoration:underline!important;font-weight:bold!important;background:#f79124!important;border-radius:2px!important;padding:3px 6px}ul.related_post{margin:0 0 18px 0!important;padding:0!important}ul.related_post li{position:relative!important;min-height:60px;list-style:none!important;padding:10px 0 10px 0!important;margin:0!important;border-bottom:1px solid rgba(0,0,0,.1)!important;background:none!important}ul.related_post li a{position:relative!important;text-decoration:none;text-indent:0!important}ul.related_post li a img{width:60px;height:60px;float:left!important;margin:0 10px 0 0!important;padding:0!important;max-width:100%!important;float:none!important}ul.related_post li a img.wp_rp_santa_hat{display:none!important}ul.related_post li a.title{vertical-align:top!important}ul.related_post li a.wp_rp_thumbnail{float:left!important;margin-right:10px!important}ul.related_post li a.wp_rp_thumbnail img{float:none!important;margin-right:0!important;display:block!important}</style>
+<!-- WP Favicon -->
+<link rel="shortcut icon" href="http://blog.longwin.com.tw/favicon.ico" type="image/x-icon"/>
+<link rel="icon" href="http://blog.longwin.com.tw/xfavicon.gif.pagespeed.ic.dCMtVKHkhk.jpg" type="image/gif"/>
+<!-- /WP Favicon -->
+<!-- Tracking code easily added by NK Google Analytics -->
+<script type="text/javascript">(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','UA-101810-4','blog.longwin.com.tw');ga('send','pageview');</script>
+</head>
+<body class="single single-post postid-1724 single-format-standard">
+<div id="wrapper" class="hfeed">
+<div id="header">
+<div id="masthead">
+<div id="branding" role="banner">
+<div id="site-title">
+<span>
+<a href="http://blog.longwin.com.tw/" title="Tsung&#039;s Blog" rel="home">Tsung&#039;s Blog</a>
+</span>
+</div>
+<div id="site-description">個人筆記, 記錄關於 系統、程式、新聞 與 日常生活 等資訊</div>
+<script pagespeed_no_defer="">//<![CDATA[
+(function(){var g=this,h=function(b,d){var a=b.split("."),c=g;a[0]in c||!c.execScript||c.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===d?c[e]?c=c[e]:c=c[e]={}:c[e]=d};var l=function(b){var d=b.length;if(0<d){for(var a=Array(d),c=0;c<d;c++)a[c]=b[c];return a}return[]};var m=function(b){var d=window;if(d.addEventListener)d.addEventListener("load",b,!1);else if(d.attachEvent)d.attachEvent("onload",b);else{var a=d.onload;d.onload=function(){b.call(this);a&&a.call(this)}}};var n,p=function(b,d,a,c,e){this.f=b;this.h=d;this.i=a;this.c=e;this.e={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.g=c;this.b={};this.a=[];this.d={}},q=function(b,d){var a,c,e=d.getAttribute("pagespeed_url_hash");if(a=e&&!(e in b.d))if(0>=d.offsetWidth&&0>=d.offsetHeight)a=!1;else{c=d.getBoundingClientRect();var f=document.body;a=c.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);c=c.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+c;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.e.height&&c<=b.e.width)}a&&(b.a.push(e),b.d[e]=!0)};p.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&q(this,b)};h("pagespeed.CriticalImages.checkImageForCriticality",function(b){n.checkImageForCriticality(b)});h("pagespeed.CriticalImages.checkCriticalImages",function(){r(n)});var r=function(b){b.b={};for(var d=["IMG","INPUT"],a=[],c=0;c<d.length;++c)a=a.concat(l(document.getElementsByTagName(d[c])));if(0!=a.length&&a[0].getBoundingClientRect){for(c=0;d=a[c];++c)q(b,d);a="oh="+b.i;b.c&&(a+="&n="+b.c);if(d=0!=b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),c=1;c<b.a.length;++c){var e=","+encodeURIComponent(b.a[c]);131072>=a.length+e.length&&(a+=e)}b.g&&(e="&rd="+encodeURIComponent(JSON.stringify(s())),131072>=a.length+e.length&&(a+=e),d=!0);t=a;if(d){c=b.f;b=b.h;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(k){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(u){}}f&&(f.open("POST",c+(-1==c.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}},s=function(){var b={},d=document.getElementsByTagName("IMG");if(0==d.length)return{};var a=d[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var c=0;a=d[c];++c){var e=a.getAttribute("pagespeed_url_hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].k&&a.height>=b[e].j)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b},t="";h("pagespeed.CriticalImages.getBeaconData",function(){return t});h("pagespeed.CriticalImages.Run",function(b,d,a,c,e,f){var k=new p(b,d,a,e,f);n=k;c&&m(function(){window.setTimeout(function(){r(k)},0)})});})();pagespeed.CriticalImages.Run('/mod_pagespeed_beacon','http://blog.longwin.com.tw/2009/11/rhel-install-cenos-yum-2009/','ZSrIa4U5AZ',true,false,'fijas_ukwNE');
+//]]></script><img src="http://blog.longwin.com.tw/wp-content/themes/twentyten/images/headers/940x198xcherryblossoms.jpg.pagespeed.ic.XWFlIlsVyA.jpg" width="940" height="198" alt="" pagespeed_url_hash="885711399" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+</div><!-- #branding -->
+<div id="access" role="navigation">
+<div class="skip-link screen-reader-text"><a href="#content" title="跳至內容">跳至內容</a></div>
+<div class="menu"><ul><li><a href="http://blog.longwin.com.tw/">首頁</a></li><li class="page_item page-item-4240"><a href="http://blog.longwin.com.tw/about/">關於我</a></li></ul></div>
+</div><!-- #access -->
+</div><!-- #masthead -->
+</div><!-- #header -->
+<div id="main">
+<div id="container">
+<div id="content" role="main">
+<div id="nav-above" class="navigation">
+<div class="nav-previous"><a href="http://blog.longwin.com.tw/2009/11/vimdiff-vs-git-diff-2009/" rel="prev"><span class="meta-nav">&larr;</span> 使用 vimdiff 來呈現 Git diff 差異</a></div>
+<div class="nav-next"><a href="http://blog.longwin.com.tw/2009/11/debian-linux-build-nis-server-master-2009/" rel="next">於 Debian Linux 架設 NIS Server (Master) <span class="meta-nav">&rarr;</span></a></div>
+</div><!-- #nav-above -->
+<div id="post-1724" class="post-1724 post type-post status-publish format-standard hentry category-my_note-unix">
+<h1 class="entry-title">於 RHEL 安裝 CenOS YUM Package Manager</h1>
+<div class="entry-meta">
+<span meta-prep meta-prep-author>發表於</span> <a href="http://blog.longwin.com.tw/2009/11/rhel-install-cenos-yum-2009/" title="07:55:41" rel="bookmark"><span class="entry-date">2009 年 11 月 23 日</span></a> <span class="meta-sep">由</span> <span class="author vcard"><a class="url fn n" href="http://blog.longwin.com.tw/author/jon/" title="全部文章，由 Tsung">Tsung</a></span>	</div><!-- .entry-meta -->
+<div class="entry-content">
+<p>
+之前幫忙設定 Red Hat Enterprise Linux(RHEL) 的系統, 好的狀況是有原始光碟, 可以直接 mount 進來裝, 差的狀況就是自己找 Source code 回來編譯.
+</p>
+<p>
+上次遇到發現有人將 CenOS 的 <a href="http://en.wikipedia.org/wiki/Yum" target="_blank" title="YUM - WikiPedia">YUM</a> 弄到 RHEL 上, 確實可以正常裝進 RHEL, 但是沒有測試使用 YUM 安裝的 Package 狀況如何(如果機器在腳邊, 才敢這樣子測. XD)
+</p>
+<p>
+此篇紀錄在 RHEL 安裝 CenOS 的 YUM 的過程, 至於使用 YUM 後續安裝不確定穩定度.(話說, 跟這樣子做比起來, 直接把 RHEL 換成 CenOS 應該會更安心點. XD)
+</p>
+<p>
+註: RHEL 找不到可以免費抓 Package(rpm) 的地方.
+</p>
+<p><span id="more-1724"></span></p>
+<p>
+提供此資源的 官方網站: <a href="http://yum.baseurl.org/" target="_blank" title="yum - Trac">yum - Trac</a> (Yum Package Manager)
+</p>
+<h4>
+在 RHEL 安裝 YUM Package Manager 的 安裝步驟<br/>
+</h4>
+<p>
+下述步驟參考此篇: <a href="http://www.linuxeden.com/forum/thread-169714-1-5.html" target="_blank" title="Red Hat Enterprise Linux AS release 4 (Nahant Update 5) 使用 YUM 自動更新">Red Hat Enterprise Linux AS release 4 (Nahant Update 5) 使用 YUM 自動更新</a>
+</p>
+<ol>
+<li>wget http://yum.baseurl.org/download/2.0/yum-2.0.8-1.src.rpm</li>
+<li>rpmbuild --rebuild yum-2.0.8-1.src.rpm</li>
+<li>cd /usr/src/redhat/RPMS/noarch/</li>
+<li>rpm -ivh yum-2.0.8-1.noarch.rpm</li>
+<li>vim /etc/yum.conf # 將 baseurl 換成下述 (換成台灣 Server)<br/>
+<blockquote><p>
+baseurl= http://mirror.centos.org/centos/4/os/i386/<br/>
+baseurl= http://mirror.centos.org/centos/4/updates/i386/
+</p></blockquote>
+</li>
+<li>yum update # 這樣子就可以用囉~</li>
+</ol>
+<h4>
+相關網頁<br/>
+</h4>
+<ul>
+<li><a href="http://www.haostudio.idv.tw/blog/?p=73" target="_blank" title="CentOS 用YUM 升級時連線至台灣的Server">CentOS 用YUM 升級時連線至台灣的Server</a> </li>
+</ul>
+<!-- Easy Plugin for AdSense V7.60 -->
+<!-- [leadout: 0 urCount: 0 urMax: 0] -->
+<div class="ezAdsense adsense adsense-leadout" style="float:right;margin:12px;"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Blog - 336 x 280 -->
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-2833110699572522" data-ad-slot="6353348500"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+<!-- Easy Plugin for AdSense V7.60 -->
+<p><!-- If u want to theme it yourself, plz put this code where you want --><br/><br/>
+<g:plusone size=""></g:plusone></p>
+<div class="wp_rp_wrap  wp_rp_modern" id="wp_rp_first"><div class="wp_rp_content"><h3 class="related_post_title">延伸閱讀</h3><ul class="related_post wp_rp"><li data-position="0" data-poid="in-892" data-post-type="none"><a href="http://blog.longwin.com.tw/2006/01/what_is_redhat_enterprise_linux/" class="wp_rp_thumbnail"><img src="http://blog.longwin.com.tw/wp-content/plugins/wordpress-23-related-posts-plugin/static/thumbs/150x150x20.jpg.pagespeed.ic.Cb1Di39XNC.jpg" alt="Red Hat Enterprise Linux編號意義" width="150" height="150" pagespeed_url_hash="1330980692" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a><a href="http://blog.longwin.com.tw/2006/01/what_is_redhat_enterprise_linux/" class="wp_rp_title">Red Hat Enterprise Linux編號意義</a></li><li data-position="1" data-poid="in-1696" data-post-type="none"><a href="http://blog.longwin.com.tw/2009/10/linxu-shell-lftp-pget-thread-2009/" class="wp_rp_thumbnail"><img src="http://blog.longwin.com.tw/wp-content/plugins/wordpress-23-related-posts-plugin/static/thumbs/9.jpg.pagespeed.ce.27VdfVwEQh.jpg" alt="Linux 於 Shell 使用 lftp 來同時開啟多個連線下載" width="150" height="150" pagespeed_url_hash="3346848245" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a><a href="http://blog.longwin.com.tw/2009/10/linxu-shell-lftp-pget-thread-2009/" class="wp_rp_title">Linux 於 Shell 使用 lftp 來同時開啟多個連線下載</a></li><li data-position="2" data-poid="in-813" data-post-type="none"><a href="http://blog.longwin.com.tw/2005/10/ubuntu_linux_news_20051005/" class="wp_rp_thumbnail"><img src="http://blog.longwin.com.tw/wp-content/plugins/wordpress-23-related-posts-plugin/static/thumbs/10.jpg.pagespeed.ce.M3ZOn5g5aP.jpg" alt="Ubuntu成了Linux新寵" width="150" height="150" pagespeed_url_hash="1406196705" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a><a href="http://blog.longwin.com.tw/2005/10/ubuntu_linux_news_20051005/" class="wp_rp_title">Ubuntu成了Linux新寵</a></li><li data-position="3" data-poid="in-1550" data-post-type="none"><a href="http://blog.longwin.com.tw/2009/03/debian-linux-make-install-lockf-2009/" class="wp_rp_thumbnail"><img src="http://blog.longwin.com.tw/wp-content/plugins/wordpress-23-related-posts-plugin/static/thumbs/29.jpg.pagespeed.ce.5eJ1uwSzh2.jpg" alt="於 Debian Linux 安裝 lockf" width="150" height="150" pagespeed_url_hash="3981479981" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a><a href="http://blog.longwin.com.tw/2009/03/debian-linux-make-install-lockf-2009/" class="wp_rp_title">於 Debian Linux 安裝 lockf</a></li><li data-position="4" data-poid="in-1185" data-post-type="none"><a href="http://blog.longwin.com.tw/2007/07/freebsd_initial_env_build_2007/" class="wp_rp_thumbnail"><img src="http://blog.longwin.com.tw/wp-content/plugins/wordpress-23-related-posts-plugin/static/thumbs/150x150x20.jpg.pagespeed.ic.Cb1Di39XNC.jpg" alt="FreeBSD 初期環境建置" width="150" height="150" pagespeed_url_hash="1330980692" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a><a href="http://blog.longwin.com.tw/2007/07/freebsd_initial_env_build_2007/" class="wp_rp_title">FreeBSD 初期環境建置</a></li></ul></div></div>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-email"><a rel="nofollow" data-shared="" class="share-email sd-button share-icon" href="http://blog.longwin.com.tw/2009/11/rhel-install-cenos-yum-2009/?share=email" title="點這裡寄給朋友"><span>電子郵件</span></a></li><li class="share-print"><a rel="nofollow" data-shared="" class="share-print sd-button share-icon" href="http://blog.longwin.com.tw/2009/11/rhel-install-cenos-yum-2009/#print" title="點這裡列印"><span>列印</span></a></li><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-1724" class="share-facebook sd-button share-icon" href="http://blog.longwin.com.tw/2009/11/rhel-install-cenos-yum-2009/?share=facebook" title="分享到 Facebook"><span>Facebook</span></a></li><li class="share-linkedin"><a rel="nofollow" data-shared="sharing-linkedin-1724" class="share-linkedin sd-button share-icon" href="http://blog.longwin.com.tw/2009/11/rhel-install-cenos-yum-2009/?share=linkedin" title="分享到 LinkedIn"><span>LinkedIn</span></a></li><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-1724" class="share-twitter sd-button share-icon" href="http://blog.longwin.com.tw/2009/11/rhel-install-cenos-yum-2009/?share=twitter" title="分享到 Twitter"><span>Twitter</span></a></li><li class="share-google-plus-1"><a rel="nofollow" data-shared="sharing-google-1724" class="share-google-plus-1 sd-button share-icon" href="http://blog.longwin.com.tw/2009/11/rhel-install-cenos-yum-2009/?share=google-plus-1" title="點擊分享到 Google+"><span>Google</span></a></li><li class="share-end"></li></ul></div></div></div><span id='mp-share-below-action'></span><ul class='mp-share-buttons'><li class='mp-share-buttons-fb'><iframe src='http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fblog.longwin.com.tw%2F2009%2F11%2Frhel-install-cenos-yum-2009%2F&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=21' scrolling='no' frameborder='0' style='border:none; overflow:hidden; width:100px; height:21px;' allowTransparency='true'></iframe></li><li class='mp-share-buttons-tw'><a href='http://twitter.com/share?url=http%3A%2F%2Fwp.me%2Fp1s9D4-rO&amp;counturl=http%3A%2F%2Fblog.longwin.com.tw%2F2009%2F11%2Frhel-install-cenos-yum-2009%2F' class='twitter-share-button' data-count='horizontal' data-via='tsung'></a></li><li class='mp-share-buttons-gp'><g:plusone href='http://blog.longwin.com.tw/2009/11/rhel-install-cenos-yum-2009/' size='medium'></g:plusone></li><li class='mp-share-buttons-li'><script type='in/share' data-url='http://blog.longwin.com.tw/2009/11/rhel-install-cenos-yum-2009/' data-counter='right'></script></li></ul><div class='mp-share-clear-fix'></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-21486538-1724-54cedc4f15dcb' data-src='//widgets.wp.com/likes/#blog_id=21486538&amp;post_id=1724&amp;origin=blog.longwin.com.tw&amp;obj_id=21486538-1724-54cedc4f15dcb' data-name='like-post-frame-21486538-1724-54cedc4f15dcb'><h3 class='sd-title'>請按讚：</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height:55px'><span class='button'><span>喜歡</span></span> <span class="loading">載入中...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
+<div id='jp-relatedposts' class='jp-relatedposts'>
+<h3 class="jp-relatedposts-headline"><em>相關</em></h3>
+</div>
+<!-- BEGIN License added by Creative-Commons-Configurator plugin for WordPress -->
+<p class="cc-block">Copyright &copy; 2009 - All Rights Reserved</p>
+<!-- END License added by Creative-Commons-Configurator plugin for WordPress -->
+</div><!-- .entry-content -->
+<div id="entry-author-info">
+<div id="author-avatar">
+<img alt='' src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAA8ADwDASIAAhEBAxEB/8QAHAAAAQUBAQEAAAAAAAAAAAAABgEEBQcIAgMA/8QANBAAAgEDAwIEBQIEBwAAAAAAAQIDBAURAAYhEjEHE0FRFCJhcYEykQgVodEkQlKxsuHw/8QAGQEAAgMBAAAAAAAAAAAAAAAAAwUBAgQA/8QAHREAAgMBAAMBAAAAAAAAAAAAAQIAAxEEEiExBf/aAAwDAQACEQMRAD8A2V21Uv8AFXvibZXhjL8DM0NwusnwcDqcNGpUl3H2HGfTIOrbOs6/xz2O7XPZdmuFFAslHb6iRqtuoAp1hAhweSMg5xrpB3Jmzwy8P6vdHmVRM0KMfknJ75Jyf/e40Ybg8IYbUwiiulRISqt1uR7kMfsCU/fVjbJSn21tmgo6lm+SBS7RxE8kZOABqVa62a8uPIkMhQEYdSDj14P2Glb9TkkgxvVyVhQGHuZkvG0qyK5eSZiJAejLDOWHp+3I0VeD29rz4Xb+pzVGQ0c/SlVDn5Z4if8AkO4P47EjR/uafb5qiy080kwxlo4WcDHbJHGgbf236m/fyystqM9R5ywBCME9R4+3OjUdTs4Vvhmfp5ERSyfRN9U8sc8Ec8TBo5FDKw9QRkHXWNQfh/R1tu2RZaC4zRTVdNQwxSvGcqSqgcH17d9Tmdbphi6FfFK1R3fZtXA8aSBB1hHXqVuCCCPbBOinvriqhSenkgkGUkUqw+hGNVZfIZLI3iwaZ+qLNHUU8SgyqIhjEcpTPGOSOdMtt7XjtFBUIk8tRK6H5pnLsOPc6KrrTyWu4VNE2T5bkAn1Hof21AVNcYYpHpLlBG5JEiuF+bjGOTkAZzpOVw+Jj1W32IDNZJLtBARVTxtAHR0SVlQkjGSB3I7g/wDWnMlo8m3/AArdNW6shUOueo9QA/POls0lRA80stVDKX+U+UMA4J5+/wDbVjeD9iS83iSvqcmGjZHxjh3zlR/TOoqUu4Wdc6Vr5S3dr29rTt23213MjU1MkTMfUgAHUlnSnSZ06AwZEJOnTFOvOeVYIWlf9KjJ1HVV5p42McAMr449AfzoX3FuWhttP8Ve7jHRxZwokbHUfZV9T9hoi1kwL2gSuNzbskrfEW+WqpQL8HHCykLxhgeM/gaj7hT0Rt5CvDH5mSx8sN1HvznTbcNZaLnf33lZmaoo5iKKvJjZSMAFHIIB4J9uzfTTG82utx/h0Z0PIUnjSfrBS47HnC21KyH3IwR26gSWaNo4wxzI+AM40b/w373jqtxXqgklWK29SxwMxwDIi9TH85I/A1Vd/sd/rl+GhpwnHqwVFHux7AfU697A9fs74SktaU9d0ENMWRlLMSSxBz9eMjRuGosxYfJn/TvCKAT7m0opElQPG6up5BU5B11qh7PuiqWkp6y3TzwRy5doy36GzgqfQ8n9tH1BvOoNKnxFMryerAd9MihisXKYjqxyi56lHWn78jQ1uPaVBuS8x11dJJIsMfT5WcDA54/J0SqxJ6/VSca86f5bjMo7Bu33A0cHJlIBkZQWO20VG9FBSRxQSD5lUcE4xk/XUfeLQtHQ+ZTleiMAHPt27e+iUf5h/pYgabV6B/KjblTJ0kfTVLK1sGMISq16jqHIC/ya6V7eWI0pqYEN0NyXPOGb3+g7D786e0OzKCJH83M0h/U59T/bRTBzJIPQE/7nXbfJSlh3yedSqhBglWZrCWY6ZALYqQlaeL5IITkgD9R74/oNTUMEMcSqQvbPOvkULDx7aaXKV0nCqcDpGplZ/9k=' class='avatar avatar-60 photo' pagespeed_url_hash="1818548801" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>	</div><!-- #author-avatar -->
+<div id="author-description">
+<h2>關於 Tsung</h2>
+對新奇的事物都很有興趣, 喜歡簡單的東西, 過簡單的生活.	<div id="author-link">
+<a href="http://blog.longwin.com.tw/author/jon/" rel="author">
+檢視由 Tsung 發表的文章 <span class="meta-nav">&rarr;</span>	</a>
+</div><!-- #author-link	-->
+</div><!-- #author-description -->
+</div><!-- #entry-author-info -->
+<div class="entry-utility">
+本篇發表於 <a href="http://blog.longwin.com.tw/category/my_note-unix/" rel="category tag">My_Note-Unix</a>。將<a href="http://blog.longwin.com.tw/2009/11/rhel-install-cenos-yum-2009/" title="於 RHEL 安裝 CenOS YUM Package Manager 的永久鏈結" rel="bookmark">永久鏈結</a>加入書籤。	</div><!-- .entry-utility -->
+</div><!-- #post-## -->
+<div id="nav-below" class="navigation">
+<div class="nav-previous"><a href="http://blog.longwin.com.tw/2009/11/vimdiff-vs-git-diff-2009/" rel="prev"><span class="meta-nav">&larr;</span> 使用 vimdiff 來呈現 Git diff 差異</a></div>
+<div class="nav-next"><a href="http://blog.longwin.com.tw/2009/11/debian-linux-build-nis-server-master-2009/" rel="next">於 Debian Linux 架設 NIS Server (Master) <span class="meta-nav">&rarr;</span></a></div>
+</div><!-- #nav-below -->
+<div id="comments">
+<h3 id="comments-title"><em>於 RHEL 安裝 CenOS YUM Package Manager</em> 有 2 則回應</h3>
+<ol class="commentlist">
+<li class="comment even thread-even depth-1" id="li-comment-12688">
+<div id="comment-12688">
+<div class="comment-author vcard">
+<img alt='' src='http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40' class='avatar avatar-40 photo avatar-default' height='40' width='40' pagespeed_url_hash="2074545055" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>	<cite class="fn">artchiu</cite> <span class="says">說道：</span>	</div><!-- .comment-author .vcard -->
+<div class="comment-meta commentmetadata"><a href="http://blog.longwin.com.tw/2009/11/rhel-install-cenos-yum-2009/#comment-12688">
+2009 年 11 月 23 日 at 13:05:31</a>	</div><!-- .comment-meta .commentmetadata -->
+<div class="comment-body"><p>雖然我沒用過，不過我記得 RHEL5 好像有內建 yum 不是嗎？ (參見 <a href="http://www.cyberciti.biz/faq/rhel-centos-fedora-linux-yum-command-howto/" rel="nofollow">http://www.cyberciti.biz/faq/rhel-centos-fedora-linux-yum-command-howto/</a>)</p>
+</div>
+<div class="reply">
+<a class='comment-reply-link' href='/2009/11/rhel-install-cenos-yum-2009/?replytocom=12688#respond' onclick='return addComment.moveForm( "comment-12688", "12688", "respond", "1724" )' aria-label='回覆 artchiu'>回覆</a>	</div><!-- .reply -->
+</div><!-- #comment-##  -->
+</li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-12689">
+<div id="comment-12689">
+<div class="comment-author vcard">
+<img alt='' src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCAAoACgDASIAAhEBAxEB/8QAGwAAAgIDAQAAAAAAAAAAAAAAAAYHCAIDBAX/xAAxEAACAQQABQMBBQkAAAAAAAABAgMABAURBhIhMUEHE1GBFBUWInEjYWKRobHB0fD/xAAXAQADAQAAAAAAAAAAAAAAAAACBAUD/8QAHhEAAgIDAAMBAAAAAAAAAAAAAQIAAwQRIRIxQSL/2gAMAwEAAhEDEQA/ALl1Q/HYy49W/VLiDiXOTEWy3LRIockqoJCKp8AKB9avgarnecGx4HK5uzxCrZrNkXuFWIcoRWC9F5SNDp8+aXybCic+xjFqFj99CRlxd6TYuATriIblQE/KDIW30G97+etJeKTN+mGYxnFWLuJI5YLkJLEx6FT3B+VIBBB+amq5ssxZ8Ox/eF68lxJMEd1c6UEHQBPXvrzSz+HbmSymiy0azhyjBWdpOYqQdaYk62Nd/NJV5Lqw2eR+3ERl/I7Lf4i+hymJs8lbncN1Ak8Z/hZQw/oaKwwcUsGFsYJ44o5Y7eNXSJQqKwUAhQOw32oqrJE7fNRz6oQwWuVt7lJUWa4jIZObqeXQ3r9CB9Kc73MW8IIhPvOPjsPrUKeqmTsMxn8fkLLLQ3E2N90XkVvIG9uOTlXmOvCsBv4BNZ31k1E6mmPaFtUA+4t8W3UslikIS9RXfmMaOh5tE9dE+d0xelFvaZXjS3gv5FPtxNLHGx6yFNfz1sE0p8QT5lQEEEkioOhRe/60ucJZHN4Hi+PijIRXKvH+xtoYtc6oxBduU/OgOv8Aqp2MhssEqZloqpJPJc+io64d9RftLQpdQrNFIgZZoxykg+SP7jpRVfxMiCxT9m29jWS2mjcnkdSjaOtqRo9f3f5rzcZw5h8VEY7GxhRXTlc8u2cHvs+aKKY3E9TgzOFVpEjs2WFQm2JXfL2A143/AN1rTbcJ42N2knVrmTX5nlO+9FFAqKu9CGzs+gx3qd1njbOCQTLCE5RpR4VaKKKKDP/Z' class='avatar avatar-40 photo' pagespeed_url_hash="1818548801" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>	<cite class="fn"><a href='http://plog.longwin.com.tw' rel='external nofollow' class='url'>Tsung</a></cite> <span class="says">說道：</span>	</div><!-- .comment-author .vcard -->
+<div class="comment-meta commentmetadata"><a href="http://blog.longwin.com.tw/2009/11/rhel-install-cenos-yum-2009/#comment-12689">
+2009 年 11 月 23 日 at 14:07:37</a>	</div><!-- .comment-meta .commentmetadata -->
+<div class="comment-body"><p>我沒用過 RHEL5 耶, 4 沒有 yum.. <img src="http://blog.longwin.com.tw/wp-includes/images/smilies/icon_sad.gif.pagespeed.ce.Gic9s8NPav.gif" alt=":(" class="wp-smiley" pagespeed_url_hash="3819202343" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></p>
+</div>
+<div class="reply">
+<a class='comment-reply-link' href='/2009/11/rhel-install-cenos-yum-2009/?replytocom=12689#respond' onclick='return addComment.moveForm( "comment-12689", "12689", "respond", "1724" )' aria-label='回覆 Tsung'>回覆</a>	</div><!-- .reply -->
+</div><!-- #comment-##  -->
+</li><!-- #comment-## -->
+</ol>
+<div id="respond" class="comment-respond">
+<h3 id="reply-title" class="comment-reply-title">發表迴響 <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2009/11/rhel-install-cenos-yum-2009/#respond" style="display:none;">取消回覆</a></small></h3>
+<form action="http://blog.longwin.com.tw/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+<p class="comment-notes"><span id="email-notes">你的電子郵件位址並不會被公開。</span> 必要欄位標記為 <span class="required">*</span></p>	<p class="comment-form-author"><label for="author">名稱 <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true'/></p>
+<p class="comment-form-email"><label for="email">電子郵件 <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-describedby="email-notes" aria-required='true'/></p>
+<p class="comment-form-url"><label for="url">個人網站</label> <input id="url" name="url" type="text" value="" size="30"/></p>
+<p class="cptch_block"><br/>	<input type="hidden" name="cptch_result" value="DYY="/>
+<input type="hidden" name="cptch_time" value="1422842958"/>
+<input type="hidden" value="Version: 4.0.8"/>
+七 &#43; <input id="cptch_input" class="cptch_input" type="text" autocomplete="off" name="cptch_number" value="" maxlength="2" size="2" aria-required="true" required="required" style="margin-bottom:0;display:inline;font-size: 12px;width: 40px;"/> = 16</p>	<p class="comment-form-comment"><label for="comment">迴響</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-describedby="form-allowed-tags" aria-required="true"></textarea></p>	<p class="form-allowed-tags" id="form-allowed-tags">你可以使用這些 <abbr title="HyperText Markup Language">HTML</abbr> 標籤與屬性： <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>	<p class="form-submit">
+<input name="submit" type="submit" id="submit" class="submit" value="張貼迴響"/>
+<input type='hidden' name='comment_post_ID' value='1724' id='comment_post_ID'/>
+<input type='hidden' name='comment_parent' id='comment_parent' value='0'/>
+</p>
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="e40666804b"/></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"/> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments">用電子郵件通知我後續的迴響。</label></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"/> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">新文章使用電子郵件通知我。</label></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="94"/></p>	</form>
+</div><!-- #respond -->
+</div><!-- #comments -->
+</div><!-- #content -->
+</div><!-- #container -->
+<div id="primary" class="widget-area" role="complementary">
+<ul class="xoxo">
+<li id="ezadssearch-4" class="widget-container EzAdsSearch"><h3 class="widget-title"></h3><div class="ezAdsense adsense adsense-search"><div style="margin:0px; ">
+<form action="http://www.google.com.tw/cse" id="cse-search-box">
+<div>
+<input type="hidden" name="cx" value="partner-pub-2833110699572522:4337510249">
+<input type="hidden" name="ie" value="UTF-8">
+<input type="text" name="q" size="20" x-webkit-speech>
+<input type="submit" name="sa" value="&#x641c;&#x5c0b;">
+</div>
+</form>
+<script type="text/javascript" src="http://www.google.com.tw/coop/cse/brand?form=cse-search-box&amp;lang=zh-TW"></script>
+</div></div></li><li id="wpew_widgets_content-3" class="widget-container widget_wpew_widgets_content"><h3 class="widget-title">Translate</h3><div id="google_translate_element"></div><script type="text/javascript">function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'zh-TW',layout:google.translate.TranslateElement.InlineLayout.SIMPLE,gaTrack:true,gaId:'UA-101810-4'},'google_translate_element');}</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script></li><li id="profilepic_widget" class="widget-container profilepic_widget"><h3 class="widget-title">自我介紹</h3><div id='profilepic_profile'><img src="http://blog.longwin.com.tw/wp-content/profile-pics/120xNx1.jpg.pagespeed.ic.ClQlYbiVmg.jpg" width=120 id="authorpic" pagespeed_url_hash="1818548801" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></div></li><li id="wpew_widgets_content-2" class="widget-container widget_wpew_widgets_content"><h3 class="widget-title">Email</h3><p><img src="http://blogs.longwin.com.tw/wordpress/email.png" alt="Email" pagespeed_url_hash="1849593487" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></p></li><li id="ezadswidget-4" class="widget-container EzAdsWidget"><h3 class="widget-title">贊助商連結</h3>
+<!-- Easy Plugin for AdSense V7.60 -->
+<!-- [widget: 1 urCount: 1 urMax: 0] -->
+<div class="ezAdsense adsense adsense-widget" style="text-align:center;margin:12px;"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Side module - 160 x 600 -->
+<ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-2833110699572522" data-ad-slot="0296291804"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+<!-- Easy Plugin for AdSense V7.60 -->
+</li><li id="wpew_widgets_content-7" class="widget-container widget_wpew_widgets_content"><h3 class="widget-title">即時訪客</h3><div class="sitetag-abadge-container" style="position:relative;"><a target="_blank" href="http://sitetag.us/" style="position:absolute;top:5px;right:5px;_right:10px;background:url(http://static.sitetag.us/favicon.ico) no-repeat 0 2px;border:none;color:#fc0!important;font-family:Georgia!important;font-style:italic!important;padding-left:18px">SiteTag</a><script type="text/javascript" src="http://pub.sitetag.us/abadge.js?hash=5785c66d0cd372c374d01b2c680fc690&background_color=FFF&border_color=2483b6&border_width=3&inner_background_color=fbfbfb&color=0e0e33&limit=5"></script></div></li><li id="categories-6" class="widget-container widget_categories"><h3 class="widget-title">文章分類</h3>	<ul>
+<li class="cat-item cat-item-10"><a href="http://blog.longwin.com.tw/category/application/">Application</a>
+</li>
+<li class="cat-item cat-item-672"><a href="http://blog.longwin.com.tw/category/camp-2/" title="露營">Camp</a>
+</li>
+<li class="cat-item cat-item-19"><a href="http://blog.longwin.com.tw/category/document-ebook/">Document-Ebook</a>
+</li>
+<li class="cat-item cat-item-34"><a href="http://blog.longwin.com.tw/category/innovation/">Innovation</a>
+</li>
+<li class="cat-item cat-item-29"><a href="http://blog.longwin.com.tw/category/my_note/">My_Note</a>
+</li>
+<li class="cat-item cat-item-31"><a href="http://blog.longwin.com.tw/category/my_note-app-setting/">My_Note-App-Setting</a>
+</li>
+<li class="cat-item cat-item-30"><a href="http://blog.longwin.com.tw/category/my_note-plog/">My_Note-pLog</a>
+</li>
+<li class="cat-item cat-item-28"><a href="http://blog.longwin.com.tw/category/my_note-programming/">My_Note-Programming</a>
+</li>
+<li class="cat-item cat-item-27"><a href="http://blog.longwin.com.tw/category/my_note-unix/">My_Note-Unix</a>
+</li>
+<li class="cat-item cat-item-25"><a href="http://blog.longwin.com.tw/category/my-favorite-site/">My-Favorite-Site</a>
+</li>
+<li class="cat-item cat-item-20"><a href="http://blog.longwin.com.tw/category/my-life/">My-Life</a>
+</li>
+<li class="cat-item cat-item-23"><a href="http://blog.longwin.com.tw/category/news/">News</a>
+</li>
+<li class="cat-item cat-item-33"><a href="http://blog.longwin.com.tw/category/news_security/">News_Security</a>
+</li>
+<li class="cat-item cat-item-32"><a href="http://blog.longwin.com.tw/category/news-application/">News-Application</a>
+</li>
+<li class="cat-item cat-item-24"><a href="http://blog.longwin.com.tw/category/news-google-yahoo/">News-Google-Yahoo</a>
+</li>
+<li class="cat-item cat-item-21"><a href="http://blog.longwin.com.tw/category/news-life-joke/">News-Life-Joke</a>
+</li>
+<li class="cat-item cat-item-22"><a href="http://blog.longwin.com.tw/category/news-technology/">News-Technology</a>
+</li>
+<li class="cat-item cat-item-16"><a href="http://blog.longwin.com.tw/category/news-unix/">News-Unix</a>
+</li>
+<li class="cat-item cat-item-18"><a href="http://blog.longwin.com.tw/category/news-windows/">News-Windows</a>
+</li>
+<li class="cat-item cat-item-2"><a href="http://blog.longwin.com.tw/category/os-linux_bsd/">OS-Linux_BSD</a>
+</li>
+<li class="cat-item cat-item-4"><a href="http://blog.longwin.com.tw/category/program/">Program</a>
+</li>
+<li class="cat-item cat-item-17"><a href="http://blog.longwin.com.tw/category/programming/">Programming</a>
+</li>
+<li class="cat-item cat-item-7"><a href="http://blog.longwin.com.tw/category/windows/">Windows</a>
+</li>
+<li class="cat-item cat-item-46"><a href="http://blog.longwin.com.tw/category/wordpress/">WordPress</a>
+</li>
+<li class="cat-item cat-item-9"><a href="http://blog.longwin.com.tw/category/%e5%a5%bd%e7%ab%99%e6%8e%a8%e8%96%a6/">好站推薦</a>
+</li>
+<li class="cat-item cat-item-5"><a href="http://blog.longwin.com.tw/category/%e6%95%99%e5%ad%b8%e6%96%87%e4%bb%b6/">教學文件</a>
+</li>
+<li class="cat-item cat-item-3"><a href="http://blog.longwin.com.tw/category/%e6%96%87%e7%ab%a0/">文章</a>
+</li>
+<li class="cat-item cat-item-1"><a href="http://blog.longwin.com.tw/category/%e6%97%a5%e8%a8%98/">日記</a>
+</li>
+<li class="cat-item cat-item-8"><a href="http://blog.longwin.com.tw/category/%e7%94%9f%e6%b4%bb/">生活</a>
+</li>
+<li class="cat-item cat-item-11"><a href="http://blog.longwin.com.tw/category/%e7%a7%91%e6%8a%80%e6%96%b0%e8%81%9e/">科技新聞</a>
+</li>
+<li class="cat-item cat-item-6"><a href="http://blog.longwin.com.tw/category/%e8%bd%89%e8%bc%89%e6%96%b0%e8%81%9e/">轉載新聞</a>
+</li>
+<li class="cat-item cat-item-12"><a href="http://blog.longwin.com.tw/category/%e9%9b%bb%e5%ad%90%e6%9b%b8/">電子書</a>
+</li>
+</ul>
+</li><li id="recent-comments-3" class="widget-container widget_recent_comments"><h3 class="widget-title">近期迴響</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link"><a href='http://blog.longwin.com.tw/' rel='external nofollow' class='url'>Tsung</a></span> 在 <a href="http://blog.longwin.com.tw/2015/01/linux-glibc-ghost-vulnerability-patch-fix-2015/#comment-58374">Linux Glibc GHOST 漏洞偵測、修補 CVE-2015-0235</a></li><li class="recentcomments"><span class="comment-author-link">Ming</span> 在 <a href="http://blog.longwin.com.tw/2015/01/linux-glibc-ghost-vulnerability-patch-fix-2015/#comment-58372">Linux Glibc GHOST 漏洞偵測、修補 CVE-2015-0235</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://blog.longwin.com.tw/' rel='external nofollow' class='url'>Tsung</a></span> 在 <a href="http://blog.longwin.com.tw/2015/01/linux-glibc-ghost-vulnerability-patch-fix-2015/#comment-58371">Linux Glibc GHOST 漏洞偵測、修補 CVE-2015-0235</a></li><li class="recentcomments"><span class="comment-author-link">Steven On</span> 在 <a href="http://blog.longwin.com.tw/2015/01/linux-glibc-ghost-vulnerability-patch-fix-2015/#comment-58370">Linux Glibc GHOST 漏洞偵測、修補 CVE-2015-0235</a></li><li class="recentcomments"><span class="comment-author-link">Lin</span> 在 <a href="http://blog.longwin.com.tw/about/#comment-58368">關於我</a></li></ul></li><li id="archives-3" class="widget-container widget_archive"><h3 class="widget-title">Archives</h3>	<select name="archive-dropdown" onchange='document.location.href=this.options[this.selectedIndex].value;'>
+<option value="">選擇月份</option>
+<option value='http://blog.longwin.com.tw/2015/02/'> 2015 年 二月 &nbsp;(1)</option>
+<option value='http://blog.longwin.com.tw/2015/01/'> 2015 年 一月 &nbsp;(20)</option>
+<option value='http://blog.longwin.com.tw/2014/12/'> 2014 年 十二月 &nbsp;(24)</option>
+<option value='http://blog.longwin.com.tw/2014/11/'> 2014 年 十一月 &nbsp;(20)</option>
+<option value='http://blog.longwin.com.tw/2014/10/'> 2014 年 十月 &nbsp;(20)</option>
+<option value='http://blog.longwin.com.tw/2014/09/'> 2014 年 九月 &nbsp;(21)</option>
+<option value='http://blog.longwin.com.tw/2014/08/'> 2014 年 八月 &nbsp;(20)</option>
+<option value='http://blog.longwin.com.tw/2014/07/'> 2014 年 七月 &nbsp;(20)</option>
+<option value='http://blog.longwin.com.tw/2014/06/'> 2014 年 六月 &nbsp;(20)</option>
+<option value='http://blog.longwin.com.tw/2014/05/'> 2014 年 五月 &nbsp;(20)</option>
+<option value='http://blog.longwin.com.tw/2014/04/'> 2014 年 四月 &nbsp;(21)</option>
+<option value='http://blog.longwin.com.tw/2014/03/'> 2014 年 三月 &nbsp;(21)</option>
+<option value='http://blog.longwin.com.tw/2014/02/'> 2014 年 二月 &nbsp;(17)</option>
+<option value='http://blog.longwin.com.tw/2014/01/'> 2014 年 一月 &nbsp;(19)</option>
+<option value='http://blog.longwin.com.tw/2013/12/'> 2013 年 十二月 &nbsp;(22)</option>
+<option value='http://blog.longwin.com.tw/2013/11/'> 2013 年 十一月 &nbsp;(21)</option>
+<option value='http://blog.longwin.com.tw/2013/10/'> 2013 年 十月 &nbsp;(21)</option>
+<option value='http://blog.longwin.com.tw/2013/09/'> 2013 年 九月 &nbsp;(19)</option>
+<option value='http://blog.longwin.com.tw/2013/08/'> 2013 年 八月 &nbsp;(22)</option>
+<option value='http://blog.longwin.com.tw/2013/07/'> 2013 年 七月 &nbsp;(23)</option>
+<option value='http://blog.longwin.com.tw/2013/06/'> 2013 年 六月 &nbsp;(19)</option>
+<option value='http://blog.longwin.com.tw/2013/05/'> 2013 年 五月 &nbsp;(22)</option>
+<option value='http://blog.longwin.com.tw/2013/04/'> 2013 年 四月 &nbsp;(20)</option>
+<option value='http://blog.longwin.com.tw/2013/03/'> 2013 年 三月 &nbsp;(20)</option>
+<option value='http://blog.longwin.com.tw/2013/02/'> 2013 年 二月 &nbsp;(17)</option>
+<option value='http://blog.longwin.com.tw/2013/01/'> 2013 年 一月 &nbsp;(24)</option>
+<option value='http://blog.longwin.com.tw/2012/12/'> 2012 年 十二月 &nbsp;(21)</option>
+<option value='http://blog.longwin.com.tw/2012/11/'> 2012 年 十一月 &nbsp;(21)</option>
+<option value='http://blog.longwin.com.tw/2012/10/'> 2012 年 十月 &nbsp;(21)</option>
+<option value='http://blog.longwin.com.tw/2012/09/'> 2012 年 九月 &nbsp;(20)</option>
+<option value='http://blog.longwin.com.tw/2012/08/'> 2012 年 八月 &nbsp;(2)</option>
+<option value='http://blog.longwin.com.tw/2012/07/'> 2012 年 七月 &nbsp;(8)</option>
+<option value='http://blog.longwin.com.tw/2012/06/'> 2012 年 六月 &nbsp;(21)</option>
+<option value='http://blog.longwin.com.tw/2012/05/'> 2012 年 五月 &nbsp;(22)</option>
+<option value='http://blog.longwin.com.tw/2012/04/'> 2012 年 四月 &nbsp;(20)</option>
+<option value='http://blog.longwin.com.tw/2012/03/'> 2012 年 三月 &nbsp;(22)</option>
+<option value='http://blog.longwin.com.tw/2012/02/'> 2012 年 二月 &nbsp;(20)</option>
+<option value='http://blog.longwin.com.tw/2012/01/'> 2012 年 一月 &nbsp;(23)</option>
+<option value='http://blog.longwin.com.tw/2011/12/'> 2011 年 十二月 &nbsp;(22)</option>
+<option value='http://blog.longwin.com.tw/2011/11/'> 2011 年 十一月 &nbsp;(22)</option>
+<option value='http://blog.longwin.com.tw/2011/10/'> 2011 年 十月 &nbsp;(20)</option>
+<option value='http://blog.longwin.com.tw/2011/09/'> 2011 年 九月 &nbsp;(19)</option>
+<option value='http://blog.longwin.com.tw/2011/08/'> 2011 年 八月 &nbsp;(23)</option>
+<option value='http://blog.longwin.com.tw/2011/07/'> 2011 年 七月 &nbsp;(21)</option>
+<option value='http://blog.longwin.com.tw/2011/06/'> 2011 年 六月 &nbsp;(21)</option>
+<option value='http://blog.longwin.com.tw/2011/05/'> 2011 年 五月 &nbsp;(22)</option>
+<option value='http://blog.longwin.com.tw/2011/04/'> 2011 年 四月 &nbsp;(20)</option>
+<option value='http://blog.longwin.com.tw/2011/03/'> 2011 年 三月 &nbsp;(23)</option>
+<option value='http://blog.longwin.com.tw/2011/02/'> 2011 年 二月 &nbsp;(15)</option>
+<option value='http://blog.longwin.com.tw/2011/01/'> 2011 年 一月 &nbsp;(19)</option>
+<option value='http://blog.longwin.com.tw/2010/12/'> 2010 年 十二月 &nbsp;(23)</option>
+<option value='http://blog.longwin.com.tw/2010/11/'> 2010 年 十一月 &nbsp;(24)</option>
+<option value='http://blog.longwin.com.tw/2010/10/'> 2010 年 十月 &nbsp;(22)</option>
+<option value='http://blog.longwin.com.tw/2010/09/'> 2010 年 九月 &nbsp;(24)</option>
+<option value='http://blog.longwin.com.tw/2010/08/'> 2010 年 八月 &nbsp;(23)</option>
+<option value='http://blog.longwin.com.tw/2010/07/'> 2010 年 七月 &nbsp;(27)</option>
+<option value='http://blog.longwin.com.tw/2010/06/'> 2010 年 六月 &nbsp;(25)</option>
+<option value='http://blog.longwin.com.tw/2010/05/'> 2010 年 五月 &nbsp;(24)</option>
+<option value='http://blog.longwin.com.tw/2010/04/'> 2010 年 四月 &nbsp;(28)</option>
+<option value='http://blog.longwin.com.tw/2010/03/'> 2010 年 三月 &nbsp;(26)</option>
+<option value='http://blog.longwin.com.tw/2010/02/'> 2010 年 二月 &nbsp;(19)</option>
+<option value='http://blog.longwin.com.tw/2010/01/'> 2010 年 一月 &nbsp;(20)</option>
+<option value='http://blog.longwin.com.tw/2009/12/'> 2009 年 十二月 &nbsp;(25)</option>
+<option value='http://blog.longwin.com.tw/2009/11/'> 2009 年 十一月 &nbsp;(21)</option>
+<option value='http://blog.longwin.com.tw/2009/10/'> 2009 年 十月 &nbsp;(21)</option>
+<option value='http://blog.longwin.com.tw/2009/09/'> 2009 年 九月 &nbsp;(10)</option>
+<option value='http://blog.longwin.com.tw/2009/08/'> 2009 年 八月 &nbsp;(19)</option>
+<option value='http://blog.longwin.com.tw/2009/07/'> 2009 年 七月 &nbsp;(23)</option>
+<option value='http://blog.longwin.com.tw/2009/06/'> 2009 年 六月 &nbsp;(23)</option>
+<option value='http://blog.longwin.com.tw/2009/05/'> 2009 年 五月 &nbsp;(18)</option>
+<option value='http://blog.longwin.com.tw/2009/04/'> 2009 年 四月 &nbsp;(22)</option>
+<option value='http://blog.longwin.com.tw/2009/03/'> 2009 年 三月 &nbsp;(22)</option>
+<option value='http://blog.longwin.com.tw/2009/02/'> 2009 年 二月 &nbsp;(20)</option>
+<option value='http://blog.longwin.com.tw/2009/01/'> 2009 年 一月 &nbsp;(19)</option>
+<option value='http://blog.longwin.com.tw/2008/12/'> 2008 年 十二月 &nbsp;(23)</option>
+<option value='http://blog.longwin.com.tw/2008/11/'> 2008 年 十一月 &nbsp;(20)</option>
+<option value='http://blog.longwin.com.tw/2008/10/'> 2008 年 十月 &nbsp;(23)</option>
+<option value='http://blog.longwin.com.tw/2008/09/'> 2008 年 九月 &nbsp;(22)</option>
+<option value='http://blog.longwin.com.tw/2008/08/'> 2008 年 八月 &nbsp;(20)</option>
+<option value='http://blog.longwin.com.tw/2008/07/'> 2008 年 七月 &nbsp;(17)</option>
+<option value='http://blog.longwin.com.tw/2008/06/'> 2008 年 六月 &nbsp;(6)</option>
+<option value='http://blog.longwin.com.tw/2008/05/'> 2008 年 五月 &nbsp;(13)</option>
+<option value='http://blog.longwin.com.tw/2008/04/'> 2008 年 四月 &nbsp;(20)</option>
+<option value='http://blog.longwin.com.tw/2008/03/'> 2008 年 三月 &nbsp;(17)</option>
+<option value='http://blog.longwin.com.tw/2008/02/'> 2008 年 二月 &nbsp;(14)</option>
+<option value='http://blog.longwin.com.tw/2008/01/'> 2008 年 一月 &nbsp;(19)</option>
+<option value='http://blog.longwin.com.tw/2007/12/'> 2007 年 十二月 &nbsp;(15)</option>
+<option value='http://blog.longwin.com.tw/2007/11/'> 2007 年 十一月 &nbsp;(26)</option>
+<option value='http://blog.longwin.com.tw/2007/10/'> 2007 年 十月 &nbsp;(19)</option>
+<option value='http://blog.longwin.com.tw/2007/09/'> 2007 年 九月 &nbsp;(9)</option>
+<option value='http://blog.longwin.com.tw/2007/08/'> 2007 年 八月 &nbsp;(24)</option>
+<option value='http://blog.longwin.com.tw/2007/07/'> 2007 年 七月 &nbsp;(20)</option>
+<option value='http://blog.longwin.com.tw/2007/06/'> 2007 年 六月 &nbsp;(15)</option>
+<option value='http://blog.longwin.com.tw/2007/05/'> 2007 年 五月 &nbsp;(9)</option>
+<option value='http://blog.longwin.com.tw/2007/04/'> 2007 年 四月 &nbsp;(9)</option>
+<option value='http://blog.longwin.com.tw/2007/03/'> 2007 年 三月 &nbsp;(11)</option>
+<option value='http://blog.longwin.com.tw/2007/02/'> 2007 年 二月 &nbsp;(8)</option>
+<option value='http://blog.longwin.com.tw/2007/01/'> 2007 年 一月 &nbsp;(27)</option>
+<option value='http://blog.longwin.com.tw/2006/12/'> 2006 年 十二月 &nbsp;(32)</option>
+<option value='http://blog.longwin.com.tw/2006/11/'> 2006 年 十一月 &nbsp;(13)</option>
+<option value='http://blog.longwin.com.tw/2006/10/'> 2006 年 十月 &nbsp;(14)</option>
+<option value='http://blog.longwin.com.tw/2006/09/'> 2006 年 九月 &nbsp;(10)</option>
+<option value='http://blog.longwin.com.tw/2006/08/'> 2006 年 八月 &nbsp;(10)</option>
+<option value='http://blog.longwin.com.tw/2006/07/'> 2006 年 七月 &nbsp;(15)</option>
+<option value='http://blog.longwin.com.tw/2006/06/'> 2006 年 六月 &nbsp;(15)</option>
+<option value='http://blog.longwin.com.tw/2006/05/'> 2006 年 五月 &nbsp;(13)</option>
+<option value='http://blog.longwin.com.tw/2006/04/'> 2006 年 四月 &nbsp;(23)</option>
+<option value='http://blog.longwin.com.tw/2006/03/'> 2006 年 三月 &nbsp;(25)</option>
+<option value='http://blog.longwin.com.tw/2006/02/'> 2006 年 二月 &nbsp;(26)</option>
+<option value='http://blog.longwin.com.tw/2006/01/'> 2006 年 一月 &nbsp;(9)</option>
+<option value='http://blog.longwin.com.tw/2005/12/'> 2005 年 十二月 &nbsp;(22)</option>
+<option value='http://blog.longwin.com.tw/2005/11/'> 2005 年 十一月 &nbsp;(28)</option>
+<option value='http://blog.longwin.com.tw/2005/10/'> 2005 年 十月 &nbsp;(27)</option>
+<option value='http://blog.longwin.com.tw/2005/09/'> 2005 年 九月 &nbsp;(44)</option>
+<option value='http://blog.longwin.com.tw/2005/08/'> 2005 年 八月 &nbsp;(54)</option>
+<option value='http://blog.longwin.com.tw/2005/07/'> 2005 年 七月 &nbsp;(18)</option>
+<option value='http://blog.longwin.com.tw/2005/06/'> 2005 年 六月 &nbsp;(17)</option>
+<option value='http://blog.longwin.com.tw/2005/05/'> 2005 年 五月 &nbsp;(50)</option>
+<option value='http://blog.longwin.com.tw/2005/04/'> 2005 年 四月 &nbsp;(39)</option>
+<option value='http://blog.longwin.com.tw/2005/03/'> 2005 年 三月 &nbsp;(65)</option>
+<option value='http://blog.longwin.com.tw/2005/02/'> 2005 年 二月 &nbsp;(42)</option>
+<option value='http://blog.longwin.com.tw/2005/01/'> 2005 年 一月 &nbsp;(77)</option>
+<option value='http://blog.longwin.com.tw/2004/12/'> 2004 年 十二月 &nbsp;(94)</option>
+<option value='http://blog.longwin.com.tw/2004/11/'> 2004 年 十一月 &nbsp;(62)</option>
+<option value='http://blog.longwin.com.tw/2004/10/'> 2004 年 十月 &nbsp;(59)</option>
+<option value='http://blog.longwin.com.tw/2004/09/'> 2004 年 九月 &nbsp;(33)</option>
+<option value='http://blog.longwin.com.tw/2004/08/'> 2004 年 八月 &nbsp;(42)</option>
+<option value='http://blog.longwin.com.tw/2004/07/'> 2004 年 七月 &nbsp;(28)</option>
+<option value='http://blog.longwin.com.tw/2004/06/'> 2004 年 六月 &nbsp;(35)</option>
+<option value='http://blog.longwin.com.tw/2004/05/'> 2004 年 五月 &nbsp;(4)</option>
+<option value='http://blog.longwin.com.tw/2004/04/'> 2004 年 四月 &nbsp;(28)</option>
+<option value='http://blog.longwin.com.tw/2004/03/'> 2004 年 三月 &nbsp;(10)</option>
+</select>
+</li><li id="wpew_widgets_content-11" class="widget-container widget_wpew_widgets_content"><h3 class="widget-title">熱門標籤</h3><style>.sitetag-overlay{position:relative;_border:1px solid #ccc;_border-width:1px 0 0 1px}.sitetag-overlay .shadow b,.sitetag-overlay .shadow i{position:absolute;background:transparent url(http://static.sitetag.us/shadow.png) 0 0 repeat scroll;z-index:1;_display:none;_background:none}.sitetag-overlay .shadow{_display:none}.sitetag-overlay .shadow b+i{top:0;right:0;bottom:16px;left:auto;width:12px;background-position:100% 0}.sitetag-overlay .shadow b{left:0;right:17px;bottom:4px;height:17px;background-position:0 100%}.sitetag-overlay .shadow b+i+b{left:auto;right:0;bottom:4px;top:auto;width:17px;height:12px;background-position:100% 100%;z-index:1}.sitetag-overlay-bd{position:relative;z-index:12;margin:0 7px 7px 0;zoom:1}</style><div class="sitetag-overlay"><div class="sitetag-overlay-bd"><script type="text/javascript" src="http://pub.sitetag.us/gubadge.js?hash=5785c66d0cd372c374d01b2c680fc690&limit=30&background_color=DAD8C0&border_color=cc6633&border_width=6&inner_background_color=002&color=ffff00"></script></div><div class="shadow"><b></b><i></i><b></b></div></div></li><li id="wpew_widgets_content-12" class="widget-container widget_wpew_widgets_content"><h3 class="widget-title">網站分類標籤</h3><style>.sitetag-overlay{position:relative;_border:1px solid #ccc;_border-width:1px 0 0 1px}.sitetag-overlay .shadow b,.sitetag-overlay .shadow i{position:absolute;background:transparent url(http://static.sitetag.us/shadow.png) 0 0 repeat scroll;z-index:1;_display:none;_background:none}.sitetag-overlay .shadow{_display:none}.sitetag-overlay .shadow b+i{top:0;right:0;bottom:16px;left:auto;width:12px;background-position:100% 0}.sitetag-overlay .shadow b{left:0;right:17px;bottom:4px;height:17px;background-position:0 100%}.sitetag-overlay .shadow b+i+b{left:auto;right:0;bottom:4px;top:auto;width:17px;height:12px;background-position:100% 100%;z-index:1}.sitetag-overlay-bd{position:relative;z-index:12;margin:0 7px 7px 0;zoom:1}</style><div class="sitetag-overlay"><div class="sitetag-overlay-bd"><script type="text/javascript" src="http://pub.sitetag.us/gsbadge.js?hash=5785c66d0cd372c374d01b2c680fc690&limit=30&background_color=FFFFFF&border_color=666666&border_width=6&inner_background_color=FFFFFF&color=0E0E33"></script></div><div class="shadow"><b></b><i></i><b></b></div></div></li><li id="wpew_widgets_content-8" class="widget-container widget_wpew_widgets_content"><h3 class="widget-title">Stock Market Finance</h3><div align="center" width="210px" style="font-size:12px"><iframe width="210" height="410" style="margin-bottom:5px" src="http://www.sanebull.com/widget_world_watch.jsp?market=all" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><br/><a href="http://www.sanebull.com/widgets" target="_top">Stock Market Finance Widgets</a></div></li><li id="wpew_widgets_content-13" class="widget-container widget_wpew_widgets_content"><style>h1,h2,h3,h4,h5,h6{font-weight:bold}</style></li>	</ul>
+</div><!-- #primary .widget-area -->
+</div><!-- #main -->
+<div id="footer" role="contentinfo">
+<div id="colophon">
+<div id="footer-widget-area" role="complementary">
+<div id="first" class="widget-area">
+<ul class="xoxo">
+<li id="search-3" class="widget-container widget_search"><h3 class="widget-title">Search</h3><form role="search" method="get" id="searchform" class="searchform" action="http://blog.longwin.com.tw/">
+<div>
+<label class="screen-reader-text" for="s">搜尋關於：</label>
+<input type="text" value="" name="s" id="s"/>
+<input type="submit" id="searchsubmit" value="搜尋"/>
+</div>
+</form></li><li id="linkcat-37" class="widget-container widget_links"><h3 class="widget-title">好友 與 Blog</h3>
+<ul class='xoxo blogroll'>
+<li><a href="http://www.neo.com.tw/" rel="friend" target="_blank">Neo&#039;s Blog</a></li>
+</ul>
+</li>
+<li id="linkcat-35" class="widget-container widget_links"><h3 class="widget-title">好站連結</h3>
+<ul class='xoxo blogroll'>
+<li><a href="http://www.flickr.com/photos/tsung/" target="_blank">Flickr Photo</a></li>
+<li><a href="http://golangd.com/" target="_blank">Go 程式語言討論區</a></li>
+<li><a href="https://plus.google.com/102624495263698082690?rel=author" rel="me" target="_blank">Google+</a></li>
+<li><a href="http://wordtalks.com/" rel="me" target="_blank">WordTalks</a></li>
+<li><a href="http://wowtree.com/" rel="me" target="_blank">wowTree</a></li>
+<li><a href="http://blog.longwin.com.tw/2005/04/my_favorite_list/" rel="me">好站連結</a></li>
+<li><a href="http://name.longwin.com.tw/" rel="me" target="_blank">英文名字翻譯轉換</a></li>
+<li><a href="http://www.feebee.com.tw/" title="飛快比價，比了再買" target="_blank">飛比價格 比價網</a></li>
+</ul>
+</li>
+<li id="linkcat-36" class="widget-container widget_links"><h3 class="widget-title">贊助商</h3>
+<ul class='xoxo blogroll'>
+<li><a href="http://www.longwin.com.tw/" rel="me" target="_blank">隆瑩寢飾精品</a></li>
+</ul>
+</li>
+</ul>
+</div><!-- #first .widget-area -->
+<div id="second" class="widget-area">
+<ul class="xoxo">
+<li id="facebook-likebox-2" class="widget-container widget_facebook_likebox"><h3 class="widget-title"><a href="http://www.facebook.com/tsungnote">Tsung&#039;s Note FB 粉絲團</a></h3><iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Ftsungnote&#038;width=260&#038;height=485&#038;colorscheme=light&#038;show_faces=true&#038;stream=false&#038;show_border=true&#038;header=false&#038;force_wall=true&#038;locale=zh_TW" scrolling="no" frameborder="0" style="border: none; overflow: hidden; width: 260px;  height: 485px; background: #fff"></iframe></li>	</ul>
+</div><!-- #second .widget-area -->
+<div id="third" class="widget-area">
+<ul class="xoxo">
+<li id="calendar-3" class="widget-container widget_calendar"><h3 class="widget-title">日曆</h3><div id="calendar_wrap"><table id="wp-calendar">
+<caption>十一月 2009</caption>
+<thead>
+<tr>
+<th scope="col" title="星期一">一</th>
+<th scope="col" title="星期二">二</th>
+<th scope="col" title="星期三">三</th>
+<th scope="col" title="星期四">四</th>
+<th scope="col" title="星期五">五</th>
+<th scope="col" title="星期六">六</th>
+<th scope="col" title="星期日">日</th>
+</tr>
+</thead>
+<tfoot>
+<tr>
+<td colspan="3" id="prev"><a href="http://blog.longwin.com.tw/2009/10/">&laquo; 十月</a></td>
+<td class="pad">&nbsp;</td>
+<td colspan="3" id="next"><a href="http://blog.longwin.com.tw/2009/12/">十二月 &raquo;</a></td>
+</tr>
+</tfoot>
+<tbody>
+<tr>
+<td colspan="6" class="pad">&nbsp;</td><td>1</td>
+</tr>
+<tr>
+<td><a href="http://blog.longwin.com.tw/2009/11/02/" title="Mplayer 開啟 全螢幕 會卡住無法播放 修正">2</a></td><td><a href="http://blog.longwin.com.tw/2009/11/03/" title="好文: 你知道你家有什麼東西最耗電嗎?">3</a></td><td><a href="http://blog.longwin.com.tw/2009/11/04/" title="好書: Linux Performance Monitoring 下載 (電子書)">4</a></td><td><a href="http://blog.longwin.com.tw/2009/11/05/" title="Apache2 mod_rewrite 於 %2F (/) 的 Bug 修復">5</a></td><td><a href="http://blog.longwin.com.tw/2009/11/06/" title="Key-Value 系統 分類整理 (NoSQL)">6</a></td><td>7</td><td>8</td>
+</tr>
+<tr>
+<td><a href="http://blog.longwin.com.tw/2009/11/09/" title="Linux 掛載 MDF 檔案(Mount)">9</a></td><td><a href="http://blog.longwin.com.tw/2009/11/10/" title="Google Dashboard, Web History - 個人 設定、隱私資料庫">10</a></td><td><a href="http://blog.longwin.com.tw/2009/11/11/" title="大陸新浪網 的 App Engine">11</a></td><td><a href="http://blog.longwin.com.tw/2009/11/12/" title="Linux 文字模式 螢幕畫面共享 - 使用Screen">12</a></td><td><a href="http://blog.longwin.com.tw/2009/11/13/" title="新程式語言 Vim - Zimbu, Google - Go">13</a></td><td>14</td><td>15</td>
+</tr>
+<tr>
+<td><a href="http://blog.longwin.com.tw/2009/11/16/" title="MPlayer 關閉錯誤訊息 (Linux)">16</a></td><td><a href="http://blog.longwin.com.tw/2009/11/17/" title="線上環境的 MySQL 設定檔 預設值修改(Jeremy 建議)">17</a></td><td><a href="http://blog.longwin.com.tw/2009/11/18/" title="Ubuntu 9.10 增加 / 設定 語系(Locale)">18</a></td><td><a href="http://blog.longwin.com.tw/2009/11/19/" title="好文: CSS Hack 在各瀏覽器的差異、用法 整理">19</a></td><td><a href="http://blog.longwin.com.tw/2009/11/20/" title="使用 vimdiff 來呈現 Git diff 差異">20</a></td><td>21</td><td>22</td>
+</tr>
+<tr>
+<td><a href="http://blog.longwin.com.tw/2009/11/23/" title="於 RHEL 安裝 CenOS YUM Package Manager">23</a></td><td><a href="http://blog.longwin.com.tw/2009/11/24/" title="於 Debian Linux 架設 NIS Server (Master)">24</a></td><td><a href="http://blog.longwin.com.tw/2009/11/25/" title="於 Debian Linux 架設 NIS Server (Slave)">25</a></td><td><a href="http://blog.longwin.com.tw/2009/11/26/" title="於 Debian Linux 架設 NIS Server (Client)">26</a></td><td><a href="http://blog.longwin.com.tw/2009/11/27/" title="Debian Linux 的小技巧提示套件">27</a></td><td>28</td><td>29</td>
+</tr>
+<tr>
+<td><a href="http://blog.longwin.com.tw/2009/11/30/" title="Vim 的 JavaScript 縮排格式最佳化 外掛">30</a></td>
+<td class="pad" colspan="6">&nbsp;</td>
+</tr>
+</tbody>
+</table></div></li><li id="wpew_widgets_content-5" class="widget-container widget_wpew_widgets_content"><h3 class="widget-title">Google Calendar</h3><iframe src="//www.google.com/calendar/embed?title=Todo%20Calendar&showTitle=0&mode=AGENDA&height=250&wkst=1&bgcolor=%23FFFFFF&src=tsunghao%40gmail.com&color=%232952A3&ctz=Asia%2FTaipei" style=" border-width:0 " width="220" height="250" frameborder="0" scrolling="no"></iframe></li>	</ul>
+</div><!-- #third .widget-area -->
+<div id="fourth" class="widget-area">
+<ul class="xoxo">
+<li id="meta-3" class="widget-container widget_meta"><h3 class="widget-title">管理區</h3>	<ul>
+<li><a rel="nofollow" href="http://blog.longwin.com.tw/wp-login.php">登入</a></li>
+<li><a href="http://blog.longwin.com.tw/feed/">文章 <abbr title="Really Simple Syndication">RSS</abbr> 訂閱</a></li>
+<li><a href="http://blog.longwin.com.tw/comments/feed/">迴響 <abbr title="Really Simple Syndication">RSS</abbr> 訂閱</a></li>
+<li><a href="http://tw.wordpress.org/" title="使用 WordPress 建置，最先進的語意化個人出版平台。">WordPress 台灣正體中文</a></li>	</ul>
+</li><li id="blog_subscription-2" class="widget-container jetpack_subscription_widget"><h3 class="widget-title"><label for="subscribe-field">適用電子郵件訂閱網站</label></h3>
+<form action="#" method="post" accept-charset="utf-8" id="subscribe-blog-blog_subscription-2">
+<div id="subscribe-text"><p>輸入你的電子郵件地址訂閱網站的新文章，使用電子郵件接收新通知。</p>
+</div><p>訂閱 31 其他用戶 </p>
+<p id="subscribe-email">
+<label id="jetpack-subscribe-label" for="subscribe-field">
+電子郵件位址	</label>
+<input type="email" name="email" value="電子郵件位址" id="subscribe-field" placeholder="電子郵件位址"/>
+</p>
+<p id="subscribe-submit">
+<input type="hidden" name="action" value="subscribe"/>
+<input type="hidden" name="source" value="http://blog.longwin.com.tw/2009/11/rhel-install-cenos-yum-2009/"/>
+<input type="hidden" name="sub-type" value="widget"/>
+<input type="hidden" name="redirect_fragment" value="blog_subscription-2"/>
+<input type="submit" value="訂閱" name="jetpack_subscriptions_widget"/>
+</p>
+</form>
+<script>(function(d){if(('placeholder'in d.createElement('input'))){var label=d.getElementById('jetpack-subscribe-label');label.style.clip='rect(1px, 1px, 1px, 1px)';label.style.position='absolute';label.style.height='1px';label.style.width='1px';label.style.overflow='hidden';}})(document);</script>
+</li><li id="wpew_widgets_content-6" class="widget-container widget_wpew_widgets_content"><p style="text-align:center;"><a href="http://feeds2.feedburner.com/tsungblog"><img src="http://feeds2.feedburner.com/~fc/tsungblog?bg=99CCFF&fg=444444&anim=0" height="26" width="88" style="border:0" alt="" pagespeed_url_hash="879062353" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a></p>
+<p style="text-align:center;"><a href="http://pagerank.easylife.tw" target="_blank" title="Google PageRank查詢"><img src="http://pagerank.easylife.tw/pagerank.php?skin=ng1&url=blog.longwin.com.tw" border="0" alt="Google PageRank查詢" onerror="this.style.display='none';" rel="nofollow" pagespeed_url_hash="3103761371" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a></p>
+<script type="text/javascript" src="http://track.sitetag.us/tracking.js?hash=5785c66d0cd372c374d01b2c680fc690"></script>
+<!--<script type="text/javascript" src="http://click.longwin.com.tw/js/click_min.js?hash=5785c66d0cd372c374d01b2c680fc690"></script>-->
+<style>blockquote{font-family:Georgia,serif;font-size:18px;font-style:normal;margin:.25em 0;padding:.25em 40px;line-height:1.45;position:relative;color:#383838;background:#ececec}blockquote:before{display:block;content:"\201C";font-size:80px;position:absolute;left:-35px;top:-25px;color:#7a7a7a}blockquote cite{color:#999;font-size:14px;display:block;margin-top:5px}blockquote cite:before{content:"\2014 \2009"}.entry-content p{line-height:1.7em;text-align:justify;text-justify:ideographic;margin:0;text-indent:2em;margin-after:.5em;word-break:break-all}.entry-content em{font-style:normal}.entry-content ul,ol{margin-left:4em}.entry-content{letter-spacing:.2px}</style></li>	</ul>
+</div><!-- #fourth .widget-area -->
+</div><!-- #footer-widget-area -->
+<div id="site-info">
+<a href="http://blog.longwin.com.tw/" title="Tsung&#039;s Blog" rel="home">
+Tsung&#039;s Blog	</a>
+</div><!-- #site-info -->
+<div id="site-generator">
+<a href="http://tw.wordpress.org/" title="個人語意出版平台">使用 WordPress 建置。</a>
+</div><!-- #site-generator -->
+</div><!-- #colophon -->
+</div><!-- #footer -->
+</div><!-- #wrapper -->
+<!--MP Share Center Scripts--><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script><!--Twitter Tweet Button--><script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script><!--Google +1 Button--><script type="text/javascript" src="http://platform.linkedin.com/in.js"></script><!--LinkedIn Share Button-->	<div style="display:none">
+<div class="grofile-hash-map-b636a9bf35d30f7781db075f241e6fb2">
+</div>
+<div class="grofile-hash-map-d41d8cd98f00b204e9800998ecf8427e">
+</div>
+</div>
+<script type="text/javascript">WPCOM_sharing_counts={"http:\/\/blog.longwin.com.tw\/2009\/11\/rhel-install-cenos-yum-2009\/":1724}</script>
+<div id="sharing_email" style="display: none;">
+<form action="/2009/11/rhel-install-cenos-yum-2009/" method="post">
+<label for="target_email">寄到電子郵件位址</label>
+<input type="email" name="target_email" id="target_email" value=""/>
+<label for="source_name">帳號</label>
+<input type="text" name="source_name" id="source_name" value=""/>
+<label for="source_email">你的Email</label>
+<input type="email" name="source_email" id="source_email" value=""/>
+<img style="float: right; display: none" class="loading" src="http://blog.longwin.com.tw/wp-content/plugins/jetpack/modules/sharedaddy/images/loading.gif.pagespeed.ce.moJpQhMDYx.gif" alt="loading" width="16" height="16" pagespeed_url_hash="38476114" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+<input type="submit" value="寄送電子郵件" class="sharing_send"/>
+<a href="#cancel" class="sharing_cancel">取消</a>
+<div class="errors errors-1" style="display: none;">
+文章沒有送出-請確認你的Email位置	</div>
+<div class="errors errors-2" style="display: none;">
+Email確認失敗,請稍後再試.	</div>
+<div class="errors errors-3" style="display: none;">
+抱歉，你的網誌無法透過電子郵件分享	</div>
+</form>
+</div>
+<script type="text/javascript">jQuery(document).on('ready post-load',function(){jQuery('a.share-facebook').on('click',function(){window.open(jQuery(this).attr('href'),'wpcomfacebook','menubar=1,resizable=1,width=600,height=400');return false;});});</script>
+<script type="text/javascript">jQuery(document).on('ready post-load',function(){jQuery('a.share-linkedin').on('click',function(){window.open(jQuery(this).attr('href'),'wpcomlinkedin','menubar=1,resizable=1,width=580,height=450');return false;});});</script>
+<script type="text/javascript">jQuery(document).on('ready post-load',function(){jQuery('a.share-twitter').on('click',function(){window.open(jQuery(this).attr('href'),'wpcomtwitter','menubar=1,resizable=1,width=600,height=350');return false;});});</script>
+<script type="text/javascript">jQuery(document).on('ready post-load',function(){jQuery('a.share-google-plus-1').on('click',function(){window.open(jQuery(this).attr('href'),'wpcomgoogle-plus-1','menubar=1,resizable=1,width=480,height=550');return false;});});</script>
+<script src="http://blog.longwin.com.tw/wp-content,_plugins,_akismet,__inc,_form.js,qver==3.0.4+wp-includes,_js,_comment-reply.min.js,qver==4.1.pagespeed.jc.eG9ySq7igM.js"></script><script>eval(mod_pagespeed_k5gfyO_JUC);</script>
+<script>eval(mod_pagespeed_ugmJO5cGqg);</script>
+<script type='text/javascript' src='http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201506'></script>
+<script type='text/javascript' src='http://s.gravatar.com/js/gprofiles.js?ver=2015Febaa'></script>
+<script type='text/javascript'>//<![CDATA[
+var WPGroHo={"my_hash":""};
+//]]></script>
+<script src="http://blog.longwin.com.tw/wp-content/plugins/jetpack/modules/wpgroho.js,qver==4.1+likes,_queuehandler.js,qver==3.3.pagespeed.jc.4hFLM5Byzp.js"></script><script>eval(mod_pagespeed_frhlkULBY0);</script>
+<script>eval(mod_pagespeed_GEFnDc$e$h);</script>
+<script type='text/javascript'>//<![CDATA[
+var sharing_js_options={"lang":"en","counts":"1"};
+//]]></script>
+<script type='text/javascript' src='http://blog.longwin.com.tw/wp-content/plugins/jetpack/modules/sharedaddy/sharing.js,qver=20140920.pagespeed.jm.zwNwqWdWoP.js'></script>
+<iframe src='http://widgets.wp.com/likes/master.html?ver=20141028#ver=20141028&amp;lang=zh&amp;mp6=0' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+<div id='likes-other-gravatars'><div class="likes-text"><span>%d</span> 位部落客按了讚：</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+<script src="http://stats.wp.com/e-201506.js" type="text/javascript"></script>
+<script type="text/javascript">st_go({v:'ext',j:'1:3.3',blog:'21486538',post:'1724',tz:'8'});var load_cmc=function(){linktracker_init(21486538,1724,2);};if(typeof addLoadEvent!='undefined')addLoadEvent(load_cmc);else load_cmc();</script></body>
+</html>
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using memcached
+Database Caching 5/52 queries in 0.017 seconds using memcached
+Object Caching 2794/2920 objects using memcached
+
+ Served from: blog.longwin.com.tw @ 2015-02-02 10:09:19 by W3 Total Cache -->
