@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html>
+<head profile="http://www.w3.org/2005/10/profile">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+<title>Stata | FAQs: How can I determine if my computer/OS is 64-bit</title>
+<meta name=google content=notranslate />
+<meta name="description" content="Stata Windows FAQ: How can I determine if my computer/operating system is 64-bit?" />
+<meta property=fb:page_id content=151026434935843 />
+<meta name="keywords" content="statistics software, statistical software package, applied statistics software, statistics, data analysis, analysis, data analysis software, graphs, graphing, data management" />
+<meta name="keywords" content="windows, operating system, os, 64, bit, compliant, compatible" />
+<meta name="robots" content="" />
+<link rel="shortcut icon" href="http://stata.com/favicon-no-number.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="/includes/css/stata2009blue.css" type="text/css">
+<link rel="stylesheet" href="/includes/css/centerimage2.css" type="text/css">
+<link rel="stylesheet" href="/includes/css/jquery-ui.css" type="text/css">
+<link rel="stylesheet" href="/includes/css/style2013.css" type="text/css">
+<link rel="stylesheet" href="/includes/css/order.css" type="text/css">
+<link rel="stylesheet" href="/includes/css/bookstyle.css" type="text/css">
+<link rel="stylesheet" href="/includes/css/dropdown2013-style.css" type="text/css">
+<link rel="stylesheet" href="/includes/css/marquee.css" type="text/css">
+<script type="text/javascript" language="javascript1.2" src="/includes/js/dropdown2013.js"></script> 
+<script type="text/javascript" language="javascript1.2" src="/includes/js/toggle.js"></script> 
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script type="text/javascript" language="javascript1.2" src="/includes/js/jquery-1.6.2.js"></script> 
+<script type="text/javascript" language="text/javascript" src="/includes/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" language="text/javascript" src="/includes/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" language="javascript1.2" src="/includes/js/statagraphs.js"></script> 
+<!-- <script type="text/javascript" language="javascript1.2" src="/includes/js/changecountry.js"></script> 
+-->
+<script type="text/javascript" language="javascript1.2" src="/includes/js/jquery-ui.js"></script> 
+<script type="text/javascript" language="text/javascript" src="/includes/js/cookie.js"></script>
+<!-- script type="text/javascript" src="/includes/js/carhartl-jquery-cookie-92b7715/jquery.cookie.js"></script --> 
+<script type="text/javascript" src="/includes/js/jquery.cookies.2.2.0.js"></script>
+<script type="text/javascript" language="text/javascript" src="/includes/js/marquee.js"></script>
+<script type="text/javascript" language="text/javascript" src="/includes/js/sliding_panels.js"></script>
+<script type="text/javascript" language="text/javascript" src="/includes/js/farinspace/jquery.imgpreload.min.js"></script>
+  <link rel="stylesheet" href="/includes/css/responsive-carousel.css" media="screen">
+  <link rel="stylesheet" href="/includes/css/responsive-carousel.slide.css" media="screen">
+  <link rel="stylesheet" href="/includes/css/demostyles.css">
+  <!-- Load local lib and tests. -->
+  <script src="/includes/js/responsive-carousel.js"></script>
+  <script src="/includes/js/responsive-carousel.touch.js"></script>
+  <script src="/includes/js/responsive-carousel.drag.js"></script>
+  <script src="/includes/js/responsive-carousel.dynamic-containers.js"></script>
+  <script src="/includes/js/responsive-carousel.autoinit.js"></script>
+<script src="/includes/js/cartScripts.js"></script>
+<!-- <link rel="alternate" type="application/rss+xml" title="RSS" href="/headlines.rss"> -->
+<script language="javascript1.2" src="/includes/js/little_window.js"></script>
+
+<script type="text/javascript" language="JavaScript">
+
+<!--
+
+var imgObj;
+function over(imgNum) {
+
+	if (menuReadyState) {
+
+		//reset all images
+		//menuClosingFunction();
+
+		//get image object
+		if(ns4){imgObj=document.layers["navlayer"].document.images["b"+imgNum];}
+		else{imgObj=document.images["b"+imgNum];}
+
+		//find position of image
+		xPos = getRealLeft(imgObj);
+		yPos = getRealTop(imgObj);
+
+		//activate menu with returned coordinates
+		activateMenu(imgNum,xPos,yPos+imgObj.height);}
+	}
+
+function loadEmUp() { 
+  var doc=document; if(doc.images){ if(!doc.MM_p) doc.MM_p=new Array();
+    var i,j=doc.MM_p.length,a=loadEmUp.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ doc.MM_p[j]=new Image; doc.MM_p[j++].src=a[i];}}
+
+}
+
+function swapImg(id, newSrc) {
+	var theImage = locateImage(id);
+	if (theImage) {
+		theImage.src = newSrc;
+	}
+}
+
+function locateImage(name) {
+	var theImage = false;
+	if (document.images) {
+		theImage = document.images[name];
+	}
+	if (theImage) {
+		return theImage;
+	}
+	return (false);
+}
+
+function showbak(elem)
+{
+	if (elem == 'headlineitem1') {
+		hide('headlineitem2') ;
+		hide('headlineitem3') ;
+	}
+	document.getElementById(elem).style.display = "block" ;
+}
+
+function show(elem)
+{
+	document.getElementById(elem).style.display = "block" ;
+}
+
+function hide(elem)
+{
+	document.getElementById(elem).style.display = "none" ;
+}
+//here you place the ids of every element you want.
+var ids=new Array('bookrow1','bookrow2','bookrow3','bookrow4','bookrow5');
+
+function switchid(id){	
+	hideallids();
+	showdiv(id);
+}
+
+function hideallids(){
+	//loop through the array and hide each element by id
+	for (var i=0;i<ids.length;i++){
+		hidediv(ids[i]);
+	}		  
+}
+
+function hidediv(id) {
+	//safe function to hide an element with a specified id
+	if (document.getElementById) { // DOM3 = IE5, NS6
+		document.getElementById(id).style.display = 'none';
+	}
+	else {
+		if (document.layers) { // Netscape 4
+			document.id.display = 'none';
+		}
+		else { // IE 4
+			document.all.id.style.display = 'none';
+		}
+	}
+}
+
+function showdiv(id) {
+	//safe function to show an element with a specified id
+		  
+	if (document.getElementById) { // DOM3 = IE5, NS6
+		document.getElementById(id).style.display = 'block';
+	}
+	else {
+		if (document.layers) { // Netscape 4
+			document.id.display = 'block';
+		}
+		else { // IE 4
+			document.all.id.style.display = 'block';
+		}
+	}
+}
+
+function swapLink(A,B) 
+{
+document.getElementById('changeme').innerHTML="<img src=\"" + A + "\" border=\"0\" alt=\"\" id=\"beast\" \/>"
+document.getElementById('changeme').href=B
+// document.getElementById('changeme').target="_blank"
+}
+
+// function swapBG(A)
+// {
+// document.getElementById("changetable").style.backgroundImage="url('" + A + "')";
+// }
+
+//-->
+
+
+</script>
+
+<!-- SCRIPTS FOR ORDER PAGE -->
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+<script src="/includes/js/mpcores.js"></script>
+<script src="/includes/js/popup.js"></script>
+<script src="/includes/js/cartScripts.js"></script>
+<!-- END SCRIPTS FOR ORDER PAGE -->
+
+
+</head>
+<body onload="mpcores();">
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9407990-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<div id="container">
+
+<div id="siteheader-outer">
+<div id="siteheader">
+<a href="/"><img class="homelink" src="/includes/images/transparent-pixel.png" alt="" /></a><h1> Stata: Data Analysis and Statistical Software </h1>
+<div style="display:inline-block; float: right; padding: 5px; color: #595959; font-size: 12px;">
+<a href="http://www.stata.com/store/checkout/cart/" style="color: #FFFFFF;">My Cart</a> &nbsp; &vert;  &nbsp;
+
+          <a href="http://www.stata.com/store/customer/account/login/" style="color: #FFFFFF;">Log In/Create Account</a>
+	  </div>
+</div>
+</div>
+
+<div id="dropdownNav">
+
+<div id="menu">
+<table><tr><td>
+<span class="mainitem"><a href="http://www.stata.com/products/">Products</a><br /><div>
+    <span class="categories">
+    <a href="http://www.stata.com/stata13/">Stata 13</a><br />
+    <p class="substuff">
+      <a href="http://www.stata.com/why-use-stata/">Overview: Why use Stata?</a><br />
+      <a href="http://www.stata.com/features/">Features</a><br />
+      <a href="http://www.stata.com/stata13/">New in Stata 13</a><br />
+      <a href="http://www.stata.com/statamp/">Stata/MP</a><br />
+      <a href="http://www.stata.com/products/which-stata-is-right-for-me/">Which Stata is right for me?</a><br />
+      <a href="http://www.stata.com/products/compatible-operating-systems/">Supported platforms</a><br />
+      <a href="http://www.stata.com/order/">Pricing and ordering</a><br />
+      <a href="http://www.stata.com/order/request-price-quote/">Request a quote</a><br />
+    </p>
+    </span>
+    <span class="categories">
+    <a href="http://www.stata.com/training/">Training </a><br />
+    <p class="substuff">
+      <a href="http://www.stata.com/netcourse/">NetCourses</a><br />
+      <a href="http://www.stata.com/training/enroll-public/">Public training</a><br />
+      <a href="http://www.stata.com/training/onsite-training/">On-site training</a><br />
+    </p>
+    <a href="http://www.stata.com/bookstore/">Bookstore </a><br />
+    <p class="substuff">
+      <a href="http://www.stata.com/bookstore/stata-press-books/">Stata Press books</a><br />
+      <a href="http://www.stata.com/bookstore/books-on-stata/">Books on Stata</a><br />
+      <a href="http://www.stata.com/bookstore/statistics/">Books on statistics</a><br />
+    </p>
+    </span>
+    <span class="categories">
+    <a class="bump" href="http://www.stata.com/bookstore/stata-journal/">Stata Journal</a><br />
+    <a class="bump" href="http://stata-press.com/">Stata Press</a><br />
+    <a class="bump" href="http://www.stata.com/products/stat-transfer/">Stat/Transfer</a><br />
+    <a class="bump" href="http://www.stata.com/giftshop/">Gift Shop</a><br />
+    </span> 
+</div>
+</td>
+<td>
+<span class="mainitem"><a href="http://www.stata.com/order/">Purchase</a><br /><div>
+    <span class="categories">
+    <a class="bump" href="http://www.stata.com/order/">Order Stata</a><br />
+    <a class="bump" href="http://www.stata.com/order/">Order upgrade</a><br />
+    <a class="bump" href="http://www.stata.com/order/request-price-quote/">Request a quote</a><br />
+    <a href="http://www.stata.com/training/">Training</a><br />
+    <p class="substuff">
+      <a href="http://www.stata.com/netcourse/">NetCourses</a><br />
+      <a href="http://www.stata.com/training/enroll-public/">Public training</a><br />
+      <a href="http://www.stata.com/training/onsite-training/">On-site training</a><br />
+    </p>
+    </span>
+    <span class="categories">
+    <a href="http://www.stata.com/bookstore/">Bookstore</a><br />
+    <p class="substuff">
+      <a href="http://www.stata.com/bookstore/stata-press-books/">Stata Press books</a><br />
+      <a href="http://www.stata.com/bookstore/books-on-stata/">Books on Stata</a><br />
+      <a href="http://www.stata.com/bookstore/statistics/">Books on statistics</a><br />
+    </p>
+    <a class="bump" href="http://www.stata.com/order/">Stat/Transfer</a><br />
+    <a class="bump" href="http://www.stata.com/bookstore/subscribe-stata-journal/">Stata Journal</a><br />
+    <a class="bump" href="http://www.stata.com/giftshop/">Gift Shop</a><br />
+    </span>
+
+</div></span>
+</td>
+<td>
+<span class="mainitem"><a href="http://www.stata.com/training/">Training</a><br /><div>
+    <span class="categories">
+    <a class="bump" href="http://www.stata.com/links/video-tutorials/">Video tutorials</a><br />
+    <a class="bump" href="http://www.stata.com/netcourse/">NetCourses</a><br />
+    <a class="bump" href="http://www.stata.com/training/public/">Public training</a><br />
+    <a class="bump" href="http://www.stata.com/training/onsite-training/">On-site training</a><br />
+    <a class="bump" href="http://www.stata.com/meeting/short-courses/">Third-party short courses</a><br />
+    </span>
+</div></span>
+</td>
+<td>
+<span class="mainitem"><a href="http://www.stata.com/support/">Support</a><br /><div style="margin-left: -25%;">
+    <span class="categories">
+    <a class="bump" href="http://www.stata.com/support/updates/">Updates</a><br />
+    <a class="bump" href="http://www.stata.com/support/documentation/">Documentation</a><br />
+    <a class="bump" href="http://www.stata.com/support/faqs/">FAQs</a><br />
+    <a class="bump" href="http://www.stata.com/register/">Register Stata</a><br />
+    <a href="http://www.stata.com/support/tech-support/">Technical services </a>
+    <p class="substuff">
+      <a href="http://www.stata.com/support/tech-support/policy/">Policy</a><br />
+      <a href="http://www.stata.com/support/tech-support/contact/">Contact </a><br />
+    </p>
+    </span>
+    <span class="categories">
+    <a href="http://www.stata.com/publications/">Publications </a>
+    <p class="substuff">
+      <a href="http://www.stata.com/bookstore/">Bookstore</a><br />
+      <a href="http://www.stata.com/bookstore/stata-journal/">Stata Journal</a><br />
+      <a href="http://www.stata.com/stata-news/">Stata News</a>
+    </p>
+    <a href="http://www.stata.com/meeting/">Conferences and meetings</a>
+    <p class="substuff">
+      <a href="http://www.stata.com/meeting/columbus15/">Stata Conference </a><br />
+      <a href="http://www.stata.com/meeting/">Upcoming meetings</a><br />
+      <a href="http://www.stata.com/meeting/proceedings/">Proceedings</a><br />
+    </p>
+    <a class="bump" href="http://www.stata.com/alerts/">Email alerts</a><br />
+    </span>
+    <span class="categories">
+    <a class="bump" href="http://www.stata.com/statalist/">Statalist</a><br />
+    <a class="bump" href="http://blog.stata.com/">The Stata Blog</a><br />
+    <a class="bump" href="http://www.stata.com/links/">Web resources </a><br />
+<!--
+    <p class="substuff">
+      <a href="http://www.stata.com/links/">Stata resources</a><br />
+      <a href="http://www.stata.com/links/statistical-software-providers">Software providers</a><br />
+      <a href="http://www.stata.com/links/statistical-book-publishers/">Book publishers</a><br />
+      <a href="http://www.stata.com/links/statistical-journals/">Journals</a><br />
+      <a href="http://www.stata.com/links/statistical-organizations/">Organizations</a><br />
+    </p>
+-->
+    <a class="bump" href="http://www.stata.com/publications/author-support-program/">Author Support Program</a><br />
+    <a class="bump" href="http://www.stata.com/support/installation-qualification/">Installation Qualification Tool</a><br />
+    </span>
+</div></span>
+</td>
+<td>
+<span class="mainitem"><a href="http://www.stata.com/company/">Company</a><br /><div>
+    <span class="categories">
+    <a class="top company" href="http://www.stata.com/company/">StataCorp </a>
+    <p class="substuff">
+      <a href="http://www.stata.com/company/contact/">Contact us</a><br />
+      <a href="http://www.stata.com/company/hours/">Hours of operation</a><br />
+      <a href="http://www.stata.com/news/">Announcements</a>
+    </p>
+    <a href="http://www.stata.com/customer-service/">Customer service </a><br />
+    <p class="substuff">
+      <a href="http://www.stata.com/customer-service/change-address/">Change address</a><br />
+      <a href="http://www.stata.com/register/">Register Stata online</a><br />
+      <a href="http://www.stata.com/customer-service/change-registration/">Change registration</a><br />
+      <a href="http://www.stata.com/customer-service/stata-news/">Subscribe to Stata News</a><br />
+    </p>
+    </span>
+    <span class="categories">
+    <a class="bump" href="http://www.stata.com/worldwide/">Distributors</a><br />
+    <a class="bump" href="http://www.stata.com/careers/">Careers</a><br />
+    <a href="">Other sites </a><br />
+    <p class="substuff">
+      <a href="http://stata-journal.com/">Stata Journal</a><br />
+      <a href="http://stata-press.com/">Stata Press</a><br />
+      <a href="http://blog.stata.com/">The Stata Blog</a><br />
+    </p>
+    </span>
+</div></span>
+</td>
+<td style="border-right: 0px;">
+<span class="mainitem"><nobr><a href="http://www.stata.com/search/">Search</a>&nbsp;<form action="https://www.stata.com/gsearch.php" method="GET" style="display: inline-block; padding: 0px; margin: 0px; height: 25px; vertical-align: top;">
+        <input type="text" name="q" size="20" maxlength="255" value="" style="padding:0;margin-left: 2; margin: 2px 2px 2px 0px; height: 15px; vertical-align: top; background-color: #595959; color: #fff; border: solid 1px #797979;">
+        <input type="hidden" name="site" value="stata">
+        <input type="hidden" name="client" value="stata">
+        <input type="hidden" name="proxystylesheet" value="stata">
+	<input type="hidden" name="restrict" value="Default">
+        <input type="hidden" name="output" value="xml_no_dtd"> <input type="submit" value="Go" style="padding: 0px 1px 0px 1px; margin: -3px 0px 0px 0px; height: 20px;width: 30px; font-size: .8em;">
+       </form></nobr><div>
+    <a href="http://www.stata.com/search/advanced/">Advanced search</a><br />
+    <a href="http://www.stata.com/site-index/">Site index</a><br />
+</div></span>
+</td>
+</tr>
+</table>
+</div>
+
+</div>
+
+<div id="searchNav">
+      <table style="padding: 0px; margin: 0px;"><tr>
+      <td style="padding: 0px 4px 0px 0px; font-size: 8pt;">Search</td>
+      <td style="padding: 0px 0px 0px 0px;"><nobr><form action="https://www.stata.com/gsearch.php" method="GET" style="padding: 0; margin: 0; height: 15px; vertical-align: top;">
+        <input type="text" name="q" size="25%" height="10px" maxlength="255" value="" style="font-size: 6pt; padding:0;margin-left: 2; margin: 2px 2px 2px 0px; vertical-align: top; background-color: #595959; color: #fff; border: solid 1px #797979;">
+        <input type="hidden" name="site" value="stata">
+        <input type="hidden" name="client" value="stata">
+        <input type="hidden" name="proxystylesheet" value="stata">
+	<input type="hidden" name="restrict" value="Default">
+        <input type="hidden" name="output" value="xml_no_dtd"> <input type="submit" value="NoGo" height="10" width="10" style="font-size: 6pt; padding: 0px 1px 0px 1px; margin: 0px;">
+       </form></nobr></td></tr></table>
+</div>
+
+
+<!-- END DROPDOWNS -->
+<div id="sitebody">
+<div style="border-bottom: solid 1px #afafaf; padding-bottom: 4px; padding-top: 0px; margin-bottom: 0px; text-align: left;">
+&nbsp;&nbsp; &#62;&#62; <a href="/" style="text-decoration:none">Home</a> &#62;&#62; <a href="/support/" style="text-decoration:none">Resources &amp; support</a> &#62;&#62; <a href="/support/faqs/" style="text-decoration:none">FAQs</a> &#62;&#62; <font color="#6B0505">Check if OS is 64-bit compliant</font></div>
+<!-- CONTENT BEGINS -->
+
+<h3>How can I determine if my computer/operating system is 64-bit?</h3>
+
+<table class="faqtitle">
+  <tr>
+    <td>
+	
+	Title
+	
+    </td>
+    <td rowspan="3">&nbsp;</td>
+    <td>
+	
+	How to determine if your OS is 64-bit compliant
+	
+    </td>
+  </tr>
+  <tr>
+    <td>
+	
+	Author
+	
+    </td>
+    <td>
+	
+	Pete Huckelba, StataCorp
+	
+    </td>
+  </tr>
+  <tr>
+    <td>
+	
+	Date
+	
+    </td>
+    <td>
+	
+	June 2005; updated June 2013
+	
+    </td>
+  </tr>
+</table>
+
+<hr />
+
+<h3 id="windows">Windows</h3>
+
+<p>
+   Windows 8: press the 'Windows' key on your keyboard to return to the Start
+   screen.  Type <b>control panel</b> and press <i>enter</i> to launch.  Click
+   on <b>System and Security</b> -&gt; <b>System</b>.  The <b>System type:</b>
+   line will detail the operating system type:
+
+</p>
+
+<div class="centerit">
+<a href="javascript:custom_window('/support/faqs/windows/win8.png',960,600)">
+<img src="/support/faqs/windows/win8sm.png" style="width: 200px; padding: 5px;" alt="" /></a>
+</div>
+<p>
+
+<p>
+   Windows 7: click <b>Start</b> -&gt; <b>Control Panel</b> -&gt; <b>System 
+   and Security</b> -&gt; <b>System</b>.  The <b>System type:</b> line will 
+   detail the operating system type:
+
+</p>
+
+<div class="centerit">
+<a href="javascript:custom_window('/support/faqs/windows/win7_64.png','855','491')">
+<img src="/support/faqs/windows/win7_64sm.png" style="width: 200px; padding: 5px;" alt="" /></a>
+</div>
+<p>
+   Windows Vista: click <b>Start</b> -&gt; <b>Control Panel</b> -&gt; 
+   <b>System and Maintenance</b> -&gt; <b>System</b>.  The <b>System type:</b> 
+   line will detail the operating system type:
+
+</p>
+
+<div class="centerit">
+<a href="javascript:custom_window('/support/faqs/windows/vista_64.gif',781,466)">
+<img src="/support/faqs/windows/vista_64sm.gif" style="width: 200px; padding: 5px;" alt="" /></a>
+</div>
+
+<p>
+   Windows XP: click <b>Start</b> -&gt; <b>Run</b> and type <b>dxdiag</b>.  
+   If a Windows dialog box is displayed asking if you want to verify your 
+   drivers, you can safely click <b>No</b> and continue.  When the program has 
+   finished loading, you should see something similar to one of the following 
+   images:
+
+</p>
+
+
+<div class="centerit">
+<table class="centerit" style="width: 100%">
+<tr><td style="vertical-align: middle; text-align: center;">
+
+<a href="javascript:custom_window('/support/faqs/windows/winxp64.gif',732,533)"><img src="/support/faqs/windows/winxp64sm.gif" style="width: 200px; padding: 5px;" alt="" /></a>
+
+&emsp;
+
+<a href="javascript:custom_window('/support/faqs/windows/winxp64-2.gif',732,526)"><img src="/support/faqs/windows/winxp64-2sm.gif" style="width: 200px; padding: 5px;" alt="" /></a>
+
+&emsp;
+
+<a href="javascript:custom_window('/support/faqs/windows/win2003.gif',732,526)"><img src="/support/faqs/windows/win2003sm.gif" style="width: 200px; padding: 5px;" alt=""  /></a>
+</td></tr></table>
+</div>
+
+<p>
+  The <b>Operating System</b> line refers to Windows &lt;some
+  version&gt; x64 or 64-bit edition.  The last image above specifies the processor
+  <b>Itanium</b>, which is a 64-bit processor.
+</p>
+
+<h3 id="mac">Mac</h3>
+
+<p>
+  Select <b>About this Mac</b> from the <b>Apple</b> menu.  The text below
+  <b>Mac OS X</b> will give the operating system version, and the
+  <b>Processor</b> line will detail the processor type.
+</p>
+
+<div class="centerit">
+<img src="/support/faqs/windows/64-bit-compliance/i/aboutthismac.png" alt="about this mac" />
+</div>
+
+<p>
+  Mac OS X 10.6.8 (or greater) is a 64-bit operating system. 
+  Stata for Mac is available only for 64-bit Intel-based Macs.
+</p>
+
+<p>
+  All currently shipping Macs have a 64-bit processor and a 64-bit operating
+  system.
+</p>
+
+<h3 id="linux">Linux</h3>
+
+<p>
+  Linux users should type the <b>uname</b> command.  Depending on the
+  platform, you may see
+</p>
+
+<p>
+<div class="indent" style="font-family: monospace;"><b>[cph@gaylord ~]$ uname -a</b><br>
+Linux gaylord.stata.com 2.6.11-1.27_FC3 #1 Tue May 17 20:24:57 EDT 2005 x86_64 x86_64 <span style="color: red;">x86_64 GNU/Linux</span><br></div>
+
+<p>
+<div class="indent" style="font-family: monospace;"><b>[cph@caddo ~]$ uname -a</b><br>
+Linux caddo.stata.com 2.6.9-5.0.5.EL #1 SMP Fri Apr 8 14:20:58 EDT 2005 ia64 ia64
+<span style="color: red">ia64 GNU/Linux</span></div>
+
+<p>
+<div class="indent" style="font-family: monospace;"><b>[cph@tango ~]$ uname -a</b><br>
+Linux tango.stata.com 2.6.10-1.771_FC2smp #1 SMP Mon Mar 28
+01:10:51 EST 2005 i686 i686 <span style="color: red">i386 GNU/Linux</span></div>
+
+<p>
+  In the above listing, 'gaylord' (x86_64 GNU/Linux) and 'caddo' (ia64
+  GNU/Linux) are 64-bit compliant.  'tango' (i386 GNU/Linux) is only a 32-bit
+  platform.
+</p>
+
+<h3 id="unix">Unix (Oracle (Sun) Solaris, IBM-AIX)</h3>
+
+<ul class="plist">
+   <li>Oracle (Sun) Solaris
+
+  <br /><br />
+   Sun's platforms transitioned to 64-bit over a period of time, making
+   identifying the platform for 64-bit compliance tricky.  Sun has stated:
+  <br /><br />
+
+   <div class="indent">
+      Sun has implemented its 64-bit operating system in phases. The Solaris
+      2.5 Operating Environment provided support for increased precision with
+      64-bit math and also included support for 64-bit asynchronous I/O. The
+      Solaris 2.6 Operating Environment added support for large datasets with
+      large (1 Terabyte) filesystems while allowing co-existence of 32-bit and
+      64-bit files. Beginning with the Solaris 7 Operating Environment, Sun
+      introduced support for large virtual address spaces with a full 64-bit
+      operating system. Sun began shipping 64-bit hardware in 1995. By phasing
+      in operating system support for 64-bits Sun has provided 64-bit features
+      as the market has demanded them while guaranteeing compatibility for
+      existing 32-bit applications.
+  </div>
+
+   <br />
+   To determine what kind of binaries your Solaris machine can run, try the following:
+
+   <br /><br />
+   <div class="indent" style="font-family: monospace;"><b>eden:/home/cph: isainfo -v</b><br>
+   <span style="color: red">64-bit</span> sparcv9 applications<br>
+   32-bit sparc applications</div>
+
+   <br />
+   You can see that this Solaris machine is capable of running 32-bit as well
+   as 64-bit applications.  If <b>isainfo</b> fails, running a 64-bit
+   application on your Sun will generally not be possible, unless of course
+   <b>isainfo</b> is not in your path or has not been installed.  You can also
+   use the <b>uname</b> command to glean more information:
+
+   <br /><br />
+   <div class="indent" style="font-family: monospace;"><b>eden:/home/cph: uname -a</b><br>
+   SunOS eden 5.8 Generic_108528-05 sun4u sparc SUNW,Ultra-5_10</div>
+   <br />
+   <div class="indent" style="font-family: monospace;"><b>lagrange:/usr/users/cph: uname -a</b><br>
+   SunOS lagrange 5.5.1 Generic_103640-29 sun4u sparc SUNW,Ultra-1</div>
+
+   <br /><br />
+   SunOS/Solaris versions map to the following:
+
+   <div class="centerit" style="padding-top: 5px;">
+   <table align="center" border="1" cellpadding="0" cellspacing="0" width="80%">
+   <tr>
+      <td width="50%" align="center"><b>SunOS</b></td>
+      <td width="50%" align="center"><b>SOLARIS</b></td>
+   </tr>
+   <tr>
+      <td width="50%" align="center">5.3</td>
+      <td width="50%" align="center">2.3</td>
+  </tr>
+  <tr>
+     <td width="50%" align="center">5.4</td>
+     <td width="50%" align="center">2.4</td>
+   </tr>
+   <tr>
+     <td width="50%" align="center">5.5</td>
+     <td width="50%" align="center">2.5</td>
+   </tr>
+   <tr>
+      <td width="50%" align="center">5.5.1</td>
+      <td width="50%" align="center">2.5.1</td>
+   </tr>
+   <tr>
+      <td width="50%" align="center">5.6</td>
+      <td width="50%" align="center">2.6</td>
+   </tr>
+   <tr>
+      <td width="50%" align="center">5.7 or greater is 64-bit compliant</td>
+      <td width="50%" align="center">2.7 or greater is 64-bit compliant</td>
+   </tr>
+   </table>
+  </div>
+
+   <br />
+   While all UltraSparc processors are capable of 64-bit computing, the OS
+   release level may be the limiting factor.  In the above excerpt, 'eden'
+   (SunOS 5.8) is a fully compliant 64-bit platform, and 'lagrange' (SunOS
+   5.5.1) is a 64-bit UltraSparc limited to 32-bit computing.
+</li>
+
+   <li>IBM-AIX (IBM-AIX is no longer supported by Stata, but we leave this
+         information here for completeness)
+
+   <br /><br/>
+   The <b>getconf</b> command will return the configuration of your machine.
+   Since you are looking only for the kernel parameters, you should type
+
+   <br /><br/>
+   <div class="indent" style="font-family: courier, monospace;"><b>[cph@anna ~]$ getconf -a | grep KERN</b><br>
+   KERNEL_BITMODE:                         64</div>
+
+   <br />
+   If that fails or does not return a result, try the <b>file</b> command.
+
+   <br /><br/>
+   <div class="indent" style="font-family: monospace;"><b>[cph@anna ~]$ file /usr/lib/boot/unix*</b><br>
+   /usr/lib/boot/unix: <span style="color: red">64-bit XCOFF executable</span> or object module not stripped<br>
+   /usr/lib/boot/unix_64: <span style="color: red">64-bit XCOFF executable</span> or object module not stripped<br>
+   /usr/lib/boot/unix_mp: executable (RISC System/6000) or object module not stripped<br>
+   /usr/lib/boot/unix_up: executable (RISC System/6000) or object module not stripped<br></div>
+
+   <p>
+   <div class="indent" style="font-family: monospace;"><b>[cph@ozona ~]$ file /usr/lib/boot/unix*</b><br>
+   /usr/lib/boot/unix:     symbolic link to /usr/lib/boot/unix_up.<br>
+   /usr/lib/boot/unix_kdb: executable (RISC System/6000) or object module not stripped<br>
+   /usr/lib/boot/unix_up:  executable (RISC System/6000) or object module not stripped</div>
+<br />
+
+   We can see that 'anna' is a 64-bit capable platform, and 'ozona' is only 32-bit.
+</li>
+
+</ul>
+
+<!-- CONTENT ENDS -->
+</div>
+<div id="sitenav">
+<nobr><!-- AddThis Button BEGIN --><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pubid=ra-4e9d772077bcc9d2"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0; padding: 0px; margin: 0px 0px 0px 0px;"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e9d772077bcc9d2"></script><!-- AddThis Button END -->&nbsp;<g:plusone size="small" count="false"></g:plusone></nobr>
+<br />
+<br />
+<b><a href="/support/faqs" class="headsame">FAQs</a></b><br>
+<a href="/support/faqs/whats-new/">What's new?</a><br>
+<a href="/support/faqs/statistics/">Statistics</a><br>
+<a href="/support/faqs/data/">Data management</a><br>
+<a href="/support/faqs/graphics/">Graphics</a><br>
+<a href="/support/faqs/programming/">Programming Stata</a><br>
+<a href="/support/faqs/mata/">Mata</a><br>
+<a href="/support/faqs/resources/">Resources</a><br>
+<a href="/support/faqs/web/">Internet capabilities</a><br>
+<a href="/support/faqs/win/" class="bodysame">Stata for Windows</a><br>
+<div class="indent" style="padding-top: 0px; margin-top: 0px;">
+</div>
+<a href="/support/faqs/unix/">Stata for Unix</a><br>
+<a href="/support/faqs/mac/">Stata for Mac</a><br>
+<a href="/support/faqs/technical-support/">Technical support</a><br>
+
+<div style="border-top: solid 1px #afafaf; padding: 5px 1px 5px 0px; margin-top: 10px;">
+<div style="text-align: center; margin-top: 8px; font-size: 1em; font-weight: bold; color: #44697D;">
+<nobr>
+<a href="http://www.facebook.com/StataCorp"><img src="/includes/contimages/standardized-fb-icon-rnav.png" style="width: 20px; height: 20px;" alt="Like us on Facebook" /></a>
+<a href="http://twitter.com/Stata"><img src="/includes/contimages/standardized-tw-icon-rnav.png" style="width: 20px; height: 20px;" alt="Follow us on Twitter" /></a>
+<a href="http://www.linkedin.com/company/statacorp"><img src="/includes/contimages/standardized-in-icon-rnav.png" style="width: 20px; height: 20px;" alt="Follow us on LinkedIn" /></a>
+<a href="https://plus.google.com/+stata" rel="publisher"><img src="/includes/contimages/standardized-gplus-new-icon-rnav.png" style="width: 20px; height: 20px;" alt="Google+" / ></a>
+<a href="http://www.youtube.com/user/statacorp"><img src="/includes/contimages/standardized-youtube-icon-rnav.png" style="width: 20px; height: 20px;" alt="Watch us on YouTube" /></a>
+<a href="http://blog.stata.com/"><img src="/includes/contimages/standardized-blog-icon-rnav.png" style="width: 20px; height: 20px;" /></a>
+</nobr><br />
+Follow us
+</div>
+</div>
+</div>
+<div id="sitenav-mobile">
+<nobr><!-- AddThis Button BEGIN --><a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;pubid=ra-4e9d772077bcc9d2"><img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0; padding: 0px; margin: 0px 0px 0px 0px;"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4e9d772077bcc9d2"></script><!-- AddThis Button END -->&nbsp;<g:plusone size="small" count="false"></g:plusone></nobr>
+<br />
+<br />
+<b><a href="/support/faqs" class="headsame">FAQs</a></b><br>
+<a href="/support/faqs/whats-new/">What's new?</a><br>
+<a href="/support/faqs/statistics/">Statistics</a><br>
+<a href="/support/faqs/data/">Data management</a><br>
+<a href="/support/faqs/graphics/">Graphics</a><br>
+<a href="/support/faqs/programming/">Programming Stata</a><br>
+<a href="/support/faqs/mata/">Mata</a><br>
+<a href="/support/faqs/resources/">Resources</a><br>
+<a href="/support/faqs/web/">Internet capabilities</a><br>
+<a href="/support/faqs/win/" class="bodysame">Stata for Windows</a><br>
+<div class="indent" style="padding-top: 0px; margin-top: 0px;">
+</div>
+<a href="/support/faqs/unix/">Stata for Unix</a><br>
+<a href="/support/faqs/mac/">Stata for Mac</a><br>
+<a href="/support/faqs/technical-support/">Technical support</a><br>
+
+<div style="border-top: solid 1px #afafaf; padding: 5px 1px 5px 0px; margin-top: 10px;">
+<div style="text-align: center; margin-top: 8px; font-size: 1em; font-weight: bold; color: #44697D;">
+<nobr>
+<a href="http://www.facebook.com/StataCorp"><img src="/includes/contimages/standardized-fb-icon-rnav.png" style="width: 20px; height: 20px;" alt="Like us on Facebook" /></a>
+<a href="http://twitter.com/Stata"><img src="/includes/contimages/standardized-tw-icon-rnav.png" style="width: 20px; height: 20px;" alt="Follow us on Twitter" /></a>
+<a href="http://www.linkedin.com/company/statacorp"><img src="/includes/contimages/standardized-in-icon-rnav.png" style="width: 20px; height: 20px;" alt="Follow us on LinkedIn" /></a>
+<a href="https://plus.google.com/+stata" rel="publisher"><img src="/includes/contimages/standardized-gplus-new-icon-rnav.png" style="width: 20px; height: 20px;" alt="Google+" / ></a>
+<a href="http://www.youtube.com/user/statacorp"><img src="/includes/contimages/standardized-youtube-icon-rnav.png" style="width: 20px; height: 20px;" alt="Watch us on YouTube" /></a>
+<a href="http://blog.stata.com/"><img src="/includes/contimages/standardized-blog-icon-rnav.png" style="width: 20px; height: 20px;" /></a>
+</nobr><br />
+Follow us
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div id="sitefooter">
+<table style="margin-left: auto; margin-right: auto;">
+<tr>
+  <td style="text-align: center;">
+
+
+      &copy; Copyright 1996&ndash;2015 StataCorp LP
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="http://www.stata.com/terms-of-use/">Terms of use</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="http://www.stata.com/privacy-policy/">Privacy</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="http://www.stata.com/company/contact/">Contact us</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="http://www.stata.com/site-index/">Site index</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="http://www.stata.com/m">View mobile site</a>
+  </td>
+</tr>
+
+</table>
+</div>
+
+<div style="margin: 8px auto; text-align: center; width: 200px;">
+<table class="centerit"><tr>
+<td><a href="http://blog.stata.com/"><img src="/includes/contimages/blog_icon.gif" alt="The Stata Blog: Not Elsewhere Classified" /></a></td>
+<td><a href="http://www.facebook.com/StataCorp"><img src="/includes/contimages/standardized-fb-icon-rnav.png" alt="Find us on Facebook" / ></a></td>
+<!-- <td><a href="https://plus.google.com/+stata/"><img src="/includes/contimages/g-plus-icon-25x25.png" alt="Find us on Google+" / ></a></td> -->
+<td><a href="http://twitter.com/stata"><img src="/includes/contimages/standardized-tw-icon-rnav.png" alt="Follow us on Twitter" / ></a></td>
+<td><a href="http://www.linkedin.com/company/statacorp"><img src="/includes/contimages/standardized-in-icon-rnav.png" alt="LinkedIn" / ></a></td>
+<td><a href="https://plus.google.com/+stata" rel="publisher"><img src="/includes/contimages/standardized-gplus-new-icon-rnav.png" alt="Google+" / ></a></td>
+<td><a href="http://www.youtube.com/user/statacorp/"><img src="/includes/contimages/standardized-youtube-icon-rnav.png" alt="Watch us on YouTube" /></a></td>
+<!--<td><g:plusone size="standard" count="false"></g:plusone></td>-->
+</tr></table>
+</td></tr></table>
+
+</div>
+
+</body>
+</html>
