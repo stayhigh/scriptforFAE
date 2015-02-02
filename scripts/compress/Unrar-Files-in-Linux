@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html xmlns:fb="https://www.facebook.com/2008/fbml" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir='ltr'>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+	<title>How to Unrar Files in Linux: 10 Steps (with Pictures) - wikiHow</title>
+	<script>
+<!--
+var WH = WH || {};
+WH.timeStart = (new Date()).getTime();
+//-->
+</script>
+
+			<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta name="verify-v1" content="/Ur0RE4/QGQIq9F46KZyKIyL0ZnS96N5x1DwQJa7bR8=" />
+	<meta name="google-site-verification" content="Jb3uMWyKPQ3B9lzp5hZvJjITDKG8xI8mnEpWifGXUb0" />
+	<meta name="msvalidate.01" content="CFD80128CAD3E726220D4C2420D539BE" />
+	<meta name="y_key" content="1b3ab4fc6fba3ab3" />
+	<meta name="p:domain_verify" content="bb366527fa38aa5bc27356b728a2ec6f" />
+		<link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.wikihow.com/Unrar-Files-in-Linux">
+			<style type="text/css" media="all">/*<![CDATA[*/ @import "/extensions/min/g/whcss,slc,kbc,tptc&r=bcea94&e=.css"; /*]]>*/</style>
+		<style type="text/css" media="print">/*<![CDATA[*/ body{background-color:#FFF;font-size:1.2em}#header_outer{background:0 0;position:relative}#header{text-align:center;height:63px!important;width:242px!important;background:url(/skins/owl/images/logo_lightbg_242.jpg) no-repeat center center;margin-top:15px}#article_shell{margin:0 auto;float:none;padding-bottom:2em}.sticking{position:absolute!important;top:0!important}#actions,#article_rating,#article_tabs,#breadcrumb,#bubble_search,#cse-search-box,#end_options,#footer_outer,#header_space,#logo_link,#notification_count,#originators,#sidebar,#sliderbox,.edit,.editsection,.mwimg,.section.relatedwikihows,.section.video,.whvid_cont,.altadder_section{display:none!important} /*]]>*/</style>	
+				<script>
+			<!--
+			var WH = WH || {};
+			WH.lang = WH.lang || {};
+			button_swap = button_unswap = function(){};
+			WH.exitTimerStartTime = (new Date()).getTime();
+			WH.mergeLang = function(A){for(i in A){v=A[i];if(typeof v==='string'){WH.lang[i]=v;}}};
+			//-->
+		</script>
+		
+		<meta name="generator" content="MediaWiki 1.23wmf15" />
+<meta name="robots" content="index,follow" /><!--default_cached-->
+<meta name="description" content="How to Unrar Files in Linux. Roshal Archive (RAR) is a file format designed to compress and archive data. Once you download rar files from the Internet, you need a program that will extract them – unpack or unrar them. Since this program d..." />
+<meta name="keywords" content="WikiHow, Unrar Files in Linux, wiki, how to articles, how to instructions, DIY, tips, howto, learn, how do I" />
+<link rel="alternate" type="application/x-wiki" title="Edit" href="/index.php?title=Unrar-Files-in-Linux&amp;action=edit" />
+<link rel="edit" title="Edit" href="/index.php?title=Unrar-Files-in-Linux&amp;action=edit" />
+<link rel="apple-touch-icon" href="http://pad3.whstatic.com/skins/WikiHow/safari-large-icon.png" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="wikiHow (en)" />
+<link rel="EditURI" type="application/rsd+xml" href="http://www.wikihow.com/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="wikiHow Atom feed" href="/index.php?title=Special:RecentChanges&amp;feed=atom" />				
+				<link rel='canonical' href='http://www.wikihow.com/Unrar-Files-in-Linux'/>
+						<link href="https://plus.google.com/102818024478962731382" rel="publisher" />
+						<!-- not mobile -->
+			<!--<![endif]-->
+		<link rel="alternate" type="application/rss+xml" title="wikiHow: How-to of the Day" href="http://www.wikihow.com/feed.rss"/>
+	<link rel="apple-touch-icon" href="http://pad3.whstatic.com/skins/WikiHow/safari-large-icon.png" />
+			<meta property="og:title" content="How to Unrar Files in Linux"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="http://www.wikihow.com/Unrar-Files-in-Linux"/>
+<meta property="og:site_name" content="wikiHow"/>
+<meta property="og:description" content="Roshal Archive (RAR) is a file format designed to compress and archive data. Once you download rar files from the Internet, you need a program that will extract them – unpack or unrar them. Since this program doesn&#039;t come pre-installed in m..."/>
+<meta property="og:image" content="http://www.wikihow.com/images/c/c4/Unrar-Files-in-Linux-Step-10.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image:src" content="http://www.wikihow.com/images/c/c4/Unrar-Files-in-Linux-Step-10.jpg"/>
+<meta name="twitter:site" content="@wikihow"/>
+<meta name="twitter:description" content="Roshal Archive (RAR) is a file format designed to compress and archive data. Once you download rar files from the Internet, you need a program that will extract them &acirc;�� unpack or unrar them. Since this program doesn't come pre-installed in m..."/>
+<meta name="twitter:title" content="How to Unrar Files in Linux"/>
+<meta name="twitter:url" content="http://www.wikihow.com/Unrar-Files-in-Linux"/>
+			
+	
+					<link rel="alternate" hreflang="en" href="http://www.wikihow.com/Unrar-Files-in-Linux" />
+				<link rel="alternate" hreflang="es" href="http://es.wikihow.com/descomprimir-archivos-rar-en-Linux" />
+				<link rel="alternate" hreflang="de" href="http://de.wikihow.com/Unrar-in-Linux-verwenden" />
+				<link rel="alternate" hreflang="pt" href="http://pt.wikihow.com/Descompactar-Arquivos-rar-no-Linux" />
+				<link rel="alternate" hreflang="it" href="http://it.wikihow.com/Decomprimere-i-File-RAR-in-Linux" />
+				<link rel="alternate" hreflang="ru" href="http://ru.wikihow.com/%D1%80%D0%B0%D0%B7%D0%B0%D1%80%D1%85%D0%B8%D0%B2%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C-%D1%84%D0%B0%D0%B9%D0%BB%D1%8B-%D0%B2-Linux" />
+			</head>
+		<body 			   
+			  class="mediawiki ltr  sitedir-ltr"
+			>
+		
+		<!-- MediaWiki:wikihowads_setup -->
+<script type='text/javascript'>
+<!--
+WH.browserDetect=function(){var ua=navigator.userAgent.toLowerCase();is_ff=ua.indexOf('firefox')!=-1;is_safari=ua.indexOf('applewebkit')!=-1;is_chrome=ua.indexOf('chrome')!=-1;is_ie6=false;is_ie7=false;is_ie8=false;is_ie9=false;isiPad=ua.indexOf('ipad');isiPhone=ua.indexOf('iphone');if(/msie (\d+\.\d+);/.test(ua)){var iev=new Number(RegExp.$1);if(iev>=9)is_ie9=true;else if(iev>=8)is_ie8=true;else if(iev>=7)is_ie7=true;else if(iev>=6)is_ie6=true}};WH.isFromSearch=function(){var ref=document.referrer;if(ref.indexOf('https://www.google.com/')==0||(ref.indexOf('google.')!=-1&&ref.indexOf('mail.google.com')==-1&&ref.indexOf('url?q=')==-1&&ref.indexOf('q=')!=-1))return true;if(ref.indexOf('bing.com')!=-1&&ref.indexOf('q=')!=-1)return true;if(ref.indexOf('yahoo.com')!=-1&&ref.indexOf('p=')!=-1)return true;if(ref.indexOf('ask.com')!=-1&&ref.indexOf('q=')!=-1)return true;if(ref.indexOf('aol.com')!=-1&&ref.indexOf('q=')!=-1)return true;if(ref.indexOf('baidu.com')!=-1&&ref.indexOf('wd=')!=-1)return true;if(ref.indexOf('yandex.com')!=-1&&ref.indexOf('text=')!=-1)return true;return false};WH.wikihowAds=(function(){var adsSet=false,adArray={},adIndex=0,adUnitArray={},adCount={intro:1,'0':1,'1':3,'2':3,'2a':3,'5':1,'7':2,docviewer3:2},isHorizontal={'7':true,docviewer3:true}
+function checkHideAds(){var ca=document.cookie.split(';');var hideAds=false;for(var i=0;i<ca.length;i++){var c=ca[i];var pair=c.split('=');var key=pair[0];var value=pair[1];key=key.replace(/ /,'');if(key=='wiki_hideads'){if(value=='1')hideAds=true}};return hideAds};return {checkHideAds:checkHideAds}})();WH.browserDetect();var fromsearch=WH.isFromSearch();var gHideAds=WH.wikihowAds.checkHideAds(),gchans='',radChan1='',radPos1='',adPadding='',adColor='',adUrl='',adTitle='',adText='',showImageAd=false,adNum=0;var missing_last_ads=false;var hasAltMethods=false;var gchans="";var rad=true;var xchannels='';var showImageAd=true;var abType=1;var r=Math.random();var abType=0;if(r<=.75){abType=0;if(fromsearch)gchans+='+1723212974';document.write("<sty"+"le type='text/css'>.ad_label{background-color:#727272;} </sty"+"le>")}else{abType=1;if(fromsearch)gchans+='+4676679373';document.write("<sty"+"le type='text/css'>.ad_labelintro{display:none;}</sty"+"le>");document.write("<sty"+"le type='text/css'>.ad_label{background-color:#727272;} </sty"+"le>")};if(fromsearch)document.write("<sty"+"le type='text/css'>.adunitintro{margin-top:10px;}</sty"+"le>");else document.write("<sty"+"le type='text/css'>.ad_labelintro{display:none;}#adjump {display:none;}</sty"+"le>");document.write("<sty"+"le type='text/css'>.adunit0, .adunit1, .ad_labelintro, .ad_label0, .ad_label1{margin-top:10px;} .wh_ad_inner{float:left;} </sty"+"le>");var isHHM='';if(isHHM=="1")showImageAd=false;if(is_ff>=0)gchans+="+0944676689";else if(is_chrome>=0)gchans+="+6585791357";else if(is_safari)gchans+="+0925121701";else if(is_ie6)gchans+="+5181221492";else if(is_ie7)gchans+="+3373262885";else if(is_ie8)gchans+="+2594021353";else if(is_ie9)gchans+="+1264837522";if(isiPad>=0)gchans+="+5756207113";if(fromsearch){gchans+="+3377966061";radChan1+="+3377966061"}else{gchans+="+9658161873";radChan1+="+9658161873"};if(!gHideAds){gchans+="+4744756494";radChan1+="+4744756494"}else google_max_num_ads='0';google_analytics_domain_name=".wikihow.com";google_ad_client="pub-9543332082073187";google_feedback='on';google_ad_region="test";google_ad_type='text';google_font_face="ubuntu"
+//-->
+</script>		<div id="header_outer"><div id="header">
+			<ul id="actions">
+									<li id="nav_messages_li">
+						<div class="nav_icon"></div>
+						<a id='nav_messages' class='nav' href='#'>MESSAGES</a>
+											</li>
+									<li id="nav_profile_li">
+						<div class="nav_icon"></div>
+						<a id='nav_profile' class='nav' href='#'>LOG IN</a>
+						<div class="menu_login"><form name="userlogin" class="userlogin" method="post" action="https://ssl.wikihow.com/index.php?title=Special:Userlogin&amp;action=submitlogin&amp;type=login&amp;returnto=Unrar-Files-in-Linux&amp;sitelogin=1">
+	
+	<h3>Log in via</h3>
+	<div id="fb_connect_head"><a id="fb_login_head" href="#" ><span></span></a></div>
+				<div id="gplus_connect_head"><a id="gplus_login_head" href="#"><span></span></a></div>		
+	<div class="userlogin_inputs">
+		<h3>Log In</h3>
+		<input type='text' class='loginText input_med' name="wpName" id="wpName1_head" value="Username" size='20' />
+		<input type="hidden" id="wpName1_showhide_head" /><br />
+		
+		<input type='password' class='loginPassword input_med' name="wpPassword" id="wpPassword1_head" value="" size='20' />
+		<input type="hidden" id="wpPassword1_showhide_head" />
+	</div>
+
+	<input type='submit' class="button primary login_button" name="wpLoginattempt" id="wpLoginattempt" value="Log In" />
+
+	<div class="userlogin_remember">
+		<input type='checkbox' name="wpRemember" value="1" id="wpRemember_head" checked="checked" /> 
+		<label for="wpRemember_head">Remember me</label>
+	</div>
+	
+	<div class="userlogin_links">
+		<a href="/Special:LoginReminder" id="forgot_pwd_head">Forgot password?</a>
+		<a href="https://ssl.wikihow.com/Special:Userlogin?type=signup">Create an account</a>
+	</div>
+</form>
+</div>					</li>
+									<li id="nav_explore_li">
+						<div class="nav_icon"></div>
+						<a id='nav_explore' class='nav' href='#'>EXPLORE</a>
+						<div class="menu"><a href="/Special:CommunityDashboard" title="Special:CommunityDashboard">Community Dashboard</a><a href='/Special:Randomizer'>Random Article</a><a href="/wikiHow:About-wikiHow" title="wikiHow:About wikiHow">About Us</a><a href="/Special:Categorylisting" title="Special:Categorylisting">Categories</a><a href="/Special:RecentChanges" title="Special:RecentChanges">Recent Changes</a></div>					</li>
+									<li id="nav_help_li">
+						<div class="nav_icon"></div>
+						<a id='nav_help' class='nav' href='#'>HELP US</a>
+						<div class="menu"><a href="/Special:CreatePage" title="Special:CreatePage">Write an Article</a><a href="/Special:RequestTopic" title="Special:RequestTopic">Request a New Article</a><a href="/Special:ListRequestedTopics" title="Special:ListRequestedTopics">Answer a Request</a><a href='/Special:CommunityDashboard'>More Ideas...</a></div>					</li>
+									<li id="nav_edit_li">
+						<div class="nav_icon"></div>
+						<a id='nav_edit' class='nav' href='/index.php?title=Unrar-Files-in-Linux&action=edit'>EDIT</a>
+						<div class="menu"><a href='/index.php?title=Unrar-Files-in-Linux&action=edit'>Edit this Article</a></div>					</li>
+							</ul><!--end actions-->
+									<a href='/Main-Page' id='logo_link'><img src="http://pad2.whstatic.com/skins/owl/images/wikihow_logo.png" class="logo" /></a>
+			
+<form action="/Special:GoogSearch" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="008953293426798287586:mr-gwotjmbs" />
+    <input type="hidden" name="cof" value="FORID:10" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" id="cse_q" name="q" size="30" value="" class="search_box" x-webkit-speech />
+    <input type="submit" id="cse_sa" value="Search" class="search_button" onmouseover="button_swap(this);" onmouseout="button_unswap(this);" onclick='gatTrack("Search","Search","Custom_search");'/>
+  </div>
+</form>
+					</div></div><!--end header-->
+				<div id="main_container" class="">
+			<div id="header_space"></div>
+		
+		<div id="main">
+		<script type="text/javascript">
+if(abType == 1) {
+  document.write('<i' + 'ns class="adsbygoogle" style="display:block;width:728px;height:90px; margin: 10px auto 0 auto;" data-ad-client="ca-pub-9543332082073187" data-ad-slot="7221676577"> </i' + 'ns>');
+
+			(adsbygoogle = window.adsbygoogle || []).push({
+				params: {google_ad_channel: "+7733764704+1640266093+8110356115+3119976353+9595513032+7974857016+6876289738+7122150828" + gchans + xchannels}
+			});
+
+}
+</script>				<div id="actionbar" class="">
+							<div id="gatBreadCrumb">
+					<ul id="breadcrumb" class="Breadcrumbs">
+						<li class='home'><a href="/Main-Page" title="Main Page">Home</a></li> <li>&raquo; <a href="/Special:Categorylisting" title="Special:Categorylisting">Categories</a></li> <li> &raquo; <a href="/Category:Computers-and-Electronics" title="Category:Computers and Electronics">Computers and Electronics</a></li><li> &raquo; <a href="/Category:Operating-Systems" title="Category:Operating Systems">Operating Systems</a></li><li> &raquo; <a href="/Category:Linux" title="Category:Linux">Linux</a></li>					</ul>
+				</div>
+						<div id='article_tabs'><ul id='tabs'><li><a  href='http://www.wikihow.com/Unrar-Files-in-Linux' class='on' id='tab_article'>Article</a></li><li><a  href='/index.php?title=Unrar-Files-in-Linux&action=edit' class='' id='tab_edit'>Edit</a></li><li><a  href='/Discussion:Unrar-Files-in-Linux' class='' id='tab_discuss'>Discuss</a></li></ul></div>
+		</div><!--end actionbar-->
+		<script>
+		<!--
+		WH.translationData = {'es': {'msg':"<a href=\"http:\/\/es.wikihow.com\/descomprimir-archivos-rar-en-Linux?utm_source=enwikihow&utm_medium=translatedcta&utm_campaign=translated\">\u00bfTe gustar\u00eda saber <i>C\u00f3mo descomprimir archivos rar en Linux<\/i>? \u00a1Lee acerca de eso en espa\u00f1ol!<\/a>"},'de': {'msg':"<a href=\"http:\/\/de.wikihow.com\/Unrar-in-Linux-verwenden?utm_source=enwikihow&utm_medium=translatedcta&utm_campaign=translated\">Lies auch unseren deutschen Artikel: <i>Unrar in Linux verwenden<\/i>.<\/a>"},'pt': {'msg':"<a href=\"http:\/\/pt.wikihow.com\/Descompactar-Arquivos-rar-no-Linux?utm_source=enwikihow&utm_medium=translatedcta&utm_campaign=translated\">Gostaria de aprender <i>Como Descompactar Arquivos rar no Linux<\/i>? Leia sobre o assunto em portugu\u00eas!<\/a>"},'it': {'msg':"<a href=\"http:\/\/it.wikihow.com\/Decomprimere-i-File-RAR-in-Linux?utm_source=enwikihow&utm_medium=translatedcta&utm_campaign=translated\">Ti piacerebbe sapere <i>Come Decomprimere i File RAR in Linux<\/i>? Leggi come farlo, in italiano!<\/a>"}};
+		//-->
+		</script>
+				
+<script>
+	WH.mergeLang({
+'navlist_collapse': '- collapse','navlist_expand': '+ expand','usernameoremail': 'Username or Email','password': 'Password'
+	});
+</script>
+		<div id="container" class="">
+		<div id="article_shell">
+		<div id="article">
+
+						<div id="bodycontents">
+<div id="intro" class="section  sticky ">
+<a href="/index.php?title=Unrar-Files-in-Linux&amp;action=edit" class="editsection">Edit Article</a><h1 class="firstHeading" itemprop="name"><a href="http://www.wikihow.com/Unrar-Files-in-Linux" itemprop="url">How to Unrar Files in Linux</a></h1>
+<p id="method_toc" class="sp_method_toc"><span>Two Methods:</span><a href="#Install_the_Unrar_Application_sub" class="">Install the Unrar Application</a><a href="#Use_the_Unrar_Application_sub" class="">Use the Unrar Application</a></p>
+<p>Roshal Archive (RAR) is a file format designed to compress and archive data. Once you download rar files from the Internet, you need a program that will extract them – unpack or unrar them. Since this program doesn’t come pre-installed in most Linux installations, you need to acquire it elsewhere. This guide explains where to find unrar, and how to use it to unrar files in Linux.</p>
+<div class="clearall"></div>
+<div class="ad_label ad_label_side ad_labelintro">Ad</div>
+<div class="wh_ad_inner adunitintro">
+	<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script type="text/javascript">
+		<!--
+		if(fromsearch && abType == 0) {
+                         introSlot = "6425735775";
+			document.write('<i' + 'ns class="adsbygoogle" style="display:inline-block;width:645px;height:120px" data-ad-client="ca-pub-9543332082073187" data-ad-slot="' + introSlot + '"> </' + 'i' + 'ns>');
+
+			(adsbygoogle = window.adsbygoogle || []).push({
+				params: {google_max_num_ads: 2,
+					 google_override_format: true,
+                                         google_ad_channel: "0206790666+7733764704+1640266093+8110356115+3119976353+9595513032+6876289738+7122150828" + gchans + xchannels}
+			});
+                }
+		//-->
+	</script>
+</div>
+<div class="clearall adclear"></div>
+</div>
+<h2 class="hidden"><span class="mw-headline" id="Steps">Steps</span></h2>
+<a name="Install_the_Unrar_Application_sub" class="anchor"></a><div class="section steps   sticky ">
+<h3>
+<div class="altblock"></div>
+<span class="mw-headline" id="Install_the_Unrar_Application">Method 1 of 2: Install the Unrar Application</span>
+</h3>
+<div id="steps_1" class="section_text">
+<ol class="steps_list_2">
+<li>
+<div class="mwimg  largeimage  underwidth  floatcenter " style="max-width:462px"><a href="/Image:Unrar-Files-in-Linux-Step-1.jpg" class="image"><img alt="Unrar Files in Linux Step 1.jpg" src="http://pad2.whstatic.com/images/4/4b/Unrar-Files-in-Linux-Step-1.jpg" width="462" height="76"></a></div>
+<div class="step_num">1</div><b class="whb">Make sure that your computer is connected to the Internet.</b>
+<div class="clearall"></div>
+<div class="ad_label ad_label0">Ad</div>
+<div class="wh_ad_inner adunit0">
+	<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script type="text/javascript">
+		<!--
+			firstSlot = "9505992976";
+		
+			document.write('<i' + 'ns class="adsbygoogle" style="display:inline-block;width:600px;height:120px" data-ad-client="ca-pub-9543332082073187" data-ad-slot="' + firstSlot + '"> </' + 'i' + 'ns>');
+
+			(adsbygoogle = window.adsbygoogle || []).push({
+				params: {google_max_num_ads: 2,
+					google_override_format: true,
+                                         google_ad_channel: "2748203808+7733764704+1640266093+8110356115+3119976353+9595513032+7974857016+6876289738+7122150828" + gchans + xchannels}
+			});
+		//-->
+	</script>
+</div>
+<div class="clearall adclear"></div>
+</li>
+<li>
+<div class="mwimg  largeimage  underwidth  floatcenter " style="max-width:615px"><a href="/Image:Unrar-Files-in-Linux-Step-2.jpg" class="image"><img alt="Unrar Files in Linux Step 2.jpg" src="http://pad2.whstatic.com/images/3/3c/Unrar-Files-in-Linux-Step-2.jpg" width="615" height="229"></a></div>
+<div class="step_num">2</div><b class="whb">Open up the Linux shell if you are currently in the Linux GUI.</b>
+<ul>
+<li>The shell can be opened by using the following key combination: Control + ALT + F1.</li>
+<li>You can also open a Terminal that acts as a shell from your System Tools folder.</li>
+<li>All commands listed below can be entered at the command line in the Linux shell or Terminal.</li>
+</ul>
+<div class="clearall"></div>
+</li>
+<li>
+<div class="mwimg  largeimage  underwidth  floatcenter " style="max-width:455px"><a href="/Image:Unrar-Files-in-Linux-Step-3.jpg" class="image"><img alt="Unrar Files in Linux Step 3.jpg" src="http://pad3.whstatic.com/images/b/b4/Unrar-Files-in-Linux-Step-3.jpg" width="455" height="114"></a></div>
+<div class="step_num">3</div><b class="whb">Use the right command to download unrar into your Linux installation.</b> The following commands require root privileges, so you should be logging in using <i>su</i> (or <i>sudo</i>). Type in your login and password to log as root.
+<ul>
+<li>Users of Debian Linux should type in the following command: “apt-get install unrar” or “apt-get install unrar-free”.</li>
+<li>If you are using Fedora Core Linux, type in the following command: “yum install unrar”.</li>
+<li>Arch Linux users should install from extra repository using "pacman -S unrar".</li>
+<li>Users of OpenBSD type in this command: “pkg_add –v –r unrar”.</li>
+<li>Suse10 users can enter “yast2 –i unrar”.</li>
+<li>Suse11 users can enter “zipper install unrar”.</li>
+</ul>
+<div class="clearall"></div>
+</li>
+<li>
+<div class="mwimg  largeimage  underwidth  floatcenter " style="max-width:611px"><a href="/Image:Unrar-Files-in-Linux-Step-4.jpg" class="image"><img alt="Unrar Files in Linux Step 4.jpg" src="http://pad2.whstatic.com/images/f/fa/Unrar-Files-in-Linux-Step-4.jpg" width="611" height="119"></a></div>
+<div class="step_num">4</div><b class="whb">Download the binary package directly from rarlab if the above commands don’t work.</b>
+<ul>
+<li>Type “cd /tmp”.</li>
+<li>Type “wget <a rel="nofollow" class="external free" href="http://www.rarlab.com/rar/rarlinux-3.9.1.tar.gz">http://www.rarlab.com/rar/rarlinux-3.9.1.tar.gz</a> ”.</li>
+<li>Unrar the file with the following command: “tar -zxvf rarlinux-3.9.1.tar.gz”.</li>
+</ul>
+<div class="clearall"></div>
+</li>
+<li>
+<div class="step_num">5</div><b class="whb">Locate the rar and unrar commands in the rar directory.</b><br><br><div class="mwimg  tcenter floatcenter " style="max-width:550px"><a href="/Image:Unrar-Files-in-Linux-Step-5.jpg" class="image"><img alt="Unrar Files in Linux Step 5.jpg" src="http://pad3.whstatic.com/images/e/ec/Unrar-Files-in-Linux-Step-5.jpg" width="550" height="98"></a></div>
+<ul>
+<li>Enter “CD rar”.</li>
+<li>Type “./unrar”.</li>
+</ul>
+<div class="clearall"></div>
+</li>
+<li>
+<div class="mwimg  largeimage  underwidth  floatcenter " style="max-width:453px"><a href="/Image:Unrar-Files-in-Linux-Step-6.jpg" class="image"><img alt="Unrar Files in Linux Step 6.jpg" src="http://pad3.whstatic.com/images/0/01/Unrar-Files-in-Linux-Step-6.jpg" width="453" height="57"></a></div>
+<div class="step_num">6</div><b class="whb">Copy the rar and unrar to the /usr/local/bin directory with the following command:</b> “cp rar unrar /usr/local/bin”. The unrar command is now available for use in your Linux installation.
+<div class="clearall"></div>
+</li>
+</ol>
+<div class="clearall"></div>
+</div>
+</div>
+<a name="Use_the_Unrar_Application_sub" class="anchor"></a><div class="section steps   sticky ">
+<h3>
+<div class="altblock"></div>
+<span class="mw-headline" id="Use_the_Unrar_Application">Method 2 of 2: Use the Unrar Application</span>
+</h3>
+<div id="steps_2" class="section_text">
+<ol class="steps_list_2">
+<li>
+<div class="mwimg  largeimage  underwidth  floatcenter " style="max-width:646px"><a href="/Image:Unrar-Files-in-Linux-Step-9.jpg" class="image"><img alt="Unrar Files in Linux Step 9.jpg" src="http://pad1.whstatic.com/images/3/36/Unrar-Files-in-Linux-Step-9.jpg" width="646" height="215"></a></div>
+<div class="step_num">1</div><b class="whb">Extract files with the full path with the command “unrar x file.</b>rar”. This is probably what you want.
+<div class="clearall"></div>
+</li>
+<li>
+<div class="mwimg  largeimage  underwidth  floatcenter " style="max-width:614px"><a href="/Image:Unrar-Files-in-Linux-Step-7.jpg" class="image"><img alt="Unrar Files in Linux Step 7.jpg" src="http://pad1.whstatic.com/images/1/18/Unrar-Files-in-Linux-Step-7.jpg" width="614" height="229"></a></div>
+<div class="step_num">2</div><b class="whb">Dump all files(excluding folders) into the current directory with the command “unrar e file.</b>rar”.
+<div class="clearall"></div>
+</li>
+<li>
+<div class="mwimg  largeimage  floatcenter " style="max-width:670px"><a href="/Image:Unrar-Files-in-Linux-Step-8.jpg" class="image"><img alt="Unrar Files in Linux Step 8.jpg" src="http://pad3.whstatic.com/images/thumb/e/e5/Unrar-Files-in-Linux-Step-8.jpg/670px-Unrar-Files-in-Linux-Step-8.jpg" width="670" height="239"></a></div>
+<div class="step_num">3</div><b class="whb">List the files inside a rar archive with the command “unrar l file.</b>rar”.
+<div class="clearall"></div>
+</li>
+<li class="final_li">
+<div class="mwimg  largeimage  underwidth  floatcenter " style="max-width:640px"><a href="/Image:Unrar-Files-in-Linux-Step-10.jpg" class="image"><img alt="Unrar Files in Linux Step 10.jpg" src="http://pad1.whstatic.com/images/c/c4/Unrar-Files-in-Linux-Step-10.jpg" width="640" height="223"></a></div>
+<div class="step_num">4</div><b class="whb">Test the integrity of an archive with the command “unrar t file.</b>rar”.
+<div class="clearall"></div>
+<div class="ad_label ad_label1">Ad</div>
+<div class="wh_ad_inner adunit1">
+	<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script type="text/javascript">
+		<!--
+			secondSlot = "1982726171";
+		
+			document.write('<i' + 'ns class="adsbygoogle" style="display:inline-block;width:600px;height:180px" data-ad-client="ca-pub-9543332082073187" data-ad-slot="' + secondSlot + '"> </' + 'i' + 'ns>');
+
+			(adsbygoogle = window.adsbygoogle || []).push({
+				params: {google_max_num_ads: 3,
+					 google_override_format: true,
+                                         google_ad_channel: "4065666674+7733764704+1640266093+8110356115+3119976353+9595513032+7974857016+6876289738+7122150828" + gchans + xchannels}
+			});
+		//-->
+	</script>
+</div>
+<div class="clearall adclear"></div>
+</li>
+</ol>
+<p class="lone_p"><br></p>
+<div class="clearall"></div>
+</div>
+</div>
+<div class="section knowledgebox_section sticky" id="knowledgebox">
+    <h2>
+        <span class="mw-headline kbheadline">We could really use your help!</span>
+    </h2>
+
+    <div class="kbrow">
+        <div class="kbcol" id="1973903">
+            <div class="kbcol-inner">
+                <div class="kbgradients"></div>
+                <div class="kbtop kbgreen">
+                    <div class="kbtellus">
+                        Can you tell us about<br><b class="kbttopic">personal grooming?</b>
+                    </div>
+                </div>
+                <div class="kbbot kbbotborder noselect">
+                    <div class="kbbotwrapper">
+                        <div class="kbbotleftwrapper">
+                            <div class="kbyes">Yes</div>
+                        </div>
+                        <div class="kbbotrightwrapper">
+                            <div class="kbno">No</div>
+                        </div>
+                    </div>
+                    <div class="kbbotstripe kbbotborder"></div>
+                </div>
+                <div class="kbnodisplay" id="kbctopic">personal grooming</div>
+                <div class="kbnodisplay" id="kbcphrase">how to get rid of back hair</div>
+                <div class="kbnodisplay"><img id="kbcthumb" src="/images/thumb/a/a3/Get-Rid-of-Back-Hair-Step-28.jpg/-crop-127-140-127px-Get-Rid-of-Back-Hair-Step-28.jpg"></div>
+                <div class="kbarrow"></div>
+            </div>
+        </div>
+
+        <div class="kbcol" id="1187379">
+            <div class="kbcol-inner">
+                <div class="kbgradients"></div>
+                <div class="kbtop kbgreen">
+                    <div class="kbtellus">
+                        Can you tell us about<br><b class="kbttopic">weight loss?</b>
+                    </div>
+                </div>
+                <div class="kbbot kbbotborder noselect">
+                    <div class="kbbotwrapper">
+                        <div class="kbbotleftwrapper">
+                            <div class="kbyes">Yes</div>
+                        </div>
+                        <div class="kbbotrightwrapper">
+                            <div class="kbno">No</div>
+                        </div>
+                    </div>
+                    <div class="kbbotstripe kbbotborder"></div>
+                </div>
+                <div class="kbnodisplay" id="kbctopic">weight loss</div>
+                <div class="kbnodisplay" id="kbcphrase">how to drop a dress size in one week</div>
+                <div class="kbnodisplay"><img id="kbcthumb" src="/images/thumb/f/ff/Drop-a-dress-size-Intro.jpg/-crop-127-140-127px-Drop-a-dress-size-Intro.jpg"></div>
+                <div class="kbarrow"></div>
+            </div>
+        </div>
+
+        <div class="kbcol" id="1185817">
+            <div class="kbcol-inner">
+                <div class="kbgradients"></div>
+                <div class="kbtop kbgreen">
+                    <div class="kbtellus">
+                        Can you tell us about<br><b class="kbttopic">shrinking clothes?</b>
+                    </div>
+                </div>
+                <div class="kbbot kbbotborder noselect">
+                    <div class="kbbotwrapper">
+                        <div class="kbbotleftwrapper">
+                            <div class="kbyes">Yes</div>
+                        </div>
+                        <div class="kbbotrightwrapper">
+                            <div class="kbno">No</div>
+                        </div>
+                    </div>
+                    <div class="kbbotstripe kbbotborder"></div>
+                </div>
+                <div class="kbnodisplay" id="kbctopic">shrinking clothes</div>
+                <div class="kbnodisplay" id="kbcphrase">different ways to shrink cotton shirts</div>
+                <div class="kbnodisplay"><img id="kbcthumb" src="/images/thumb/7/77/Shrink-Cotton-Shirts-Step-3.jpg/-crop-127-140-127px-Shrink-Cotton-Shirts-Step-3.jpg"></div>
+                <div class="kbarrow"></div>
+            </div>
+        </div>
+
+        <div class="kbcol" id="999600">
+            <div class="kbcol-inner">
+                <div class="kbgradients"></div>
+                <div class="kbtop kbgreen">
+                    <div class="kbtellus">
+                        Can you tell us about<br><b class="kbttopic">haircare and styling?</b>
+                    </div>
+                </div>
+                <div class="kbbot kbbotborder noselect">
+                    <div class="kbbotwrapper">
+                        <div class="kbbotleftwrapper">
+                            <div class="kbyes">Yes</div>
+                        </div>
+                        <div class="kbbotrightwrapper">
+                            <div class="kbno">No</div>
+                        </div>
+                    </div>
+                    <div class="kbbotstripe kbbotborder"></div>
+                </div>
+                <div class="kbnodisplay" id="kbctopic">haircare and styling</div>
+                <div class="kbnodisplay" id="kbcphrase">how to get thinner hair</div>
+                <div class="kbnodisplay"><img id="kbcthumb" src="/images/thumb/c/c3/Get-Thinner-Hair-Step-4.jpg/-crop-127-140-127px-Get-Thinner-Hair-Step-4.jpg"></div>
+                <div class="kbarrow"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="clearall"></div>
+
+    <input type="hidden" id="kbthankstext" value="Thanks!">
+</div>
+
+<div class="section kbedit_section" id="knowledgebox">
+    <div class="kbeditheader">
+        <div class="kbeditimage">
+            <div class="kb-image-inner">
+                <div class="kb-placeholder-image"></div>
+                <div class="kb-actual-image"></div>
+            </div>
+        </div>
+        <div class="kbeditheadertext">
+            <div>
+                <div class="kbheaderarrow-outer"></div>
+                <div class="kbheaderarrow-inner"></div>
+            </div>
+            <div class="kb-headertext-inner">
+                <div class="kbrdhp">Thanks for helping! Please tell us everything you know about</div>
+                <div class="kbrdht" id="kbheaderphrase">...</div>
+            </div>
+        </div>
+        <div class="kbclose">
+<div class="kbrcw"></div>
+<div class="kbrccw"></div>
+</div>
+    </div>
+
+    <div class="kbformcontainer">
+        <form id="kbform" action="#">
+            <div contenteditable="true" disabled class="inactive fancy_input" id="kbcontentbox"><span class="fancy_input_placeholder" id="kbplaceholder"><strong>Tell us everything you know here.</strong> Remember, more detail is better.</span></div>
+            <div class="kbnewcontent">
+                <input type="hidden" id="kbaid" value="0"><input type="hidden" id="kbtopic" value=""><textarea id="kbcontent" class="active fancy_input kbpadmore" maxlength="5000"></textarea><div class="kbtipsbox">
+                    <div class="kbtipstoggle">
+                        <div class="kbtipstogglebtn">
+<div class="kbtipshbar"></div>
+<div class="kbtipsvbar"></div>
+</div> Tips
+                    </div>
+                    <div class="kbtipsheader"><strong>Provide Details.</strong></div>
+                    <div class="kbtipsdetails">
+                        Please be as detailed as possible in your explanation. Don't worry about formatting! We'll take care of it.
+                        For example:<br><strong>Don't say</strong>: <em>Eat more fats.</em><br><strong>Do say</strong>: <em>Add fats with some nutritional value to the foods you already eat. Try olive oil, butter, avocado, and mayonnaise.</em>
+                    </div>
+                </div>
+                <div class="kbformbot">
+                    <div class="kbformbot-left">
+                        <input placeholder="(Optional) Enter email address for article updates" id="kbemail">
+</div>
+                    <div class="kbformbot-right">
+                        <a id="kbadd" class="button primary op-action">Submit</a>
+                        <div class="kbspinner" id="kbwaiting"><img src="http://pad2.whstatic.com/extensions/wikihow/rotate.gif" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearall"></div>
+        </form>
+    </div>
+</div>
+
+
+<div class="section tips  sticky ">
+<h2><span class="mw-headline" id="Tips">Tips</span></h2>
+<div id="tips" class="section_text">
+<ul>
+<li>If you are uncomfortable with the command line and are looking for a GUI RAR interface for your Linux installation, you can try out PeaZip. PeaZip works in Gnome and KDE and is available in DEB or RPM.</li>
+<li>RAR3 is the current version of the RAR format. It added the Advanced Encryption Standard with a 128-bit key length. It also supports files larger than 4 Gigabytes and Unicode names.</li>
+<li>RAR files can only be created through commercial software, but they can be unpacked using the free unrar command line tool in Linux.</li>
+<li>The RAR format supports data compression, error recovery and file spanning (separating a single file into a group of files, to be recombined later).</li>
+<li>File Roller (default archive manager in Gnome-based distribution) can use unrar command line tool. Just install the unrar tool in /usr/local/bin/ directory (or equivalent) and File Roller will automatically use it to open and unpack rar files.</li>
+<li>If a RAR file is broken into smaller files, they are named .rar, .r00, .r01 and so on. Point your unrar utility at the .rar file and it will automatically put the pieces back together.</li>
+</ul>
+<div class="wh_ad_inner adunit2a">
+	<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script type="text/javascript">
+		<!--
+		document.write("<div class='ad_label ad_label2a'>Ad</" + "div>");
+		
+		slot1 = "4936192570";
+		slot2 = "6412925775";
+		marginright = "8px"
+			
+
+			document.write('<i' + 'ns class="adsbygoogle" style="display:inline-block;width:300px;height:250px;margin-left:7px;margin-right:'+marginright+';" data-ad-client="ca-pub-9543332082073187" data-ad-slot="' + slot1 + '"> </' + 'i' + 'ns>');
+			(adsbygoogle = window.adsbygoogle || []).push({params:{google_ad_channel: "9206048113+7733764704+1640266093+8110356115+3119976353+9595513032+7974857016+6876289738+7122150828" + gchans}});
+			document.write('<i' + 'ns class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-9543332082073187" data-ad-slot="' + slot2 + '"> </' + 'i' + 'ns>');
+			(adsbygoogle = window.adsbygoogle || []).push({params:{google_ad_channel: "9206048113+7733764704+1640266093+8110356115+3119976353+9595513032+7974857016+6876289738+7122150828" + gchans}});
+                
+		//-->
+	</script>
+</div>
+<div class="clearall adclear"></div>
+<div class="clearall"></div>
+</div>
+</div>
+<div class="section warnings  sticky ">
+<h2><span class="mw-headline" id="Warnings">Warnings</span></h2>
+<div id="warnings" class="section_text">
+<ul>
+<li>If you receive error messages during the installation of the unrar command, log in as super user by typing “sudo -s” and your password. This gives you the appropriate installation permissions.</li>
+</ul>
+<div class="clearall"></div>
+</div>
+</div>
+<div class="section relatedwikihows  sticky ">
+<h2><span class="mw-headline" id="Related_wikiHows">Related wikiHows</span></h2>
+<div id="relatedwikihows" class="section_text">
+<div class="thumbnail" style="width:127px; height:120px;"><a href="/Compress-Large-Files"><img src="http://pad1.whstatic.com/images/thumb/4/45/Compress-Large-Files-Step-17.jpg/-crop-127-120-127px-Compress-Large-Files-Step-17.jpg" alt=""><div class="text"><p>How to <br><span>Compress Large Files</span></p></div></a></div>
+<div class="thumbnail" style="width:127px; height:120px;"><a href="/Store-a-Rar-or-Zip-in-an-Image-File"><img src="http://pad3.whstatic.com/images/thumb/0/00/Store-a-Rar-or-Zip-in-an-Image-File-Step-8.jpg/-crop-127-120-127px-Store-a-Rar-or-Zip-in-an-Image-File-Step-8.jpg" alt=""><div class="text"><p>How to <br><span>Store a Rar or Zip in an Image File</span></p></div></a></div>
+<div class="thumbnail" style="width:127px; height:120px;"><a href="/Deal-With-Compressed-Files-Using-TUGZip"><img src="http://pad2.whstatic.com/images/thumb/a/a2/Deal-With-Compressed-Files-Using-TUGZip-Step-18.jpg/-crop-127-120-127px-Deal-With-Compressed-Files-Using-TUGZip-Step-18.jpg" alt=""><div class="text"><p>How to <br><span>Deal With Compressed Files Using TUGZip</span></p></div></a></div>
+<div class="thumbnail" style="width:127px; height:120px;"><a href="/Open-Rar/Zip/Arj-Files-on-Mac-Os-X"><img src="http://pad3.whstatic.com/images/thumb/a/a2/Book_266.png/-crop-127-120-127px-Book_266.png" alt=""><div class="text"><p>How to <br><span>Open Rar/Zip/Arj Files on Mac Os X</span></p></div></a></div>
+<div class="thumbnail" style="width:127px; height:120px;"><a href="/Extract-a-Gz-File"><img src="http://pad2.whstatic.com/images/thumb/5/50/Extract-a-Gz-File-Step-6Bullet1.jpg/-crop-127-120-127px-Extract-a-Gz-File-Step-6Bullet1.jpg" alt=""><div class="text"><p>How to <br><span>Extract a Gz File</span></p></div></a></div>
+<div class="clearall"></div>
+</div>
+</div>
+<div class="section sourcesandcitations  sticky ">
+<h2><span class="mw-headline" id="Sources_and_Citations">Sources and Citations</span></h2>
+<div id="sourcesandcitations" class="section_text">
+<ul>
+<li><a rel="nofollow" class="external free" href="http://www.go2linux.org/unrar-linux-command-man-page">http://www.go2linux.org/unrar-linux-command-man-page</a></li>
+<li><a rel="nofollow" class="external free" href="http://linux.byexamples.com/archives/46/unrar-the-file/">http://linux.byexamples.com/archives/46/unrar-the-file/</a></li>
+</ul>
+<div class="clearall"></div>
+</div>
+</div>
+<!-- 
+NewPP limit report
+Parsed by app6.wikihow.com
+CPU time usage: 0.044 seconds
+Real time usage: 0.054 seconds
+Preprocessor visited node count: 27/1000000
+Preprocessor generated node count: 32/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+--><!-- Saved in parser cache with key wikidb_112:pcache:idhash:713038-0!*!0!!*!2!* and timestamp 20150131020140
+ -->
+</div>
+				<div class="section">
+											<h2 class="section_head" id="article_info_header"><span>Article Info</span></h2>
+						<div id="article_info" class="section_text">
+																								<p class="info"> Categories: <span dir='ltr'><a href="/Category:Linux" title="Category:Linux">Linux</a></span></p>
+																									<p class="info">In other languages:</p>
+							<p class="info">Español:&nbsp;<span><a href="http://es.wikihow.com/descomprimir-archivos-rar-en-Linux">Cómo descomprimir archivos rar en Linux</a></span>&#44;&nbsp;Deutsch:&nbsp;<span><a href="http://de.wikihow.com/Unrar-in-Linux-verwenden">Unrar in Linux verwenden</a></span>&#44;&nbsp;Português:&nbsp;<span><a href="http://pt.wikihow.com/Descompactar-Arquivos-rar-no-Linux">Como Descompactar Arquivos rar no Linux</a></span>&#44;&nbsp;Italiano:&nbsp;<span><a href="http://it.wikihow.com/Decomprimere-i-File-RAR-in-Linux">Come Decomprimere i File RAR in Linux</a></span>&#44;&nbsp;Русский:&nbsp;<span><a href="http://ru.wikihow.com/%D1%80%D0%B0%D0%B7%D0%B0%D1%80%D1%85%D0%B8%D0%B2%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C-%D1%84%D0%B0%D0%B9%D0%BB%D1%8B-%D0%B2-Linux">разархивировать файлы в Linux</a></span>							</p>
+												<ul id="end_options">
+							<li class="endop_discuss"><span></span><a href="/Discussion:Unrar-Files-in-Linux" id="gatDiscussionFooter">Discuss</a></li>
+							<li class="endop_print"><span></span><a href="/index.php?title=Unrar-Files-in-Linux&printable=yes" id="gatPrintView">Print</a></li>
+							<li class="endop_email"><span></span><a href="#" onclick="return emailLink();" id="gatSharingEmail">Email</a></li>
+														<li class="endop_edit"><span></span><a href="/index.php?title=Unrar-Files-in-Linux&action=edit" id="gatEditFooter">Edit</a></li>
+															<li class="endop_fanmail"><span></span><a href="/Special:ThankAuthors?target=Unrar-Files-in-Linux" id="gatThankAuthors">Send fan mail to authors</a></li>
+													</ul> <!--end end_options -->
+							
+																				<div class="clearall"></div>
+					</div><!--end article_info section_text-->
+						<p class='page_stats'>Thanks to all authors for creating a page that has been read 308,072 times.</p>
+
+									<div id="article_rating">
+				<span class="mw-headline">Did this article help you?</span>
+				<div id="ar_buttons">
+					<span id="gatAccuracyYes" pageid="713038" class="button secondary aritem">Yes</span>
+					<span id="gatAccuracyNo" pageid="713038" class="button secondary aritem">No</span>
+					
+				</div>
+			</div>				</div><!--end section-->
+
+										
+		</div> <!-- article -->
+		<div id="">
+
+					</div>  <!--end last_question-->
+		<div class="clearall"></div>
+
+		</div>  <!--end article_shell-->
+
+
+					<div id="sidebar">
+
+				<div id="transbox" class="sidebox" style="display:none"></div>
+				
+				<!-- Social Proof Section-->
+									<div id="social_proof_sidebox" class="arrow_box sidebox">
+	<h3>About this wikiHow</h3>
+	<div id="sp_inner">
+						<div class="sp_box">
+			<div class="sp_icon_bg" ></div>
+			<div class="sp_views_icon_sidebar" ></div>
+			<div class="sp_text"><b>308,072</b>&nbsp;views</div>
+		</div>
+				<div class="sp_box">
+				<div class="sp_icon_bg" ></div>
+				<div class="sp_updated_icon_sidebar"></div>
+				<div class="sp_text">
+					<span data-datestamp="2014-12-20T09:43:05Z" id="sp_modified"></span>
+				</div>
+		</div>
+				<div id="sp_edit" class="sp_box">
+			<div class="sp_icon_bg" ></div>
+			<div class="sp_edit_icon_sidebar"></div>
+			<div class="sp_text">
+				9 Co-authors			</div>
+		</div>
+					<div id="sp_methods_box" class="sp_box">
+			<div class="sp_oval_icon_bg">2</div>
+				<div class="sp_text">Methods</div>
+			</div>
+			</div>
+	<div class='sp_popup_container'>
+			</div>
+	<div class='sp_top_popup_container'>
+			</div>
+</div>
+								<!-- END Social Proof Section-->
+
+				<!-- Sidebar Top Widgets -->
+								<!-- END Sidebar Top Widgets -->
+
+								
+				
+				
+									<script>
+						<!--
+						var aax_src='3003';
+						var amzn_targs = '';
+						var url = encodeURIComponent(document.location);
+						try { url = encodeURIComponent("" + window.top.location); } catch(e) {}
+						document.write("<scr"+"ipt src='//aax-us-east.amazon-Adsystem.com/e/dtb/bid?src=" + aax_src + "&u="+url+"&cb=" + Math.round(Math.random()*10000000) + "'></scr"+"ipt>");
+						document.close();
+						//-->
+					</script>
+											<div class='wh_ad'>
+<div class="side_ad">
+<script type="text/javascript"><!--
+if(!gHideAds) {
+
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+
+googletag.cmd.push(function() {
+var slot = googletag.defineSlot('/10095428/IMAGE_RR_COMP_ELECTRO', [300, 250], 'div-gpt-ad-1358462906741-2').addService(googletag.pubads());
+slot.set("adsense_channel_ids", gchans); 
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+
+// added for amazon targeting ad test
+if(typeof document.amzn_slots != 'undefined') {
+googletag.cmd.push(function() {
+try {
+for(var slot in document.amzn_slots) {
+var slot_name = document.amzn_slots[slot];
+googletag.pubads().setTargeting(slot_name, "1");
+} 
+} catch(e) {}
+});
+}
+
+document.write("<div id='div-gpt-ad-1358462906741-2' style='width:300px; height:250px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1358462906741-2'); });
+document.write("</div>");
+
+}
+//-->
+</script>
+</div>
+</div>
+								<div id="top_links" class="sidebox logged_out" >
+					<a href="/Special:Randomizer" id="gatRandom" accesskey='x' class="button secondary">Random Article</a>
+					<a href="/Special:Createpage" id="gatWriteAnArticle" class="button secondary">Write An Article</a>
+				</div><!--end top_links-->
+												
+				
+									<div id="side_related_articles" class="sidebox related_articles">
+						<h3>Related Articles</h3><div class='thumbnail' style='width:127px; height:140px;'><a href='/Use-Linux'><img src='http://pad1.whstatic.com/images/thumb/a/a3/Use-Linux-Step-9.jpg/-crop-127-140-127px-Use-Linux-Step-9.jpg' alt='' /><div class='text'><p>How to <br /><span>Use Linux</span></p></div></a></div><div class='thumbnail' style='width:127px; height:140px;'><a href='/Set-up-a-Wireless-Network-in-Puppy-Linux'><img src='http://pad1.whstatic.com/images/thumb/3/38/Set-up-a-Wireless-Network-in-Puppy-Linux-Step-17.jpg/-crop-127-140-127px-Set-up-a-Wireless-Network-in-Puppy-Linux-Step-17.jpg' alt='' /><div class='text'><p>How to <br /><span>Set up a Wireless Network in Puppy Linux</span></p></div></a></div><div class='thumbnail' style='width:127px; height:140px;'><a href='/Extract-Tar-Files-in-Linux'><img src='http://pad3.whstatic.com/images/thumb/c/ce/Extract-Tar-Files-in-Linux-Step-9.jpg/-crop-127-140-127px-Extract-Tar-Files-in-Linux-Step-9.jpg' alt='' /><div class='text'><p>How to <br /><span>Extract Tar Files in Linux</span></p></div></a></div><div class='thumbnail' style='width:127px; height:140px;'><a href='/Set-up-Mobile-Broadband-in-Linux'><img src='http://pad3.whstatic.com/images/thumb/b/b9/Set-up-Mobile-Broadband-in-Linux-Step-6.jpg/-crop-127-140-127px-Set-up-Mobile-Broadband-in-Linux-Step-6.jpg' alt='' /><div class='text'><p>How to <br /><span>Set up Mobile Broadband in Linux</span></p></div></a></div><div class='clearall'></div>
+					</div>
+				
+									<div class="sidebox logged_out" id="sidebar_share">
+						<h3>Share</h3>
+						<div class="gplus1_button"><g:plusone size="tall" callback="plusone_vote"></g:plusone></div><div class="like_button"><fb:like href="http://www.wikihow.com/Unrar-Files-in-Linux" send="false" layout="box_count" width="46" show_faces="false"></fb:like></div><div id="pinterest"><a href="http://pinterest.com/pin/create/button/?url=http://www.wikihow.com/Unrar-Files-in-Linux&media=http%3A%2F%2Fpad1.whstatic.com%2Fimages%2Fc%2Fc4%2FUnrar-Files-in-Linux-Step-10.jpg&description=How+to+Unrar+Files+in+Linux+--+via+wikiHow.com" class="pin-it-button" count-layout="vertical">Pin It</a></div><div class="admin_state"><a href="https://twitter.com/share" data-lang="en" style="display:none; background-image: none; color: #ffffff;" class="twitter-share-button" data-count="vertical" data-via="wikiHow" data-text="How to Unrar Files in Linux" data-related="JackH:Founder of wikiHow">Tweet</a></div>						<div style="clear:both; float:none;"></div>
+					</div>
+				
+									
+
+						
+				
+				<!-- Sidebar Widgets -->
+								<!-- END Sidebar Widgets -->
+
+				
+									<div id="side_featured_articles" class="sidebox">
+						<h3><span onclick="location='/Category:Featured-Articles';" style="cursor:pointer;">Featured Articles</span></h3>
+<div class='thumbnail' style='width:126px; height:120px;'><a href='/Earn-Money-Through-Google-Adsense'><img src='http://pad3.whstatic.com/images/thumb/4/47/Earn-Money-Through-Google-Adsense-Step-18-Version-2.jpg/-crop-126-120-126px-Earn-Money-Through-Google-Adsense-Step-18-Version-2.jpg' alt='' /><div class='text'><p>How to <br /><span>Earn Money Through Google Adsense</span></p></div></a></div><div class='thumbnail' style='width:126px; height:120px;'><a href='/Kill-a-Process-in-Command-Prompt'><img src='http://pad2.whstatic.com/images/thumb/d/d7/Part2step6.png/-crop-126-120-126px-Part2step6.png' alt='' /><div class='text'><p>How to <br /><span>Kill a Process in Command Prompt</span></p></div></a></div><div class='thumbnail' style='width:126px; height:120px;'><a href='/Wash-Viscose'><img src='http://pad2.whstatic.com/images/thumb/2/2c/Wash-Viscose-Step-17.jpg/-crop-126-120-126px-Wash-Viscose-Step-17.jpg' alt='' /><div class='text'><p>How to <br /><span>Wash Viscose</span></p></div></a></div><div class='thumbnail' style='width:126px; height:120px;'><a href='/Join-a-Guild-in-World-of-Warcraft'><img src='http://pad1.whstatic.com/images/thumb/b/bb/Join-a-Guild-in-World-of-Warcraft-Step-5.jpg/-crop-126-120-126px-Join-a-Guild-in-World-of-Warcraft-Step-5.jpg' alt='' /><div class='text'><p>How to <br /><span>Join a Guild in World of Warcraft</span></p></div></a></div><div class='clearall'></div>					</div>
+				
+				
+									<div id="side_featured_contributor" class="sidebox">
+							<div>
+		<h3>Meet a Community Member</h3>
+		<div class='featuredContrib_id'>
+					<span id='fc_id_img' class='fc_id_img'><a href='/User:Lojjik' onclick='gatTrack("Browsing","Feat_contrib_img","Feat_contrib_wgt");'><img src='http://pad2.whstatic.com/images/avatarOut/7/79/1322689.jpg?20141230052928' /></a></span>
+				<span id='fc_id' class='fc_id' onclick='gatTrack("Browsing","Feat_contrib_blurb","Feat_contrib_wgt");'><p>Meet <a href="/User:Lojjik" title="User:Lojjik">Lojjik</a>, a college student and wikiHow <a href="/Become-a-wikiHow-Admin" title="Become a wikiHow Admin">Admin</a> and <a href="/Become-a-New-Article-Booster-on-wikiHow" title="Become a New Article Booster on wikiHow">Booster</a>, who has been active in the community for over 7 years. He has started 30 articles, patrolled over 47,000 edits, and contributed to wikiHow code as an engineering intern. He also enjoys helping with administrative backlogs, <a href="/Special:CreatePage" title="Special:CreatePage">writing</a>, and working on content to improve readability, particularly in articles’ <a href="/Category:Summarization" title="Category:Summarization">introductions</a>. He’s most proud of his work on <a href="/Reduce-Glare-when-Driving-at-Night" title="Reduce Glare when Driving at Night">How to Reduce Glare when Driving at Night</a>, which has been featured and translated into 5 different languages. He says that, in the wikiHow community, the fusion of friendly people with an ideology of knowledge philanthropy gives him a sense of belonging, a desire to stay connected and keep growing the <a href="/wikiHow:About-wikiHow" title="wikiHow:About wikiHow">project</a>. To new editors, he says: “Don't worry about making mistakes. Everything is fixable. If you think you can leave an article better than the way you found it, I'd encourage you to do just that. A little bit goes a long way toward achieving <a href="/wikiHow:Mission" title="wikiHow:Mission">our mission</a>!”</p></span>
+		</div>
+        <div class="clearall"></div>
+	</div>
+
+													<p class="bottom_button">
+								<a href="/Special:Userlogin" class="button secondary" id="gatFCWidgetBottom" onclick='gatTrack("Browsing","Feat_contrib_cta","Feat_contrib_wgt");'>Join The Community</a>
+							</p>
+											</div><!--end side_featured_contributor-->
+				
+				
+									<div class="sidebox">
+							<h3>Follow Us On...</h3>
+	<table cellpadding="0" cellspacing="0" id="follow_table">
+        <tr>
+            <td><a href="http://www.facebook.com/wikiHow" target="_blank" id="gatFollowFacebook"><div class="follow-facebook"></div></a></td>
+            <td><a href="https://www.twitter.com/wikihow" target="_blank" id="gatFollowTwitter"><div class="follow-twitter"></div></a></td>
+            <td><a href="http://www.wikihow.com/feed.rss" target="_blank" id="gatFollowRss"><div class="follow-feed"></div></a></td>
+            <td><a href="http://weheartit.com/wikihow" id="gatHeartWikiHow"><div class="follow-email"></div></a></td>
+            <td><a href="https://plus.google.com/u/0/b/102818024478962731382/" target="_blank" id="gatFollowPlus"><div class="follow-plus"></div></a></td>
+        </tr>
+        <tr>
+            <td><a href="http://pinterest.com/wikihow/" target="_blank" id="gatFollowPinterest"><div class="follow-pinterest"></div></a></td>
+            <td><a href="http://wikihow.tumblr.com/" target="_blank" id="gatFollowTumblr"><div class="follow-tumblr"></div></a></td>
+            <td><a href="http://www.stumbleupon.com/stumbler/wikiHow" target="_blank" id="gatFollowStumbleupon"><div class="follow-stumbleupon"></div></a></td> 
+            <td><a href="https://market.android.com/details?id=com.wikihow.wikihowapp" target="_blank" id="gatFollowAndroid"><div class="follow-android"></div></a></td>
+            <td><a href="http://itunes.apple.com/us/app/wikihow-how-to-diy-survival/id309209200?mt=8" target="_blank" id="gatFollowApp"><div class="follow-iphone"></div></a></td>
+        </tr>
+</table>
+					</div>
+				
+			</div><!--end sidebar-->
+				<div class="clearall" ></div>
+		</div> <!--end container -->
+		</div><!--end main-->
+			<div id="clear_footer"></div>
+		</div><!--end main_container-->
+		<div id="footer_outer">
+			<div id="footer">
+				<div id="footer_side">
+															<ul>
+<li class="top"><a href="/Main-Page" title="Main Page">Home</a></li>
+<li><a href="/About-wikiHow" title="About wikiHow" class="mw-redirect">About wikiHow</a></li>
+<li><a href="/Terms-of-Use" title="Terms of Use" class="mw-redirect">Terms of Use</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.wikihow.com/feed.rss">RSS</a></li>
+<li><a href="/Special:Sitemap" title="Special:Sitemap">Site map</a></li>
+<li><a href="/Special:UserLogin" title="Special:UserLogin">Log In</a></li>
+<li><a rel="nofollow" class="external text" href="http://m.wikihow.com/Unrar-Files-in-Linux">Mobile view</a></li>
+</ul>
+									</div><!--end footer_side-->
+
+				<div id="footer_main">
+
+					<div id="sub_footer">
+													<!-- MediaWiki:Sub_footer_new_anon -->
+<div id="creative_commons">
+    <a href="/wikiHow:Creative-Commons" class="imglink sub_footer_link footer_creative_commons footer_sprite"></a>
+    All text shared under a <a href="http://www.wikihow.com/wikiHow:Creative-Commons">Creative Commons License</a>.
+</div>
+
+<div id="mediawiki_p">
+    <a href="/Powered-and-Inspired-by-Mediawiki" class="imglink sub_footer_link footer_mediawiki footer_sprite"></a>
+    <a href="/Powered-and-Inspired-by-Mediawiki">Powered by Mediawiki.</a>
+</div>											</div>
+				</div><!--end footer_main-->
+			</div>
+				<br class="clearall" />
+		</div><!--end footer-->
+		<div id="dialog-box" title=""></div>
+
+		<div id='sliderbox' class='sliderbox_08'>
+						<div id='slider_thanks_08'>
+							<a href='#' id='slider_close_button'></a>
+							<div class='slider_become_main'>
+								<p class='slider_become_text'>Become<br />an Author!</p>
+								<!--p>Start your very own article today.</p-->
+								<p class='slider_button'><a class='button primary' href='/Special:ListRequestedTopics'>Write an Article</a></p>
+							</div>
+						</div>
+					</div><div id="slideshowdetect"></div>
+		<div id="fb-root" ></div>
+
+					<script>/*<![CDATA[*/var mediaWikiLoadStart=(new Date()).getTime();function isCompatible(ua){if(ua===undefined){ua=navigator.userAgent;}return!((ua.indexOf('MSIE')!==-1&&parseFloat(ua.split('MSIE')[1])<6)||(ua.indexOf('Firefox/')!==-1&&parseFloat(ua.split('Firefox/')[1])<3)||ua.match(/BlackBerry[^\/]*\/[1-5]\./)||ua.match(/webOS\/1\.[0-4]/)||ua.match(/PlayStation/i)||ua.match(/SymbianOS|Series60/)||ua.match(/NetFront/)||ua.match(/Opera Mini/)||ua.match(/S40OviBrowser/)||(ua.match(/Glass/)&&ua.match(/Android/)));}var startUp=function(){mw.config=new mw.Map(true);mw.loader.addSource({"local":{"loadScript":"/load.php","apiScript":"/api.php"}});mw.loader.register([["site","1422673262",[],"site"],["noscript","1422252703",[],"noscript"],["startup","1422673262",[],"startup"],["filepage","1422325258"],["user.groups","1422325258",[],"user"],["user","1422325258",[],"user"],["user.cssprefs","1421962909",["mediawiki.user"],"private"],["user.options","1421962909",[],"private"],["user.tokens","1421962909",[],"private"],
+["mediawiki.language.data","1422385116",["mediawiki.language.init"]],["skins.common.elements","1422229757"],["skins.common.content","1422229757"],["skins.common.interface","1422301536"],["skins.cologneblue","1422229757"],["skins.modern","1422229757"],["skins.vector.styles","1422301536"],["skins.monobook.styles","1422229757"],["skins.vector.js","1422229757",["jquery.delayedBind"]],["skins.vector.collapsibleNav","1422301536",["jquery.client","jquery.cookie","jquery.tabIndex"]],["jquery","1422358739"],["jquery.appear","1422252703"],["jquery.arrowSteps","1422267713"],["jquery.async","1422267713"],["jquery.autoEllipsis","1422267713",["jquery.highlightText"]],["jquery.badge","1422267713",["mediawiki.language"]],["jquery.byteLength","1422252703"],["jquery.byteLimit","1422267713",["jquery.byteLength"]],["jquery.checkboxShiftClick","1422267713"],["jquery.chosen","1422267713"],["jquery.client","1422252703"],["jquery.color","1422267713",["jquery.colorUtil"]],["jquery.colorUtil","1422327340"],[
+"jquery.cookie","1422252703"],["jquery.delayedBind","1422252703"],["jquery.expandableField","1422252703",["jquery.delayedBind"]],["jquery.farbtastic","1422327340",["jquery.colorUtil"]],["jquery.footHovzer","1422327340"],["jquery.form","1422252703"],["jquery.fullscreen","1422172998"],["jquery.getAttrs","1422172999"],["jquery.hidpi","1422327340"],["jquery.highlightText","1422252703",["jquery.mwExtension"]],["jquery.hoverIntent","1422327340"],["jquery.json","1422252703"],["jquery.localize","1422252703"],["jquery.makeCollapsible","1422327340"],["jquery.mockjax","1422267713"],["jquery.mw-jump","1422327340"],["jquery.mwExtension","1422252703"],["jquery.placeholder","1422267713"],["jquery.qunit","1422267713"],["jquery.qunit.completenessTest","1422267713",["jquery.qunit"]],["jquery.spinner","1422267713"],["jquery.jStorage","1422327340",["jquery.json"]],["jquery.suggestions","1422172999",["jquery.autoEllipsis"]],["jquery.tabIndex","1422269343"],["jquery.tablesorter","1422172999",[
+"jquery.mwExtension","mediawiki.language.months"]],["jquery.textSelection","1422269343",["jquery.client"]],["jquery.throttle-debounce","1422269343"],["jquery.validate","1422269343"],["jquery.xmldom","1422269343"],["jquery.tipsy","1422172999"],["jquery.ui.core","1422269343",["jquery"],"jquery.ui"],["jquery.ui.widget","1422269343",[],"jquery.ui"],["jquery.ui.mouse","1422283602",["jquery.ui.widget"],"jquery.ui"],["jquery.ui.position","1422327340",[],"jquery.ui"],["jquery.ui.draggable","1422172999",["jquery.ui.core","jquery.ui.mouse","jquery.ui.widget"],"jquery.ui"],["jquery.ui.droppable","1422327340",["jquery.ui.core","jquery.ui.draggable","jquery.ui.mouse","jquery.ui.widget"],"jquery.ui"],["jquery.ui.resizable","1422327340",["jquery.ui.core","jquery.ui.mouse","jquery.ui.widget"],"jquery.ui"],["jquery.ui.selectable","1422327340",["jquery.ui.core","jquery.ui.mouse","jquery.ui.widget"],"jquery.ui"],["jquery.ui.sortable","1422172999",["jquery.ui.core","jquery.ui.mouse","jquery.ui.widget"],
+"jquery.ui"],["jquery.ui.accordion","1422327340",["jquery.ui.core","jquery.ui.widget"],"jquery.ui"],["jquery.ui.autocomplete","1422283602",["jquery.ui.core","jquery.ui.position","jquery.ui.widget"],"jquery.ui"],["jquery.ui.button","1422267713",["jquery.ui.core","jquery.ui.widget"],"jquery.ui"],["jquery.ui.datepicker","1422327340",["jquery.ui.core"],"jquery.ui"],["jquery.ui.dialog","1422327340",["jquery.ui.button","jquery.ui.core","jquery.ui.draggable","jquery.ui.mouse","jquery.ui.position","jquery.ui.resizable","jquery.ui.widget"],"jquery.ui"],["jquery.ui.progressbar","1422233835",["jquery.ui.core","jquery.ui.widget"],"jquery.ui"],["jquery.ui.slider","1422233835",["jquery.ui.core","jquery.ui.mouse","jquery.ui.widget"],"jquery.ui"],["jquery.ui.tabs","1422327340",["jquery.ui.core","jquery.ui.widget"],"jquery.ui"],["jquery.effects.core","1422267713",["jquery"],"jquery.ui"],["jquery.effects.blind","1422163325",["jquery.effects.core"],"jquery.ui"],["jquery.effects.bounce","1422163325",[
+"jquery.effects.core"],"jquery.ui"],["jquery.effects.clip","1422327340",["jquery.effects.core"],"jquery.ui"],["jquery.effects.drop","1422243394",["jquery.effects.core"],"jquery.ui"],["jquery.effects.explode","1422243394",["jquery.effects.core"],"jquery.ui"],["jquery.effects.fade","1422243394",["jquery.effects.core"],"jquery.ui"],["jquery.effects.fold","1422243394",["jquery.effects.core"],"jquery.ui"],["jquery.effects.highlight","1422327340",["jquery.effects.core"],"jquery.ui"],["jquery.effects.pulsate","1422267713",["jquery.effects.core"],"jquery.ui"],["jquery.effects.scale","1422267713",["jquery.effects.core"],"jquery.ui"],["jquery.effects.shake","1422327340",["jquery.effects.core"],"jquery.ui"],["jquery.effects.slide","1422243394",["jquery.effects.core"],"jquery.ui"],["jquery.effects.transfer","1422327340",["jquery.effects.core"],"jquery.ui"],["moment","1422273830"],["mediawiki","1422358739"],["mediawiki.api","1422273830",["mediawiki.util"]],["mediawiki.api.category","1422273830",[
+"mediawiki.Title","mediawiki.api"]],["mediawiki.api.edit","1422243394",["mediawiki.Title","mediawiki.api"]],["mediawiki.api.login","1422273830",["mediawiki.api"]],["mediawiki.api.parse","1422273830",["mediawiki.api"]],["mediawiki.api.watch","1422243394",["mediawiki.api","user.tokens"]],["mediawiki.debug","1422273830",["jquery.footHovzer"]],["mediawiki.debug.init","1422273830",["mediawiki.debug"]],["mediawiki.feedback","1422273830",["jquery.ui.dialog","mediawiki.Title","mediawiki.api.edit","mediawiki.jqueryMsg"]],["mediawiki.hidpi","1422243394",["jquery.hidpi"]],["mediawiki.hlist","1422273830",["jquery.client"]],["mediawiki.htmlform","1422273830"],["mediawiki.icon","1422273830"],["mediawiki.inspect","1422243394",["jquery.byteLength","jquery.json"]],["mediawiki.notification","1422243394",["mediawiki.page.startup"]],["mediawiki.notify","1422273830"],["mediawiki.searchSuggest","1422243394",["jquery.autoEllipsis","jquery.client","jquery.placeholder","jquery.suggestions","mediawiki.api"]],[
+"mediawiki.Title","1422243394",["jquery.byteLength","mediawiki.util"]],["mediawiki.toc","1422273830",["jquery.cookie"]],["mediawiki.Uri","1422243394"],["mediawiki.user","1422345054",["jquery.cookie","mediawiki.api","user.options","user.tokens"]],["mediawiki.util","1422345054",["jquery.client","jquery.mwExtension","mediawiki.notify","mediawiki.toc"]],["mediawiki.cookie","1422345054",["jquery.cookie"]],["mediawiki.action.edit","1422273830",["jquery.byteLimit","jquery.textSelection","mediawiki.action.edit.styles"]],["mediawiki.action.edit.styles","1422273830"],["mediawiki.action.edit.collapsibleFooter","1422273830",["jquery.cookie","jquery.makeCollapsible","mediawiki.icon"]],["mediawiki.action.edit.preview","1422345054",["jquery.form","jquery.spinner","mediawiki.action.history.diff"]],["mediawiki.action.history","1422273830",[],"mediawiki.action.history"],["mediawiki.action.history.diff","1422273830",[],"mediawiki.action.history"],["mediawiki.action.view.dblClickEdit","1422345054",[
+"mediawiki.page.startup","mediawiki.util"]],["mediawiki.action.view.metadata","1422273830"],["mediawiki.action.view.postEdit","1422345054",["mediawiki.cookie","mediawiki.jqueryMsg"]],["mediawiki.action.view.redirectToFragment","1422345054",["jquery.client"]],["mediawiki.action.view.rightClickEdit","1422345054"],["mediawiki.action.edit.editWarning","1422273830",["mediawiki.jqueryMsg"]],["mediawiki.action.watch.ajax","1421962909",["mediawiki.page.watch.ajax"]],["mediawiki.language","1422273830",["mediawiki.cldr","mediawiki.language.data"]],["mediawiki.cldr","1422273830",["mediawiki.libs.pluralruleparser"]],["mediawiki.libs.pluralruleparser","1422345054"],["mediawiki.language.init","1422273830"],["mediawiki.jqueryMsg","1422225254",["mediawiki.language","mediawiki.util"]],["mediawiki.language.months","1422273830",["mediawiki.language"]],["mediawiki.libs.jpegmeta","1422345054"],["mediawiki.page.gallery","1422273830"],["mediawiki.page.ready","1422273830",["jquery.checkboxShiftClick",
+"jquery.makeCollapsible","jquery.mw-jump","jquery.placeholder","mediawiki.util"]],["mediawiki.page.startup","1422225254",["jquery.client","mediawiki.util"]],["mediawiki.page.patrol.ajax","1422273830",["jquery.spinner","mediawiki.Title","mediawiki.api","mediawiki.notify","mediawiki.page.startup","mediawiki.util","user.tokens"]],["mediawiki.page.watch.ajax","1422273830",["jquery.mwExtension","mediawiki.api.watch","mediawiki.notify","mediawiki.page.startup","mediawiki.util"]],["mediawiki.page.image.pagination","1422225254",["jquery.spinner"]],["mediawiki.special","1422225254"],["mediawiki.special.block","1422225254",["mediawiki.util"]],["mediawiki.special.changeemail","1422273830",["mediawiki.util"]],["mediawiki.special.changeslist","1422273830"],["mediawiki.special.changeslist.legend","1422273830"],["mediawiki.special.changeslist.legend.js","1422273830",["jquery.cookie","jquery.makeCollapsible"]],["mediawiki.special.changeslist.enhanced","1422345054"],["mediawiki.special.movePage",
+"1422273830",["jquery.byteLimit"]],["mediawiki.special.pagesWithProp","1422345054"],["mediawiki.special.preferences","1422225254",["mediawiki.language"]],["mediawiki.special.recentchanges","1422345054",["mediawiki.special"]],["mediawiki.special.search","1422273830"],["mediawiki.special.undelete","1422345054"],["mediawiki.special.upload","1422345054",["mediawiki.libs.jpegmeta","mediawiki.util"]],["mediawiki.special.userlogin.common.styles","1422345054"],["mediawiki.special.userlogin.signup.styles","1422273830"],["mediawiki.special.userlogin.login.styles","1422345054"],["mediawiki.special.userlogin.common.js","1422345054"],["mediawiki.special.userlogin.signup.js","1422273830",["mediawiki.jqueryMsg"]],["mediawiki.special.javaScriptTest","1422273830",["jquery.qunit"]],["mediawiki.special.version","1422345054"],["mediawiki.legacy.ajax","1422369590",["mediawiki.legacy.wikibits","mediawiki.util"]],["mediawiki.legacy.commonPrint","1422348797"],["mediawiki.legacy.config","1422184806",[
+"mediawiki.legacy.wikibits"]],["mediawiki.legacy.protect","1422348797",["jquery.byteLimit"]],["mediawiki.legacy.shared","1422184806"],["mediawiki.legacy.oldshared","1422184806"],["mediawiki.legacy.upload","1422184806",["jquery.spinner","mediawiki.Title","mediawiki.api","mediawiki.util"]],["mediawiki.legacy.wikibits","1422184806",["mediawiki.util"]],["mediawiki.ui","1422273830"],["mediawiki.ui.button","1422273830"],["oojs","1422345054"],["oojs-ui","1422345054",["oojs"]],["ext.wikihow.kbguardian.scripts","1422369590"],["ext.wikihow.mobile.kbguardian.scripts","1422369590",["mediawiki.page.ready","mobile.wikihow"]],["ext.wikihow.kbguardian.styles","1422369590"],["ext.wikihow.articlecreator","1422490296"],["ext.eventLogging","1422310727",["jquery.json","mediawiki.util"]],["ext.eventLogging.jsonSchema","1422369590"],["schema.GuidedTour","1421962909",["ext.eventLogging"]],["mediawiki.libs.guiders","1422184806"],["ext.guidedTour.styles","1422348797",["mediawiki.libs.guiders",
+"mediawiki.ui.button"]],["ext.guidedTour.siteStyles","1422345054",["ext.guidedTour.styles"]],["ext.guidedTour.lib.internal","1422184806"],["ext.guidedTour.lib","1422184806",["ext.guidedTour.lib.internal","ext.guidedTour.siteStyles","jquery.cookie","jquery.json","mediawiki.jqueryMsg","mediawiki.libs.guiders","mediawiki.util","schema.GuidedTour"]],["ext.guidedTour","1422184806",["ext.guidedTour.lib"]],["ext.guidedTour.tour.dashboard","1422310727",["ext.guidedTour"]],["ext.guidedTour.tour.fe","1422348797",["ext.guidedTour"]],["ext.guidedTour.tour.rc","1422369590",["ext.guidedTour"]],["ext.guidedTour.tour.talk","1422348797",["ext.guidedTour"]],["ext.guidedTour.tour.firstedit","1422369590",["ext.guidedTour"]],["ext.guidedTour.tour.firsteditve","1422369590",["ext.guidedTour"]],["ext.guidedTour.tour.test","1422369590",["ext.guidedTour"]],["mobile.rclite.scripts","1422369590",["mobile.wikihow"]],["mobile.rclite.styles","1422369590"],["ext.wikihow.ucipatrol","1422369590",["mediawiki.user"]],[
+"ext.wikihow.mobile.ucipatrol","1422311101",["mediawiki.user","mobile.wikihow"]],["ext.wikihow.socialproof","1422571075",["wikihow.common.jquery.dateformat"]],["ext.wikihow.ratetool","1422311101"],["ext.wikihow.adminratetool","1422245286"],["ext.wikihow.spellchecker","1422311101",["mediawiki.page.ready"]],["ext.wikihow.mobile.spellchecker","1422311101",["mobile.wikihow"]],["ext.wikihow.CategoryGuardian","1422311101",["mediawiki.page.ready"]],["ext.wikihow.CategoryGuardian.styles","1422257686"],["ext.wikihow.mobile.CategoryGuardian","1422311101",["mobile.wikihow"]],["ext.wikihow.usercompletedimages","1422310727"],["mobile.wikihow.uci","1421962909",["mobile.wikihow"]],["ext.wikihow.UsageLogs","1422311104",["mediawiki.page.ready","wikihow.common.bowser","wikihow.common.underscore"]],["mobile.templates","1422310727"],["mobile.bridge","1421962909"],["mobile.loggingSchemas","1421962909",["mobile.startup"]],["mobile.file.scripts","1421962909",["mobile.startup"]],["mobile.styles.mainpage",
+"1421962909",[],"other"],["mobile.pagelist.styles","1421962909"],["mobile.styles","1421962909"],["tablet.styles","1421962909",["mobile.startup"]],["mobile.toc","1421962909",["mobile.startup","mobile.templates"]],["tablet.scripts","1421962909",["mobile.toc"]],["skins.minerva.buttons.styles","1421962909"],["skins.minerva.chrome.styles","1421962909"],["skins.minerva.content.styles","1421962909"],["skins.minerva.drawers.styles","1421962909"],["mobile.styles.beta","1421962909"],["mobile.head","1421962909"],["mobile.head.beta","1421962909",["mediawiki.jqueryMsg","mediawiki.language","mobile.head"]],["mobile.startup","1421962909",["jquery.cookie","mobile.head","mobile.templates","mobile.user"]],["mobile.user","1421962909",["mediawiki.user","mobile.head"]],["mobile.editor","1421962909",["mobile.overlays","mobile.stable.common"]],["mobile.editor.common","1421962909",["jquery.cookie","mobile.stable","mobile.templates"]],["mobile.editor.ve","1421962909",["ext.visualEditor.mobileViewTarget",
+"mobile.beta","mobile.editor.common","mobile.stable.common"]],["mobile.editor.overlay","1421962909",["mobile.editor.common","mobile.loggingSchemas"]],["mobile.uploads","1421962909",["mobile.stable","mobile.templates"]],["mobile.beta.common","1421962909",["mobile.loggingSchemas","mobile.stable.common","mobile.templates"]],["mobile.keepgoing","1421962909",["mobile.beta","mobile.overlays","mobile.templates"]],["mobile.geonotahack","1421962909",["mobile.loggingSchemas","mobile.overlays","mobile.stable.common","mobile.startup"]],["mobile.beta","1421962909",["mobile.beta.common","mobile.overlays","mobile.stable"]],["mobile.search","1421962909",["mobile.overlays"]],["mobile.search.stable","1421962909",["mobile.search"]],["mobile.talk","1421962909",["mobile.beta","mobile.templates"]],["mobile.ajaxpages","1421962909",["mobile.startup"]],["mobile.alpha","1421962909",["mobile.ajaxpages","mobile.beta","mobile.keepgoing"]],["mobile.toast.styles","1421962909"],["mobile.stable.styles","1421962909"],[
+"mobile.overlays","1421962909",["mobile.startup","mobile.templates"]],["mobile.stable.common","1421962909",["mediawiki.jqueryMsg","mediawiki.util","mobile.overlays","mobile.startup","mobile.templates","mobile.toast.styles"]],["mobile.lastEdited.stable","1421962909",["mobile.stable"]],["mobile.references","1421962909",["mobile.stable.common","mobile.startup","mobile.templates"]],["mobile.toggling","1421962909",["mobile.startup"]],["mobile.toggling.beta","1421962909",["mobile.toggling"]],["mobile.contentOverlays","1421962909",["mobile.overlays"]],["mobile.newusers","1421962909",["mobile.contentOverlays","mobile.editor","mobile.templates"]],["mobile.stable","1421962909",["mediawiki.language","mediawiki.util","mobile.loggingSchemas","mobile.references","mobile.stable.common","mobile.stable.styles","mobile.startup","mobile.templates","mobile.user"]],["mobile.languages.common","1421962909",["mobile.overlays"]],["mobile.languages","1421962909",["mobile.languages.common"]],[
+"mobile.languages.beta","1421962909",["mobile.languages.common"]],["mobile.issues","1421962909",["mobile.overlays"]],["mobile.desktop","1422245864",["jquery.cookie"]],["mobile.mobileoptions.scripts","1421962909",["mobile.startup","mobile.templates"]],["mobile.nearby.styles","1421962909"],["mobile.nearby.beta","1421962909",["mobile.beta.common","mobile.nearby","mobile.stable.common"]],["mobile.nearby","1421962909",["jquery.json","mediawiki.language","mobile.loggingSchemas","mobile.nearby.styles","mobile.stable.common","mobile.templates"]],["mobile.nearby.scripts","1421962909",["mobile.nearby"]],["mobile.notifications","1421962909",["mobile.overlays"]],["mobile.notifications.overlay","1421962909",["ext.echo.base","mobile.stable"]],["mobile.uploads.scripts","1421962909",["mobile.stable.common","mobile.stable.styles","mobile.templates"]],["mobile.mobilediff.scripts","1421962909",["mobile.loggingSchemas","mobile.stable.common"]],["mobile.wikihow","1421962909",["ext.wikihow.common"]],[
+"zzz.mobile.wikihow.styles_late_load","1421962909"],["mobile.wikihow.wikivideo","1421962909"],["mobile.wikihow.user","1421962909"],["mobile.wikihow.userscript","1421962909"],["zzz.mobile.wikihow.homepage","1421962909"],["zzz.mobile.wikihow.notifications","1421962909"],["mobile.wikihow.loggedout","1421962909",["mobile.overlays"]],["mobile.wikihow.loggedout.overlay","1421962909",["mobile.stable"]],["mobile.wikihow.notifications.overlay","1421962909",["mobile.notifications.overlay"]],["zzz.mobile.wikihow.sample","1421962909"],["zzz.mobile.wikihow.passwordreset","1421962909"],["mobile.wikihow.stable.styles","1421962909",["mobile.stable.styles"]],["ext.wikihow.wikivid","1421962909"],["ext.scribunto","1422245864",["jquery.ui.dialog"]],["ext.scribunto.edit","1422245864",["ext.scribunto","jquery.spinner","mediawiki.api"]],["ext.checkUser","1422245864",["mediawiki.util"]],["ext.cite","1422245864",["jquery.tooltip"]],["jquery.tooltip","1422310727"],["ext.rtlcite","1422310727"],["ext.Drafts",
+"1422245864",["mediawiki.jqueryMsg","mediawiki.legacy.wikibits"]],["ext.wikihow.PatrolCount","1422310727"],["ext.wikihow.lsearch.mobile.styles","1422245864"],["ext.wikihow.ratingreason","1422572675"],["ext.wikihow.ratingreason.styles","1422572675"],["ext.confirmEdit.fancyCaptcha.styles","1422245864"],["ext.confirmEdit.fancyCaptcha","1422245864",["mediawiki.api"]],["ext.confirmEdit.fancyCaptchaMobile","1422308598",["mobile.startup"]],["ext.geshi.local","1422293201"],["ext.MassMessage.special.js","1422245864",["jquery.byteLimit","jquery.delayedBind","jquery.ui.autocomplete","mediawiki.jqueryMsg"]],["ext.MassMessage.special","1422308598"],["ext.echo.base","1422245864"],["ext.echo.desktop","1422245864",["ext.echo.base","mediawiki.Uri","mediawiki.api","mediawiki.jqueryMsg","mediawiki.user"]],["ext.echo.overlay","1422245864",["ext.echo.desktop","mediawiki.language","mediawiki.util"]],["ext.echo.special","1422409025",["ext.echo.desktop","mediawiki.ui.button"]],["ext.echo.alert","1422245864"],
+["ext.echo.badge","1422245864"],["ext.abuseFilter","1422245864"],["ext.abuseFilter.edit","1422245864",["jquery.spinner","jquery.textSelection","mediawiki.api","mediawiki.util"]],["ext.abuseFilter.tools","1422245864",["jquery.spinner","mediawiki.api","mediawiki.notify","user.tokens"]],["ext.abuseFilter.examine","1422245864",["jquery.spinner","mediawiki.api"]],["ext.wikihow.PatrolThrottle","1422245864"],["wikihow.common.jquery.download","1422301580"],["wikihow.common.jquery.dateformat","1422245864"],["wikihow.common.underscore","1422311104"],["wikihow.common.bowser","1422311104"],["wikihow.common.mustache","1422311104"],["ext.wikihow.talkpages","1422269441",["wikihow.common.jquery.dateformat"]],["ext.nuke","1422427609"],["ext.wikihow.common","1422572675",["mediawiki.user"]],["mobile.uploads.schema","1421962909",["ext.eventLogging"]],["mobile.watchlist.schema","1421962909",["ext.eventLogging"]],["mobile.editing.schema","1421962909",["ext.eventLogging"]],["schema.MobileWebCta","1421962909"
+,["ext.eventLogging"]],["schema.MobileWebClickTracking","1421962909",["ext.eventLogging"]],["schema.MobileLeftNavbarEditCTA","1421962909",["ext.eventLogging"]]]);mw.config.set({"wgLoadScript":"/load.php","debug":false,"skin":"wikihowskin","stylepath":"/skins","wgUrlProtocols":"http\\:\\/\\/|https\\:\\/\\/|ftp\\:\\/\\/|ftps\\:\\/\\/|ssh\\:\\/\\/|sftp\\:\\/\\/|irc\\:\\/\\/|ircs\\:\\/\\/|xmpp\\:|sip\\:|sips\\:|gopher\\:\\/\\/|telnet\\:\\/\\/|nntp\\:\\/\\/|worldwind\\:\\/\\/|mailto\\:|tel\\:|sms\\:|news\\:|svn\\:\\/\\/|git\\:\\/\\/|mms\\:\\/\\/|bitcoin\\:|magnet\\:|urn\\:|geo\\:|\\/\\/","wgArticlePath":"/$1","wgScriptPath":"","wgScriptExtension":".php","wgScript":"/index.php","wgVariantArticlePath":false,"wgActionPaths":{},"wgServer":"http://www.wikihow.com","wgUserLanguage":"en","wgContentLanguage":"en","wgVersion":"1.23wmf15","wgEnableAPI":true,"wgEnableWriteAPI":true,"wgMainPageTitle":"Main Page","wgFormattedNamespaces":{"-5":"Quiz","-4":"Doc","-3":"Widget","-2":"Media","-1":"Special",
+"0":"","1":"Discussion","2":"User","3":"User talk","4":"wikiHow","5":"wikiHow talk","6":"Image","7":"Image talk","8":"MediaWiki","9":"MediaWiki talk","10":"Template","11":"Template talk","12":"Help","13":"Help talk","14":"Category","15":"Category talk","16":"Request","17":"Request talk","18":"User kudos","19":"User kudos talk","24":"Video","25":"Video talk","26":"VideoComments","27":"VideoComments talk","828":"Module","829":"Module talk"},"wgNamespaceIds":{"quiz":-5,"doc":-4,"widget":-3,"media":-2,"special":-1,"":0,"discussion":1,"user":2,"user_talk":3,"wikihow":4,"wikihow_talk":5,"image":6,"image_talk":7,"mediawiki":8,"mediawiki_talk":9,"template":10,"template_talk":11,"help":12,"help_talk":13,"category":14,"category_talk":15,"request":16,"request_talk":17,"user_kudos":18,"user_kudos_talk":19,"video":24,"video_talk":25,"videocomments":26,"videocomments_talk":27,"module":828,"module_talk":829,"talk":1,"project":4,"project_talk":5,"file":6,"file_talk":7},"wgContentNamespaces":[0],
+"wgSiteName":"wikiHow","wgFileExtensions":["png","gif","jpg","jpeg","pdf"],"wgDBname":"wikidb_112","wgFileCanRotate":true,"wgAvailableSkins":{"myskin":"MySkin","chick":"Chick","cologneblue":"CologneBlue","modern":"Modern","standard":"Standard","nostalgia":"Nostalgia","wikihowskin":"WikiHowSkin","monobook":"MonoBook","vector":"Vector","simple":"Simple"},"wgExtensionAssetsPath":"/extensions","wgCookiePrefix":"wiki_shared","wgCookieDomain":"wikihow.com","wgResourceLoaderMaxQueryLength":-1,"wgCaseSensitiveNamespaces":[],"wgLegalTitleChars":" %!\"$\u0026'()*,\\-./0-9:;=?@A-Z\\\\\\^_`a-z~+\\u0080-\\uFFFF","wgResourceLoaderStorageVersion":1,"wgResourceLoaderStorageEnabled":false,"wgEventLoggingBaseUri":false,"wgStopMobileRedirectCookie":{"name":"wiki_nombl","duration":1,"domain":".wikihow.com","path":"/"},"wgMFNearbyEndpoint":"","wgMFNearbyNamespace":0,"wgMFKeepGoing":false,"wgDraftAutoSaveWait":120,"wgDraftAutoSaveTimeout":20,"wgDraftAutoSaveInputBased":false});};if(isCompatible()){document.
+write("\u003Cscript src=\"/load.php?debug=false\u0026amp;lang=en\u0026amp;modules=jquery%2Cmediawiki\u0026amp;only=scripts\u0026amp;siterev=bcea94\u0026amp;skin=wikihowskin\"\u003E\u003C/script\u003E");}delete isCompatible;
+/* cache key: wikidb_112:resourceloader:filter:minify-js:7:b474283c8bca42775c1b75c882342439 *//*]]>*/</script><script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Unrar-Files-in-Linux","wgTitle":"Unrar Files in Linux","wgCurRevisionId":16195234,"wgRevisionId":16195234,"wgArticleId":713038,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Linux"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Unrar-Files-in-Linux","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgImageSwitchingEnabled":true,"wgWikihowSiteRev":"bcea94","wgFBAppId":"157545333433","wgCDNbase":"http://pad1.whstatic.com"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function(){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":1,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":30,"rclimit":50,"rememberpassword":1,"rows":25,"showhiddencats":0,"shownumberswatching":1,"showtoolbar":1,"skin":"wikihowskin","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,
+"watchmoves":0,"wllimit":250,"useeditwarning":1,"prefershttps":1,"show_google_authorship":0,"recent_changes_widget_show":1,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"plain-text","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-other":false,"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-kudos":true,"echo-subscriptions-web-thumbs-up":true,"welcomer":0,"defaulteditor":"visual","disablesuggest":true,"scrolltalk":1,"rctest":0,"showtoc":0,"disablemarketingemail":0,"thumbsemailnotifications":0,"usertalknotifications":0,
+"enableauthoremail":0,"thumbsnotifications":0,"globalemailoptout":0,"articlecreator":1,"showhelpfulnessdata":1,"showarticleinfo":1,"language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs16":false,"searchNs17":false,"searchNs18":false,"searchNs19":false,"searchNs24":false,"searchNs25":false,"searchNs26":false,"searchNs27":false,"searchNs828":false,"searchNs829":false,"extensionDrafts_enable":true,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function(){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: wikidb_112:resourceloader:filter:minify-js:7:abb3844bb59b35c39e2e63b04302b0ed */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.wikihow.wikivid","ext.wikihow.common"]);
+}</script>			<script type="text/javascript" src="/extensions/min/g/whjs,stu,fl,slj,thm,kbj,tpt&r=bcea94&e=.js"></script>
+		
+					<script>
+				<!--
+				if (WH.ExitTimer) {
+					WH.ExitTimer.start();
+				}
+				//-->
+			</script>
+		
+		
+		<script type="text/javascript">
+			<!--
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+				ga('create', 'UA-2375655-1', 'auto', {'allowLinker': true});
+		ga('linker:autoLink', [/^.*wikihow\.com$/]);
+		ga('send', 'pageview');
+		var load_t_delta=(new Date()).getTime()-WH.timeStart;
+		setTimeout("ga('send','event','Adjusted Bounce','60 seconds on page (desktop)')",Math.max(60000-load_t_delta,0));
+
+		var pv_user_type = mw.config.get('wgUserName') === null ? 'anon' : 'logged_in';
+		ga('send', 'event','pvs-d',pv_user_type, {'nonInteraction': 1});
+				//-->
+		</script>
+
+					<script type="text/javascript">
+			<!--
+				jQuery(window).load(gatStartObservers);
+			//-->
+		</script>
+									
+		
+		<script type="text/javascript">if(window['optimizely'] == undefined) { window['optimizely'] = [] } window['optimizely'].push(['addToSegment', 'wikihow_user_name', wgUserName]);</script><script src="//cdn.optimizely.com/js/526710254.js"></script>
+				
+		
+						
+					<script type="text/javascript">
+	$(document).ready(function () {
+		loadGoogleCSESearchBox('en');
+	});
+</script>		
+<script type="text/javascript">
+	(function ($) {
+		$(document).ready(function() {
+			WH.addScrollEffectToTOC();
+		});
+
+		$(window).load(function() {
+
+			if ($('.twitter-share-button').length && (!$.browser.msie || $.browser.version > 7)) {
+
+				$.getScript("https://platform.twitter.com/widgets.js", function() {
+					twttr.events.bind('tweet', function(event) {
+						if (event) {
+							var targetUrl;
+							if (event.target && event.target.nodeName == 'IFRAME') {
+								targetUrl = extractParamFromUri(event.target.src, 'url');
+							}
+							ga('send', 'social', 'twitter', 'tweet', targetUrl);
+						}
+					});
+
+				});
+			}
+
+			if (isiPhone < 0 && isiPad < 0 && $('.gplus1_button').length) {
+				WH.setGooglePlusOneLangCode();
+				var node2 = document.createElement('script');
+				node2.type = 'text/javascript';
+				node2.async = true;
+				node2.src = 'http://apis.google.com/js/plusone.js';
+				$('body').append(node2);
+			}
+			if (typeof WH.FB != 'undefined') WH.FB.init('new');
+			if (typeof WH.GP != 'undefined') WH.GP.init();
+
+			if ($('#pinterest').length) {
+				var node3 = document.createElement('script');
+				node3.type = 'text/javascript';
+				node3.async = true;
+				node3.src = 'http://assets.pinterest.com/js/pinit.js';
+				$('body').append(node3);
+			}
+
+			if (typeof WH.imageFeedback != 'undefined') {
+				WH.imageFeedback();
+			}
+		});
+	})(jQuery);
+</script>
+<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"ready","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.action.view.postEdit","mediawiki.user","mediawiki.page.ready","mediawiki.searchSuggest","ext.Drafts","ext.wikihow.socialproof"],null,true);
+}</script>
+
+		<!-- shown patrolled revid=16195234, latest=16195234 -->
+<div id='servedtime' style='display: none;'>530</div></div>
+<!-- Served by app1.wikihow.com in 0.530 secs on 2015-01-31 04:12:25 PST. --></body>
+</html>
