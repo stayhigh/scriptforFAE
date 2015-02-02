@@ -1,0 +1,895 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>RPM Command: 15 Examples to Install, Uninstall, Upgrade, Query RPM Packages</title>
+<meta name="robots" content="noodp, noydir" />
+<link rel="stylesheet" href="http://static.thegeekstuff.com/wp-content/themes/thesis_185/custom/layout.css" type="text/css" media="screen, projection" />
+<!--[if lte IE 8]><link rel="stylesheet" href="http://static.thegeekstuff.com/wp-content/themes/thesis_185/lib/css/ie.css" type="text/css" media="screen, projection" /><![endif]-->
+<link rel="stylesheet" href="http://static.thegeekstuff.com/wp-content/themes/thesis_185/custom/custom.css" type="text/css" media="screen, projection" />
+<link rel="canonical" href="http://www.thegeekstuff.com/2010/07/rpm-command-examples/" />
+<link rel="alternate" type="application/rss+xml" title="The Geek Stuff RSS Feed" href="http://feedproxy.google.com/TheGeekStuff" />
+<link rel="pingback" href="http://www.thegeekstuff.com/xmlrpc.php" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.thegeekstuff.com/xmlrpc.php?rsd" />
+<link href="http://static.thegeekstuff.com/favicon.ico" rel="icon" type="image/x-icon" />
+<link rel="author" href="https://plus.google.com/112493711428194838421/posts"/>
+<link rel="alternate" type="application/rss+xml" title="The Geek Stuff &raquo; RPM Command: 15 Examples to Install, Uninstall, Upgrade, Query RPM Packages Comments Feed" href="http://www.thegeekstuff.com/2010/07/rpm-command-examples/feed/" />
+
+<!-- All in One SEO Pack 2.1 by Michael Torbert of Semper Fi Web Design[277,359] -->
+<meta name="description" content="RPM command is used for installing, uninstalling, upgrading, querying, listing, and checking RPM packages on your Linux system. RPM stands for Red Hat" />
+
+<link rel="canonical" href="http://www.thegeekstuff.com/2010/07/rpm-command-examples/" />
+<!-- /all in one seo pack -->
+</head>
+<body class="custom">
+<div id="container">
+<div id="page">
+	<div id="header">
+<p id="logo"><a href="http://www.thegeekstuff.com"><img src="http://static.thegeekstuff.com/wp-content/themes/thesis_18/custom/images/thegeekstuff.gif" alt="The Geek Stuff" /></a></p><div id="header_ad"><div id="header_ad1">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8090601437064582";
+/* TGS Logo Header Big Image Only */
+google_ad_slot = "4708993701";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div></div>
+	</div>
+<ul class="menu">
+<li class="tab tab-home"><a href="http://www.thegeekstuff.com">Home</a></li>
+<li class="tab tab-1"><a href="http://www.thegeekstuff.com/linux-101-hacks-ebook/" title="Linux 101 Hacks eBook, by Ramesh Natarajan">Free eBook</a></li>
+<li class="tab tab-2"><a href="http://www.thegeekstuff.com/contact/" title="Contact">Contact</a></li>
+<li><a href="http://www.thegeekstuff.com/about/">About</a></li>
+<li><a href="http://www.thegeekstuff.com/best-of-the-blog">Start Here</a></li>
+</ul>
+	<div id="content_box">
+		<div id="content" class="hfeed">
+
+			<div class="post-5060 post type-post status-publish format-standard hentry category-linux tag-centos-rpm tag-redhat-rpm tag-rhel-rpm tag-rpm-2 tag-rpm-i386 tag-rpm-package post_box top" id="post-5060">
+				<div class="headline_area">
+					<h1 class="entry-title">RPM Command: 15 Examples to Install, Uninstall, Upgrade, Query RPM Packages</h1>
+					<p class="headline_meta">by <span class="author vcard"><span class="fn">Sasikala</span></span> on <abbr class="published" title="2010-07-07">July 7, 2010</abbr></p>
+				</div>
+				<div class="format_text entry-content">
+<div style="margin:7px 0px 6px 0px; padding:5px;"> 
+
+<div style="float:left; width=95px">
+<g:plusone size="medium"></g:plusone>
+</div>
+
+<div style="float:left; padding:2px; width:90px"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.thegeekstuff.com%2F2010%2F07%2Frpm-command-examples%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe></iframe>
+</div>
+
+<div style="width=95px">
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+</div>
+
+</div>
+<p><img class="alignright size-medium wp-image-5084" src="http://static.thegeekstuff.com/wp-content/uploads/2010/07/rpm-package-management-300x257.png" alt="" width="300" height="257" />RPM command is used for installing, uninstalling, upgrading, querying, listing, and checking RPM packages on your Linux system.</p>
+<p>RPM stands for <strong>R</strong>ed Hat <strong>P</strong>ackage <strong>M</strong>anager.</p>
+<p>With root privilege, you can use the rpm command with appropriate options to manage the RPM software packages.<br />
+<span id="more-5060"></span><br />
+In this article, let us review 15 practical examples of rpm command.</p>
+<p>Let us take an rpm of Mysql Client and run through all our examples.</p>
+<h3>1. Installing a RPM package Using rpm -ivh</h3>
+<p>RPM filename has packagename, version, release and architecture name.</p>
+<p>For example, In the MySQL-client-3.23.57-1.i386.rpm file:</p>
+<ul>
+<li>MySQL-client &#8211; Package Name</li>
+<li>3.23.57 &#8211; Version</li>
+<li>1 &#8211; Release</li>
+<li>i386 &#8211; Architecture</li>
+</ul>
+<p>When you install a RPM, it checks whether your system is suitable for the software the RPM package contains, figures out where to install the files located inside the rpm package, installs them on your system, and adds that piece of software into its database of installed RPM packages.</p>
+    <center>
+      <div style="margin-left:2px; margin-top:10px; margin-bottom:10px; ">
+
+        <!-- AD BLOCK -->
+		
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8090601437064582";
+/* TGS SinglePost Bottom Medium Rect */
+google_ad_slot = "8643685131";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+        <!-- END AD BLOCK -->
+
+	  </div>
+    </center>
+
+
+<p>The following rpm command installs Mysql client package.</p>
+<pre># rpm -ivh  MySQL-client-3.23.57-1.i386.rpm
+Preparing...                ########################################### [100%]
+   1:MySQL-client           ########################################### [100%]</pre>
+<p>rpm command and options</p>
+<ul>
+<li> -i : install a package</li>
+<li> -v : verbose</li>
+<li> -h : print hash marks as the package archive is unpacked.</li>
+</ul>
+<p>You can also use <a href="http://www.thegeekstuff.com/2010/06/install-remove-deb-package/">dpkg on Debian</a>, <a href="http://www.thegeekstuff.com/2010/06/install-remove-sparc-packages/">pkgadd on Solaris</a>, <a href="http://www.thegeekstuff.com/2010/06/install-remove-depot-packages/">depot on HP-UX</a> to install packages.</p>
+<h3>2. Query all the RPM Packages using rpm -qa</h3>
+<p>You can use rpm command to query all the packages installed in your system.</p>
+<pre># rpm -qa
+cdrecord-2.01-10.7.el5
+bluez-libs-3.7-1.1
+setarch-2.0-1.1
+.
+.</pre>
+<ul>
+<li> -q query operation</li>
+<li> -a queries all installed packages</li>
+</ul>
+<p>To identify whether a particular rpm package is installed on your system, combine rpm and grep command as shown below. Following command checks whether cdrecord package is installed on your system.</p>
+<pre># rpm -qa | grep 'cdrecord'</pre>
+<h3>3. Query a Particular RPM Package using rpm -q</h3>
+<p>The above example lists all currently installed package. After installation of a package to check the installation, you can query a particular package and verify as shown below.</p>
+<pre># rpm -q MySQL-client
+MySQL-client-3.23.57-1
+
+# rpm -q MySQL
+package MySQL is not installed</pre>
+<p>Note: To query a package, you should specify the exact package name. If the package name is incorrect, then rpm command will report that the package is not installed.</p>
+<h3>4. Query RPM Packages in a various format using rpm &#8211;queryformat</h3>
+<p>Rpm command provides an option &#8211;queryformat, which allows you to give the header tag names, to list the packages. Enclose the header tag with in {}.</p>
+<pre># rpm -qa --queryformat '%{name-%{version}-%{release} %{size}\n'
+cdrecord-2.01-10.7 12324
+bluez-libs-3.7-1.1 5634
+setarch-2.0-1.1 235563
+.
+.
+
+#</pre>
+<h3>5. Which RPM package does a file belong to? &#8211; Use rpm -qf</h3>
+<p>Let us say, you have list of files and you would want to know which package owns all these files. rpm command has options to achieve this.</p>
+<p>The following example shows that /usr/bin/mysqlaccess file is part of the MySQL-client-3.23.57-1 rpm.</p>
+<pre># rpm -qf /usr/bin/mysqlaccess
+MySQL-client-3.23.57-1</pre>
+<ul>
+<li> -f : file name</li>
+</ul>
+<h3>6. Locate documentation of a package that owns file using rpm -qdf</h3>
+<p>Use the following to know the list of documentations, for a package that owns a file. The following command, gives the location of all the manual pages related to mysql package.</p>
+<pre># rpm -qdf /usr/bin/mysqlaccess
+/usr/share/man/man1/mysql.1.gz
+/usr/share/man/man1/mysqlaccess.1.gz
+/usr/share/man/man1/mysqladmin.1.gz
+/usr/share/man/man1/mysqldump.1.gz
+/usr/share/man/man1/mysqlshow.1.gz</pre>
+<ul>
+<li> -d : refers documentation.</li>
+</ul>
+<h3>7. Information about Installed RPM Package using rpm -qi</h3>
+<p>rpm command provides a lot of information about an installed pacakge using rpm -qi as shown below:</p>
+<pre># rpm -qi MySQL-client
+Name        : MySQL-client                 Relocations: (not relocatable)
+Version     : 3.23.57                           Vendor: MySQL AB
+Release     : 1                             Build Date: Mon 09 Jun 2003 11:08:28 PM CEST
+Install Date: Mon 06 Feb 2010 03:19:16 AM PST               Build Host: build.mysql.com
+Group       : Applications/Databases        Source RPM: MySQL-3.23.57-1.src.rpm
+Size        : 5305109                          License: GPL / LGPL
+Signature   : (none)
+Packager    : Lenz Grimmer
+URL         : http://www.mysql.com/
+Summary     : MySQL - Client
+Description : This package contains the standard MySQL clients.</pre>
+<p>If you have an RPM file that you would like to install, but want to know more information about it before installing, you can do the following:</p>
+<pre># rpm -qip MySQL-client-3.23.57-1.i386.rpm
+Name        : MySQL-client                 Relocations: (not relocatable)
+Version     : 3.23.57                           Vendor: MySQL AB
+Release     : 1                             Build Date: Mon 09 Jun 2003 11:08:28 PM CEST
+Install Date: (not installed)               Build Host: build.mysql.com
+Group       : Applications/Databases        Source RPM: MySQL-3.23.57-1.src.rpm
+Size        : 5305109                          License: GPL / LGPL
+Signature   : (none)
+Packager    : Lenz Grimmer
+URL         : http://www.mysql.com/
+Summary     : MySQL - Client
+Description : This package contains the standard MySQL clients.</pre>
+<ul>
+<li> -i : view information about an rpm</li>
+<li> -p : specify a package name</li>
+</ul>
+<h3>8. List all the Files in a Package using rpm -qlp</h3>
+<p>To list the content of a RPM package, use the following command, which will list out the files without extracting into the local directory folder.</p>
+<pre>$ rpm -qlp ovpc-2.1.10.rpm
+/usr/bin/mysqlaccess
+/usr/bin/mysqldata
+/usr/bin/mysqlperm
+.
+.
+/usr/bin/mysqladmin</pre>
+<ul>
+<li> q : query the rpm file</li>
+<li> l : list the files in the package</li>
+<li> p : specify the package name</li>
+</ul>
+<p>You can also <a href="http://www.thegeekstuff.com/2010/04/view-and-extract-packages/">extract files from RPM package using rpm2cpio</a> as we discussed earlier.</p>
+<h3>9. List the Dependency Packages using rpm -qRP</h3>
+<p>To view the list of packages on which this package depends,</p>
+<pre># rpm -qRp MySQL-client-3.23.57-1.i386.rpm
+/bin/sh
+/usr/bin/perl</pre>
+<h3>10. Find out the state of files in a package using rpm -qsp</h3>
+<p>The following command is to find state (installed, replaced or normal) for all the files in a RPM package.</p>
+<pre># rpm -qsp MySQL-client-3.23.57-1.i386.rpm
+normal        /usr/bin/msql2mysql
+normal        /usr/bin/mysql
+normal        /usr/bin/mysql_find_rows
+normal        /usr/bin/mysqlaccess
+normal        /usr/bin/mysqladmin
+normal        /usr/bin/mysqlbinlog
+normal        /usr/bin/mysqlcheck
+normal        /usr/bin/mysqldump
+normal        /usr/bin/mysqlimport
+normal        /usr/bin/mysqlshow
+normal        /usr/share/man/man1/mysql.1.gz
+normal        /usr/share/man/man1/mysqlaccess.1.gz
+normal        /usr/share/man/man1/mysqladmin.1.gz
+normal        /usr/share/man/man1/mysqldump.1.gz
+normal        /usr/share/man/man1/mysqlshow.1.gz</pre>
+<h3>11. Verify a Particular RPM Package using rpm -Vp</h3>
+<p>Verifying a package compares information about the installed files in the package with information about the files taken from the package metadata stored in the rpm database. In the following command, -V is for verification and -p option is used to specify a package name to verify.</p>
+<pre># rpm -Vp MySQL-client-3.23.57-1.i386.rpm
+S.5....T c        /usr/bin/msql2mysql
+S.5....T c        /usr/bin/mysql
+S.5....T c        /usr/bin/mysql_find_rows
+S.5....T c        /usr/bin/mysqlaccess</pre>
+<p>The character in the above output denotes the following:</p>
+<ul>
+<li> S file Size differs</li>
+<li> M Mode differs (includes permissions and file type)</li>
+<li> 5 MD5 sum differs</li>
+<li> D Device major/minor number mismatch</li>
+<li> L readlink(2) path mismatch</li>
+<li> U User ownership differs</li>
+<li> G Group ownership differs</li>
+<li> T mTime differs</li>
+</ul>
+<h3>12. Verify a Package Owning file using rpm -Vf</h3>
+<p>The following command verify the package which owns the given filename.</p>
+<pre># rpm -Vf /usr/bin/mysqlaccess
+S.5....T c /usr/bin/mysql
+#</pre>
+<h3>13. Upgrading a RPM Package using rpm -Uvh</h3>
+<p>Upgrading a package is similar to installing one, but RPM automatically un-installs existing versions of the package before installing the new one. If an old version of the package is not found, the upgrade option will still install it.</p>
+<pre># rpm -Uvh MySQL-client-3.23.57-1.i386.rpm
+Preparing... 			########################################### [100%]
+1:MySQL-client          ###########################################</pre>
+<h3>14. Uninstalling a RPM Package using rpm -e</h3>
+<p>To remove an installed rpm package using -e as shown below. After uninstallation, you can query using rpm -qa and verify the uninstallation.</p>
+<pre># rpm -ev MySQL-client
+</pre>
+<h3>15. Verifying all the RPM Packages using rpm -Va</h3>
+<p>The following command verifies all the installed packages.</p>
+<pre># rpm -Va
+S.5....T c /etc/issue
+S.5....T c /etc/issue.net
+S.5....T c /var/service/imap/ssl/seed
+S.5....T c /home/httpd/html/horde/ingo/config/backends.php
+.
+.
+S.5....T c /home/httpd/html/horde/ingo/config/prefs.php
+S.5....T c /etc/printcap</pre>
+<div style="margin:7px 0px 3px 0px; padding:5px; background:#F2F0E8">
+
+<div style="float:left; width=95px">
+<g:plusone size="medium"></g:plusone>
+</div>
+
+<div style="float:left; width=95px">
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+</div>
+
+<div style="float:left; padding:2px; width:90px"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.thegeekstuff.com%2F2010%2F07%2Frpm-command-examples%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe></iframe>
+</div>
+
+<div style="padding:1px">
+&gt;&nbsp;<a href="#respond">Add your comment</a> 
+</div>
+
+</div>
+<h3>If you enjoyed this article, you might also like..</h3>
+<table>
+<tr>
+<td valign="top">
+<ol>
+<li><a href="http://www.thegeekstuff.com/2010/12/50-unix-linux-sysadmin-tutorials/">50 Linux Sysadmin Tutorials</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/11/50-linux-commands/">50 Most Frequently Used Linux Commands (With Examples)</a></li>
+<li><a href="http://www.thegeekstuff.com/2011/12/linux-performance-monitoring-tools/">Top 25 Best Linux Performance Monitoring and Debugging Tools</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/03/15-practical-linux-find-command-examples/">Mommy, I found it! – 15 Practical Linux Find Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/linux-101-hacks-ebook/">Linux 101 Hacks 2nd Edition eBook</a>&nbsp;<img title="Linux 101 Hacks Book" src="http://static.thegeekstuff.com/images/free-small.png" alt="Linux 101 Hacks Book" /></li>
+</ol>
+</td>
+<td>
+<ul>
+<li><a href="http://www.thegeekstuff.com/2010/01/awk-introduction-tutorial-7-awk-print-examples/">Awk Introduction – 7 Awk Print Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/10/unix-sed-tutorial-advanced-sed-substitution-examples/">Advanced Sed Substitution Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/03/8-essential-vim-editor-navigation-fundamentals/">8 Essential Vim Editor Navigation Fundamentals</a></li>
+<li><a href="http://www.thegeekstuff.com/2011/06/iptables-rules-examples/">25 Most Frequently Used Linux IPTables Rules Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/08/turbocharge-putty-with-12-powerful-add-ons-software-for-geeks-3/">Turbocharge PuTTY with 12 Powerful Add-Ons</a></li>
+</ul>
+</td>
+</tr>
+</table>
+<br />
+<center> 
+<table border=0 cellspacing="10"> 
+<tr> 
+<td> 
+<a rel="nofollow" href="http://www.thegeekstuff.com/bash-101-hacks-ebook/"><img title="Bash 101 Hacks Book" src="http://static.thegeekstuff.com/images/bash-132.png" alt="Bash 101 Hacks Book" /></a> 
+</td> 
+<td> 
+<a rel="nofollow" href="http://www.thegeekstuff.com/sed-awk-101-hacks-ebook/"><img title="Sed and Awk 101 Hacks Book" src="http://static.thegeekstuff.com/images/sed-and-awk-132.png" alt="Sed and Awk 101 Hacks Book" /></a> 
+</td> 
+<td> 
+<a rel="nofollow" href="http://www.thegeekstuff.com/nagios-core-ebook/"><img title="Nagios Core 3 Book" src="http://static.thegeekstuff.com/images/nagios-core-132.png" alt="Nagios Core 3 Book" /></a> 
+</td> 
+<td> 
+<a rel="nofollow" href="http://www.thegeekstuff.com/vim-101-hacks-ebook/"><img title="Vim 101 Hacks Book" src="http://static.thegeekstuff.com/images/vim-101-hacks-132.png" alt="Vim 101 Hacks Book" /></a> 
+</td> 
+</tr> 
+</table> 
+</center>
+<br />
+<div id="tgs-tags">
+Tags: <a href="http://www.thegeekstuff.com/tag/centos-rpm/" rel="tag">CentOS RPM</a>, <a href="http://www.thegeekstuff.com/tag/redhat-rpm/" rel="tag">RedHat RPM</a>, <a href="http://www.thegeekstuff.com/tag/rhel-rpm/" rel="tag">RHEL RPM</a>, <a href="http://www.thegeekstuff.com/tag/rpm-2/" rel="tag">RPM 2</a>, <a href="http://www.thegeekstuff.com/tag/rpm-i386/" rel="tag">RPM i386</a>, <a href="http://www.thegeekstuff.com/tag/rpm-package/" rel="tag">RPM Package</a></div>
+				</div>
+			</div>
+
+			<div id="comments">
+				<div id="comments_intro" class="comments_intro">
+					<p><span class="bracket">{</span> <span>25</span> comments&#8230; read them below or <a href="#respond" rel="nofollow">add one</a> <span class="bracket">}</span></p>
+				</div>
+
+				<dl id="comment_list">
+					<dt class="comment even thread-even depth-1" id="comment-52754">
+<span class="avatar"></span>
+<span class="comment_num"><a href="#comment-52754" title="Permalink to this comment" rel="nofollow">1</a></span>
+<span class="comment_author">Josh</span>
+<span class="comment_time">July 7, 2010 at 12:12 pm</span>
+
+					</dt>
+					<dd class="comment even thread-even depth-1">
+<div class="format_text" id="comment-body-52754">
+<p>On #4 it appears you have a typo.  I think you left off a close bracket } after the name field.</p>
+<p>You wrote:<br />
+rpm -qa &#8211;queryformat &#8216;%{name-%{version}-%{release} %{size}\n&#8217;</p>
+<p>Should be:<br />
+rpm -qa &#8211;queryformat &#8216;%{name}-%{version}-%{release} %{size}\n&#8217;</p>
+</div>
+					</dd>
+					<dt class="comment odd alt thread-odd thread-alt depth-1" id="comment-52755">
+<span class="avatar"></span>
+<span class="comment_num"><a href="#comment-52755" title="Permalink to this comment" rel="nofollow">2</a></span>
+<span class="comment_author">Josh</span>
+<span class="comment_time">July 7, 2010 at 12:16 pm</span>
+
+					</dt>
+					<dd class="comment odd alt thread-odd thread-alt depth-1">
+<div class="format_text" id="comment-body-52755">
+<p>Oh, and at least on my RHEL4 systems, the rpm -v flag is for verbose, -V is for verify.</p>
+</div>
+					</dd>
+					<dt class="comment even thread-even depth-1" id="comment-52834">
+<span class="avatar"></span>
+<span class="comment_num"><a href="#comment-52834" title="Permalink to this comment" rel="nofollow">3</a></span>
+<span class="comment_author">diptanu paul</span>
+<span class="comment_time">July 8, 2010 at 12:30 am</span>
+
+					</dt>
+					<dd class="comment even thread-even depth-1">
+<div class="format_text" id="comment-body-52834">
+<p>I have a problem with rpm.I recentrly installed one rpm bpowerd-3.0b1-1 in my system and later i found that i donot require it.but when i remove it using rpm -e..it gives an error.Please suggest<br />
+[root@www ~]# rpm -qa|grep -i bpowerd-3.0b1-1<br />
+bpowerd-3.0b1-1<br />
+[root@www ~]# rpm -e bpowerd-3.0b1-1<br />
+error reading information on service bpowerd: No such file or directory<br />
+error: %postun(bpowerd-3.0b1-1.i386) scriptlet failed, exit status 1<br />
+[root@www ~]# rpm -qa|grep -i bpowerd-3.0b1-1<br />
+bpowerd-3.0b1-1<br />
+[root@www ~]#</p>
+<p>How to remove the same from the rpm list,Please guide</p>
+</div>
+					</dd>
+					<dt class="comment odd alt thread-odd thread-alt depth-1" id="comment-52837">
+<span class="avatar"></span>
+<span class="comment_num"><a href="#comment-52837" title="Permalink to this comment" rel="nofollow">4</a></span>
+<span class="comment_author">Arjan</span>
+<span class="comment_time">July 8, 2010 at 12:56 am</span>
+
+					</dt>
+					<dd class="comment odd alt thread-odd thread-alt depth-1">
+<div class="format_text" id="comment-body-52837">
+<p>If you are sure the bpowerd service is not running anymore, you could &#8216;t try<br />
+rpm -e &#8211;nopostun bpowerd-3.0b1-1</p>
+</div>
+					</dd>
+					<dt class="comment even thread-even depth-1" id="comment-52842">
+<span class="avatar"></span>
+<span class="comment_num"><a href="#comment-52842" title="Permalink to this comment" rel="nofollow">5</a></span>
+<span class="comment_author">diptanu</span>
+<span class="comment_time">July 8, 2010 at 1:55 am</span>
+
+					</dt>
+					<dd class="comment even thread-even depth-1">
+<div class="format_text" id="comment-body-52842">
+<p>Arjan,<br />
+Thanks alot.It worked.I completely missed to check the option while looking out for the solution..Thanks again</p>
+</div>
+					</dd>
+					<dt class="comment odd alt thread-odd thread-alt depth-1" id="comment-53052">
+<span class="avatar"></span>
+<span class="comment_num"><a href="#comment-53052" title="Permalink to this comment" rel="nofollow">6</a></span>
+<span class="comment_author">BalaC</span>
+<span class="comment_time">July 9, 2010 at 7:52 am</span>
+
+					</dt>
+					<dd class="comment odd alt thread-odd thread-alt depth-1">
+<div class="format_text" id="comment-body-53052">
+<p>rpm -qlp was a worthy one. i need them mostly</p>
+</div>
+					</dd>
+					<dt class="comment even thread-even depth-1" id="comment-59471">
+<span class="avatar"></span>
+<span class="comment_num"><a href="#comment-59471" title="Permalink to this comment" rel="nofollow">7</a></span>
+<span class="comment_author">Gautam Kashyap</span>
+<span class="comment_time">August 17, 2010 at 12:49 am</span>
+
+					</dt>
+					<dd class="comment even thread-even depth-1">
+<div class="format_text" id="comment-body-59471">
+<p>Gr8 post&#8230;&#8230;&#8230;&#8230;&#8230;is there any way to rollback the old package after upgradation???</p>
+</div>
+					</dd>
+					<dt class="comment odd alt thread-odd thread-alt depth-1" id="comment-70681">
+<span class="avatar"></span>
+<span class="comment_num"><a href="#comment-70681" title="Permalink to this comment" rel="nofollow">8</a></span>
+<span class="comment_author">manoj</span>
+<span class="comment_time">November 23, 2010 at 6:30 am</span>
+
+					</dt>
+					<dd class="comment odd alt thread-odd thread-alt depth-1">
+<div class="format_text" id="comment-body-70681">
+<p>The above stuff is worth knowing for those who want to work on linux</p>
+</div>
+					</dd>
+					<dt class="comment even thread-even depth-1" id="comment-73003">
+<span class="avatar"></span>
+<span class="comment_num"><a href="#comment-73003" title="Permalink to this comment" rel="nofollow">9</a></span>
+<span class="comment_author">p sankar</span>
+<span class="comment_time">December 13, 2010 at 5:21 am</span>
+
+					</dt>
+					<dd class="comment even thread-even depth-1">
+<div class="format_text" id="comment-body-73003">
+<p>pls, explain to me how to understand rpm commands in linux RHEL 5 server<br />
+and how we can get all rpm packages and its commands for installation and uninstall with its own sys</p>
+</div>
+					</dd>
+					<dt class="comment odd alt thread-odd thread-alt depth-1" id="comment-80953">
+<span class="avatar"></span>
+<span class="comment_num"><a href="#comment-80953" title="Permalink to this comment" rel="nofollow">10</a></span>
+<span class="comment_author">j martinez</span>
+<span class="comment_time">January 24, 2011 at 12:39 pm</span>
+
+					</dt>
+					<dd class="comment odd alt thread-odd thread-alt depth-1">
+<div class="format_text" id="comment-body-80953">
+<p>Pretty good information. I added a bookmark since I&#8217;m always looking for one of these commands throughout the day.</p>
+<p>I did see one mistake, however. &#8220;rpm -qi&#8221; gives you information about an installed package.</p>
+<p>The example you used with &#8220;rpm -qip MySQL-client-3.23.57-1.i386.rpm&#8221; is how you get information about a package from the RPM file.  That&#8217;s why the Install Date in the output shows that it&#8217;s not installed. The -p switch takes an rpm file as its argument.</p>
+</div>
+					</dd>
+					<dt class="comment even thread-even depth-1" id="comment-145913">
+<span class="avatar"></span>
+<span class="comment_num"><a href="#comment-145913" title="Permalink to this comment" rel="nofollow">11</a></span>
+<span class="comment_author">arun prakash</span>
+<span class="comment_time">November 26, 2011 at 2:42 am</span>
+
+					</dt>
+					<dd class="comment even thread-even depth-1">
+<div class="format_text" id="comment-body-145913">
+<p>very useful examples..thanks a lot&#8230;</p>
+</div>
+					</dd>
+					<dt class="comment odd alt thread-odd thread-alt depth-1" id="comment-150434">
+<span class="avatar"></span>
+<span class="comment_num"><a href="#comment-150434" title="Permalink to this comment" rel="nofollow">12</a></span>
+<span class="comment_author">Open Source</span>
+<span class="comment_time">December 5, 2011 at 3:02 am</span>
+
+					</dt>
+					<dd class="comment odd alt thread-odd thread-alt depth-1">
+<div class="format_text" id="comment-body-150434">
+<p>#11. Verify a Particular RPM Package using rpm -vp</p>
+<p>it should be -V (in caps) and not -v (in lower case)</p>
+<p>Verify option -V (caps)<br />
+=================<br />
+rpm {-V|&#8211;verify}</p>
+<p>-v (small case)<br />
+============<br />
+-v     Print verbose information &#8211; normally routine progress messages will be displayed</p>
+</div>
+					</dd>
+					<dt class="comment byuser comment-author-admin even thread-even depth-1" id="comment-194254">
+<span class="avatar"></span>
+<span class="comment_num"><a href="#comment-194254" title="Permalink to this comment" rel="nofollow">13</a></span>
+<span class="comment_author">Ramesh Natarajan</span>
+<span class="comment_time">February 8, 2012 at 11:09 am</span>
+
+					</dt>
+					<dd class="comment byuser comment-author-admin even thread-even depth-1">
+<div class="format_text" id="comment-body-194254">
+<p>@j martinez,</p>
+<p>You are right. Thanks for pointing it out. I&#8217;ve updated item#7 accordingly.</p>
+<p>@Open Source,</p>
+<p>Thanks for pointing it out. I&#8217;ve fixed it.</p>
+</div>
+					</dd>
+					<dt class="comment odd alt thread-odd thread-alt depth-1" id="comment-273183">
+<span class="avatar"></span>
+<span class="comment_num"><a href="#comment-273183" title="Permalink to this comment" rel="nofollow">14</a></span>
+<span class="comment_author">senthamil</span>
+<span class="comment_time">July 21, 2012 at 7:30 am</span>
+
+					</dt>
+					<dd class="comment odd alt thread-odd thread-alt depth-1">
+<div class="format_text" id="comment-body-273183">
+<p>all information very usefull, thanks</p>
+</div>
+					</dd>
+					<dt class="comment even thread-even depth-1" id="comment-374657">
+<span class="avatar"></span>
+<span class="comment_num"><a href="#comment-374657" title="Permalink to this comment" rel="nofollow">15</a></span>
+<span class="comment_author">Madhuri</span>
+<span class="comment_time">November 11, 2012 at 12:14 am</span>
+
+					</dt>
+					<dd class="comment even thread-even depth-1">
+<div class="format_text" id="comment-body-374657">
+<p>Excellent Info.. Awesome Explanation and very useful.</p>
+<p>Regards.,<br />
+Madhuri</p>
+</div>
+					</dd>
+					<dt class="comment odd alt thread-odd thread-alt depth-1" id="comment-379499">
+<span class="avatar"></span>
+<span class="comment_num"><a href="#comment-379499" title="Permalink to this comment" rel="nofollow">16</a></span>
+<span class="comment_author">Kannan</span>
+<span class="comment_time">November 14, 2012 at 3:41 am</span>
+
+					</dt>
+					<dd class="comment odd alt thread-odd thread-alt depth-1">
+<div class="format_text" id="comment-body-379499">
+<p>Hi,</p>
+<p>Please let me know that how to login with postgresql @ redhat linux.</p>
+<p>Regards<br />
+Kannan</p>
+</div>
+					</dd>
+					<dt class="comment even thread-even depth-1" id="comment-508731">
+<span class="avatar"></span>
+<span class="comment_num"><a href="#comment-508731" title="Permalink to this comment" rel="nofollow">17</a></span>
+<span class="comment_author">nareen</span>
+<span class="comment_time">January 22, 2013 at 5:08 am</span>
+
+					</dt>
+					<dd class="comment even thread-even depth-1">
+<div class="format_text" id="comment-body-508731">
+<p>how to run vlc player from root user&#8230;&#8230;</p>
+</div>
+					</dd>
+					<dt class="comment odd alt thread-odd thread-alt depth-1" id="comment-618927">
+<span class="avatar"></span>
+<span class="comment_num"><a href="#comment-618927" title="Permalink to this comment" rel="nofollow">18</a></span>
+<span class="comment_author">phani</span>
+<span class="comment_time">April 1, 2013 at 1:50 pm</span>
+
+					</dt>
+					<dd class="comment odd alt thread-odd thread-alt depth-1">
+<div class="format_text" id="comment-body-618927">
+<p>Good article</p>
+<p>thanks</p>
+</div>
+					</dd>
+					<dt class="comment even thread-even depth-1" id="comment-897209">
+<span class="avatar"></span>
+<span class="comment_num"><a href="#comment-897209" title="Permalink to this comment" rel="nofollow">19</a></span>
+<span class="comment_author">Abhinav</span>
+<span class="comment_time">August 22, 2013 at 2:40 am</span>
+
+					</dt>
+					<dd class="comment even thread-even depth-1">
+<div class="format_text" id="comment-body-897209">
+<p>awesome article !!</p>
+</div>
+					</dd>
+					<dt class="comment odd alt thread-odd thread-alt depth-1" id="comment-898657">
+<span class="avatar"></span>
+<span class="comment_num"><a href="#comment-898657" title="Permalink to this comment" rel="nofollow">20</a></span>
+<span class="comment_author">madhu</span>
+<span class="comment_time">August 23, 2013 at 12:55 am</span>
+
+					</dt>
+					<dd class="comment odd alt thread-odd thread-alt depth-1">
+<div class="format_text" id="comment-body-898657">
+<p>Superb article!  Very useful!</p>
+</div>
+					</dd>
+					<dt class="comment even thread-even depth-1" id="comment-1577078">
+<span class="avatar"></span>
+<span class="comment_num"><a href="#comment-1577078" title="Permalink to this comment" rel="nofollow">21</a></span>
+<span class="comment_author">Tim</span>
+<span class="comment_time">April 28, 2014 at 5:23 pm</span>
+
+					</dt>
+					<dd class="comment even thread-even depth-1">
+<div class="format_text" id="comment-body-1577078">
+<p>Very interesting but one command escape me&#8230;I want to know what programs use a particular package/dependency? EG. I install a program, yum (or rpm) identifies the dependencies this program requires and installs them along with the program. </p>
+<p>If I have a package which is a dependency how do I find out what other programs need this package? At the moment I have x86 &amp; 64 bit versions of mediainfo which is causing &#8220;yum update&#8221; many problems!</p>
+<p>Cheers</p>
+</div>
+					</dd>
+					<dt class="comment odd alt thread-odd thread-alt depth-1" id="comment-1921708">
+<span class="avatar"></span>
+<span class="comment_num"><a href="#comment-1921708" title="Permalink to this comment" rel="nofollow">22</a></span>
+<span class="comment_author">Anonymous</span>
+<span class="comment_time">July 2, 2014 at 1:00 am</span>
+
+					</dt>
+					<dd class="comment odd alt thread-odd thread-alt depth-1">
+<div class="format_text" id="comment-body-1921708">
+<p>Good post ..</p>
+</div>
+					</dd>
+					<dt class="comment even thread-even depth-1" id="comment-2033213">
+<span class="avatar"></span>
+<span class="comment_num"><a href="#comment-2033213" title="Permalink to this comment" rel="nofollow">23</a></span>
+<span class="comment_author">niranjana</span>
+<span class="comment_time">August 4, 2014 at 10:58 pm</span>
+
+					</dt>
+					<dd class="comment even thread-even depth-1">
+<div class="format_text" id="comment-body-2033213">
+<p>how to install rpm package in ubuntu.i already tried many commands but not workout</p>
+</div>
+					</dd>
+					<dt class="comment odd alt thread-odd thread-alt depth-1" id="comment-2152348">
+<span class="avatar"></span>
+<span class="comment_num"><a href="#comment-2152348" title="Permalink to this comment" rel="nofollow">24</a></span>
+<span class="comment_author">gaurav</span>
+<span class="comment_time">August 29, 2014 at 9:59 pm</span>
+
+					</dt>
+					<dd class="comment odd alt thread-odd thread-alt depth-1">
+<div class="format_text" id="comment-body-2152348">
+<p>Hi Ramesh,</p>
+<p>How do I create a rpm package to install bunch rpms from a vendor with pre and post bash script to do some custom config checks?</p>
+</div>
+					</dd>
+					<dt class="comment even thread-even depth-1" id="comment-2536446">
+<span class="avatar"></span>
+<span class="comment_num"><a href="#comment-2536446" title="Permalink to this comment" rel="nofollow">25</a></span>
+<span class="comment_author">arun</span>
+<span class="comment_time">October 20, 2014 at 9:00 pm</span>
+
+					</dt>
+					<dd class="comment even thread-even depth-1">
+<div class="format_text" id="comment-body-2536446">
+<p>Hi Ramesh,<br />
+        Is there any way to modify RPM metadata like Build date, version, Install date?</p>
+<p>Arun</p>
+</div>
+					</dd>
+				</dl>
+				<div id="respond">
+					<div id="respond_intro">
+						<p>Leave a Comment</p>
+					</div>
+					<form action="http://www.thegeekstuff.com/wp-comments-post.php" method="post" id="commentform">
+						<p><input class="text_input" type="text" name="author" id="author" value="" tabindex="1" /><label for="author">Name</label></p>
+						<p><input class="text_input" type="text" name="email" id="email" value="" tabindex="2" /><label for="email">E-mail</label></p>
+						<p><input class="text_input" type="text" name="url" id="url" value="" tabindex="3" /><label for="url">Website</label></p>
+						<p class="comment_box">
+							<textarea name="comment" id="comment" tabindex="4" cols="40" rows="8"></textarea>
+						</p>
+
+
+	<p style="clear: both;" class="subscribe-to-comments">
+	<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" />
+	<label for="subscribe">Notify me of followup comments via e-mail</label>
+	</p>
+
+
+						<p class="remove_bottom_margin">
+							<input name="submit" class="form_submit" type="submit" id="submit" tabindex="5" value="Submit" />
+<input type='hidden' name='comment_post_ID' value='5060' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="eb768561e2" /></p>					</form>
+				</div>
+			</div>
+					<div class="prev_next post_nav">
+						<p class="previous">Previous post: <a href="http://www.thegeekstuff.com/2010/07/screen-command-examples/" rel="prev">Screen Command Examples: Get Control of Linux / Unix Terminal</a></p>
+						<p>Next post: <a href="http://www.thegeekstuff.com/2010/07/8-postgresql-date-and-time-function-examples/" rel="next">8 PostgreSQL Date and Time Function Examples</a></p>
+					</div>
+		</div>
+
+		<div id="sidebars">
+			<div id="sidebar_1" class="sidebar">
+				<ul class="sidebar_list">
+<li class="widget widget_text" id="text-21">			<div class="textwidget"><a title="Subscribe via RSS" href="http://www.thegeekstuff.com/feed" rel="nofollow">RSS</a>&nbsp; | &nbsp;<a title="Subscribe via Email" href="http://feedburner.google.com/fb/a/mailverify?uri=TheGeekStuff&loc=en_US" rel="nofollow">Email</a>&nbsp; | &nbsp;<a title="Follow us on Twitter" href="http://twitter.com/thegeekstuff" rel="nofollow">Twitter</a>&nbsp; | &nbsp;<a title="Become a fan" href="http://www.facebook.com/thegeekstuff" rel="nofollow">Facebook</a>&nbsp; | &nbsp;<a title="Follow us on Google+" href="https://plus.google.com/112493711428194838421/posts">Google+</a>
+<br /><br />
+<form action="http://www.thegeekstuff.com/search" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="005666763606120661560:zkmegbt_djm" />
+    <input type="hidden" name="cof" value="FORID:10" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input style="background-color:#fffeee" type="text" name="q" size="35" />
+    <input style="border-color:#CCCCCC #999999 #999999 #CCCCCC; border-style:double; border-width:1px; overflow:visible;" type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script>
+<script type="text/javascript" src="http://www.google.com/coop/cse/t13n?form=cse-search-box&t13n_langs=en"></script>
+<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=en"></script>
+<br /></div>
+		</li><li class="widget widget_text" id="text-3">			<div class="textwidget"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-8090601437064582";
+/* TGS Right Bar Rectangle Text Ad */
+google_ad_slot = "9054077260";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br/></div>
+		</li><li class="widget widget_text" id="text-18"><h3>UPCOMING WORKSHOP</h3>			<div class="textwidget"><ul>
+<li><a href="http://www.thegeekstuff.com/sysadmin-workshop/">Linux Sysadmin Workshop in Los Angeles</a>
+<br>(Mar 5th and 6th, 2015)</li>
+</ul></div>
+		</li><li class="widget widget_text" id="text-4"><h3>EBOOKS</h3>			<div class="textwidget"><ul>
+<li><img title="Linux 101 Hacks Book" src="http://static.thegeekstuff.com/images/free-small.png" alt="Linux 101 Hacks Book" />&nbsp;<a href="http://www.thegeekstuff.com/linux-101-hacks-ebook/">Linux 101 Hacks 2nd Edition eBook</a> - Practical Examples to Build a Strong Foundation in Linux</li>
+<li><a href="http://www.thegeekstuff.com/bash-101-hacks-ebook/">Bash 101 Hacks eBook</a> - Take Control of Your Bash Command Line and Shell Scripting</li>
+<li><a href="http://www.thegeekstuff.com/sed-awk-101-hacks-ebook/">Sed and Awk 101 Hacks eBook</a> - Enhance Your UNIX / Linux Life with Sed and Awk</li>
+<li><a href="http://www.thegeekstuff.com/vim-101-hacks-ebook/">Vim 101 Hacks eBook</a> - Practical Examples for Becoming Fast and Productive in Vim Editor</li>
+<li><a href="http://www.thegeekstuff.com/nagios-core-ebook/">Nagios Core 3 eBook</a> - Monitor Everything, Be Proactive, and Sleep Well</li>
+</ul></div>
+		</li><li class="widget widget_text" id="text-22">			<div class="textwidget"><iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fthegeekstuff&amp;width&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:258px;" allowTransparency="true"></iframe></div>
+		</li><li class="widget widget_text" id="text-17"><h3>POPULAR POSTS</h3>			<div class="textwidget"><ul>
+<li><a href="http://www.thegeekstuff.com/2009/01/12-amazing-and-essential-linux-books-to-enrich-your-brain-and-library/">12 Amazing and Essential Linux Books To Enrich Your Brain and Library</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/12/50-unix-linux-sysadmin-tutorials/">50 UNIX / Linux Sysadmin Tutorials</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/11/50-linux-commands/">50 Most Frequently Used UNIX / Linux Commands (With Examples)</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/08/gtd-getting-things-done/">How To Be Productive and Get Things Done Using GTD</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/03/30-things-to-do-when-you-are-bored-and-have-a-computer/">30 Things To Do When you are Bored and have a Computer</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/09/linux-file-system-structure/">Linux Directory Structure (File System Structure) Explained with Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/06/15-practical-crontab-examples/">Linux Crontab: 15 Awesome Cron Job Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/">Get a Grip on the Grep! – 15 Practical Grep Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/07/linux-ls-command-examples/">Unix LS Command: 15 Practical Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/08/15-examples-to-master-linux-command-line-history/">15 Examples To Master Linux Command Line History</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/08/bug-tracking-system/">Top 10 Open Source Bug Tracking System</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/01/vi-and-vim-macro-tutorial-how-to-record-and-play/">Vi and Vim Macro Tutorial: How To Record and Play</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/03/15-practical-linux-find-command-examples/">Mommy, I found it! -- 15 Practical Linux Find Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/07/best-gmail-tips-and-tricks/">15 Awesome Gmail Tips and Tricks</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/06/expertise-in-google-search/">15 Awesome Google Search Tips and Tricks</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/08/raid-levels-tutorial/">RAID 0, RAID 1, RAID 5, RAID 10 Explained with Diagrams</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/01/15-practical-unix-linux-top-command-examples/">Can You Top This? 15 Practical Linux Top Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/09/top-5-best-network-monitoring-tools/">Top 5 Best System Monitoring Tools</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/06/top-5-best-linux-os-distributions/">Top 5 Best Linux OS Distributions</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/06/how-to-monitor-remote-linux-host-using-nagios-30/">How To Monitor Remote Linux Host using Nagios 3.0</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/01/awk-introduction-tutorial-7-awk-print-examples/">Awk Introduction Tutorial – 7 Awk Print Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/09/rsync-command-examples/">How to Backup Linux? 15 rsync Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/09/the-ultimate-wget-download-guide-with-15-awesome-examples/">The Ultimate Wget Download Guide With 15 Awesome Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/07/top-5-best-linux-text-editors/">Top 5 Best Linux Text Editors</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/08/tcpdump-command-examples/">Packet Analyzer: 15 TCPDUMP Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/06/bash-array-tutorial/">The Ultimate Bash Array Tutorial with 15 Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/11/3-steps-to-perform-ssh-login-without-password-using-ssh-keygen-ssh-copy-id/">3 Steps to Perform SSH Login Without Password Using ssh-keygen & ssh-copy-id</a></li>
+<li><a href="http://www.thegeekstuff.com/2009/10/unix-sed-tutorial-advanced-sed-substitution-examples/">Unix Sed Tutorial: Advanced Sed Substitution Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2010/03/netstat-command-examples/">UNIX / Linux: 10 Netstat Command Examples</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/06/the-ultimate-guide-for-creating-strong-passwords/">The Ultimate Guide for Creating Strong Passwords</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/08/6-steps-to-secure-your-home-wireless-network/">6 Steps to Secure Your Home Wireless Network</a></li>
+<li><a href="http://www.thegeekstuff.com/2008/08/turbocharge-putty-with-12-powerful-add-ons-software-for-geeks-3/">Turbocharge PuTTY with 12 Powerful Add-Ons</a></li>
+</ul></div>
+		</li><li class="widget widget_text" id="text-19"><h3>CATEGORIES</h3>			<div class="textwidget"><ul>
+<li><a rel="nofollow" href="/category/linux/">Linux Tutorials</a></li>
+<li><a rel="nofollow" href="/category/vim-2/">Vim Editor</a></li>
+<li><a rel="nofollow" href="/category/sed/">Sed Scripting</a></li>
+<li><a rel="nofollow" href="/category/awk/">Awk Scripting</a></li>
+<li><a rel="nofollow" href="/category/bash-2/">Bash Shell Scripting</a></li>
+<li><a rel="nofollow" href="/category/nagios-2/">Nagios Monitoring</a></li>
+<li><a rel="nofollow" href="/category/openssh-2/">OpenSSH</a></li>
+<li><a rel="nofollow" href="/category/iptables/">IPTables Firewall</a></li>
+<li><a rel="nofollow" href="/category/apache/">Apache Web Server</a></li>
+<li><a rel="nofollow" href="/category/mysql/">MySQL Database</a></li>
+<li><a rel="nofollow" href="/category/perl/">Perl Programming</a></li>
+<li><a rel="nofollow" href="/category/google/">Google Tutorials</a></li>
+<li><a rel="nofollow" href="/category/ubuntu/">Ubuntu Tutorials</a></li>
+<li><a rel="nofollow" href="/category/postgresql/">PostgreSQL DB</a></li>
+<li><a rel="nofollow" href="/category/hello-world/">Hello World Examples</a></li>
+<li><a rel="nofollow" href="/category/c-programming/">C Programming</a></li>
+<li><a rel="nofollow" href="/category/c-plus-plus/">C++ Programming</a></li>
+<li><a rel="nofollow" href="/category/dell-2/">DELL Server Tutorials</a></li>
+<li><a rel="nofollow" href="/category/oracle/">Oracle Database</a></li>
+<li><a rel="nofollow" href="/category/vmware/">VMware Tutorials</a></li>
+</ul></div>
+		</li><li class="widget widget_text" id="text-20">			<div class="textwidget"><g:person href="https://plus.google.com/112493711428194838421" data-rel="author" layout="landscape"></g:person></div>
+		</li>				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+<div class="col_footer1">
+	<ul class="sidebar_list">
+<li id="text-7" class="widget widget_text"><h3>About The Geek Stuff</h3>			<div class="textwidget"><br />
+<img class="float" title="Ramesh Natarajan" src="http://static.thegeekstuff.com/images/ramesh-small.gif" alt="Linux 101 Hacks Book" />
+My name is <strong>Ramesh Natarajan</strong>. I will be posting instruction guides, how-to, troubleshooting tips and tricks on Linux, database, hardware, security and web. My focus is to write articles that will either teach you or help you resolve a problem. Read more about <a href="http://www.thegeekstuff.com/about/">Ramesh Natarajan</a> and the blog.</div>
+		</li>
+<li id="text-8" class="widget widget_text"><h3>Support Us</h3>			<div class="textwidget"><br />
+Support this blog by purchasing one of my ebooks.
+<br /><br />
+<a rel="nofollow" href="http://www.thegeekstuff.com/bash-101-hacks-ebook/">Bash 101 Hacks eBook</a>
+<br /><br />
+<a rel="nofollow" href="http://www.thegeekstuff.com/sed-awk-101-hacks-ebook/">Sed and Awk 101 Hacks eBook</a>
+<br /><br />
+<a rel="nofollow" href="http://www.thegeekstuff.com/vim-101-hacks-ebook/">Vim 101 Hacks eBook</a>
+<br /><br />
+<a rel="nofollow" href="http://www.thegeekstuff.com/nagios-core-ebook/">Nagios Core 3 eBook</a></div>
+		</li>
+<li id="text-9" class="widget widget_text"><h3>Contact Us</h3>			<div class="textwidget"><br />
+<strong>Email Me :</strong>
+Use this <a href="http://www.thegeekstuff.com/contact" rel="nofollow">Contact Form</a> to get in touch me with your comments, questions or suggestions about this site. You can also simply drop me a line to say hello!.
+<br /><br />
+<a title="Follow us on Google+" href="https://plus.google.com/112493711428194838421/posts">Follow us on Google+</a>
+<br /><br />
+<a title="Follow us on Twitter" href="http://twitter.com/thegeekstuff" rel="nofollow">Follow us on Twitter</a>
+<br /><br />
+<a href="
+http://www.facebook.com/thegeekstuff" rel="nofollow">Become a fan on Facebook</a>&nbsp;&nbsp;</div>
+		</li>
+	</ul>
+</div>
+
+<div class="cb"></div>
+	<p>Copyright &copy; 2008&ndash;2014 Ramesh Natarajan. All rights reserved  | 
+<a href="http://www.thegeekstuff.com/copyright">Terms of Service</a> </p>	</div>
+</div>
+</div>
+<!--[if lte IE 8]>
+<div id="ie_clear"></div>
+<![endif]-->
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-5302569-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Content Delivery Network via Amazon Web Services: CloudFront: static.thegeekstuff.com
+
+ Served from: www.thegeekstuff.com @ 2015-02-01 19:16:18 by W3 Total Cache -->
