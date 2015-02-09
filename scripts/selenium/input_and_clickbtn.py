@@ -21,7 +21,7 @@ fp.set_preference("browser.download.defaultFolder", os.getcwd())
 fp.set_preference("browser.helperApps.neverAsk.saveToDisk","image/png")
 fp.set_preference("browser.helperApps.neverAsk.openFile", "CONTENT-TYPE")
 browser = webdriver.Firefox(firefox_profile=fp) # Get local session of Firefox
-browser.implicitly_wait(10)
+browser.implicitly_wait(5)
 browser.get(url) # Load page
 
 """
@@ -55,13 +55,13 @@ eachnum = {
         }
 # Test for each iteration chinese input 
 for i in range(1,10):
-    elem.send_keys(u"祝亭力天天開心" + eachnum[i])
+    elem.send_keys(u"天天開心" + eachnum[i])
     elem.send_keys(Keys.RETURN)
     time.sleep(2)  # Wait for human read
     download_btn = browser.find_element_by_id("default-submit") # Find the query box
     time.sleep(2)  # Wait for human read
     download_btn.find_element_by_id("default-submit").click()
-    elem.clear()
+    elem.clear()   # clear the field of elem
     time.sleep(2)  # Wait for human read
 
 
