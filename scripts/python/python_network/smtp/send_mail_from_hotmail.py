@@ -9,11 +9,9 @@ import sys
 import smtplib
 import getpass
 
-
 if len(sys.argv) != 3:
     print "usage: python %s from@fromdomain.com to@todomain.com"
     exit()
-
 
 sender = sys.argv[1]  # sender = from@fromdomain.com
 receiver = sys.argv[2]  # receivers = to@todomain.com
@@ -25,7 +23,6 @@ message = """From: From Person <%s>
         """ % (sys.argv[1], sys.argv[2])
 SMTP_PORT = 587
 SMTP_SERVER = "smtp.live.com"
-
 
 try:
     smtpObj = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
