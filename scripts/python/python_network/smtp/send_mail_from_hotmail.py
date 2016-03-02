@@ -39,5 +39,3 @@ except smtplib.SMTPRecipientsRefused:
     print "Error: unable to send email: SMTPRecipientsRefused"
 except smtplib.SMTPSenderRefused:
     print "Error: unable to send email: SMTPSenderRefused"
-
-
